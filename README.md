@@ -118,9 +118,12 @@ Action Plan
 
 這個頁面會展示：
 
+- committee verdict summary bar
 - 個案背景與研究問題
 - committee scorecard 與權重化傾向
+- horizon-specific forecast panel
 - specialist agent 個別觀點
+- peer comparison block
 - 共識與分歧整理
 - base / bull / bear 三情境框架
 - entry / exit ladder 視覺化

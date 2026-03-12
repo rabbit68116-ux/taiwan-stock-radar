@@ -426,8 +426,10 @@ pre {
 }
 
 .scorecard-card,
+.verdict-card,
 .ladder-card,
-.memo-card {
+.memo-card,
+.forecast-card {
   border-radius: 22px;
   border: 1px solid var(--line);
   background:
@@ -498,6 +500,114 @@ pre {
 .score-note {
   margin: 14px 0 0;
   color: var(--muted);
+}
+
+.verdict-card {
+  padding: 24px;
+}
+
+.verdict-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.verdict-head h3 {
+  margin-bottom: 8px;
+}
+
+.verdict-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(31, 111, 95, 0.12);
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.verdict-bar {
+  display: flex;
+  width: 100%;
+  min-height: 42px;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(27, 28, 22, 0.08);
+}
+
+.verdict-bar span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 10px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.verdict-positive {
+  background: linear-gradient(90deg, #1f6f5f, #3d8d7c);
+}
+
+.verdict-caution {
+  background: linear-gradient(90deg, #d08a3a, #e2a85a);
+}
+
+.verdict-risk {
+  background: linear-gradient(90deg, #a35a38, #c97348);
+}
+
+.verdict-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.verdict-notes > div {
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.forecast-card {
+  padding: 24px;
+}
+
+.forecast-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: rgba(216, 132, 51, 0.14);
+  color: #8a4c10;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.forecast-pill-strong {
+  background: rgba(31, 111, 95, 0.12);
+  color: var(--accent);
 }
 
 .ladder-card {
@@ -674,6 +784,15 @@ code {
   }
 
   .split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .verdict-head {
+    flex-direction: column;
+  }
+
+  .verdict-notes,
+  .forecast-grid {
     grid-template-columns: 1fr;
   }
 
