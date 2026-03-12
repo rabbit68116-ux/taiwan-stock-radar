@@ -1,7 +1,8 @@
 {
   "horizons": {
     "scan_default": "swing",
-    "deep_dive_default": "tactical_and_swing"
+    "deep_dive_default": "tactical_and_swing",
+    "single_stock_council_default": "swing"
   },
   "ranking": {
     "top_n": 20,
@@ -42,5 +43,49 @@
       "action_plan",
       "invalidation"
     ]
+  },
+  "single_stock_council": {
+    "meeting_phases": [
+      "case_setup",
+      "independent_specialist_briefs",
+      "cross_examination",
+      "weighted_vote",
+      "final_decision_packet"
+    ],
+    "required_sections": [
+      "analysis_date",
+      "horizon",
+      "stock_context",
+      "market_regime",
+      "specialist_briefs",
+      "agreement_map",
+      "final_thesis",
+      "scenario_tree",
+      "buy_zone",
+      "entry_triggers",
+      "stop_loss",
+      "take_profit_plan",
+      "invalidation",
+      "confidence",
+      "missing_data"
+    ],
+    "required_actions": [
+      "preferred_buy_zone",
+      "aggressive_entry_trigger",
+      "conservative_entry_trigger",
+      "stop_loss",
+      "take_profit_1",
+      "take_profit_2",
+      "full_invalidation"
+    ],
+    "scenario_framework": [
+      "base_case",
+      "bull_case",
+      "bear_case"
+    ],
+    "dissent_policy": {
+      "always_log_dissent": true,
+      "highlight_risk_manager_objection": true
+    }
   }
 }

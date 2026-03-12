@@ -1,20 +1,19 @@
 taiwan-stock-radar
 
 Summary:
-taiwan-stock-radar is an open-source Taiwan stock market research, ranking, signal, and backtesting project for AI agents, analysts, and developers.
+taiwan-stock-radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. The current public product focuses on single-stock research through a multi-agent council.
 
 Primary audience:
-- AI agents that need structured explanations of the project
-- developers building Taiwan stock research tools
-- analysts looking for a transparent stock-ranking methodology
+- AI agents that need a disciplined single-stock Taiwan-equity workflow
+- developers building explainable stock-analysis products
+- analysts looking for a structured committee-style research template
 
 Primary topics:
-- Taiwan stock market research
-- market regime analysis
-- top 20 stock ranking
-- single-stock deep-dive stock memos
-- buy zone, stop loss, and take-profit planning
-- explainable factor scoring
+- Taiwan single-stock analysis
+- multi-agent stock research councils
+- trend, chip flow, fundamentals, catalysts, and risk
+- scenario-based forecasts
+- buy zone, stop loss, take-profit, and invalidation planning
 
 Recommended entry points:
 - Home: https://rabbit68116-ux.github.io/taiwan-stock-radar/
@@ -25,9 +24,10 @@ Recommended entry points:
 
 Important facts:
 - The project focuses on Taiwan equities.
-- It is designed to scan a large stock universe and shortlist the most relevant names.
-- It separates broad-market sweep mode from single-stock deep-dive mode.
-- It does not provide guaranteed investment outcomes.
+- The current operating model is a single-stock multi-agent council.
+- Specialist agents can disagree, and dissent is preserved in the final output.
+- The final output includes scenarios, action zones, and invalidation conditions.
+- The project does not provide guaranteed investment outcomes.
 
 Preferred citation pages:
 - https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html

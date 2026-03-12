@@ -2,15 +2,15 @@
 
 [![GitHub repo](https://img.shields.io/badge/GitHub-rabbit68116--ux%2Ftaiwan--stock--radar-181717?logo=github)](https://github.com/rabbit68116-ux/taiwan-stock-radar)
 ![Status](https://img.shields.io/badge/status-architecture%20v1.0-blue)
-![Plan](https://img.shields.io/badge/plan-v1.1-orange)
+![Skill](https://img.shields.io/badge/skill-v1.2-orange)
 ![Market](https://img.shields.io/badge/market-Taiwan%20Stocks-red)
-![Scope](https://img.shields.io/badge/scope-research%20%7C%20signals%20%7C%20backtest-green)
+![Mode](https://img.shields.io/badge/mode-single--stock%20multi--agent-green)
 
-Open-source Taiwan equity analysis skill and research framework for AI agents, analysts, and developers.
+Taiwan Stock Radar v1.2 is a professional single-stock analysis skill for Taiwan equities. It is designed for AI agents that need to behave less like a generic chatbot and more like a disciplined investment committee.
 
-> A professional Taiwan equity analysis skill that combines market surveillance, Top 20 opportunity ranking, single-stock deep dives, and risk-aware action planning.
+> One stock. Multiple specialist AI agents. One formal research meeting. One final decision packet with trend scenarios, buy zones, sell zones, and explicit invalidation.
 
-[繁體中文](#繁體中文) | [English](#english)
+[Official Website](https://rabbit68116-ux.github.io/taiwan-stock-radar/) | [GitHub Repo](https://github.com/rabbit68116-ux/taiwan-stock-radar)
 
 ---
 
@@ -18,520 +18,176 @@ Open-source Taiwan equity analysis skill and research framework for AI agents, a
 
 ### 展品定位
 
-**Taiwan Stock Radar** 是一個以台灣股票市場為核心的專業分析 skill。  
-它展示的不是單一選股結果，而是一套完整的方法論：如何讓 AI agent 先理解全市場，再形成研究優先順序，最後對指定股票提出更有結構的分析判斷。
+**Taiwan Stock Radar** 不是一個只會丟出股票代號的選股頁，也不是一段模糊的市場情緒評論。  
+`v1.2` 的核心定位是把單一台股個案，交給多位具不同性格、專長、權重的 AI agent 分身，模擬一場專業股市研討會議，最後輸出可執行的研究結論。
 
-這個專案的展示重點在於：
+這個 skill 專門處理一件事：
 
-- 從約 1800 檔台股建立市場級掃描能力
-- 用可解釋的排序邏輯整理 Top 20 研究候選股
-- 將單股判斷擴充為 thesis、action zones、risk framing 的深度輸出
-- 讓分析結果能被檢驗、討論、優化，而不是停留在模糊結論
+- 針對一檔台股做深入研判
+- 讓不同專業 AI analyst 各自提出論點與反對意見
+- 將技術面、籌碼面、基本面、事件面與風險管理整合成一份正式決策摘要
+- 明確給出趨勢判斷、買入區、停損區、停利區、失效條件與信心等級
 
-對想做台股 AI、量化研究、回測驗證與研究工具開發的人來說，這是一個同時具備展示價值與工程延展性的專業骨架。
+### v1.2 核心升級
 
-### 專案價值
+相較於先前版本，`v1.2` 將主軸明確收斂為 **單股、多 agent、會議式決策**：
 
-Taiwan Stock Radar 的核心不是「預測市場一定會怎麼走」，而是展示一種更專業的分析方式：
+- 將市場掃描降為背景展示層，首頁聚焦單股決策能力
+- 將單股分析視為一個完整專案，而不是掃描後附帶的一段補充
+- 透過多位專業 agent 分工，避免單一視角誤判
+- 允許 agent 之間保留歧見，而不是強迫輸出單一路徑
+- 最終輸出以「決策文件」為核心，而不是只給一句看多或看空
 
-- 先建立市場上下文，再談單一股票
-- 先做研究排序，再做深度判斷
-- 先定義風險，再定義機會
-- 先給可執行區間，再給方向觀點
+### 多重 AI Agent 專業研討會
 
-這讓它不只是選股工具，而更像一位能先觀察全市場、再對關鍵標的提出研究備忘錄的分析師。
+在 `v1.2` 中，單一股票會進入一個多 agent council。每位 agent 有不同的性格、分析責任、使用指標與投票權重。
 
-### 核心能力
+| AI Agent | 角色定位 | 核心觀察 | 權重 |
+|---|---|---|---:|
+| Chief Strategist | 主持研究會議，整合全局結論 | 市場背景、結論整合、衝突裁決 | 0.24 |
+| Technical Strategist | 技術面與趨勢結構分析 | 多週期趨勢、支撐壓力、量價結構 | 0.18 |
+| Chip Flow Analyst | 籌碼與資金流向分析 | 外資、投信、融資、主力結構 | 0.18 |
+| Fundamental Analyst | 基本面與品質分析 | 月營收、獲利品質、產品週期、估值敘事 | 0.17 |
+| Catalyst Analyst | 事件與催化因子分析 | 法說、營收公告、產業事件、政策節點 | 0.11 |
+| Risk Manager | 反方與風控代表 | 流動性、波動、失敗型態、部位風險 | 0.12 |
 
-| 能力 | 說明 |
+### 研討會議流程
+
+1. `Case setup`
+   確認股票代號、公司名稱、分析日期、時間週期、研究問題與目前已知限制。
+2. `Specialist briefs`
+   每位 agent 先獨立輸出自己的分析摘要，不先受其他 agent 影響。
+3. `Cross-examination`
+   由主持 agent 將衝突點攤開，例如技術面強但籌碼轉弱、基本面改善但事件風險逼近。
+4. `Weighted verdict`
+   依權重計算共識方向，同時保留反方意見與主要風險。
+5. `Decision packet`
+   輸出專業研究結論，包括趨勢預測、情境機率、買賣點、停損、停利與失效條件。
+
+### 最終輸出長什麼樣
+
+`Taiwan Stock Radar v1.2` 的標準輸出不是一句「看多」或「看空」，而是一份完整的單股決策包：
+
+- `Final thesis`
+  這檔股票目前最值得成立的主論點是什麼。
+- `Trend forecast`
+  以 tactical、swing、position 三種週期區分方向判斷。
+- `Scenario tree`
+  至少包含 base case、bull case、bear case，並標記觸發條件。
+- `Action zones`
+  給出理想買入區、積極買點、保守確認買點。
+- `Risk controls`
+  包含停損區、失效條件、不能追價的條件。
+- `Exit plan`
+  提供 TP1、TP2、減碼邏輯與失敗退出規則。
+- `Consensus and dissent`
+  顯示哪些 agent 支持、哪些 agent 保留、爭議點是什麼。
+
+### 為什麼值得追蹤
+
+- 它展示的是 **AI agent 編排能力**，不是單一 prompt 技巧。
+- 它專注在 **台灣股票**，而不是用美股邏輯硬套本地市場。
+- 它把分析過程做成 **可追蹤、可辯論、可更新** 的研究流程。
+- 它讓最終輸出更接近資深分析師的會議摘要，而不是散亂評論。
+
+### Repo 內容
+
+| 路徑 | 作用 |
 |---|---|
-| Full-market scan | 掃描約 1800 檔台股，建立市場觀察起點 |
-| Top 20 shortlist | 用排序邏輯整理最值得研究的候選標的 |
-| Single-stock deep dive | 對指定股票輸出 thesis、context、action zones、risk framing |
-| Explainable scoring | 以可拆解的因子與風險邏輯支撐排序結果 |
-| Action planning | 以買入區、停損區、停利區與 invalidation structure 呈現分析 |
+| [`SKILL.md`](./SKILL.md) | `v1.2` 核心 skill 定義，說明多 agent 單股分析流程 |
+| [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md) | 多 agent 研討會藍圖與輸出規格 |
+| [`references/taiwan-market-playbook.md`](./references/taiwan-market-playbook.md) | 台股市場脈絡、常見因子與台灣特有風險規則 |
+| [`references/prediction-framework.md`](./references/prediction-framework.md) | 預測語氣、情境推演、信心表達與失效條件框架 |
+| [`config/agent_personas.yaml`](./config/agent_personas.yaml) | 各 agent 的性格、專長、權重與分析責任 |
+| [`config/settings.yaml`](./config/settings.yaml) | 專案版本與分析模式設定 |
+| [`config/action_rules.yaml`](./config/action_rules.yaml) | 買點、停損、停利與決策輸出欄位規範 |
+| [`agents/openai.yaml`](./agents/openai.yaml) | agent 介面與預設提示描述 |
+| [`scripts/run_daily_scan.py`](./scripts/run_daily_scan.py) | 先前版本留下的 demo scan 腳本，作為展示型輔助資產 |
+| [`app/streamlit_app.py`](./app/streamlit_app.py) | 先前版本的 demo dashboard 骨架 |
 
-### GitHub 與網站
+### 版本說明
+
+- `v1.0`
+  建立台股分析架構基底。
+- `v1.1`
+  建立市場掃描與單股 deep-dive 的分析藍圖。
+- `v1.2`
+  正式聚焦單股研究，升級為多重 AI agent 專業研討會模式。
+
+### 公開入口
 
 - GitHub Repo: [https://github.com/rabbit68116-ux/taiwan-stock-radar](https://github.com/rabbit68116-ux/taiwan-stock-radar)
 - Public Website: [https://rabbit68116-ux.github.io/taiwan-stock-radar/](https://rabbit68116-ux.github.io/taiwan-stock-radar/)
 
-公開網站以專業展品介紹方式呈現這個 skill，重點展示：
-
-- 市場級掃描能力
-- Top 20 候選股示意
-- 單股 deep-dive 範例
-- 方法論與知識庫入口
-
-### Repo 內容
-
-這個 repo 目前已經整理成一套可供 AI agent 直接使用與延伸的台股分析 skill：
-
-| 路徑 | 作用 |
-|---|---|
-| [`SKILL.md`](./SKILL.md) | skill 的核心工作流與判斷規則 |
-| [`references/taiwan-market-playbook.md`](./references/taiwan-market-playbook.md) | 台股市場特性、因子與風險規則 |
-| [`references/prediction-framework.md`](./references/prediction-framework.md) | 預測輸出格式、情境推演與信心框架 |
-| [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md) | 市場掃描、Top 20 與單股 deep-dive 的分析藍圖 |
-| [`config/weights.yaml`](./config/weights.yaml) | 雷達評分權重設定 |
-| [`config/universe.yaml`](./config/universe.yaml) | 台股掃描股票池 |
-| [`config/action_rules.yaml`](./config/action_rules.yaml) | 買入區、停損、停利與 deep-dive 行動規則 |
-| [`scripts/run_daily_scan.py`](./scripts/run_daily_scan.py) | daily scan demo script |
-| [`app/streamlit_app.py`](./app/streamlit_app.py) | dashboard skeleton |
-
-### 快速開始
-
-安裝相依套件：
+### Quick Start
 
 ```bash
 python3 -m pip install -r requirements.txt
-```
-
-執行 daily scan demo：
-
-```bash
 python3 scripts/run_daily_scan.py
-```
-
-啟動 Streamlit demo：
-
-```bash
 streamlit run app/streamlit_app.py
 ```
 
-### 網站內容
-
-官方網站：
-
-- [https://rabbit68116-ux.github.io/taiwan-stock-radar/](https://rabbit68116-ux.github.io/taiwan-stock-radar/)
-
-`taiwan-stock-radar` 的公開網站以專業展品介紹方式呈現這個台股分析 skill 的核心價值：
-
-- 掃描約 1800 檔台股
-- 排出 Top 20 候選股
-- 給出方向判斷與觀察優先順序
-- 定義買入區、停損區、停利區與風險框架
-- 針對指定股票做更深度的單股研判
-
-網站內容位於 `docs/`，目前主要頁面如下：
-
-| 路徑 | 作用 |
-|---|---|
-| [`docs/index.html`](./docs/index.html) | 首頁，展示 skill 的定位、方法價值、Top 20 示意與單股 deep-dive 範例 |
-| [`docs/faq.html`](./docs/faq.html) | FAQ 頁，附 FAQ schema |
-| [`docs/methodology.html`](./docs/methodology.html) | 方法論頁，說明 1800 檔掃描、Top 20、單股 deep-dive 的流程 |
-| [`docs/use-cases.html`](./docs/use-cases.html) | 使用情境頁，說明 agent 與研究者如何使用這個 skill |
-| [`docs/docs.html`](./docs/docs.html) | 知識庫入口頁，整理 repo 內的重要規格、設定與腳本 |
-
-若要更新公開網站內容，直接調整 `docs/` 下的頁面即可。
-
-### 專案亮點
-
-| 亮點 | 說明 |
-|---|---|
-| 專注台股 | 結構從第一天就以台股資料、上櫃市場、族群輪動、籌碼與市場 regime 為核心 |
-| 可解釋 | 分數會拆出 Trend、Volume、Capital Flow、Quality、Sector、Market、Risk 等構面 |
-| 可回測 | 所有規則預期都能落成程式化回測，而不是停留在概念描述 |
-| 可展示 | 規劃包含 dashboard、heatmap、daily top 20、markdown summary 等展示層 |
-| AI-ready | 預留 `model_score`、`probability`、`expected_return`、`ranking_model` 供未來 ML 擴充 |
-
-### 使用者會得到什麼
-
-- 一套可維護的台股研究專案結構
-- 一個可逐步擴充的 feature engineering 與 scoring pipeline
-- 一個可持續驗證策略的 backtest 基礎
-- 一個能讓使用者快速理解市場狀態的 dashboard MVP
-- 一份可每日自動輸出的 Top 20 觀測清單
-
-### 視覺化架構圖
-
-```mermaid
-flowchart LR
-    A["Market Data Sources"] --> B["Data Loader"]
-    B --> C["Cleaner / Normalizer"]
-    C --> D["Feature Engineering"]
-    D --> E["Factor Calculation"]
-    E --> F["Radar Scoring"]
-    F --> G["Strategy Rules"]
-    G --> H["Risk Adjustment"]
-    H --> I["Signal Engine"]
-    I --> J["Backtest Engine"]
-    I --> K["Dashboard / Heatmap"]
-    I --> L["Daily Top 20 Output"]
-```
-
-### 模組地圖
-
-```mermaid
-flowchart TB
-    A["Data Layer"] --> B["Feature Layer"]
-    B --> C["Factor / Scoring Layer"]
-    C --> D["Strategy Layer"]
-    D --> E["Signal Layer"]
-    C --> F["Risk Layer"]
-    E --> G["Backtest Layer"]
-    E --> H["App / Visualization Layer"]
-    E --> I["Output / Automation Layer"]
-    F --> E
-```
-
-### 核心能力
-
-| 模組 | 內容 |
-|---|---|
-| Data | 台股資料載入、來源切換、欄位標準化、驗證 |
-| Features | 技術面、動能、量價、籌碼、基本面、族群、市場特徵 |
-| Scoring | 100 分制雷達評分、正規化、排序與可信度處理 |
-| Regime | Bull / Sideways / Bear / High Volatility 市場環境判斷 |
-| Risk | 風險旗標、風險分數、停損停利、倉位過濾 |
-| Signals | Strong Buy Watch / Buy Watch / Hold / Sell Watch / Risk Alert |
-| Backtest | 日頻回測、交易成本、滑價、績效報表 |
-| Visualization | Streamlit dashboard、sector heatmap、relative strength heatmap |
-| Automation | 每日自動掃描、Top 20 匯出、GitHub Actions / cron job |
-
-### 雷達評分概念
-
-預設會以 100 分制處理，並保留可調權重：
-
-| 構面 | 預設權重 |
-|---|---:|
-| Trend | 20 |
-| Volume | 15 |
-| Capital Flow | 20 |
-| Quality | 10 |
-| Momentum | 10 |
-| Sector | 10 |
-| Market | 5 |
-| Risk Adjustment | -20 ~ 0 |
-
-分數不是預測保證，而是觀測排序。  
-高分代表更值得進一步研究，不代表一定上漲；低分代表風險或條件不足，不代表一定下跌。
-
-### 預期輸出樣貌
-
-每日掃描完成後，專案預期會輸出類似內容：
-
-```text
-Top 20 Radar Watchlist
-Date: 2026-03-12
-
-1. 2330 台積電   Radar Score: 86   Signal: Strong Buy Watch
-2. 2454 聯發科   Radar Score: 83   Signal: Buy Watch
-3. 2303 聯電     Radar Score: 81   Signal: Buy Watch
-...
-```
-
-以及：
-
-- `output/daily_top20.csv`
-- `output/daily_top20.json`
-- `output/daily_summary.md`
-
-### 這個專案適合誰
-
-- 想研究台股量化策略的開發者
-- 想把選股流程做成資料化、規則化、可回測化的交易者
-- 想建立公開作品集或金融研究 demo 的工程師
-- 想把規則式框架進一步接上 LightGBM、XGBoost、ranking model 的研究者
-- 想追蹤一個 AI 原生金融研究系統從架構到落地過程的使用者
-
-### 為什麼現在值得追蹤
-
-- 這個 repo 已經不是模糊想法，而是有完整工程藍圖與模組邊界
-- 發展路線明確，後續每次更新都會是可見的實作里程碑
-- 適合長期追蹤：從資料層到前端展示層都會逐步補齊
-- 如果你對「AI 如何參與金融研究框架建設」有興趣，這會是一個值得觀察的公開案例
-
-### Roadmap
-
-**Phase 1**
-- Data loader
-- Feature pipeline
-- Radar scoring
-- Signal engine
-- Basic backtest
-
-**Phase 2**
-- Streamlit dashboard MVP
-- Daily auto scan
-- Markdown / CSV / JSON export
-
-**Phase 3**
-- Market heatmap
-- Sector rotation page
-- Historical scan archive
-
-### 發展路線圖
-
-```mermaid
-flowchart LR
-    A["v1.0 Foundation"] --> B["v1.1 Visualization+"]
-    B --> C["v1.2 ML Interface"]
-    C --> D["v2.0 Ranking + Portfolio"]
-```
-
-### 目前狀態
-
-目前 repo 同時包含兩個版本層：
-
-- 架構文件：`v1.0`
-- 資深分析師模式方案：`v1.1`
-
-接下來會逐步完成：
-
-1. repo 基礎結構
-2. 資料載入與統一 schema
-3. 特徵工程 pipeline
-4. 因子與雷達評分
-5. 訊號與回測引擎
-6. dashboard、heatmap 與 daily scan
-
-核心文件：
-- [`taiwan-stock-radar-architecture-v1.0-final.md`](./taiwan-stock-radar-architecture-v1.0-final.md)
-- [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md)
-
-### 風險聲明
-
-本專案僅供研究、教育與工程實作用途。  
-所有分數、排序、訊號與回測結果均不構成投資建議或保證報酬。
+上面的 scan 與 dashboard 目前仍保留作為展示型資產。  
+`v1.2` 的主要價值則在於 skill、blueprint、persona config 與單股研究流程本身。
 
 ---
 
 ## English
 
-### Overview
+### Exhibit Statement
 
-**taiwan-stock-radar** is an open-source research framework built specifically for the Taiwan stock market.  
-Its goal is not to produce opaque trading calls, but to create a research system that is explainable, backtestable, extensible, and publicly visible.
+**Taiwan Stock Radar v1.2** is a professional Taiwan-equity skill focused on one stock at a time. Instead of producing a shallow recommendation from a single prompt, it orchestrates a formal multi-agent research meeting around a selected TWSE or TPEX name.
 
-The project is designed as a full pipeline:
+The core idea is simple:
 
-- ingest market data
-- clean and normalize it into a unified schema
-- compute technical, volume, capital-flow, fundamental, sector, and market features
-- generate radar scores and ranked watchlists
-- emit buy, sell, hold, and risk-alert signals
-- validate rules through backtesting
-- present results through dashboards, heatmaps, and daily scan outputs
+- one stock enters the room
+- multiple specialist AI analysts review it from different angles
+- a chair agent moderates disagreement
+- the system produces a final decision packet with scenarios, trade zones, risk controls, and invalidation
 
-For anyone building Taiwan-market AI, quant research tools, ranking systems, or public finance demos, this repository is meant to be a strong foundation rather than a loose collection of notes.
+### What Makes v1.2 Different
 
-### What This Repo Now Includes
+- It is no longer centered on a broad-market ranking homepage narrative.
+- It treats single-stock analysis as the primary product, not as a secondary memo.
+- It uses specialist agents with different personalities, priorities, and weights.
+- It preserves disagreement instead of flattening everything into one generic conclusion.
+- It aims to resemble a professional investment discussion, not a sentiment summary.
 
-Beyond the architecture note, this repository is now being structured as a reusable skill for AI agents:
+### Specialist Agent Council
 
-| Path | Purpose |
-|---|---|
-| [`SKILL.md`](./SKILL.md) | Core workflow and reasoning rules for the agent |
-| [`references/taiwan-market-playbook.md`](./references/taiwan-market-playbook.md) | Taiwan-specific factor, regime, and risk logic |
-| [`references/prediction-framework.md`](./references/prediction-framework.md) | Forecast formatting, scenario framing, and confidence discipline |
-| [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md) | v1.1 senior-analyst blueprint for 1,800-stock scanning, Top 20 ranking, and deep-dive stock analysis |
-| [`references/github-landscape.md`](./references/github-landscape.md) | Design patterns extracted from leading open-source quant repos |
-| [`agents/openai.yaml`](./agents/openai.yaml) | Skill metadata for UI surfaces |
-| [`config/weights.yaml`](./config/weights.yaml) | Radar scoring weights |
-| [`config/universe.yaml`](./config/universe.yaml) | Scan universe configuration |
-| [`config/action_rules.yaml`](./config/action_rules.yaml) | Buy zone, stop, take-profit, and deep-dive action rules |
-| [`scripts/run_daily_scan.py`](./scripts/run_daily_scan.py) | First-pass daily scan demo script |
-| [`app/streamlit_app.py`](./app/streamlit_app.py) | Streamlit dashboard skeleton |
+| Agent | Responsibility | Examples of focus |
+|---|---|---|
+| Chief Strategist | Leads the meeting and writes the final synthesis | cross-agent conflicts, decision framing, conclusion quality |
+| Technical Strategist | Owns trend and structure | support, resistance, multi-timeframe trend, volume confirmation |
+| Chip Flow Analyst | Tracks positioning and capital flow | foreign flow, trust flow, financing, distribution risk |
+| Fundamental Analyst | Tests business quality | revenue trajectory, earnings quality, product cycle, valuation story |
+| Catalyst Analyst | Monitors timing | earnings, monthly revenue, policy, launches, industry catalysts |
+| Risk Manager | Challenges the thesis | liquidity, volatility, fragility, downside asymmetry |
 
-This shifts the repo from a concept page into a real skill bundle that can teach an AI agent how to reason about Taiwan stocks.
+### Standard Output
 
-### Senior Analyst Mode
+The expected output is a professional decision packet:
 
-The skill is being designed around a two-stage workflow:
+- final thesis
+- tactical, swing, and position-horizon trend view
+- base, bull, and bear scenarios
+- preferred buy zone
+- aggressive and conservative entry triggers
+- stop-loss and invalidation
+- take-profit ladder
+- weighted consensus and dissent notes
 
-1. Market-wide sweep
-   Target roughly 1,800 Taiwan stocks, score them through regime, sector rotation, stock factors, and risk vetoes, then return a Top 20 shortlist.
-2. Single-stock deep dive
-   When a user names one stock, switch into memo mode with peer mapping, business support, chip flow, catalyst timing, scenario tree, and action plan.
+### Project Assets
 
-This is the difference between a stock screener and an analyst-grade agent.
+The repository combines a public-facing presentation layer with reusable skill assets:
 
-### Quick Start
+- a `v1.2` skill definition in [`SKILL.md`](./SKILL.md)
+- a multi-agent research blueprint in [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md)
+- Taiwan-market heuristics in [`references/taiwan-market-playbook.md`](./references/taiwan-market-playbook.md)
+- prediction discipline in [`references/prediction-framework.md`](./references/prediction-framework.md)
+- persona configuration in [`config/agent_personas.yaml`](./config/agent_personas.yaml)
 
-Install dependencies:
+### Public Links
 
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-Run the demo daily scan:
-
-```bash
-python3 scripts/run_daily_scan.py
-```
-
-Launch the Streamlit demo:
-
-```bash
-streamlit run app/streamlit_app.py
-```
-
-### Why It Stands Out
-
-| Highlight | Description |
-|---|---|
-| Taiwan-first | Built around Taiwan market structure, OTC behavior, sector rotation, capital flow, and market regimes |
-| Explainable | Scores are decomposed into trend, volume, capital flow, quality, sector, market, and risk components |
-| Backtest-first | Strategy logic is expected to become executable and measurable, not just conceptual |
-| Demo-friendly | Planned outputs include dashboard views, heatmaps, Top 20 watchlists, and markdown summaries |
-| AI-ready | Interfaces reserve room for `model_score`, `probability`, `expected_return`, and `ranking_model` |
-
-### What Users Can Expect
-
-- A maintainable project structure for Taiwan equity research
-- A scalable feature engineering and scoring pipeline
-- A backtesting foundation for validating strategy ideas
-- A dashboard layer that makes market state easy to read
-- A daily automated watchlist output for repeatable market scanning
-
-### Visual Architecture
-
-```mermaid
-flowchart LR
-    A["Market Data Sources"] --> B["Data Loader"]
-    B --> C["Cleaner / Normalizer"]
-    C --> D["Feature Engineering"]
-    D --> E["Factor Calculation"]
-    E --> F["Radar Scoring"]
-    F --> G["Strategy Rules"]
-    G --> H["Risk Adjustment"]
-    H --> I["Signal Engine"]
-    I --> J["Backtest Engine"]
-    I --> K["Dashboard / Heatmap"]
-    I --> L["Daily Top 20 Output"]
-```
-
-### Layer Map
-
-```mermaid
-flowchart TB
-    A["Data Layer"] --> B["Feature Layer"]
-    B --> C["Factor / Scoring Layer"]
-    C --> D["Strategy Layer"]
-    D --> E["Signal Layer"]
-    C --> F["Risk Layer"]
-    E --> G["Backtest Layer"]
-    E --> H["App / Visualization Layer"]
-    E --> I["Output / Automation Layer"]
-    F --> E
-```
-
-### Core Capabilities
-
-| Module | Scope |
-|---|---|
-| Data | Taiwan data ingestion, provider switching, schema normalization, validation |
-| Features | Technical, momentum, volume, capital flow, fundamentals, sector, and market features |
-| Scoring | 100-point radar scoring, normalization, ranking, and confidence handling |
-| Regime | Bull, sideways, bear, and high-volatility detection |
-| Risk | Risk flags, risk score, stop-loss / take-profit, position filters |
-| Signals | Strong Buy Watch, Buy Watch, Hold, Sell Watch, Risk Alert |
-| Backtest | Daily-frequency testing, fees, slippage, and performance reports |
-| Visualization | Streamlit dashboard, sector heatmap, relative-strength heatmap |
-| Automation | Daily scan, Top 20 export, GitHub Actions or cron-based scheduling |
-
-### Radar Scoring Logic
-
-The default scoring structure is designed around a 100-point framework:
-
-| Component | Default Weight |
-|---|---:|
-| Trend | 20 |
-| Volume | 15 |
-| Capital Flow | 20 |
-| Quality | 10 |
-| Momentum | 10 |
-| Sector | 10 |
-| Market | 5 |
-| Risk Adjustment | -20 ~ 0 |
-
-A high score does not mean guaranteed upside.  
-A low score does not mean guaranteed downside.  
-The score is meant to rank research priority and market quality, not to promise returns.
-
-### Expected Output Snapshot
-
-```text
-Top 20 Radar Watchlist
-Date: 2026-03-12
-
-1. 2330 TSMC       Radar Score: 86   Signal: Strong Buy Watch
-2. 2454 MediaTek   Radar Score: 83   Signal: Buy Watch
-3. 2303 UMC        Radar Score: 81   Signal: Buy Watch
-...
-```
-
-Planned output files:
-
-- `output/daily_top20.csv`
-- `output/daily_top20.json`
-- `output/daily_summary.md`
-
-### Who Should Follow This
-
-- Developers building Taiwan stock research infrastructure
-- Traders who want systematic and backtestable selection logic
-- Engineers building finance demos or public open-source portfolios
-- Researchers who want to connect rule-based systems with LightGBM, XGBoost, or ranking models
-- Anyone interested in watching an AI-native market research framework grow in public
-
-### Why Follow or Star Now
-
-- The project already has a concrete engineering blueprint
-- The scope is broad but clearly segmented into modules and milestones
-- Progress will be visible and incremental, which makes the repo easy to track
-- It is an early-stage public build of a Taiwan-market AI research framework, which is still relatively rare
-
-### Roadmap
-
-**Phase 1**
-- Data loader
-- Feature pipeline
-- Radar scoring
-- Signal engine
-- Basic backtest
-
-**Phase 2**
-- Streamlit dashboard MVP
-- Daily auto scan
-- Markdown / CSV / JSON export
-
-**Phase 3**
-- Market heatmap
-- Sector rotation page
-- Historical scan archive
-
-### Development Timeline
-
-```mermaid
-flowchart LR
-    A["v1.0 Foundation"] --> B["v1.1 Visualization+"]
-    B --> C["v1.2 ML Interface"]
-    C --> D["v2.0 Ranking + Portfolio"]
-```
-
-### Current Status
-
-The repository now carries two version tracks:
-
-- architecture document: `v1.0`
-- senior-analyst operating blueprint: `v1.1`
-
-The next implementation stages will focus on:
-
-1. repository structure
-2. data loading and unified schemas
-3. feature pipelines
-4. factor and radar scoring
-5. signal and backtest engine
-6. dashboard, heatmap, and daily scan outputs
-
-Core documents:
-- [`taiwan-stock-radar-architecture-v1.0-final.md`](./taiwan-stock-radar-architecture-v1.0-final.md)
-- [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md)
-
-### Disclaimer
-
-This project is for research, education, and engineering purposes only.  
-Scores, rankings, signals, and backtest results are not investment advice and do not guarantee returns.
+- Website: [https://rabbit68116-ux.github.io/taiwan-stock-radar/](https://rabbit68116-ux.github.io/taiwan-stock-radar/)
+- GitHub: [https://github.com/rabbit68116-ux/taiwan-stock-radar](https://github.com/rabbit68116-ux/taiwan-stock-radar)

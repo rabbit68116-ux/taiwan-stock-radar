@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar FAQ</title>
-  <meta name="description" content="Frequently asked questions about Taiwan Stock Radar, a professional Taiwan equity analysis skill for AI agents, analysts, and developers.">
+  <meta name="description" content="Frequently asked questions about Taiwan Stock Radar, a single-stock multi-agent Taiwan equity analysis skill.">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar FAQ">
-  <meta property="og:description" content="Common questions about Taiwan Stock Radar and how it approaches Taiwan equity analysis.">
+  <meta property="og:description" content="Common questions about Taiwan Stock Radar and its multi-agent stock research workflow.">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -23,39 +23,39 @@
         "name": "What is Taiwan Stock Radar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taiwan Stock Radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. It combines market-wide scanning, Top 20 opportunity ranking, and structured single-stock deep-dive analysis."
+          "text": "Taiwan Stock Radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. In v1.2 it focuses on one stock at a time and runs a multi-agent research council instead of a generic stock summary."
         }
       },
       {
         "@type": "Question",
-        "name": "How does Taiwan Stock Radar produce a Top 20 shortlist?",
+        "name": "How does the multi-agent council work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The skill first scans a broad Taiwan stock universe, interprets market regime, sector rotation, factor strength, and risk filters, then ranks candidates and surfaces the names most worthy of closer research attention."
+          "text": "The skill assigns specialist AI roles such as technical, chip-flow, fundamental, catalyst, and risk analysis. Each role produces an independent view, the chair agent moderates disagreement, and the final output is synthesized through weighted judgment."
         }
       },
       {
         "@type": "Question",
-        "name": "Does a higher score mean the stock will definitely rise?",
+        "name": "Why use different AI personalities or specialist roles?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. A higher score means the framework currently sees more supporting evidence. It is a research ranking signal, not a guarantee of future performance."
+          "text": "Different specialist roles reduce single-view bias. They make the final result more rigorous by separating structure, flow, business quality, timing, and risk instead of collapsing everything into one voice."
         }
       },
       {
         "@type": "Question",
-        "name": "How are buy, stop, and take-profit zones handled?",
+        "name": "What does the final output include?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taiwan Stock Radar frames action zones rather than fixed promises. It describes a preferred buy area, an invalidation or stop area, and a take-profit or trim framework so the recommendation stays tied to risk management."
+          "text": "A standard v1.2 output includes the final thesis, base, bull, and bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and visible dissent notes from the council."
         }
       },
       {
         "@type": "Question",
-        "name": "What happens when the user requests a single-stock analysis?",
+        "name": "Does Taiwan Stock Radar guarantee stock performance?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The workflow expands into a deeper memo that includes thesis, peers, catalysts, context, scenario framing, and a more explicit action plan."
+          "text": "No. Taiwan Stock Radar is a research and decision-support skill. It provides structured judgment and risk-aware planning, not certainty about future returns."
         }
       }
     ]
@@ -83,7 +83,7 @@
       <div class="hero-card">
         <p class="eyebrow">Frequently asked questions</p>
         <h1>Taiwan Stock Radar FAQ</h1>
-        <p class="lead">This page presents concise answers to the most common questions about the skill’s role, scope, and analytical behavior. It is intended to be a clear reference for both human readers and AI systems.</p>
+        <p class="lead">This page answers the most common questions about the `v1.2` single-stock council model. It is written for both human readers and AI systems that need a clear description of the product behavior.</p>
       </div>
     </section>
 
@@ -92,27 +92,27 @@
         <div class="grid">
           <article class="card">
             <h2>What is Taiwan Stock Radar?</h2>
-            <p>Taiwan Stock Radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. It demonstrates a professional workflow that combines market scan, Top 20 ranking, and single-stock deep-dive analysis.</p>
+            <p>Taiwan Stock Radar is a Taiwan equity analysis skill centered on one stock at a time. It uses a formal multi-agent meeting structure to produce a stronger, more reviewable stock judgment.</p>
           </article>
           <article class="card">
-            <h2>How does it build a Top 20 shortlist?</h2>
-            <p>It begins with a broad Taiwan stock universe, evaluates market regime, sector rotation, factor strength, and risk filters, then narrows the output to a ranked shortlist of names that deserve deeper attention.</p>
+            <h2>Why does it use multiple specialist agents?</h2>
+            <p>Because one voice can miss important contradictions. The system separates technical structure, capital flow, fundamentals, catalysts, and risk so the final result is more balanced and more professional.</p>
           </article>
           <article class="card">
-            <h2>Does a higher score guarantee upside?</h2>
-            <p>No. A higher score indicates stronger supporting conditions inside the framework. It is a research priority signal, not a guarantee of future returns.</p>
+            <h2>What is the role of the chair agent?</h2>
+            <p>The chair moderates the meeting, identifies agreement and disagreement, and writes the final decision packet rather than letting one specialist dominate the entire conclusion.</p>
           </article>
           <article class="card">
             <h2>How are action zones expressed?</h2>
-            <p>The skill frames a preferred buy area, an invalidation or stop area, and a take-profit or trim framework. This keeps the output practical while remaining consistent with risk discipline.</p>
+            <p>The skill frames a preferred buy zone, alternate entry triggers, stop-loss, take-profit levels, and invalidation conditions. This keeps the recommendation tied to execution discipline.</p>
           </article>
           <article class="card">
-            <h2>What is included in a deep-dive memo?</h2>
-            <p>A deep-dive memo usually includes thesis, market context, peer comparison, catalyst review, action zones, and explicit risk framing for the selected stock.</p>
+            <h2>What happens if the agents disagree?</h2>
+            <p>Disagreement is preserved and shown in the final output. Mixed evidence should lower confidence, not disappear behind a forced one-line answer.</p>
           </article>
           <article class="card">
             <h2>Who is the project intended for?</h2>
-            <p>It is intended for AI agents that need a stronger analytical structure, analysts who value explainable workflows, and developers building Taiwan equity research products.</p>
+            <p>It is intended for AI agents that need a stronger stock-analysis workflow, analysts who value explainable reasoning, and builders creating Taiwan-equity research products.</p>
           </article>
         </div>
       </section>

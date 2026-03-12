@@ -19,7 +19,7 @@
       "publisher": {
         "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization"
       },
-      "description": "A professional Taiwan equity analysis skill website for AI agents, analysts, and developers."
+      "description": "A professional Taiwan stock skill website focused on single-stock multi-agent research."
     },
     {
       "@type": "SoftwareApplication",
@@ -29,7 +29,7 @@
       "operatingSystem": "Web",
       "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
       "downloadUrl": "https://github.com/rabbit68116-ux/taiwan-stock-radar",
-      "description": "An open-source Taiwan equity analysis skill that demonstrates how an AI agent can scan a broad stock universe, rank the top 20 opportunities, and produce structured single-stock analysis."
+      "description": "An open-source Taiwan equity analysis skill that runs a specialist AI research council around one selected stock and returns scenarios, action zones, and invalidation rules."
     }
   ]
 }

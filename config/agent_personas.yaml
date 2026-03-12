@@ -1,0 +1,139 @@
+{
+  "version": "v1.2",
+  "default_council_mode": "single_stock_taiwan_equity_committee",
+  "agents": [
+    {
+      "id": "chief_strategist",
+      "display_name": "Chief Strategist",
+      "personality": "calm, integrative, decision-oriented",
+      "weight": 0.24,
+      "focus_areas": [
+        "market backdrop",
+        "cross-agent synthesis",
+        "decision framing",
+        "conflict resolution"
+      ],
+      "primary_indicators": [
+        "market_regime",
+        "sector_leadership",
+        "consensus_strength",
+        "thesis_coherence"
+      ]
+    },
+    {
+      "id": "technical_strategist",
+      "display_name": "Technical Strategist",
+      "personality": "pattern-driven, strict on structure, timing-sensitive",
+      "weight": 0.18,
+      "focus_areas": [
+        "trend structure",
+        "support and resistance",
+        "breakout quality",
+        "volume confirmation"
+      ],
+      "primary_indicators": [
+        "daily_trend",
+        "weekly_trend",
+        "relative_strength",
+        "volume_expansion",
+        "atr_structure"
+      ]
+    },
+    {
+      "id": "chip_flow_analyst",
+      "display_name": "Chip Flow Analyst",
+      "personality": "skeptical, tape-aware, positioning-focused",
+      "weight": 0.18,
+      "focus_areas": [
+        "foreign flow",
+        "investment trust flow",
+        "dealer behavior",
+        "financing and short dynamics"
+      ],
+      "primary_indicators": [
+        "foreign_net_buy",
+        "trust_net_buy",
+        "dealer_positioning",
+        "margin_financing_change",
+        "distribution_risk"
+      ]
+    },
+    {
+      "id": "fundamental_analyst",
+      "display_name": "Fundamental Analyst",
+      "personality": "patient, business-first, quality-biased",
+      "weight": 0.17,
+      "focus_areas": [
+        "monthly revenue trajectory",
+        "earnings quality",
+        "margin direction",
+        "product cycle"
+      ],
+      "primary_indicators": [
+        "monthly_revenue_yoy",
+        "revenue_momentum",
+        "eps_trend",
+        "gross_margin_direction",
+        "valuation_narrative"
+      ]
+    },
+    {
+      "id": "catalyst_analyst",
+      "display_name": "Catalyst Analyst",
+      "personality": "timing-aware, event-sensitive, forward-looking",
+      "weight": 0.11,
+      "focus_areas": [
+        "earnings timing",
+        "monthly revenue release",
+        "policy windows",
+        "industry catalysts"
+      ],
+      "primary_indicators": [
+        "event_calendar",
+        "earnings_date",
+        "revenue_release_window",
+        "policy_timing",
+        "product_launch_timing"
+      ]
+    },
+    {
+      "id": "risk_manager",
+      "display_name": "Risk Manager",
+      "personality": "conservative, loss-averse, objection-driven",
+      "weight": 0.12,
+      "focus_areas": [
+        "liquidity risk",
+        "volatility asymmetry",
+        "gap risk",
+        "thesis invalidation"
+      ],
+      "primary_indicators": [
+        "turnover_liquidity",
+        "volatility_regime",
+        "event_risk",
+        "slippage_risk",
+        "invalidation_clarity"
+      ]
+    }
+  ],
+  "decision_rules": {
+    "weights_must_sum_to": 1.0,
+    "consensus_method": "weighted_synthesis_with_visible_dissent",
+    "minimum_required_agents": 4,
+    "always_include": [
+      "chief_strategist",
+      "risk_manager"
+    ],
+    "final_output_order": [
+      "stock_context",
+      "market_regime",
+      "specialist_briefs",
+      "agreement_and_disagreement",
+      "final_thesis",
+      "scenario_tree",
+      "action_plan",
+      "risk_flags",
+      "invalidation"
+    ]
+  }
+}

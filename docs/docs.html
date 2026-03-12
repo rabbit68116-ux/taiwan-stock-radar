@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar Knowledge Base</title>
-  <meta name="description" content="Knowledge base and documentation entry points for Taiwan Stock Radar, including skill definitions, references, configuration files, and demo scripts.">
+  <meta name="description" content="Knowledge base and documentation entry points for Taiwan Stock Radar, including skill definitions, reference blueprints, persona configs, and demo assets.">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar Knowledge Base">
-  <meta property="og:description" content="The source documents behind the Taiwan Stock Radar skill.">
+  <meta property="og:description" content="The source documents behind the Taiwan Stock Radar single-stock research council.">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -35,26 +35,26 @@
       <div class="hero-card">
         <p class="eyebrow">Knowledge base</p>
         <h1>The reference library behind Taiwan Stock Radar</h1>
-        <p class="lead">This page gathers the source documents that define how Taiwan Stock Radar thinks, ranks, and frames stock analysis. It functions as the reference shelf behind the public exhibition layer.</p>
+        <p class="lead">This page gathers the source documents that define how the `v1.2` single-stock council behaves. It serves as the technical reference shelf behind the public-facing exhibition pages.</p>
       </div>
     </section>
 
     <main>
       <section>
         <h2>Recommended starting points</h2>
-        <p class="section-intro">For readers who want to understand the skill quickly, these are the best documents to open first. Together they explain the behavior model, ranking logic, and trade-planning rules.</p>
+        <p class="section-intro">These are the best documents to open first if you want to understand how the skill thinks, how the council is organized, and how the final decision packet is structured.</p>
         <div class="grid">
           <article class="card">
             <h3>SKILL.md</h3>
-            <p>The main behavior document for the skill. It captures the expected analytical workflow in its most direct form.</p>
+            <p>The main behavior document. It defines the single-stock council workflow and the expected discipline of the final output.</p>
           </article>
           <article class="card">
             <h3>Agent analyst blueprint</h3>
-            <p>Explains the operating model behind market sweep, Top 20 ranking, and single-stock deep-dive expansion.</p>
+            <p>Explains the specialist roles, meeting protocol, weighted synthesis, and required sections of the final decision packet.</p>
           </article>
           <article class="card">
-            <h3>Action rules</h3>
-            <p>Describes how buy zones, invalidation logic, take-profit framing, and deeper research triggers are handled.</p>
+            <h3>Agent personas</h3>
+            <p>Stores role identity, personality, weight, and indicator focus for each specialist analyst inside the council.</p>
           </article>
         </div>
       </section>
@@ -71,27 +71,27 @@
           <tbody>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar">GitHub repository</a></td>
-              <td>The main home of the project code, documents, and implementation roadmap.</td>
+              <td>The main home of the project code, documents, and public showcase.</td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/SKILL.md">SKILL.md</a></td>
-              <td>Defines the main analytical workflow and expected agent behavior.</td>
+              <td>Defines the main analytical workflow and expected council behavior.</td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/agent-analyst-blueprint.md">Agent analyst blueprint</a></td>
-              <td>Documents the project’s higher-level analysis model and shortlist-to-memo progression.</td>
+              <td>Documents the higher-level operating model for the single-stock research council.</td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/weights.yaml">Weights configuration</a></td>
-              <td>Stores the default factor-weighting logic behind the ranking framework.</td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/agent_personas.yaml">Agent personas</a></td>
+              <td>Stores persona weights, specialties, and indicator priorities for each analyst role.</td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/action_rules.yaml">Action rules</a></td>
-              <td>Defines zone framing, stop logic, take-profit rules, and deep-dive triggers.</td>
+              <td>Defines the expected meeting phases, mandatory output sections, and action-plan fields.</td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_daily_scan.py">Daily scan script</a></td>
-              <td>Runs the demo shortlist flow and produces structured output files.</td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_daily_scan.py">Legacy scan demo</a></td>
+              <td>Preserves an earlier demo asset from the broader-market exploration stage.</td>
             </tr>
           </tbody>
         </table>
@@ -101,16 +101,16 @@
         <h2>What these documents govern</h2>
         <div class="grid">
           <article class="card">
-            <h3>Market interpretation</h3>
-            <p>How the skill reads Taiwan market context, sector leadership, and regime conditions before reaching stock-level judgments.</p>
+            <h3>Specialist reasoning</h3>
+            <p>How the skill separates technical, flow, fundamental, catalyst, and risk thinking before synthesis.</p>
           </article>
           <article class="card">
-            <h3>Opportunity ranking</h3>
-            <p>How stocks are prioritized, how factor signals are weighted, and how research attention is allocated.</p>
+            <h3>Decision structure</h3>
+            <p>How the system turns disagreement into a weighted verdict with explicit confidence and invalidation.</p>
           </article>
           <article class="card">
-            <h3>Execution-aware framing</h3>
-            <p>How directional ideas are translated into practical planning with buy, stop, take-profit, and invalidation structures.</p>
+            <h3>Execution-aware output</h3>
+            <p>How the council translates analysis into buy zones, stop-loss logic, take-profit framing, and risk notes.</p>
           </article>
         </div>
       </section>

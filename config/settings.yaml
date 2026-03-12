@@ -1,15 +1,32 @@
 {
   "project": {
     "name": "taiwan-stock-radar",
-    "display_name": "taiwan-stock-radar",
-    "plan_version": "v1.1",
-    "mode": "demo"
+    "display_name": "Taiwan Stock Radar",
+    "plan_version": "v1.2",
+    "mode": "single_stock_council"
+  },
+  "analysis": {
+    "primary_scope": "single_stock",
+    "default_horizon": "swing",
+    "supported_horizons": [
+      "tactical",
+      "swing",
+      "position"
+    ]
+  },
+  "council": {
+    "enabled": true,
+    "default_agent_count": 6,
+    "consensus_threshold": 0.68,
+    "dissent_threshold": 0.24,
+    "persona_config_path": "config/agent_personas.yaml"
   },
   "scan": {
     "production_target_universe_size": 1800,
     "top_n": 20,
     "deep_dive_top_k": 3,
-    "default_horizon": "swing"
+    "default_horizon": "swing",
+    "legacy_demo_mode": true
   },
   "market": {
     "default_regime": "sideways",
@@ -24,7 +41,7 @@
     "output_dir": "output"
   },
   "app": {
-    "title": "taiwan-stock-radar",
-    "subtitle": "Taiwan stock market scan, ranking, and signal demo"
+    "title": "Taiwan Stock Radar",
+    "subtitle": "Single-stock Taiwan equity council with legacy scan demo support"
   }
 }

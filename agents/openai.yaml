@@ -1,8 +1,8 @@
 interface:
-  display_name: "taiwan-stock-radar"
-  short_description: "台股判斷、預測與研究流程 skill"
+  display_name: "Taiwan Stock Radar"
+  short_description: "台股單股多重 AI agent 研討分析 skill"
   brand_color: "#C43D2B"
-  default_prompt: "Use $taiwan-stock-radar to analyze Taiwan stocks, explain the signal logic, and propose cautious forecast scenarios."
+  default_prompt: "Use $taiwan-stock-radar to run a single-stock Taiwan equity research council with multiple specialist AI agents, then return the weighted thesis, trend scenarios, buy zone, stop loss, take-profit plan, and invalidation."
 
 policy:
   allow_implicit_invocation: true

@@ -7,39 +7,39 @@
       "name": "What is Taiwan Stock Radar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Taiwan Stock Radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. It combines market-wide scanning, Top 20 opportunity ranking, and structured single-stock deep-dive analysis."
+        "text": "Taiwan Stock Radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. In v1.2 it focuses on one stock at a time and runs a multi-agent research council instead of a generic stock summary."
       }
     },
     {
       "@type": "Question",
-      "name": "How does Taiwan Stock Radar produce a Top 20 shortlist?",
+      "name": "How does the multi-agent council work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The skill scans a broad Taiwan stock universe, interprets market regime, sector rotation, factor strength, and risk filters, then ranks candidates and surfaces the names most worthy of closer research attention."
+        "text": "The skill assigns specialist AI roles such as technical, chip-flow, fundamental, catalyst, and risk analysis. Each role produces an independent view, the chair agent moderates disagreement, and the final output is synthesized through weighted judgment."
       }
     },
     {
       "@type": "Question",
-      "name": "Does a higher score guarantee upside?",
+      "name": "Why use different AI personalities or specialist roles?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. A higher score indicates stronger supporting conditions inside the framework. It is a research priority signal, not a guarantee of future returns."
+        "text": "Different specialist roles reduce single-view bias. They make the final result more rigorous by separating structure, flow, business quality, timing, and risk instead of collapsing everything into one voice."
       }
     },
     {
       "@type": "Question",
-      "name": "How are buy, stop, and take-profit zones handled?",
+      "name": "What does the final output include?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Taiwan Stock Radar frames action zones rather than fixed promises. It describes a preferred buy area, an invalidation or stop area, and a take-profit or trim framework so the recommendation stays tied to risk management."
+        "text": "A standard v1.2 output includes the final thesis, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and visible dissent notes from the council."
       }
     },
     {
       "@type": "Question",
-      "name": "What happens when the user requests a single-stock analysis?",
+      "name": "Does Taiwan Stock Radar guarantee stock performance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The workflow expands into a deeper memo that includes thesis, peers, catalysts, context, scenario framing, and a more explicit action plan."
+        "text": "No. Taiwan Stock Radar is a research and decision-support skill. It provides structured judgment and risk-aware planning, not certainty about future returns."
       }
     }
   ]
