@@ -84,6 +84,44 @@ python3 scripts/run_daily_scan.py
 streamlit run app/streamlit_app.py
 ```
 
+### AEO / AI 可發現性
+
+我把網站可發現性的內容整理成兩層：
+
+- [`aeo/`](./aeo)：規劃與部署參考檔
+- [`docs/`](./docs)：可直接拿去開 GitHub Pages 的網站內容與 crawler 資產
+
+目前網站主位址先統一對齊到：
+
+- [https://rabbit68116-ux.github.io/taiwan-stock-radar/](https://rabbit68116-ux.github.io/taiwan-stock-radar/)
+
+`aeo/` 內包含：
+
+| 路徑 | 作用 |
+|---|---|
+| [`aeo/llms.txt`](./aeo/llms.txt) | 給 AI agent 的純文字網站摘要 |
+| [`aeo/robots.txt`](./aeo/robots.txt) | 給 crawler 的抓取規則 |
+| [`aeo/sitemap.xml`](./aeo/sitemap.xml) | 給 crawler 的網站地圖 |
+| [`aeo/website-structured-data.json`](./aeo/website-structured-data.json) | 首頁 JSON-LD 模板 |
+| [`aeo/faq-schema.json`](./aeo/faq-schema.json) | FAQPage schema 模板 |
+| [`aeo/site-faq.md`](./aeo/site-faq.md) | 可直接改寫成網站 FAQ 頁的內容 |
+| [`aeo/implementation-checklist.md`](./aeo/implementation-checklist.md) | 部署前 AEO 檢查清單 |
+
+`docs/` 內則是實際網站檔案：
+
+| 路徑 | 作用 |
+|---|---|
+| [`docs/index.html`](./docs/index.html) | 首頁，直接說明專案是什麼、怎麼運作 |
+| [`docs/faq.html`](./docs/faq.html) | FAQ 頁，附 FAQ schema |
+| [`docs/methodology.html`](./docs/methodology.html) | 方法論頁，說明 1800 檔掃描到 Top 20 的流程 |
+| [`docs/use-cases.html`](./docs/use-cases.html) | 使用情境頁，說明 agent 與研究者怎麼用 |
+| [`docs/docs.html`](./docs/docs.html) | 文件入口頁，提供穩定引用路徑 |
+| [`docs/llms.txt`](./docs/llms.txt) | 給 AI agent 的純文字摘要 |
+| [`docs/robots.txt`](./docs/robots.txt) | 給 crawler 的抓取規則 |
+| [`docs/sitemap.xml`](./docs/sitemap.xml) | 網站地圖 |
+
+如果要正式開站，只要在 GitHub repo 開啟 Pages，來源選 `main` branch 的 `/docs` 即可。
+
 ### 專案亮點
 
 | 亮點 | 說明 |

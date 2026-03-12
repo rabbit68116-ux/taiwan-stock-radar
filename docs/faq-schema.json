@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is taiwan-stock-radar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "taiwan-stock-radar is an open-source Taiwan stock market research and ranking system for AI agents, analysts, and developers. It combines market sweep, top 20 ranking, and single-stock deep-dive analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does taiwan-stock-radar create a top 20 stock list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It first scans a broad Taiwan stock universe, evaluates market regime, sector rotation, factor strength, and risk filters, then ranks candidates and surfaces the top 20 stocks that deserve closer attention."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a high score mean a stock will definitely go up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A high score means the stock currently has stronger supporting conditions in the framework. It is a ranking and research signal, not a guarantee of future returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are buy and sell points determined?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The workflow frames action zones instead of fixed promises. It identifies a preferred buy zone, invalidation or stop zone, and one or more take-profit or trim zones based on trend structure, volatility, and risk rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when a user asks about one specific stock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The system switches into a deeper research mode. It adds peer comparison, business and catalyst context, market support or resistance, scenario trees, and a more explicit action plan for that stock."
+      }
+    }
+  ]
+}

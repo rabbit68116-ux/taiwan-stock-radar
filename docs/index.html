@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>taiwan-stock-radar | Taiwan stock research for AI agents</title>
+  <meta name="description" content="taiwan-stock-radar is a Taiwan stock market research and ranking system for AI agents, analysts, and developers. It scans a broad universe, ranks the top 20 candidates, and supports single-stock deep dives with action zones and risk framing.">
+  <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="taiwan-stock-radar">
+  <meta property="og:description" content="Taiwan stock research, ranking, top 20 watchlists, and deep-dive stock analysis for AI agents.">
+  <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/">
+  <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization",
+        "name": "taiwan-stock-radar",
+        "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
+        "logo": "https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/logo.svg",
+        "sameAs": [
+          "https://github.com/rabbit68116-ux/taiwan-stock-radar"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#website",
+        "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
+        "name": "taiwan-stock-radar",
+        "publisher": {
+          "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization"
+        },
+        "description": "A Taiwan stock market research, ranking, and analysis website for AI agents, analysts, and developers."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#software",
+        "name": "taiwan-stock-radar",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
+        "downloadUrl": "https://github.com/rabbit68116-ux/taiwan-stock-radar",
+        "description": "An open-source Taiwan stock research and ranking system that helps AI agents scan a broad stock universe, shortlist the top 20 candidates, and produce deeper analysis for a selected stock."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell">
+      <a class="brand" href="./">
+        <img src="assets/logo.svg" alt="taiwan-stock-radar logo">
+        <span>taiwan-stock-radar</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./faq.html">FAQ</a>
+        <a href="./methodology.html">Methodology</a>
+        <a href="./use-cases.html">Use cases</a>
+        <a href="./docs.html">Docs</a>
+        <a href="./llms.txt">llms.txt</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-grid">
+        <article class="hero-card">
+          <p class="eyebrow">AI-native Taiwan stock research</p>
+          <h1>scan 1800 names, surface the top 20, then deep-dive one stock with context</h1>
+          <p class="lead">taiwan-stock-radar is an open-source Taiwan stock market research and ranking system for AI agents, analysts, and developers. It is built to turn noisy market data into explainable rankings, action zones, and structured stock memos.</p>
+          <p class="lead">它不是黑盒投資建議網站，而是一個可研究、可驗證、可回測、可擴充的台股分析系統，讓 AI agent 能像資深分析師一樣先掃市場，再針對單一股票做更深的判斷。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/rabbit68116-ux/taiwan-stock-radar">Open GitHub repo</a>
+            <a class="button button-secondary" href="./methodology.html">Read methodology</a>
+            <a class="button button-secondary" href="./faq.html">Read FAQ</a>
+          </div>
+        </article>
+
+        <aside class="panel">
+          <h2>at a glance</h2>
+          <div class="meta-list">
+            <div>
+              <span class="label">market</span>
+              <span class="value">Taiwan equities</span>
+            </div>
+            <div>
+              <span class="label">scan universe</span>
+              <span class="value">around 1800 listed names</span>
+            </div>
+            <div>
+              <span class="label">primary output</span>
+              <span class="value">top 20 watchlist</span>
+            </div>
+            <div>
+              <span class="label">deep-dive output</span>
+              <span class="value">stock memo with buy and sell zones</span>
+            </div>
+            <div>
+              <span class="label">current focus</span>
+              <span class="value">signals, backtest, dashboard, AEO</span>
+            </div>
+            <div>
+              <span class="label">last updated</span>
+              <span class="value">March 13, 2026</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <main>
+      <section>
+        <h2>what this site helps AI understand</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>market sweep mode</h3>
+            <p>The system first evaluates the broad Taiwan stock universe, checks market regime, sector rotation, factor strength, and risk filters, then narrows the list into a smaller set of high-priority names.</p>
+          </article>
+          <article class="card">
+            <h3>top 20 ranking mode</h3>
+            <p>The main ranking output is a top 20 watchlist. Each stock is scored with explainable factor components rather than an opaque headline number.</p>
+          </article>
+          <article class="card">
+            <h3>single-stock deep-dive mode</h3>
+            <p>When a user asks about one ticker, the workflow expands into peer comparison, catalyst review, action zones, scenario trees, and risk-aware planning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="quote">
+          <p><strong>Stable summary for citation:</strong> taiwan-stock-radar is an open-source Taiwan stock research stack designed for AI agents and human analysts. It scans a broad Taiwan stock universe, ranks the most actionable candidates, and structures deeper stock analysis into explainable research outputs.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>core workflow</h2>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <strong>1</strong>
+            <span class="muted">load and normalize Taiwan stock data</span>
+          </div>
+          <div class="kpi">
+            <strong>2</strong>
+            <span class="muted">compute regime, factor, and risk features</span>
+          </div>
+          <div class="kpi">
+            <strong>3</strong>
+            <span class="muted">rank the universe and shortlist the top 20</span>
+          </div>
+          <div class="kpi">
+            <strong>4</strong>
+            <span class="muted">define buy, stop, and take-profit zones</span>
+          </div>
+          <div class="kpi">
+            <strong>5</strong>
+            <span class="muted">expand to a deep-dive memo for one stock</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>expected outputs</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Output</th>
+              <th>What it contains</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>daily top 20 watchlist</td>
+              <td>ranked candidates, scores, direction bias, and watchlist priority</td>
+            </tr>
+            <tr>
+              <td>single-stock memo</td>
+              <td>trend view, risk flags, peers, catalysts, and trade planning zones</td>
+            </tr>
+            <tr>
+              <td>dashboard</td>
+              <td>market overview, ranking table, stock detail, sector heatmap, and backtest summary</td>
+            </tr>
+            <tr>
+              <td>structured files</td>
+              <td><code>daily_top20.csv</code>, <code>daily_top20.json</code>, and a readable markdown summary</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-card">
+        <p><strong>Risk note:</strong> taiwan-stock-radar is a research and decision-support system. It does not guarantee returns and should not be treated as certainty about future price movements.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

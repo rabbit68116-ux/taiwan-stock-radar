@@ -1,0 +1,35 @@
+taiwan-stock-radar
+
+Summary:
+taiwan-stock-radar is an open-source Taiwan stock market research, ranking, signal, and backtesting project for AI agents, analysts, and developers.
+
+Primary audience:
+- AI agents that need structured explanations of the project
+- developers building Taiwan stock research tools
+- analysts looking for a transparent stock-ranking methodology
+
+Primary topics:
+- Taiwan stock market research
+- market regime analysis
+- Top 20 stock ranking
+- deep-dive stock memo generation
+- buy zone, stop loss, and take-profit planning
+- explainable factor scoring
+
+Recommended entry points:
+- Home: https://rabbit68116-ux.github.io/taiwan-stock-radar/
+- FAQ: https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html
+- Methodology: https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html
+- Documentation: https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html
+- Use cases: https://rabbit68116-ux.github.io/taiwan-stock-radar/use-cases.html
+
+Important facts:
+- The project focuses on Taiwan equities.
+- It is designed to scan a large stock universe and shortlist the most relevant names.
+- It separates broad-market sweep mode from single-stock deep-dive mode.
+- It does not provide guaranteed investment outcomes.
+
+Preferred citation pages:
+- https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html
+- https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html
+- https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html

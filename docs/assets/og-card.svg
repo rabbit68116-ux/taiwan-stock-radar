@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">taiwan-stock-radar open graph card</title>
+  <desc id="desc">Open graph preview image for taiwan-stock-radar.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7f7f2"/>
+      <stop offset="55%" stop-color="#eef2ea"/>
+      <stop offset="100%" stop-color="#f4ebe3"/>
+    </linearGradient>
+    <linearGradient id="radar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f6f5f"/>
+      <stop offset="100%" stop-color="#d88433"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="885" cy="315" r="190" fill="none" stroke="#1f6f5f" stroke-opacity="0.18" stroke-width="6"/>
+  <circle cx="885" cy="315" r="128" fill="none" stroke="#1f6f5f" stroke-opacity="0.22" stroke-width="6"/>
+  <circle cx="885" cy="315" r="68" fill="none" stroke="#1f6f5f" stroke-opacity="0.25" stroke-width="6"/>
+  <path d="M885 315 L1002 230" stroke="url(#radar)" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="885" cy="315" r="14" fill="#1f6f5f"/>
+  <circle cx="1002" cy="230" r="12" fill="#d88433"/>
+  <text x="92" y="188" font-family="'Segoe UI', 'Noto Sans TC', sans-serif" font-size="34" fill="#1f6f5f">taiwan stock research for AI agents</text>
+  <text x="92" y="276" font-family="'Segoe UI', 'Noto Sans TC', sans-serif" font-size="72" font-weight="700" fill="#1b1c16">taiwan-stock-radar</text>
+  <text x="92" y="360" font-family="'Segoe UI', 'Noto Sans TC', sans-serif" font-size="30" fill="#5f6255">scan 1800 names. shortlist top 20. deep-dive one stock.</text>
+  <text x="92" y="426" font-family="'Segoe UI', 'Noto Sans TC', sans-serif" font-size="30" fill="#5f6255">regime. factor scoring. action zones. explainable output.</text>
+</svg>

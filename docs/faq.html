@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>taiwan-stock-radar FAQ</title>
+  <meta name="description" content="FAQ for taiwan-stock-radar, including what it does, how top 20 rankings are formed, how buy and sell zones are framed, and how single-stock deep dives work.">
+  <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="taiwan-stock-radar FAQ">
+  <meta property="og:description" content="Common questions about taiwan-stock-radar and its Taiwan stock ranking workflow.">
+  <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
+  <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is taiwan-stock-radar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "taiwan-stock-radar is an open-source Taiwan stock market research and ranking system for AI agents, analysts, and developers. It combines market sweep, top 20 ranking, and single-stock deep-dive analysis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does taiwan-stock-radar create a top 20 stock list?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It first scans a broad Taiwan stock universe, evaluates market regime, sector rotation, factor strength, and risk filters, then ranks candidates and surfaces the top 20 stocks that deserve closer attention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a high score mean a stock will definitely go up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. A high score means the framework currently sees stronger supporting conditions. It is a research ranking and should not be treated as certainty about price direction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are buy and sell points handled?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The system defines action zones rather than fixed promises. It suggests a preferred buy zone, an invalidation or stop zone, and take-profit or trim zones based on structure, volatility, and risk constraints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the single-stock deep-dive mode?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When the user names one stock, the workflow expands into peer mapping, catalyst review, business support, scenario trees, and more explicit buy, reduce, and exit planning."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell">
+      <a class="brand" href="./">
+        <img src="assets/logo.svg" alt="taiwan-stock-radar logo">
+        <span>taiwan-stock-radar</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./">Home</a>
+        <a href="./methodology.html">Methodology</a>
+        <a href="./use-cases.html">Use cases</a>
+        <a href="./docs.html">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-card">
+        <p class="eyebrow">FAQ</p>
+        <h1>frequently asked questions about taiwan-stock-radar</h1>
+        <p class="lead">This page is written for both humans and AI agents. It gives short, direct answers that are safe to cite when explaining what the project does and how its ranking outputs should be interpreted.</p>
+      </div>
+    </section>
+
+    <main>
+      <section>
+        <div class="grid">
+          <article class="card">
+            <h2>What is taiwan-stock-radar?</h2>
+            <p>taiwan-stock-radar is an open-source Taiwan stock market research and ranking system for AI agents, analysts, and developers. It combines broad market scanning, top 20 ranking, and single-stock deep-dive analysis.</p>
+          </article>
+          <article class="card">
+            <h2>How does it build a top 20 list?</h2>
+            <p>It first scans a broad Taiwan stock universe, evaluates market regime, sector rotation, factor strength, and risk filters, then ranks candidates and surfaces the top 20 stocks that deserve closer attention.</p>
+          </article>
+          <article class="card">
+            <h2>Does a high score guarantee upside?</h2>
+            <p>No. A high score means the framework currently sees stronger supporting conditions. It is a research ranking and should not be treated as certainty about price direction.</p>
+          </article>
+          <article class="card">
+            <h2>How are buy and sell points handled?</h2>
+            <p>The system defines action zones rather than fixed promises. It suggests a preferred buy zone, an invalidation or stop zone, and take-profit or trim zones based on structure, volatility, and risk constraints.</p>
+          </article>
+          <article class="card">
+            <h2>What is the single-stock deep-dive mode?</h2>
+            <p>When the user names one stock, the workflow expands into peer mapping, catalyst review, business support, scenario trees, and more explicit buy, reduce, and exit planning.</p>
+          </article>
+          <article class="card">
+            <h2>Who should use it?</h2>
+            <p>It is useful for developers building Taiwan stock workflows, analysts who want transparent ranking logic, and AI agents that need stable structure for market reasoning.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

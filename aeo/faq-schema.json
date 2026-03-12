@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is taiwan-stock-radar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "taiwan-stock-radar is an open-source Taiwan stock market research, ranking, signal, and backtesting system designed for AI agents, analysts, and developers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does taiwan-stock-radar create a top 20 stock list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It first scans a broad Taiwan stock universe, evaluates market regime, sector rotation, factor strength, and risk filters, then ranks candidates and surfaces the top 20 stocks that deserve closer attention."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can taiwan-stock-radar explain buy and sell levels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The workflow frames action zones instead of fixed promises. It identifies a preferred buy zone, invalidation or stop zone, and one or more take-profit or trim zones based on trend structure, volatility, and risk rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does taiwan-stock-radar provide guaranteed investment advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The project is for research, education, and engineering use. Scores, rankings, and setups are not guaranteed investment outcomes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when a user asks about one specific stock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The system switches into a deeper research mode. It adds peer comparison, business and catalyst context, market support or resistance, scenario trees, and a more explicit action plan for that stock."
+      }
+    }
+  ]
+}

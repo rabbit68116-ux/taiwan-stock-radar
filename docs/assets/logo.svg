@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">taiwan-stock-radar logo</title>
+  <desc id="desc">A circular radar mark for taiwan-stock-radar.</desc>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f6f5f"/>
+      <stop offset="100%" stop-color="#d88433"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="#f7f7f2"/>
+  <circle cx="60" cy="60" r="38" fill="none" stroke="url(#g)" stroke-width="6"/>
+  <circle cx="60" cy="60" r="24" fill="none" stroke="#1f6f5f" stroke-opacity="0.35" stroke-width="4"/>
+  <path d="M60 60 L88 44" stroke="#d88433" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="60" cy="60" r="7" fill="#1f6f5f"/>
+  <circle cx="88" cy="44" r="6" fill="#d88433"/>
+</svg>

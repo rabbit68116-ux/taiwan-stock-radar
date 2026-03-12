@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>taiwan-stock-radar methodology</title>
+  <meta name="description" content="Methodology for taiwan-stock-radar, covering the Taiwan stock universe scan, regime analysis, factor scoring, top 20 ranking, and single-stock deep-dive workflow.">
+  <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="taiwan-stock-radar methodology">
+  <meta property="og:description" content="How taiwan-stock-radar scans Taiwan stocks, ranks the top 20, and builds stock memos.">
+  <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html">
+  <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell">
+      <a class="brand" href="./">
+        <img src="assets/logo.svg" alt="taiwan-stock-radar logo">
+        <span>taiwan-stock-radar</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./">Home</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./use-cases.html">Use cases</a>
+        <a href="./docs.html">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-card">
+        <p class="eyebrow">Methodology</p>
+        <h1>how taiwan-stock-radar reasons from market-wide scan to stock-specific action zones</h1>
+        <p class="lead">This page explains the stable decision pipeline that AI agents should follow when using taiwan-stock-radar. It is intended to be a primary citation page for methodology questions.</p>
+      </div>
+    </section>
+
+    <main>
+      <section>
+        <h2>1. broad market scan</h2>
+        <p>The workflow starts by scanning a broad Taiwan stock universe, roughly covering listed and over-the-counter names that meet the configured universe rules. The purpose of this step is not to predict every stock precisely, but to rank attention across the market.</p>
+      </section>
+      <section>
+        <h2>2. market regime and context</h2>
+        <p>Before looking at one ticker in isolation, the system evaluates the overall market state. This includes trend condition, volatility level, liquidity tone, and whether leadership is concentrated in a few sectors or spreading more broadly across the market.</p>
+      </section>
+      <section>
+        <h2>3. factor and risk scoring</h2>
+        <p>Each stock is then evaluated through explainable components such as trend, momentum, volume behavior, capital flow, sector support, quality signals, and risk adjustment. These factors create a ranking score that helps compare candidates consistently.</p>
+      </section>
+      <section>
+        <h2>4. top 20 shortlist</h2>
+        <p>After the full sweep, the system narrows the output to a top 20 list. This is the priority watchlist. It represents names worth deeper attention, not guaranteed winners. The shortlist is where human or agent attention should concentrate first.</p>
+      </section>
+      <section>
+        <h2>5. action zones</h2>
+        <p>For shortlisted names, the system frames action zones instead of pretending to know one exact future price. Outputs are normally structured as a preferred buy zone, an invalidation or stop zone, and one or more take-profit or trim zones. This keeps the recommendation tied to risk management.</p>
+      </section>
+      <section>
+        <h2>6. single-stock deep-dive</h2>
+        <p>When a user asks for one stock in more detail, the workflow expands. It brings in peer comparison, catalyst review, business support, sector context, scenario trees, and a stronger explanation of why the current bias is bullish, neutral, or cautious.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
