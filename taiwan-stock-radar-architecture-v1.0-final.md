@@ -1,9 +1,9 @@
-# Taiwan Stock Radar v1.0
+# taiwan-stock-radar v1.0
 
 台股量化研究框架 — 正式版本 1.0 架構與說明文件
 
 版本：v1.0  
-方案名稱：`Taiwan Stock Radar`  
+方案名稱：`taiwan-stock-radar`  
 repo slug：`taiwan-stock-radar`  
 定位：開源台股量化研究 / 選股 / 回測 / 訊號框架  
 用途：作為 GitHub 專案正式架構說明，供後續由 Codex App 接手工程實作。
@@ -12,7 +12,7 @@ repo slug：`taiwan-stock-radar`
 
 ## 1. 專案定位
 
-**Taiwan Stock Radar** 是一個面向台灣股票市場的開源量化研究框架。  
+**taiwan-stock-radar** 是一個面向台灣股票市場的開源量化研究框架。  
 它的目標不是直接提供保證獲利的投資建議，而是提供一套 **可擴充、可回測、可解釋、可展示** 的研究基礎設施，讓開發者、研究者與交易者可以：
 
 - 建立台股市場資料管線

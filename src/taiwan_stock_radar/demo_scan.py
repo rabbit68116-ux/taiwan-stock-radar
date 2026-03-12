@@ -216,7 +216,7 @@ def generate_scan_result(
     return {
         "analysis_date": analysis_date,
         "mode": settings.get("project", {}).get("mode", "demo"),
-        "project": settings.get("project", {}).get("display_name", "Taiwan Stock Radar"),
+        "project": settings.get("project", {}).get("display_name", "taiwan-stock-radar"),
         "market_regime": regime,
         "top_n": top_n,
         "universe_size": len(ranked),

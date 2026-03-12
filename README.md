@@ -1,4 +1,4 @@
-# Taiwan Stock Radar
+# taiwan-stock-radar
 
 [![GitHub repo](https://img.shields.io/badge/GitHub-rabbit68116--ux%2Ftaiwan--stock--radar-181717?logo=github)](https://github.com/rabbit68116-ux/taiwan-stock-radar)
 ![Status](https://img.shields.io/badge/status-architecture%20v1.0-blue)
@@ -18,7 +18,7 @@ Open-source Taiwan stock market research, scoring, signal, and backtesting frame
 
 ### 專案介紹
 
-**Taiwan Stock Radar** 是一個專為台灣股票市場打造的開源量化研究框架。  
+**taiwan-stock-radar** 是一個專為台灣股票市場打造的開源量化研究框架。  
 它的目標不是提供不可解釋的黑盒投資建議，而是建立一套真正可以被研究、驗證、展示、持續擴充的台股研究系統。
 
 這個專案把量化研究常見卻分散的流程，整合成一條完整資料鏈：
@@ -260,7 +260,7 @@ flowchart LR
 
 ### Overview
 
-**Taiwan Stock Radar** is an open-source research framework built specifically for the Taiwan stock market.  
+**taiwan-stock-radar** is an open-source research framework built specifically for the Taiwan stock market.  
 Its goal is not to produce opaque trading calls, but to create a research system that is explainable, backtestable, extensible, and publicly visible.
 
 The project is designed as a full pipeline:

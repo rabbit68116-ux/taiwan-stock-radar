@@ -1,7 +1,7 @@
 {
   "project": {
     "name": "taiwan-stock-radar",
-    "display_name": "Taiwan Stock Radar",
+    "display_name": "taiwan-stock-radar",
     "plan_version": "v1.1",
     "mode": "demo"
   },
@@ -24,7 +24,7 @@
     "output_dir": "output"
   },
   "app": {
-    "title": "Taiwan Stock Radar",
+    "title": "taiwan-stock-radar",
     "subtitle": "Taiwan stock market scan, ranking, and signal demo"
   }
 }

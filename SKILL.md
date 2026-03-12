@@ -3,7 +3,7 @@ name: taiwan-stock-radar
 description: Use when the task is to analyze Taiwan stocks, explain market state, build watchlists, rank or screen TWSE/TPEX names, or make cautious forecast scenarios. Prioritize Taiwan-specific evidence such as market regime, sector rotation, monthly revenue, institutional flows, liquidity, and risk flags. Separate observations from forecasts, state the time horizon explicitly, and never present predictions as certainty.
 ---
 
-# Taiwan Stock Radar
+# taiwan-stock-radar
 
 Current operating blueprint version: `v1.1`
 Skill ID / repo slug: `taiwan-stock-radar`
