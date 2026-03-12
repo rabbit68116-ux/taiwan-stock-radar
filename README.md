@@ -32,6 +32,20 @@ Open-source Taiwan stock market research, scoring, signal, and backtesting frame
 
 對想做台股 AI、量化選股、回測驗證、研究工具開發的人來說，這不是一份零散筆記，而是一個可以持續演進的工程骨架。
 
+### 這個 repo 現在包含什麼
+
+除了架構文件，repo 現在已經開始整理成一個可直接給 AI agent 使用的台股 skill：
+
+| 路徑 | 作用 |
+|---|---|
+| [`SKILL.md`](./SKILL.md) | agent 的核心工作流與判斷規則 |
+| [`references/taiwan-market-playbook.md`](./references/taiwan-market-playbook.md) | 台股市場判斷、因子與風險規則 |
+| [`references/prediction-framework.md`](./references/prediction-framework.md) | 預測輸出格式、情境推演與信心框架 |
+| [`references/github-landscape.md`](./references/github-landscape.md) | 參考 GitHub 熱門量化與回測專案後整理出的設計模式 |
+| [`agents/openai.yaml`](./agents/openai.yaml) | skill UI metadata |
+
+這代表後續不只是在做一個專案介紹頁，而是在建立一個真的能讓 agent 學會「如何分析台股」的 reusable skill。
+
 ### 專案亮點
 
 | 亮點 | 說明 |
@@ -216,6 +230,20 @@ The project is designed as a full pipeline:
 - present results through dashboards, heatmaps, and daily scan outputs
 
 For anyone building Taiwan-market AI, quant research tools, ranking systems, or public finance demos, this repository is meant to be a strong foundation rather than a loose collection of notes.
+
+### What This Repo Now Includes
+
+Beyond the architecture note, this repository is now being structured as a reusable skill for AI agents:
+
+| Path | Purpose |
+|---|---|
+| [`SKILL.md`](./SKILL.md) | Core workflow and reasoning rules for the agent |
+| [`references/taiwan-market-playbook.md`](./references/taiwan-market-playbook.md) | Taiwan-specific factor, regime, and risk logic |
+| [`references/prediction-framework.md`](./references/prediction-framework.md) | Forecast formatting, scenario framing, and confidence discipline |
+| [`references/github-landscape.md`](./references/github-landscape.md) | Design patterns extracted from leading open-source quant repos |
+| [`agents/openai.yaml`](./agents/openai.yaml) | Skill metadata for UI surfaces |
+
+This shifts the repo from a concept page into a real skill bundle that can teach an AI agent how to reason about Taiwan stocks.
 
 ### Why It Stands Out
 
