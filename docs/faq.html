@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taiwan Stock Radar FAQ</title>
-  <meta name="description" content="Frequently asked questions about Taiwan Stock Radar, a single-stock multi-agent Taiwan equity analysis skill.">
+  <title>Taiwan Stock Radar 常見問題 FAQ</title>
+  <meta name="description" content="Taiwan Stock Radar 常見問題頁，說明這個以單股為核心的台股多 Agent 研究 skill 如何運作，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Taiwan Stock Radar FAQ">
-  <meta property="og:description" content="Common questions about Taiwan Stock Radar and its multi-agent stock research workflow.">
+  <meta property="og:title" content="Taiwan Stock Radar 常見問題 FAQ">
+  <meta property="og:description" content="了解 Taiwan Stock Radar 如何以多位專業 AI analyst 對單一台股進行深度研究。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -20,42 +20,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is Taiwan Stock Radar?",
+        "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taiwan Stock Radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. In v1.2 it focuses on one stock at a time and runs a multi-agent research council instead of a generic stock summary."
+          "text": "Taiwan Stock Radar 是一個面向台灣股票單股研究的 AI skill。v1.2 版本不再以廣泛掃描為主，而是聚焦於單一股票，透過多位 specialist AI analyst 的正式研討會議，輸出結構化判斷。 Taiwan Stock Radar is an AI skill for Taiwan single-stock research. In v1.2 it focuses on one stock at a time and produces a structured decision packet through a formal multi-agent research council."
         }
       },
       {
         "@type": "Question",
-        "name": "How does the multi-agent council work?",
+        "name": "多 Agent 研討會是怎麼運作的？ How does the multi-agent council work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The skill assigns specialist AI roles such as technical, chip-flow, fundamental, catalyst, and risk analysis. Each role produces an independent view, the chair agent moderates disagreement, and the final output is synthesized through weighted judgment."
+          "text": "系統會將技術面、籌碼面、基本面、催化因子與風險管理拆成不同角色，各自先獨立提出判斷，再由主持型 agent 做權重整合與衝突裁決。 The system separates technical, chip-flow, fundamental, catalyst, and risk roles, lets them form independent views first, and then asks a chair agent to synthesize the final verdict through weighted judgment."
         }
       },
       {
         "@type": "Question",
-        "name": "Why use different AI personalities or specialist roles?",
+        "name": "為什麼要建立不同性格或專業的 AI analyst？ Why use multiple specialist personas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Different specialist roles reduce single-view bias. They make the final result more rigorous by separating structure, flow, business quality, timing, and risk instead of collapsing everything into one voice."
+          "text": "因為單一觀點很容易忽略矛盾訊號。不同 specialist 角色可以把趨勢、資金流、商業品質、事件時點與風險分開檢視，讓最後結論更接近專業研究會議。 Multiple specialist personas reduce single-view bias by separating structure, flow, business quality, timing, and risk into distinct voices."
         }
       },
       {
         "@type": "Question",
-        "name": "What does the final output include?",
+        "name": "最終輸出會包含哪些內容？ What does the final output include?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A standard v1.2 output includes the final thesis, base, bull, and bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and visible dissent notes from the council."
+          "text": "標準輸出包含最終 thesis、base/bull/bear 三情境、建議買入區、進場觸發條件、停損、停利階梯、失效條件、信心分級，以及保留下來的反方意見。 A standard output includes the final thesis, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and preserved dissent notes."
         }
       },
       {
         "@type": "Question",
-        "name": "Does Taiwan Stock Radar guarantee stock performance?",
+        "name": "Taiwan Stock Radar 會保證報酬嗎？ Does it guarantee stock performance?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Taiwan Stock Radar is a research and decision-support skill. It provides structured judgment and risk-aware planning, not certainty about future returns."
+          "text": "不會。Taiwan Stock Radar 是研究與決策輔助 skill，不提供保證報酬，也不應被理解為對未來股價的確定承諾。 No. Taiwan Stock Radar is a research and decision-support skill, not a guarantee of future returns."
         }
       }
     ]
@@ -70,11 +70,26 @@
         <span>Taiwan Stock Radar</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="./">Home</a>
-        <a href="./case-study.html">Case Study</a>
-        <a href="./methodology.html">Methodology</a>
-        <a href="./use-cases.html">Use Cases</a>
-        <a href="./docs.html">Knowledge Base</a>
+        <a href="./">
+          首頁
+          <span class="en-translation">Home</span>
+        </a>
+        <a href="./case-study.html">
+          案例頁
+          <span class="en-translation">Case Study</span>
+        </a>
+        <a href="./methodology.html">
+          方法論
+          <span class="en-translation">Methodology</span>
+        </a>
+        <a href="./use-cases.html">
+          使用情境
+          <span class="en-translation">Use Cases</span>
+        </a>
+        <a href="./docs.html">
+          知識庫
+          <span class="en-translation">Knowledge Base</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -82,9 +97,12 @@
   <div class="shell">
     <section class="hero">
       <div class="hero-card">
-        <p class="eyebrow">Frequently asked questions</p>
-        <h1>Taiwan Stock Radar FAQ</h1>
-        <p class="lead">This page answers the most common questions about the `v1.2` single-stock council model. It is written for both human readers and AI systems that need a clear description of the product behavior.</p>
+        <p class="eyebrow">常見問題<span class="en-translation">Frequently Asked Questions</span></p>
+        <h1>關於 Taiwan Stock Radar 的常見問題
+          <span class="en-translation">Common questions about Taiwan Stock Radar</span>
+        </h1>
+        <p class="lead">這一頁整理 Taiwan Stock Radar `v1.2` 最常被問到的核心問題，說明這個單股多 Agent 研究 skill 怎麼運作、會產出什麼，以及它的邊界在哪裡。</p>
+        <p class="lead en-translation">This page answers the most common questions about Taiwan Stock Radar `v1.2`, including how the single-stock multi-agent workflow operates, what it returns, and where its limits are.</p>
       </div>
     </section>
 
@@ -92,28 +110,46 @@
       <section>
         <div class="grid">
           <article class="card">
-            <h2>What is Taiwan Stock Radar?</h2>
-            <p>Taiwan Stock Radar is a Taiwan equity analysis skill centered on one stock at a time. It uses a formal multi-agent meeting structure to produce a stronger, more reviewable stock judgment.</p>
+            <h2>什麼是 Taiwan Stock Radar？
+              <span class="en-translation">What is Taiwan Stock Radar?</span>
+            </h2>
+            <p>它是一個專門用來研究單一台股的 AI skill。它不只給一句看多或看空，而是模擬一場正式研究會議，輸出可執行、可檢討的決策文件。</p>
+            <p class="en-translation">It is an AI skill built for one Taiwan stock at a time. Instead of a loose bullish or bearish comment, it produces a reviewable decision packet through a formal research meeting.</p>
           </article>
           <article class="card">
-            <h2>Why does it use multiple specialist agents?</h2>
-            <p>Because one voice can miss important contradictions. The system separates technical structure, capital flow, fundamentals, catalysts, and risk so the final result is more balanced and more professional.</p>
+            <h2>為什麼要用多位 specialist agent？
+              <span class="en-translation">Why use multiple specialist agents?</span>
+            </h2>
+            <p>因為一種分析語氣很容易忽略其他風險。把技術面、籌碼面、基本面、催化因子與風控拆開後，結論會更平衡，也更像專業投研團隊。</p>
+            <p class="en-translation">Because one analytical voice can hide important contradictions. Separating structure, flow, fundamentals, catalysts, and risk creates a more balanced result.</p>
           </article>
           <article class="card">
-            <h2>What is the role of the chair agent?</h2>
-            <p>The chair moderates the meeting, identifies agreement and disagreement, and writes the final decision packet rather than letting one specialist dominate the entire conclusion.</p>
+            <h2>主持 agent 扮演什麼角色？
+              <span class="en-translation">What does the chair agent do?</span>
+            </h2>
+            <p>主持 agent 不是另一個分析師，而是會議主持人。它負責整理共識、標出分歧、做權重整合，最後形成正式結論。</p>
+            <p class="en-translation">The chair agent is not just another analyst. It moderates the meeting, surfaces disagreement, applies weighting, and writes the final verdict.</p>
           </article>
           <article class="card">
-            <h2>How are action zones expressed?</h2>
-            <p>The skill frames a preferred buy zone, alternate entry triggers, stop-loss, take-profit levels, and invalidation conditions. This keeps the recommendation tied to execution discipline.</p>
+            <h2>買賣點會怎麼表達？
+              <span class="en-translation">How are buy and sell points expressed?</span>
+            </h2>
+            <p>輸出不只是一句「可以買」，而是會定義建議買入區、替代進場條件、停損、停利階梯與失效條件，把判斷連回可執行的交易紀律。</p>
+            <p class="en-translation">The output defines a preferred buy zone, alternate entry triggers, stop-loss, take-profit ladder, and invalidation so the thesis stays connected to execution discipline.</p>
           </article>
           <article class="card">
-            <h2>What happens if the agents disagree?</h2>
-            <p>Disagreement is preserved and shown in the final output. Mixed evidence should lower confidence, not disappear behind a forced one-line answer.</p>
+            <h2>如果 agents 彼此意見不同怎麼辦？
+              <span class="en-translation">What happens when agents disagree?</span>
+            </h2>
+            <p>分歧會被保留下來，而不是被一句結論硬蓋掉。這也是為什麼最終文件會同時呈現共識與 dissent memo。</p>
+            <p class="en-translation">Disagreement is preserved rather than erased. That is why the final packet shows both consensus and dissent notes.</p>
           </article>
           <article class="card">
-            <h2>Who is the project intended for?</h2>
-            <p>It is intended for AI agents that need a stronger stock-analysis workflow, analysts who value explainable reasoning, and builders creating Taiwan-equity research products.</p>
+            <h2>這個專案適合誰？
+              <span class="en-translation">Who is this project for?</span>
+            </h2>
+            <p>它適合想建立更嚴謹台股研判流程的 AI agent、需要可解釋輸出的分析者，以及要把投研方法產品化的開發者。</p>
+            <p class="en-translation">It is designed for AI agents that need a stronger Taiwan-stock workflow, analysts who value explainable reasoning, and builders productizing research methods.</p>
           </article>
         </div>
       </section>

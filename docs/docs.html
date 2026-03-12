@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taiwan Stock Radar Knowledge Base</title>
-  <meta name="description" content="Knowledge base and documentation entry points for Taiwan Stock Radar, including skill definitions, reference blueprints, persona configs, and demo assets.">
+  <title>Taiwan Stock Radar 知識庫 Knowledge Base</title>
+  <meta name="description" content="Taiwan Stock Radar 知識庫與文件入口，整理 skill 定義、agent blueprint、persona 設定與公開展示頁，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Taiwan Stock Radar Knowledge Base">
-  <meta property="og:description" content="The source documents behind the Taiwan Stock Radar single-stock research council.">
+  <meta property="og:title" content="Taiwan Stock Radar 知識庫 Knowledge Base">
+  <meta property="og:description" content="查看 Taiwan Stock Radar 背後的 skill 定義、藍圖、角色設定與案例頁。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -22,11 +22,26 @@
         <span>Taiwan Stock Radar</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="./">Home</a>
-        <a href="./case-study.html">Case Study</a>
-        <a href="./faq.html">FAQ</a>
-        <a href="./methodology.html">Methodology</a>
-        <a href="./use-cases.html">Use Cases</a>
+        <a href="./">
+          首頁
+          <span class="en-translation">Home</span>
+        </a>
+        <a href="./case-study.html">
+          案例頁
+          <span class="en-translation">Case Study</span>
+        </a>
+        <a href="./faq.html">
+          常見問題
+          <span class="en-translation">FAQ</span>
+        </a>
+        <a href="./methodology.html">
+          方法論
+          <span class="en-translation">Methodology</span>
+        </a>
+        <a href="./use-cases.html">
+          使用情境
+          <span class="en-translation">Use Cases</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -34,92 +49,113 @@
   <div class="shell">
     <section class="hero">
       <div class="hero-card">
-        <p class="eyebrow">Knowledge base</p>
-        <h1>The reference library behind Taiwan Stock Radar</h1>
-        <p class="lead">This page gathers the source documents that define how the `v1.2` single-stock council behaves. It serves as the technical reference shelf behind the public-facing exhibition pages.</p>
+        <p class="eyebrow">知識庫<span class="en-translation">Knowledge Base</span></p>
+        <h1>Taiwan Stock Radar 背後的參考文件
+          <span class="en-translation">The reference library behind Taiwan Stock Radar</span>
+        </h1>
+        <p class="lead">這一頁整理 `v1.2` 單股多 Agent 研究 skill 的核心文件。它是公開展示頁背後的文件書架，讓訪客能看見方法如何被定義，而不只是看結果。</p>
+        <p class="lead en-translation">This page gathers the core documents behind the `v1.2` single-stock council. It is the reference shelf behind the public exhibit, showing how the method is defined instead of only showing the output.</p>
       </div>
     </section>
 
     <main>
       <section>
-        <h2>Recommended starting points</h2>
-        <p class="section-intro">These are the best documents to open first if you want to understand how the skill thinks, how the council is organized, and how the final decision packet is structured.</p>
+        <h2>建議先看的文件
+          <span class="en-translation">Recommended starting points</span>
+        </h2>
+        <p class="section-intro">如果你想先理解這個 skill 如何思考、委員會如何組成，以及最終決策文件如何成形，以下幾份文件最值得先打開。</p>
+        <p class="section-intro en-translation">If you want to understand how the skill thinks, how the council is organized, and how the final packet is structured, these are the best places to start.</p>
         <div class="grid">
           <article class="card">
             <h3>SKILL.md</h3>
-            <p>The main behavior document. It defines the single-stock council workflow and the expected discipline of the final output.</p>
+            <p>主行為定義文件，說明單股委員會 workflow 與輸出紀律。</p>
+            <p class="en-translation">The main behavior document defining the single-stock council workflow and output discipline.</p>
           </article>
           <article class="card">
             <h3>Agent analyst blueprint</h3>
-            <p>Explains the specialist roles, meeting protocol, weighted synthesis, and required sections of the final decision packet.</p>
+            <p>說明 specialist 角色、會議流程、權重整合邏輯，以及最終決策文件必須包含的段落。</p>
+            <p class="en-translation">Explains specialist roles, meeting protocol, weighted synthesis, and the required sections of the decision packet.</p>
           </article>
           <article class="card">
             <h3>Agent personas</h3>
-            <p>Stores role identity, personality, weight, and indicator focus for each specialist analyst inside the council.</p>
+            <p>定義每位 analyst 的人格、專長、權重與指標偏好。</p>
+            <p class="en-translation">Stores role identity, specialty, weighting, and indicator focus for each analyst persona.</p>
           </article>
           <article class="card">
             <h3>Case study</h3>
-            <p>Shows the public-facing exhibit version of a full single-stock council memo, from case setup to invalidation discipline.</p>
+            <p>展示公開版本的完整單股會議輸出，從個案設定一路到失效條件。</p>
+            <p class="en-translation">Shows the public exhibit version of a full single-stock council memo, from case setup to invalidation.</p>
           </article>
         </div>
       </section>
 
       <section>
-        <h2>Core references</h2>
+        <h2>核心參考
+          <span class="en-translation">Core references</span>
+        </h2>
         <table>
           <thead>
             <tr>
-              <th>Resource</th>
-              <th>Role in the project</th>
+              <th>資源
+                <span class="en-translation">Resource</span>
+              </th>
+              <th>在專案中的角色
+                <span class="en-translation">Role in the project</span>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar">GitHub repository</a></td>
-              <td>The main home of the project code, documents, and public showcase.</td>
+              <td>專案主要入口，包含程式、文件與公開展示頁。<span class="en-translation">The main home of the project code, documents, and public showcase.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/SKILL.md">SKILL.md</a></td>
-              <td>Defines the main analytical workflow and expected council behavior.</td>
+              <td>定義主分析流程與委員會行為。<span class="en-translation">Defines the main analytical workflow and expected council behavior.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/agent-analyst-blueprint.md">Agent analyst blueprint</a></td>
-              <td>Documents the higher-level operating model for the single-stock research council.</td>
+              <td>描述單股研究委員會的上層操作模型。<span class="en-translation">Documents the higher-level operating model for the single-stock research council.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/agent_personas.yaml">Agent personas</a></td>
-              <td>Stores persona weights, specialties, and indicator priorities for each analyst role.</td>
+              <td>記錄各 analyst 角色的權重、專長與指標優先序。<span class="en-translation">Stores persona weights, specialties, and indicator priorities for each analyst role.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/action_rules.yaml">Action rules</a></td>
-              <td>Defines the expected meeting phases, mandatory output sections, and action-plan fields.</td>
+              <td>規範會議階段、必要輸出欄位與操作計畫格式。<span class="en-translation">Defines required meeting phases, output sections, and action-plan fields.</span></td>
             </tr>
             <tr>
               <td><a href="https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html">Public case study</a></td>
-              <td>Displays the polished exhibit version of a single-stock committee output.</td>
+              <td>展示經過包裝的單股委員會輸出樣貌。<span class="en-translation">Displays the polished exhibit version of a single-stock committee output.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_daily_scan.py">Legacy scan demo</a></td>
-              <td>Preserves an earlier demo asset from the broader-market exploration stage.</td>
+              <td>保留較早期市場掃描階段的展示型資產。<span class="en-translation">Preserves an earlier demo asset from the broader-market exploration stage.</span></td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <section>
-        <h2>What these documents govern</h2>
+        <h2>這些文件控制什麼
+          <span class="en-translation">What these documents govern</span>
+        </h2>
         <div class="grid">
           <article class="card">
             <h3>Specialist reasoning</h3>
-            <p>How the skill separates technical, flow, fundamental, catalyst, and risk thinking before synthesis.</p>
+            <p>定義技術面、籌碼、基本面、催化與風險如何在整合前先被分開思考。</p>
+            <p class="en-translation">How technical, flow, fundamental, catalyst, and risk reasoning are separated before synthesis.</p>
           </article>
           <article class="card">
             <h3>Decision structure</h3>
-            <p>How the system turns disagreement into a weighted verdict with explicit confidence and invalidation.</p>
+            <p>定義委員會如何把分歧轉成帶有信心與失效條件的最終 verdict。</p>
+            <p class="en-translation">How the council turns disagreement into a weighted verdict with explicit confidence and invalidation.</p>
           </article>
           <article class="card">
             <h3>Execution-aware output</h3>
-            <p>How the council translates analysis into buy zones, stop-loss logic, take-profit framing, and risk notes.</p>
+            <p>定義分析如何落到買入區、停損、停利框架與風險備註。</p>
+            <p class="en-translation">How the council translates analysis into buy zones, stop-loss logic, take-profit framing, and risk notes.</p>
           </article>
         </div>
       </section>

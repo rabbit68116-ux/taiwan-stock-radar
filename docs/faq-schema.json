@@ -4,42 +4,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is Taiwan Stock Radar?",
+      "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Taiwan Stock Radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. In v1.2 it focuses on one stock at a time and runs a multi-agent research council instead of a generic stock summary."
+        "text": "Taiwan Stock Radar 是一個面向台灣股票單股研究的 AI skill。v1.2 版本聚焦於單一股票，透過多位 specialist AI analyst 的正式研討會議輸出結構化決策文件。 Taiwan Stock Radar is an AI skill for Taiwan single-stock research. In v1.2 it focuses on one stock at a time and produces a structured decision packet through a formal multi-agent council."
       }
     },
     {
       "@type": "Question",
-      "name": "How does the multi-agent council work?",
+      "name": "多 Agent 研討會如何運作？ How does the multi-agent council work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The skill assigns specialist AI roles such as technical, chip-flow, fundamental, catalyst, and risk analysis. Each role produces an independent view, the chair agent moderates disagreement, and the final output is synthesized through weighted judgment."
+        "text": "系統會把技術面、籌碼面、基本面、催化因子與風控拆成不同 specialist 角色，先分別形成觀點，再由主持 agent 做權重整合與衝突裁決。 The system separates technical, chip-flow, fundamental, catalyst, and risk roles, lets them form independent views, and then asks a chair agent to synthesize the final verdict."
       }
     },
     {
       "@type": "Question",
-      "name": "Why use different AI personalities or specialist roles?",
+      "name": "為什麼需要不同專業的 AI personas？ Why use multiple specialist personas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Different specialist roles reduce single-view bias. They make the final result more rigorous by separating structure, flow, business quality, timing, and risk instead of collapsing everything into one voice."
+        "text": "不同 specialist 角色可以降低單一觀點偏誤，讓趨勢、資金流、商業品質、事件時點與風險被分開檢視。 Multiple specialist personas reduce single-view bias by separating structure, flow, business quality, timing, and risk."
       }
     },
     {
       "@type": "Question",
-      "name": "What does the final output include?",
+      "name": "最終輸出有哪些欄位？ What does the final output include?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A standard v1.2 output includes the final thesis, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and visible dissent notes from the council."
+        "text": "標準輸出包含 thesis、base/bull/bear 三情境、建議買入區、進場條件、停損、停利階梯、失效條件、信心分級與 dissent memo。 A standard output includes the thesis, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and dissent notes."
       }
     },
     {
       "@type": "Question",
-      "name": "Does Taiwan Stock Radar guarantee stock performance?",
+      "name": "Taiwan Stock Radar 會保證績效嗎？ Does it guarantee performance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Taiwan Stock Radar is a research and decision-support skill. It provides structured judgment and risk-aware planning, not certainty about future returns."
+        "text": "不會。Taiwan Stock Radar 是研究與決策輔助 skill，不保證投資報酬。 No. Taiwan Stock Radar is a research and decision-support skill and does not guarantee investment performance."
       }
     }
   ]

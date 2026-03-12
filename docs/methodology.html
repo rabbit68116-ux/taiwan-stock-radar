@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taiwan Stock Radar Methodology</title>
-  <meta name="description" content="Methodology for Taiwan Stock Radar, showing how the skill runs a single-stock multi-agent research council and produces a decision packet.">
+  <title>Taiwan Stock Radar 方法論 Methodology</title>
+  <meta name="description" content="Taiwan Stock Radar 方法論頁，說明單股多 Agent 台股研究會議如何形成最終判斷與操作方案，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Taiwan Stock Radar Methodology">
-  <meta property="og:description" content="How Taiwan Stock Radar evaluates one Taiwan stock through a formal multi-agent meeting.">
+  <meta property="og:title" content="Taiwan Stock Radar 方法論 Methodology">
+  <meta property="og:description" content="了解 Taiwan Stock Radar 如何透過多位 specialist AI analyst 完成單股研究與決策整合。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -22,11 +22,26 @@
         <span>Taiwan Stock Radar</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="./">Home</a>
-        <a href="./case-study.html">Case Study</a>
-        <a href="./faq.html">FAQ</a>
-        <a href="./use-cases.html">Use Cases</a>
-        <a href="./docs.html">Knowledge Base</a>
+        <a href="./">
+          首頁
+          <span class="en-translation">Home</span>
+        </a>
+        <a href="./case-study.html">
+          案例頁
+          <span class="en-translation">Case Study</span>
+        </a>
+        <a href="./faq.html">
+          常見問題
+          <span class="en-translation">FAQ</span>
+        </a>
+        <a href="./use-cases.html">
+          使用情境
+          <span class="en-translation">Use Cases</span>
+        </a>
+        <a href="./docs.html">
+          知識庫
+          <span class="en-translation">Knowledge Base</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -34,41 +49,62 @@
   <div class="shell">
     <section class="hero">
       <div class="hero-card">
-        <p class="eyebrow">Methodology</p>
-        <h1>How Taiwan Stock Radar runs a single-stock research council</h1>
-        <p class="lead">This page outlines the `v1.2` analysis sequence behind Taiwan Stock Radar. The workflow is designed to make single-stock judgments more rigorous by dividing them into specialist viewpoints before the final conclusion is formed.</p>
+        <p class="eyebrow">方法論<span class="en-translation">Methodology</span></p>
+        <h1>Taiwan Stock Radar 如何執行單股研究會議
+          <span class="en-translation">How Taiwan Stock Radar runs a single-stock research council</span>
+        </h1>
+        <p class="lead">這一頁說明 Taiwan Stock Radar `v1.2` 的核心分析序列。整個流程的目標不是產生更華麗的觀點，而是讓單股判斷有更嚴謹的拆解、辯論與整合過程。</p>
+        <p class="lead en-translation">This page outlines the analytical sequence behind Taiwan Stock Radar `v1.2`. The goal is not louder certainty, but a more rigorous way to decompose, challenge, and synthesize single-stock judgment.</p>
       </div>
     </section>
 
     <main>
       <section>
-        <h2>1. Case setup</h2>
-        <p>The process starts by defining one stock, one analysis date, one time horizon, and one explicit research question. This keeps the meeting anchored in a clear scope.</p>
+        <h2>1. 個案設定
+          <span class="en-translation">1. Case setup</span>
+        </h2>
+        <p>流程從定義一檔股票、一個分析日期、一個研究週期與一個明確問題開始。這能避免討論失焦，也避免 agent 用模糊問題產生模糊答案。</p>
+        <p class="en-translation">The process starts by defining one stock, one analysis date, one time horizon, and one explicit research question. That keeps the meeting focused and prevents vague answers.</p>
       </section>
 
       <section>
-        <h2>2. Taiwan market context</h2>
-        <p>Before any directional call is made, the skill reviews market regime, sector position, peer context, and the event calendar. A stock should not be interpreted in isolation from its surrounding tape.</p>
+        <h2>2. 台股脈絡校準
+          <span class="en-translation">2. Taiwan market context</span>
+        </h2>
+        <p>在下方向判斷之前，系統會先看市場 regime、所屬族群、同業相對位置與事件時點。單一股票不能脫離它所在的市場背景來理解。</p>
+        <p class="en-translation">Before any directional call is made, the system reviews market regime, sector position, peer context, and event timing. A stock should not be judged in isolation.</p>
       </section>
 
       <section>
-        <h2>3. Independent specialist briefs</h2>
-        <p>Technical, chip-flow, fundamental, catalyst, and risk specialists each produce an independent initial view. This prevents the first narrative from dominating the entire analysis.</p>
+        <h2>3. Specialist 獨立簡報
+          <span class="en-translation">3. Independent specialist briefs</span>
+        </h2>
+        <p>技術面、籌碼面、基本面、催化因子與風控角色會先各自形成初步看法。這能避免第一個強勢敘事過早主導整場會議。</p>
+        <p class="en-translation">Technical, chip-flow, fundamental, catalyst, and risk specialists each produce an initial view independently so that the first strong narrative does not dominate the whole meeting.</p>
       </section>
 
       <section>
-        <h2>4. Cross-examination</h2>
-        <p>The chair compares the specialist briefs, highlights conflicts, and identifies the highest-priority uncertainty. The aim is to make contradictions visible rather than hiding them.</p>
+        <h2>4. 交叉質詢
+          <span class="en-translation">4. Cross-examination</span>
+        </h2>
+        <p>主持 agent 會比對各角色的觀點，找出主要衝突與不確定性，讓問題被攤開，而不是讓矛盾在最後摘要中消失。</p>
+        <p class="en-translation">The chair agent compares specialist views, highlights major conflicts, and surfaces the highest-priority uncertainty instead of letting contradictions disappear in the final summary.</p>
       </section>
 
       <section>
-        <h2>5. Weighted synthesis</h2>
-        <p>The final committee view is built through weighted judgment. Strong technicals can raise conviction, but catalyst risk or risk-manager objections should still reduce confidence when warranted.</p>
+        <h2>5. 權重整合
+          <span class="en-translation">5. Weighted synthesis</span>
+        </h2>
+        <p>最終結論不是投票平均，而是依專業角色與指標權重做綜合判斷。技術面很強時可以提高信心，但事件風險或風控反對仍應下修結論強度。</p>
+        <p class="en-translation">The final verdict is not a simple vote. It is built through weighted judgment, where strong technicals may raise conviction while catalyst risk or risk objections can still reduce confidence.</p>
       </section>
 
       <section>
-        <h2>6. Decision packet</h2>
-        <p>The output includes the final thesis, base/bull/bear scenarios, buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, and explicit dissent notes.</p>
+        <h2>6. 決策文件輸出
+          <span class="en-translation">6. Decision packet</span>
+        </h2>
+        <p>最後輸出會包含 thesis、base/bull/bear 三情境、建議買入區、進場條件、停損、停利階梯、失效條件，以及保留下來的 dissent memo。</p>
+        <p class="en-translation">The final packet includes the thesis, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, and preserved dissent notes.</p>
       </section>
     </main>
   </div>

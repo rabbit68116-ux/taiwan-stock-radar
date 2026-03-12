@@ -74,9 +74,13 @@ a {
 }
 
 .nav a {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   text-decoration: none;
   color: var(--muted);
   font-size: 0.96rem;
+  line-height: 1.2;
 }
 
 .hero {
@@ -113,8 +117,8 @@ a {
   color: var(--accent);
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-transform: none;
 }
 
 h1,
@@ -155,16 +159,23 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 2px;
   min-height: 48px;
   padding: 0 18px;
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
+  text-align: center;
 }
 
 .button-primary {
   background: var(--accent);
   color: #ffffff;
+}
+
+.button-primary .en-translation {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .button-secondary {
@@ -191,8 +202,8 @@ h2 {
   display: block;
   color: var(--muted);
   font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 .value {
@@ -276,6 +287,7 @@ ol {
 .chip {
   display: inline-flex;
   align-items: center;
+  flex-direction: column;
   min-height: 34px;
   padding: 0 12px;
   border-radius: 999px;
@@ -284,6 +296,51 @@ ol {
   color: var(--text);
   font-size: 0.9rem;
   font-weight: 600;
+  line-height: 1.2;
+}
+
+.en-translation {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.92em;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+h1 .en-translation,
+h2 .en-translation,
+h3 .en-translation {
+  font-size: 0.54em;
+  line-height: 1.4;
+}
+
+.nav a .en-translation,
+.button .en-translation,
+.chip .en-translation,
+.eyebrow .en-translation,
+.label .en-translation,
+.memo-label .en-translation,
+.score-pill .en-translation,
+.forecast-pill .en-translation,
+.verdict-badge .en-translation,
+.signal-pill .en-translation,
+.stock-metric span .en-translation {
+  margin-top: 2px;
+  font-size: 0.8em;
+}
+
+.value .en-translation {
+  font-size: 0.84em;
+}
+
+p.en-translation,
+li .en-translation,
+td .en-translation,
+th .en-translation,
+.section-intro .en-translation {
+  font-size: 0.94em;
 }
 
 .card ul {
@@ -378,8 +435,8 @@ pre {
   display: block;
   font-size: 0.76rem;
   color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 .stock-metric strong {
@@ -702,8 +759,8 @@ pre {
   color: #8f4426;
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 .memo-card h3 {

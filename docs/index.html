@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taiwan Stock Radar | Single-stock multi-agent Taiwan equity skill</title>
-  <meta name="description" content="Taiwan Stock Radar is a professional single-stock Taiwan equity analysis skill for AI agents. It runs a multi-agent research council, compares specialist viewpoints, and returns trend scenarios, buy zones, sell zones, and invalidation.">
+  <title>Taiwan Stock Radar | 台灣股票雷達單股研究 AI Skill</title>
+  <meta name="description" content="Taiwan Stock Radar 是專為單一台股深度研判打造的多 Agent AI skill，透過正式研究會議產出趨勢預測、買入區、停損區、停利區與失效條件，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Taiwan Stock Radar">
-  <meta property="og:description" content="A professional Taiwan stock skill centered on one-stock-at-a-time multi-agent research meetings.">
+  <meta property="og:title" content="Taiwan Stock Radar | 台灣股票雷達">
+  <meta property="og:description" content="以單股為核心的台股多 Agent 研究 skill，將 AI 分析提升為正式研討會議與決策文件。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -35,7 +35,7 @@
         "publisher": {
           "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization"
         },
-        "description": "A professional Taiwan stock skill website focused on single-stock multi-agent research."
+        "description": "Taiwan Stock Radar 是一個以單股為核心的台股多 Agent 研究網站，展示 AI analyst 如何對同一檔股票進行正式研討與決策整合。 Taiwan Stock Radar is a professional website for single-stock Taiwan equity analysis through a formal multi-agent research council."
       },
       {
         "@type": "SoftwareApplication",
@@ -45,7 +45,7 @@
         "operatingSystem": "Web",
         "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
         "downloadUrl": "https://github.com/rabbit68116-ux/taiwan-stock-radar",
-        "description": "An open-source Taiwan equity analysis skill that runs a multi-agent research council for one selected stock and returns a structured decision packet."
+        "description": "Taiwan Stock Radar 是一個開源台股研究 skill，讓多位 specialist AI analyst 對同一檔股票開立正式會議，輸出趨勢情境、買賣區間與失效條件。 Taiwan Stock Radar is an open-source Taiwan equity research skill that stages a formal multi-agent meeting around one stock and returns scenarios, action zones, and invalidation rules."
       }
     ]
   }
@@ -59,11 +59,26 @@
         <span>Taiwan Stock Radar</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="./case-study.html">Case Study</a>
-        <a href="./faq.html">FAQ</a>
-        <a href="./methodology.html">Methodology</a>
-        <a href="./use-cases.html">Use Cases</a>
-        <a href="./docs.html">Knowledge Base</a>
+        <a href="./case-study.html">
+          案例頁
+          <span class="en-translation">Case Study</span>
+        </a>
+        <a href="./faq.html">
+          常見問題
+          <span class="en-translation">FAQ</span>
+        </a>
+        <a href="./methodology.html">
+          方法論
+          <span class="en-translation">Methodology</span>
+        </a>
+        <a href="./use-cases.html">
+          使用情境
+          <span class="en-translation">Use Cases</span>
+        </a>
+        <a href="./docs.html">
+          知識庫
+          <span class="en-translation">Knowledge Base</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -72,50 +87,78 @@
     <section class="hero">
       <div class="hero-grid">
         <article class="hero-card">
-          <p class="eyebrow">Single-stock multi-agent Taiwan equity skill</p>
-          <h1>台灣股票雷達：讓多位 AI analyst 對同一檔股票開立正式研討會議</h1>
-          <p class="lead">Taiwan Stock Radar is a professional Taiwan equity skill built around one stock at a time. Instead of returning a shallow opinion, it convenes multiple specialist AI agents to debate trend structure, chip flow, fundamentals, catalysts, and risk.</p>
+          <p class="eyebrow">台股單股多 Agent 研究技能<span class="en-translation">Single-stock multi-agent Taiwan equity skill</span></p>
+          <h1>台灣股票雷達：讓多位 AI analyst 對同一檔股票開立正式研討會議
+            <span class="en-translation">Taiwan Stock Radar turns one stock into a formal research council with multiple specialist AI analysts.</span>
+          </h1>
+          <p class="lead">Taiwan Stock Radar 以單一台股為核心，不做空泛摘要，而是讓技術面、籌碼面、基本面、催化因子與風控角色先各自發言，再由主持 agent 整合出正式結論。</p>
+          <p class="lead en-translation">Taiwan Stock Radar is built around one Taiwan stock at a time. Instead of a shallow summary, it lets technical, chip-flow, fundamental, catalyst, and risk roles speak independently before a chair agent synthesizes the final verdict.</p>
           <p class="lead">最終輸出是一份可執行的單股決策文件，包含趨勢預測、情境分支、買入區、停損區、停利區、失效條件，以及會議中保留下來的反方意見。</p>
+          <p class="lead en-translation">The final output is an execution-aware decision packet with trend scenarios, buy zones, stop-loss, targets, invalidation rules, and preserved dissent.</p>
           <div class="chip-row">
-            <span class="chip">Single-stock only</span>
-            <span class="chip">Multi-agent council</span>
-            <span class="chip">Taiwan market logic</span>
-            <span class="chip">Action-zone planning</span>
+            <span class="chip">單股研判<span class="en-translation">Single stock</span></span>
+            <span class="chip">多 Agent 會議<span class="en-translation">Multi-agent council</span></span>
+            <span class="chip">台股邏輯<span class="en-translation">Taiwan market logic</span></span>
+            <span class="chip">操作區間規劃<span class="en-translation">Action-zone planning</span></span>
           </div>
           <div class="hero-actions">
-            <a class="button button-primary" href="./case-study.html">View case study</a>
-            <a class="button button-secondary" href="./methodology.html">View methodology</a>
-            <a class="button button-secondary" href="./docs.html">Open knowledge base</a>
-            <a class="button button-secondary" href="https://github.com/rabbit68116-ux/taiwan-stock-radar">View GitHub project</a>
+            <a class="button button-primary" href="./case-study.html">
+              查看案例頁
+              <span class="en-translation">Open case study</span>
+            </a>
+            <a class="button button-secondary" href="./methodology.html">
+              查看方法論
+              <span class="en-translation">View methodology</span>
+            </a>
+            <a class="button button-secondary" href="./docs.html">
+              開啟知識庫
+              <span class="en-translation">Open knowledge base</span>
+            </a>
+            <a class="button button-secondary" href="https://github.com/rabbit68116-ux/taiwan-stock-radar">
+              查看 GitHub 專案
+              <span class="en-translation">View GitHub project</span>
+            </a>
           </div>
         </article>
 
         <aside class="panel">
-          <h2>Exhibit Snapshot</h2>
+          <h2>展品摘要
+            <span class="en-translation">Exhibit Snapshot</span>
+          </h2>
           <div class="meta-list">
             <div>
-              <span class="label">Version</span>
+              <span class="label">版本<span class="en-translation">Version</span></span>
               <span class="value">v1.2</span>
             </div>
             <div>
-              <span class="label">Market</span>
-              <span class="value">Taiwan equities</span>
+              <span class="label">市場<span class="en-translation">Market</span></span>
+              <span class="value">台灣股票
+                <span class="en-translation">Taiwan equities</span>
+              </span>
             </div>
             <div>
-              <span class="label">Primary mode</span>
-              <span class="value">Single-stock research council</span>
+              <span class="label">主要模式<span class="en-translation">Primary mode</span></span>
+              <span class="value">單股研究委員會
+                <span class="en-translation">Single-stock research council</span>
+              </span>
             </div>
             <div>
-              <span class="label">Agent model</span>
-              <span class="value">Weighted specialist personas</span>
+              <span class="label">Agent 模型<span class="en-translation">Agent model</span></span>
+              <span class="value">權重化 specialist personas
+                <span class="en-translation">Weighted specialist personas</span>
+              </span>
             </div>
             <div>
-              <span class="label">Primary output</span>
-              <span class="value">Decision packet with action zones</span>
+              <span class="label">主要輸出<span class="en-translation">Primary output</span></span>
+              <span class="value">帶操作區間的決策文件
+                <span class="en-translation">Decision packet with action zones</span>
+              </span>
             </div>
             <div>
-              <span class="label">Last updated</span>
-              <span class="value">March 13, 2026</span>
+              <span class="label">更新時間<span class="en-translation">Last updated</span></span>
+              <span class="value">2026 年 3 月 13 日
+                <span class="en-translation">March 13, 2026</span>
+              </span>
             </div>
           </div>
         </aside>
@@ -124,99 +167,131 @@
 
     <main>
       <section>
-        <h2>Project Statement</h2>
-        <p class="section-intro">Taiwan Stock Radar demonstrates how an AI stock skill can become more rigorous by splitting one difficult judgment into several specialist perspectives. The goal is not louder certainty. The goal is better process, clearer disagreement, and more useful action planning.</p>
+        <h2>專案定位
+          <span class="en-translation">Project Statement</span>
+        </h2>
+        <p class="section-intro">Taiwan Stock Radar 展示的是一種更成熟的股市 AI skill 工作方式。它把一個困難的單股判斷拆成多個專業視角，再用正式會議機制整合成可執行結論。</p>
+        <p class="section-intro en-translation">Taiwan Stock Radar demonstrates a more mature stock-AI workflow. It breaks one difficult single-stock judgment into specialist perspectives and then recombines them through a formal meeting structure.</p>
         <div class="grid">
           <article class="card">
-            <h3>One stock, not a noisy watchlist</h3>
-            <p>The `v1.2` product is explicitly centered on a chosen TWSE or TPEX name. It treats single-stock judgment as the main event rather than as a leftover note after a screen.</p>
+            <h3>不是雜訊 watchlist，而是一檔股票
+              <span class="en-translation">One stock, not a noisy watchlist</span>
+            </h3>
+            <p>`v1.2` 明確聚焦於一檔 TWSE 或 TPEX 股票，把單股判斷當成主體，而不是掃描後剩下的一行附註。</p>
+            <p class="en-translation">`v1.2` is explicitly centered on one TWSE or TPEX stock at a time, treating single-stock judgment as the main event rather than a leftover note after screening.</p>
           </article>
           <article class="card">
-            <h3>Multiple specialist AI analysts</h3>
-            <p>Technical, chip-flow, fundamental, catalyst, and risk perspectives are separated first, then synthesized by a chair agent into a final research verdict.</p>
+            <h3>多位 specialist AI analyst
+              <span class="en-translation">Multiple specialist AI analysts</span>
+            </h3>
+            <p>技術面、籌碼面、基本面、催化因子與風險先被分開，再交由主持 agent 整合成最終結論。</p>
+            <p class="en-translation">Technical, chip-flow, fundamental, catalyst, and risk perspectives are separated first, then synthesized by a chair agent into the final verdict.</p>
           </article>
           <article class="card">
-            <h3>Visible disagreement</h3>
-            <p>The system is designed to preserve dissent when evidence is mixed. A professional output should show what could go wrong, not just what sounds attractive.</p>
+            <h3>保留分歧，而不是掩蓋矛盾
+              <span class="en-translation">Visible disagreement</span>
+            </h3>
+            <p>混合訊號應該降低信心，而不是被強行包成一段很順的敘事。這也是為什麼 final packet 會保留 dissent memo。</p>
+            <p class="en-translation">Mixed evidence should lower confidence instead of being flattened into a smooth narrative. That is why the final packet preserves dissent.</p>
           </article>
           <article class="card">
-            <h3>Decision-oriented output</h3>
-            <p>The final packet includes scenario framing, buy zones, stop-loss logic, take-profit ladders, and thesis-break conditions.</p>
+            <h3>輸出以決策為中心
+              <span class="en-translation">Decision-oriented output</span>
+            </h3>
+            <p>結果不只是一句方向判斷，而是情境分支、買入區、停損、停利階梯與 thesis-break 條件。</p>
+            <p class="en-translation">The result is more than a directional opinion. It includes scenarios, buy zones, stop-loss logic, take-profit ladders, and thesis-break conditions.</p>
           </article>
         </div>
       </section>
 
       <section>
         <div class="quote">
-          <p><strong>Exhibit summary:</strong> Taiwan Stock Radar is a Taiwan-equity skill that turns one stock into a formal multi-agent research meeting and returns a structured decision packet with trend scenarios, action zones, and risk-aware dissent.</p>
+          <p><strong>展品摘要：</strong> Taiwan Stock Radar 是一個面向台股的單股研究 skill，透過多 Agent 正式研討會議，輸出帶有趨勢情境、操作區間與風險反方意見的結構化決策文件。<span class="en-translation"><strong>Exhibit summary:</strong> Taiwan Stock Radar is a single-stock Taiwan-equity skill that turns one stock into a formal multi-agent research meeting and returns a structured decision packet with scenarios, action zones, and risk-aware dissent.</span></p>
         </div>
       </section>
 
       <section>
-        <h2>Featured Case Study</h2>
-        <p class="section-intro">The public exhibit includes a full sample meeting output so visitors can see the product in its final form rather than only reading abstract descriptions.</p>
+        <h2>精選案例頁
+          <span class="en-translation">Featured Case Study</span>
+        </h2>
+        <p class="section-intro">公開網站提供完整案例頁，讓訪客直接看到產品最後會長成什麼樣，而不是只看抽象敘述。</p>
+        <p class="section-intro en-translation">The public site includes a full case-study page so visitors can see the product in its final form instead of only reading abstract descriptions.</p>
         <div class="split-grid">
           <article class="analysis-card">
-            <h3>What the page shows</h3>
+            <h3>案例頁會展示什麼
+              <span class="en-translation">What the page shows</span>
+            </h3>
             <ul>
-              <li>committee verdict summary bar</li>
-              <li>case setup and research objective</li>
-              <li>committee scorecard and weighted leaning</li>
-              <li>horizon-specific forecast panel</li>
-              <li>specialist agent briefs</li>
-              <li>peer comparison block</li>
-              <li>entry / exit ladder and action map</li>
-              <li>dissent memo and scenario tree</li>
+              <li>委員會 verdict summary bar<span class="en-translation">Committee verdict summary bar</span></li>
+              <li>個案背景與研究問題<span class="en-translation">Case setup and research objective</span></li>
+              <li>committee scorecard 與權重傾向<span class="en-translation">Committee scorecard and weighted leaning</span></li>
+              <li>不同週期的 forecast panel<span class="en-translation">Horizon-specific forecast panel</span></li>
+              <li>specialist agent 簡報<span class="en-translation">Specialist agent briefs</span></li>
+              <li>同業比較區塊<span class="en-translation">Peer comparison block</span></li>
+              <li>進出場階梯與操作地圖<span class="en-translation">Entry / exit ladder and action map</span></li>
+              <li>dissent memo 與 scenario tree<span class="en-translation">Dissent memo and scenario tree</span></li>
             </ul>
           </article>
           <article class="analysis-card">
-            <h3>Open the exhibit</h3>
-            <p>The case-study page is designed to feel like a polished internal memo turned into a public-facing product artifact.</p>
-            <p><a class="button button-primary" href="./case-study.html">Open case study</a></p>
+            <h3>打開展品
+              <span class="en-translation">Open the exhibit</span>
+            </h3>
+            <p>這一頁被設計成像正式投研備忘錄的公開展品，而不是單純的內容頁。</p>
+            <p class="en-translation">The case-study page is designed to feel like a polished internal research memo turned into a public product artifact.</p>
+            <p><a class="button button-primary" href="./case-study.html">查看完整案例頁<span class="en-translation">Open case study</span></a></p>
           </article>
         </div>
       </section>
 
       <section>
-        <h2>Specialist Agent Council</h2>
-        <p class="section-intro">The system uses a weighted research council so that no single analytical style controls the entire conclusion.</p>
+        <h2>Specialist Agent Council
+          <span class="en-translation">Specialist Agent Council</span>
+        </h2>
+        <p class="section-intro">系統使用帶權重的研究委員會，讓任何一種分析風格都不會單獨控制最終結論。</p>
+        <p class="section-intro en-translation">The system uses a weighted research council so that no single analytical style controls the final conclusion.</p>
         <table>
           <thead>
             <tr>
-              <th>Agent</th>
-              <th>Primary responsibility</th>
-              <th>Weight</th>
+              <th>Agent 角色
+                <span class="en-translation">Agent</span>
+              </th>
+              <th>主要責任
+                <span class="en-translation">Primary responsibility</span>
+              </th>
+              <th>權重
+                <span class="en-translation">Weight</span>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Chief Strategist</td>
-              <td>Leads the meeting, resolves conflicts, and writes the final synthesis.</td>
+              <td>主持會議、裁決衝突並撰寫最終綜合結論。<span class="en-translation">Leads the meeting, resolves conflicts, and writes the final synthesis.</span></td>
               <td>0.24</td>
             </tr>
             <tr>
               <td>Technical Strategist</td>
-              <td>Judges multi-timeframe structure, support, resistance, and volume confirmation.</td>
+              <td>評估多週期趨勢、支撐壓力與量價結構。<span class="en-translation">Judges multi-timeframe structure, support, resistance, and volume confirmation.</span></td>
               <td>0.18</td>
             </tr>
             <tr>
               <td>Chip Flow Analyst</td>
-              <td>Evaluates foreign flow, trust flow, financing pressure, and distribution risk.</td>
+              <td>觀察外資、投信、融資與籌碼分配風險。<span class="en-translation">Evaluates foreign flow, trust flow, financing pressure, and distribution risk.</span></td>
               <td>0.18</td>
             </tr>
             <tr>
               <td>Fundamental Analyst</td>
-              <td>Tests revenue quality, earnings support, product cycle, and business narrative.</td>
+              <td>檢視月營收、獲利品質、產品週期與商業敘事。<span class="en-translation">Tests revenue quality, earnings support, product cycle, and business narrative.</span></td>
               <td>0.17</td>
             </tr>
             <tr>
               <td>Catalyst Analyst</td>
-              <td>Tracks earnings, revenue-release windows, policy timing, and industry events.</td>
+              <td>追蹤法說、營收公告、政策與產業事件時點。<span class="en-translation">Tracks earnings, revenue-release windows, policy timing, and industry events.</span></td>
               <td>0.11</td>
             </tr>
             <tr>
               <td>Risk Manager</td>
-              <td>Challenges the thesis through liquidity, volatility, and invalidation discipline.</td>
+              <td>從流動性、波動與失效紀律挑戰 thesis。<span class="en-translation">Challenges the thesis through liquidity, volatility, and invalidation discipline.</span></td>
               <td>0.12</td>
             </tr>
           </tbody>
@@ -224,71 +299,92 @@
       </section>
 
       <section>
-        <h2>Meeting Workflow</h2>
-        <p class="section-intro">The council is structured so that each specialist can think clearly before the final conclusion is formed.</p>
+        <h2>會議流程
+          <span class="en-translation">Meeting Workflow</span>
+        </h2>
+        <p class="section-intro">委員會的設計讓每位 specialist 都能在結論形成前先清楚思考與發言。</p>
+        <p class="section-intro en-translation">The council is structured so that each specialist can think clearly before the final conclusion is formed.</p>
         <div class="kpi-grid">
           <div class="kpi">
             <strong>1</strong>
-            <span class="muted">Case setup: stock, date, horizon, question</span>
+            <span class="muted">個案設定：股票、日期、週期、研究問題<span class="en-translation">Case setup: stock, date, horizon, question</span></span>
           </div>
           <div class="kpi">
             <strong>2</strong>
-            <span class="muted">Independent specialist briefs</span>
+            <span class="muted">各 specialist 獨立簡報<span class="en-translation">Independent specialist briefs</span></span>
           </div>
           <div class="kpi">
             <strong>3</strong>
-            <span class="muted">Cross-examination and conflict review</span>
+            <span class="muted">交叉質詢與衝突檢討<span class="en-translation">Cross-examination and conflict review</span></span>
           </div>
           <div class="kpi">
             <strong>4</strong>
-            <span class="muted">Weighted consensus and dissent logging</span>
+            <span class="muted">權重整合與 dissent 記錄<span class="en-translation">Weighted consensus and dissent logging</span></span>
           </div>
           <div class="kpi">
             <strong>5</strong>
-            <span class="muted">Final decision packet with action plan</span>
+            <span class="muted">形成最終決策文件與操作計畫<span class="en-translation">Final decision packet with action plan</span></span>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Representative Output</h2>
-        <p class="section-intro">A serious stock skill should deliver more than a directional opinion. It should produce work that can be reviewed, challenged, and acted on with discipline.</p>
+        <h2>代表性輸出
+          <span class="en-translation">Representative Output</span>
+        </h2>
+        <p class="section-intro">一個成熟的股市 skill 應該交付的不是一句方向判斷，而是能被檢討、被質疑、也能被執行的研究成果。</p>
+        <p class="section-intro en-translation">A serious stock skill should deliver more than a directional opinion. It should produce work that can be reviewed, challenged, and acted on with discipline.</p>
         <div class="split-grid">
           <article class="analysis-card">
-            <h3>Research packet</h3>
+            <h3>研究文件
+              <span class="en-translation">Research packet</span>
+            </h3>
             <ul>
-              <li><strong>Stock context:</strong> market, sector, peer map, and current regime.</li>
-              <li><strong>Specialist notes:</strong> separate technical, chip-flow, fundamental, catalyst, and risk briefs.</li>
-              <li><strong>Scenario tree:</strong> base case, bull case, and bear case with trigger conditions.</li>
-              <li><strong>Consensus map:</strong> what the council agrees on and what remains contested.</li>
+              <li><strong>股票背景：</strong>市場、族群、同業位置與目前 regime。<span class="en-translation"><strong>Stock context:</strong> market, sector, peer map, and current regime.</span></li>
+              <li><strong>Specialist notes：</strong>技術、籌碼、基本面、催化與風險分開陳述。<span class="en-translation"><strong>Specialist notes:</strong> separate technical, chip-flow, fundamental, catalyst, and risk briefs.</span></li>
+              <li><strong>Scenario tree：</strong>base、bull、bear 與觸發條件。<span class="en-translation"><strong>Scenario tree:</strong> base case, bull case, and bear case with trigger conditions.</span></li>
+              <li><strong>Consensus map：</strong>哪些地方有共識，哪些仍有爭議。<span class="en-translation"><strong>Consensus map:</strong> what the council agrees on and what remains contested.</span></li>
             </ul>
           </article>
           <article class="analysis-card">
-            <h3>Action plan</h3>
+            <h3>操作計畫
+              <span class="en-translation">Action plan</span>
+            </h3>
             <ul>
-              <li><strong>Preferred buy zone:</strong> where risk-reward becomes acceptable.</li>
-              <li><strong>Entry triggers:</strong> aggressive entry vs conservative confirmation.</li>
-              <li><strong>Risk control:</strong> stop-loss, invalidation, and event-risk caveats.</li>
-              <li><strong>Exit framework:</strong> TP1, TP2, and trim logic tied to scenario quality.</li>
+              <li><strong>建議買入區：</strong>何處風險報酬比開始變得合理。<span class="en-translation"><strong>Preferred buy zone:</strong> where risk-reward becomes acceptable.</span></li>
+              <li><strong>進場觸發：</strong>積極進場與保守確認的差異。<span class="en-translation"><strong>Entry triggers:</strong> aggressive entry versus conservative confirmation.</span></li>
+              <li><strong>風險控制：</strong>停損、失效條件與事件風險註記。<span class="en-translation"><strong>Risk control:</strong> stop-loss, invalidation, and event-risk caveats.</span></li>
+              <li><strong>出場框架：</strong>TP1、TP2 與分批調節邏輯。<span class="en-translation"><strong>Exit framework:</strong> TP1, TP2, and trim logic tied to scenario quality.</span></li>
             </ul>
           </article>
         </div>
       </section>
 
       <section>
-        <h2>Why This Skill Matters</h2>
+        <h2>這個 Skill 為什麼重要
+          <span class="en-translation">Why This Skill Matters</span>
+        </h2>
         <div class="grid">
           <article class="card">
-            <h3>For AI agents</h3>
-            <p>It provides a reusable structure for handling stock questions with less improvisation and more defensible reasoning.</p>
+            <h3>對 AI agents
+              <span class="en-translation">For AI agents</span>
+            </h3>
+            <p>它提供一個可重複使用的結構，讓 agent 面對股市問題時少一點即興、多一點可辯護的推理。</p>
+            <p class="en-translation">It provides a reusable structure for handling stock questions with less improvisation and more defensible reasoning.</p>
           </article>
           <article class="card">
-            <h3>For analysts</h3>
-            <p>It demonstrates how single-stock work can be split into roles, challenged, and reassembled into a clearer decision memo.</p>
+            <h3>對分析者
+              <span class="en-translation">For analysts</span>
+            </h3>
+            <p>它示範如何把單股研究拆成角色、經過質詢，再重新組成更清楚的決策備忘錄。</p>
+            <p class="en-translation">It demonstrates how single-stock work can be split into roles, challenged, and reassembled into a clearer decision memo.</p>
           </article>
           <article class="card">
-            <h3>For builders</h3>
-            <p>It turns the analysis method itself into a portable skill with configs, blueprints, and a public-facing showcase.</p>
+            <h3>對產品開發者
+              <span class="en-translation">For builders</span>
+            </h3>
+            <p>它把分析方法本身變成可攜帶的 skill，附帶 config、blueprint 與公開展示頁。</p>
+            <p class="en-translation">It turns the analysis method itself into a portable skill with configs, blueprints, and a public-facing showcase.</p>
           </article>
         </div>
       </section>
@@ -296,7 +392,7 @@
 
     <footer class="footer">
       <div class="footer-card">
-        <p><strong>Risk note:</strong> Taiwan Stock Radar is a research and decision-support skill. It does not promise investment results and should not be interpreted as certainty about future price behavior.</p>
+        <p><strong>風險聲明：</strong> Taiwan Stock Radar 是研究與決策輔助 skill，不保證投資結果，也不應被理解為對未來股價的確定承諾。<span class="en-translation"><strong>Risk note:</strong> Taiwan Stock Radar is a research and decision-support skill. It does not promise investment results and should not be interpreted as certainty about future price behavior.</span></p>
       </div>
     </footer>
   </div>
