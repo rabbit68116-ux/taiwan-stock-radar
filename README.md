@@ -6,9 +6,9 @@
 ![Market](https://img.shields.io/badge/market-Taiwan%20Stocks-red)
 ![Scope](https://img.shields.io/badge/scope-research%20%7C%20signals%20%7C%20backtest-green)
 
-Open-source Taiwan stock analysis skill and research framework for AI agents, analysts, and developers.
+Open-source Taiwan equity analysis skill and research framework for AI agents, analysts, and developers.
 
-> A structured Taiwan stock skill that combines market scan, Top 20 ranking, single-stock deep dives, and risk-aware action planning.
+> A professional Taiwan equity analysis skill that combines market surveillance, Top 20 opportunity ranking, single-stock deep dives, and risk-aware action planning.
 
 [繁體中文](#繁體中文) | [English](#english)
 
@@ -18,8 +18,8 @@ Open-source Taiwan stock analysis skill and research framework for AI agents, an
 
 ### 專案介紹
 
-**taiwan-stock-radar** 是一個專為台灣股票市場打造的開源量化研究框架。  
-它的目標不是提供不可解釋的黑盒投資建議，而是建立一套真正可以被研究、驗證、展示、持續擴充的台股研究系統。
+**taiwan-stock-radar** 是一個以台灣股票市場為核心的開源分析 skill 與研究框架。  
+它的目標不是製造不可解釋的投資結論，而是展示一套可研究、可驗證、可擴充、可持續演進的台股分析方法。
 
 這個專案把量化研究常見卻分散的流程，整合成一條完整資料鏈：
 
@@ -31,7 +31,7 @@ Open-source Taiwan stock analysis skill and research framework for AI agents, an
 - 用回測檢驗規則有效性
 - 最後以 dashboard 與 heatmap 視覺化展示
 
-對想做台股 AI、量化選股、回測驗證、研究工具開發的人來說，這不是一份零散筆記，而是一個可以持續演進的工程骨架。
+對想做台股 AI、量化選股、回測驗證與研究工具開發的人來說，這不是零散筆記，而是一個具展示價值與工程延展性的專業骨架。
 
 ### 這個 repo 現在包含什麼
 
@@ -51,7 +51,7 @@ Open-source Taiwan stock analysis skill and research framework for AI agents, an
 | [`scripts/run_daily_scan.py`](./scripts/run_daily_scan.py) | 第一版 daily scan demo script |
 | [`app/streamlit_app.py`](./app/streamlit_app.py) | Streamlit dashboard skeleton |
 
-這代表後續不只是在做一個專案介紹頁，而是在建立一個真的能讓 agent 學會「如何分析台股」的 reusable skill。
+這代表這個 repo 不只是專案說明，而是一套真正能讓 agent 學會「如何分析台股」的可重用 skill。
 
 ### 資深分析師模式
 
@@ -62,7 +62,7 @@ Open-source Taiwan stock analysis skill and research framework for AI agents, an
 2. 再深挖單一股票
    若使用者點名某一檔，會切換成 deep-dive 模式，補上 peer map、營運支持、籌碼、催化事件、情境樹與買賣計畫。
 
-這樣 agent 就不只是選股器，而更像一位會先掃全市場、再對重點標的下研究備忘錄的資深分析師。
+這讓 agent 不只是選股器，而更像一位會先觀察全市場、再對關鍵標的提出研究備忘錄的分析師。
 
 ### 快速開始
 
@@ -90,7 +90,7 @@ streamlit run app/streamlit_app.py
 
 - [https://rabbit68116-ux.github.io/taiwan-stock-radar/](https://rabbit68116-ux.github.io/taiwan-stock-radar/)
 
-`taiwan-stock-radar` 的公開網站聚焦在這個台股分析 skill 的核心價值：
+`taiwan-stock-radar` 的公開網站以專業展品介紹方式呈現這個台股分析 skill 的核心價值：
 
 - 掃描約 1800 檔台股
 - 排出 Top 20 候選股
@@ -102,11 +102,11 @@ streamlit run app/streamlit_app.py
 
 | 路徑 | 作用 |
 |---|---|
-| [`docs/index.html`](./docs/index.html) | 首頁，介紹 skill 的定位、輸出、使用價值、Top 20 示意與單股 deep-dive 範例 |
+| [`docs/index.html`](./docs/index.html) | 首頁，展示 skill 的定位、方法價值、Top 20 示意與單股 deep-dive 範例 |
 | [`docs/faq.html`](./docs/faq.html) | FAQ 頁，附 FAQ schema |
 | [`docs/methodology.html`](./docs/methodology.html) | 方法論頁，說明 1800 檔掃描、Top 20、單股 deep-dive 的流程 |
 | [`docs/use-cases.html`](./docs/use-cases.html) | 使用情境頁，說明 agent 與研究者如何使用這個 skill |
-| [`docs/docs.html`](./docs/docs.html) | 知識庫入口頁，連回 repo 內的重要規格、設定與腳本 |
+| [`docs/docs.html`](./docs/docs.html) | 知識庫入口頁，整理 repo 內的重要規格、設定與腳本 |
 
 若要更新公開網站內容，直接調整 `docs/` 下的頁面即可。
 

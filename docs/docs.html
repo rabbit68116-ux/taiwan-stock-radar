@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taiwan Stock Radar knowledge base</title>
-  <meta name="description" content="Knowledge base and documentation entry points for Taiwan Stock Radar, including the skill definition, references, config files, and demo scripts.">
+  <title>Taiwan Stock Radar Knowledge Base</title>
+  <meta name="description" content="Knowledge base and documentation entry points for Taiwan Stock Radar, including skill definitions, references, configuration files, and demo scripts.">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Taiwan Stock Radar knowledge base">
-  <meta property="og:description" content="Stable documentation entry points for the Taiwan Stock Radar skill.">
+  <meta property="og:title" content="Taiwan Stock Radar Knowledge Base">
+  <meta property="og:description" content="The source documents behind the Taiwan Stock Radar skill.">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -25,7 +25,7 @@
         <a href="./">Home</a>
         <a href="./faq.html">FAQ</a>
         <a href="./methodology.html">Methodology</a>
-        <a href="./use-cases.html">Use cases</a>
+        <a href="./use-cases.html">Use Cases</a>
       </nav>
     </div>
   </header>
@@ -34,83 +34,83 @@
     <section class="hero">
       <div class="hero-card">
         <p class="eyebrow">Knowledge base</p>
-        <h1>the source of truth behind the Taiwan Stock Radar skill</h1>
-        <p class="lead">This page is the fastest way to understand how the skill works under the hood. It points AI agents and users to the core files that define market scan logic, ranking rules, action zones, and deep-dive behavior.</p>
+        <h1>The reference library behind Taiwan Stock Radar</h1>
+        <p class="lead">This page gathers the source documents that define how Taiwan Stock Radar thinks, ranks, and frames stock analysis. It functions as the reference shelf behind the public exhibition layer.</p>
       </div>
     </section>
 
     <main>
       <section>
-        <h2>start here</h2>
-        <p class="section-intro">If you are new to the project, these are the best entry points. Together they explain what the skill does, how it reasons, and where the configurable rules live.</p>
+        <h2>Recommended starting points</h2>
+        <p class="section-intro">For readers who want to understand the skill quickly, these are the best documents to open first. Together they explain the behavior model, ranking logic, and trade-planning rules.</p>
         <div class="grid">
           <article class="card">
             <h3>SKILL.md</h3>
-            <p>The main behavior specification for the skill. This is the best place to understand the expected analyst-like workflow.</p>
+            <p>The main behavior document for the skill. It captures the expected analytical workflow in its most direct form.</p>
           </article>
           <article class="card">
-            <h3>agent analyst blueprint</h3>
-            <p>Describes the high-level operating model: market sweep, top 20 shortlist, and single-stock deep dive.</p>
+            <h3>Agent analyst blueprint</h3>
+            <p>Explains the operating model behind market sweep, Top 20 ranking, and single-stock deep-dive expansion.</p>
           </article>
           <article class="card">
-            <h3>action rules</h3>
-            <p>Explains how buy zones, stop levels, take-profit areas, and deep-dive triggers are framed.</p>
+            <h3>Action rules</h3>
+            <p>Describes how buy zones, invalidation logic, take-profit framing, and deeper research triggers are handled.</p>
           </article>
         </div>
       </section>
 
       <section>
-        <h2>core references</h2>
+        <h2>Core references</h2>
         <table>
           <thead>
             <tr>
               <th>Resource</th>
-              <th>Purpose</th>
+              <th>Role in the project</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar">GitHub repo</a></td>
-              <td>Main repository for the project code, docs, and roadmap.</td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar">GitHub repository</a></td>
+              <td>The main home of the project code, documents, and implementation roadmap.</td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/SKILL.md">SKILL.md</a></td>
-              <td>Defines the main stock-analysis workflow and agent behavior.</td>
+              <td>Defines the main analytical workflow and expected agent behavior.</td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/agent-analyst-blueprint.md">agent analyst blueprint</a></td>
-              <td>Explains the broad-market scan, top 20 shortlist, and deep-dive operating model.</td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/agent-analyst-blueprint.md">Agent analyst blueprint</a></td>
+              <td>Documents the project’s higher-level analysis model and shortlist-to-memo progression.</td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/weights.yaml">weights config</a></td>
-              <td>Stores the default factor weighting scheme behind the ranking model.</td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/weights.yaml">Weights configuration</a></td>
+              <td>Stores the default factor-weighting logic behind the ranking framework.</td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/action_rules.yaml">action rules</a></td>
-              <td>Defines buy zones, stop rules, take-profit framing, and deep-dive triggers.</td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/action_rules.yaml">Action rules</a></td>
+              <td>Defines zone framing, stop logic, take-profit rules, and deep-dive triggers.</td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_daily_scan.py">daily scan script</a></td>
-              <td>Runs the demo top 20 scan workflow and generates structured output files.</td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_daily_scan.py">Daily scan script</a></td>
+              <td>Runs the demo shortlist flow and produces structured output files.</td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <section>
-        <h2>what these files control</h2>
+        <h2>What these documents govern</h2>
         <div class="grid">
           <article class="card">
-            <h3>market interpretation</h3>
-            <p>How the skill reads Taiwan market context, sector leadership, and regime conditions before making stock-level judgments.</p>
+            <h3>Market interpretation</h3>
+            <p>How the skill reads Taiwan market context, sector leadership, and regime conditions before reaching stock-level judgments.</p>
           </article>
           <article class="card">
-            <h3>ranking logic</h3>
-            <p>How stocks enter or leave the shortlist, how factor signals are weighted, and how the agent explains why a name is rising or falling in priority.</p>
+            <h3>Opportunity ranking</h3>
+            <p>How stocks are prioritized, how factor signals are weighted, and how research attention is allocated.</p>
           </article>
           <article class="card">
-            <h3>execution framing</h3>
-            <p>How the skill turns a directional idea into a practical plan with buy, stop, take-profit, and invalidation zones.</p>
+            <h3>Execution-aware framing</h3>
+            <p>How directional ideas are translated into practical planning with buy, stop, take-profit, and invalidation structures.</p>
           </article>
         </div>
       </section>

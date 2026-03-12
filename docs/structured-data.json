@@ -4,7 +4,7 @@
     {
       "@type": "Organization",
       "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization",
-      "name": "taiwan-stock-radar",
+      "name": "Taiwan Stock Radar",
       "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
       "logo": "https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/logo.svg",
       "sameAs": [
@@ -15,21 +15,21 @@
       "@type": "WebSite",
       "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#website",
       "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
-      "name": "taiwan-stock-radar",
+      "name": "Taiwan Stock Radar",
       "publisher": {
         "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization"
       },
-      "description": "A Taiwan stock market research, ranking, and analysis website for AI agents, analysts, and developers."
+      "description": "A professional Taiwan equity analysis skill website for AI agents, analysts, and developers."
     },
     {
       "@type": "SoftwareApplication",
       "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#software",
-      "name": "taiwan-stock-radar",
+      "name": "Taiwan Stock Radar",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "Web",
       "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
       "downloadUrl": "https://github.com/rabbit68116-ux/taiwan-stock-radar",
-      "description": "An open-source Taiwan stock research and ranking system that helps AI agents scan a broad stock universe, shortlist the top 20 candidates, and produce deeper analysis for a selected stock."
+      "description": "An open-source Taiwan equity analysis skill that demonstrates how an AI agent can scan a broad stock universe, rank the top 20 opportunities, and produce structured single-stock analysis."
     }
   ]
 }
