@@ -2,6 +2,7 @@
 
 [![GitHub repo](https://img.shields.io/badge/GitHub-rabbit68116--ux%2Ftaiwan--gushi--ai--radar-181717?logo=github)](https://github.com/rabbit68116-ux/taiwan-gushi-ai-radar)
 ![Status](https://img.shields.io/badge/status-architecture%20v1.0-blue)
+![Plan](https://img.shields.io/badge/plan-v1.1-orange)
 ![Market](https://img.shields.io/badge/market-Taiwan%20Stocks-red)
 ![Scope](https://img.shields.io/badge/scope-research%20%7C%20signals%20%7C%20backtest-green)
 
@@ -41,7 +42,7 @@ Open-source Taiwan stock market research, scoring, signal, and backtesting frame
 | [`SKILL.md`](./SKILL.md) | agent 的核心工作流與判斷規則 |
 | [`references/taiwan-market-playbook.md`](./references/taiwan-market-playbook.md) | 台股市場判斷、因子與風險規則 |
 | [`references/prediction-framework.md`](./references/prediction-framework.md) | 預測輸出格式、情境推演與信心框架 |
-| [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md) | 1800 檔掃描、TOP20 排名、單股深度研判方案 |
+| [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md) | v1.1 資深分析師模式，包含 1800 檔掃描、TOP20 排名、單股深度研判方案 |
 | [`references/github-landscape.md`](./references/github-landscape.md) | 參考 GitHub 熱門量化與回測專案後整理出的設計模式 |
 | [`agents/openai.yaml`](./agents/openai.yaml) | skill UI metadata |
 | [`config/weights.yaml`](./config/weights.yaml) | 雷達評分權重設定 |
@@ -230,7 +231,12 @@ flowchart LR
 
 ### 目前狀態
 
-目前 repo 已放入 v1.0 架構文件，接下來會逐步完成：
+目前 repo 同時包含兩個版本層：
+
+- 架構文件：`v1.0`
+- 資深分析師模式方案：`v1.1`
+
+接下來會逐步完成：
 
 1. repo 基礎結構
 2. 資料載入與統一 schema
@@ -239,8 +245,9 @@ flowchart LR
 5. 訊號與回測引擎
 6. dashboard、heatmap 與 daily scan
 
-架構文件：
+核心文件：
 - [`taiwan-gushi-ai-radar-architecture-v1.0-final.md`](./taiwan-gushi-ai-radar-architecture-v1.0-final.md)
+- [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md)
 
 ### 風險聲明
 
@@ -277,7 +284,7 @@ Beyond the architecture note, this repository is now being structured as a reusa
 | [`SKILL.md`](./SKILL.md) | Core workflow and reasoning rules for the agent |
 | [`references/taiwan-market-playbook.md`](./references/taiwan-market-playbook.md) | Taiwan-specific factor, regime, and risk logic |
 | [`references/prediction-framework.md`](./references/prediction-framework.md) | Forecast formatting, scenario framing, and confidence discipline |
-| [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md) | Blueprint for 1,800-stock scanning, Top 20 ranking, and deep-dive stock analysis |
+| [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md) | v1.1 senior-analyst blueprint for 1,800-stock scanning, Top 20 ranking, and deep-dive stock analysis |
 | [`references/github-landscape.md`](./references/github-landscape.md) | Design patterns extracted from leading open-source quant repos |
 | [`agents/openai.yaml`](./agents/openai.yaml) | Skill metadata for UI surfaces |
 | [`config/weights.yaml`](./config/weights.yaml) | Radar scoring weights |
@@ -465,7 +472,12 @@ flowchart LR
 
 ### Current Status
 
-The repository currently contains the v1.0 architecture document. The next implementation stages will focus on:
+The repository now carries two version tracks:
+
+- architecture document: `v1.0`
+- senior-analyst operating blueprint: `v1.1`
+
+The next implementation stages will focus on:
 
 1. repository structure
 2. data loading and unified schemas
@@ -474,8 +486,9 @@ The repository currently contains the v1.0 architecture document. The next imple
 5. signal and backtest engine
 6. dashboard, heatmap, and daily scan outputs
 
-Architecture document:
+Core documents:
 - [`taiwan-gushi-ai-radar-architecture-v1.0-final.md`](./taiwan-gushi-ai-radar-architecture-v1.0-final.md)
+- [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md)
 
 ### Disclaimer
 

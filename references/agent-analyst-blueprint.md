@@ -1,4 +1,6 @@
-# Agent Analyst Blueprint
+# Agent Analyst Blueprint v1.1
+
+Version: `v1.1`
 
 Use this reference when designing the skill to behave like a senior Taiwan-equity analyst instead of a simple screener.
 

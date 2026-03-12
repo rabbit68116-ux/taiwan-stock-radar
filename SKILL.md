@@ -5,6 +5,8 @@ description: Use when the task is to analyze Taiwan stocks, explain market state
 
 # Taiwan Gushi AI Radar
 
+Current operating blueprint version: `v1.1`
+
 Use this skill for Taiwan-equity research tasks that require structured judgment rather than generic market commentary.
 
 Default to factor-based, explainable reasoning. The goal is to help an agent judge Taiwan stocks with disciplined evidence, not to imitate a noisy analyst note.
