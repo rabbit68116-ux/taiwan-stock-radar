@@ -4,7 +4,7 @@
 
 版本：v1.0  
 方案名稱：`Taiwan Stock Radar`  
-repo slug：`taiwan-gushi-ai-radar`  
+repo slug：`taiwan-stock-radar`  
 定位：開源台股量化研究 / 選股 / 回測 / 訊號框架  
 用途：作為 GitHub 專案正式架構說明，供後續由 Codex App 接手工程實作。
 
@@ -159,7 +159,7 @@ Backtest / Dashboard / Daily Output / Export
 ## 5. 建議專案目錄結構
 
 ```text
-taiwan-gushi-ai-radar/
+taiwan-stock-radar/
 ├─ README.md
 ├─ LICENSE
 ├─ pyproject.toml

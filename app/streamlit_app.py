@@ -14,8 +14,8 @@ SRC_DIR = PROJECT_ROOT / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from taiwan_gushi_ai_radar.config import load_project_config, resolve_output_dir
-from taiwan_gushi_ai_radar.demo_scan import generate_scan_result
+from taiwan_stock_radar.config import load_project_config, resolve_output_dir
+from taiwan_stock_radar.demo_scan import generate_scan_result
 
 
 def load_scan_payload() -> dict:

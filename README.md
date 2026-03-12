@@ -1,6 +1,6 @@
 # Taiwan Stock Radar
 
-[![GitHub repo](https://img.shields.io/badge/GitHub-rabbit68116--ux%2Ftaiwan--gushi--ai--radar-181717?logo=github)](https://github.com/rabbit68116-ux/taiwan-gushi-ai-radar)
+[![GitHub repo](https://img.shields.io/badge/GitHub-rabbit68116--ux%2Ftaiwan--stock--radar-181717?logo=github)](https://github.com/rabbit68116-ux/taiwan-stock-radar)
 ![Status](https://img.shields.io/badge/status-architecture%20v1.0-blue)
 ![Plan](https://img.shields.io/badge/plan-v1.1-orange)
 ![Market](https://img.shields.io/badge/market-Taiwan%20Stocks-red)
@@ -246,7 +246,7 @@ flowchart LR
 6. dashboard、heatmap 與 daily scan
 
 核心文件：
-- [`taiwan-gushi-ai-radar-architecture-v1.0-final.md`](./taiwan-gushi-ai-radar-architecture-v1.0-final.md)
+- [`taiwan-stock-radar-architecture-v1.0-final.md`](./taiwan-stock-radar-architecture-v1.0-final.md)
 - [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md)
 
 ### 風險聲明
@@ -487,7 +487,7 @@ The next implementation stages will focus on:
 6. dashboard, heatmap, and daily scan outputs
 
 Core documents:
-- [`taiwan-gushi-ai-radar-architecture-v1.0-final.md`](./taiwan-gushi-ai-radar-architecture-v1.0-final.md)
+- [`taiwan-stock-radar-architecture-v1.0-final.md`](./taiwan-stock-radar-architecture-v1.0-final.md)
 - [`references/agent-analyst-blueprint.md`](./references/agent-analyst-blueprint.md)
 
 ### Disclaimer

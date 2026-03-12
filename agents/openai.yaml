@@ -2,7 +2,7 @@ interface:
   display_name: "Taiwan Stock Radar"
   short_description: "台股判斷、預測與研究流程 skill"
   brand_color: "#C43D2B"
-  default_prompt: "Use $taiwan-gushi-ai-radar to analyze Taiwan stocks, explain the signal logic, and propose cautious forecast scenarios."
+  default_prompt: "Use $taiwan-stock-radar to analyze Taiwan stocks, explain the signal logic, and propose cautious forecast scenarios."
 
 policy:
   allow_implicit_invocation: true

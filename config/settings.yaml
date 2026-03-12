@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "taiwan-gushi-ai-radar",
+    "name": "taiwan-stock-radar",
     "display_name": "Taiwan Stock Radar",
     "plan_version": "v1.1",
     "mode": "demo"
