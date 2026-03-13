@@ -35,7 +35,7 @@
         "publisher": {
           "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization"
         },
-        "description": "Taiwan Stock Radar 是一個以單股為核心的台股指標驅動研究網站，展示 AI analyst 如何對同一檔股票進行正式研討、風格權重切換與決策整合。 Taiwan Stock Radar is a professional website for single-stock Taiwan equity analysis through an indicator-driven multi-agent research committee."
+        "description": "Taiwan Stock Radar 是一個以單股為核心的台股指標驅動研究網站，展示多位 AI 分析師如何對同一檔股票進行正式研討、風格權重切換與決策整合。 Taiwan Stock Radar is a professional website for single-stock Taiwan equity analysis through an indicator-driven multi-analyst research committee."
       },
       {
         "@type": "SoftwareApplication",
@@ -45,7 +45,7 @@
         "operatingSystem": "Web",
         "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
         "downloadUrl": "https://github.com/rabbit68116-ux/taiwan-stock-radar",
-        "description": "Taiwan Stock Radar 是一個開源台股研究 skill，讓多位 specialist AI analyst 對同一檔股票開立正式會議，完成訊號引擎評估、風格切換、策略選擇與操作計畫。 Taiwan Stock Radar is an open-source Taiwan equity research skill that stages a formal multi-agent meeting around one stock and returns signal-engine review, style adaptation, strategy selection, action zones, and invalidation rules."
+        "description": "Taiwan Stock Radar 是一個開源台股研究 skill，讓多位 AI 分析師對同一檔股票開立正式會議，完成訊號引擎評估、風格切換、策略選擇與操作計畫。 Taiwan Stock Radar is an open-source Taiwan equity research skill that stages a formal multi-analyst meeting around one stock and returns signal-engine review, style adaptation, strategy selection, action zones, and invalidation rules."
       }
     ]
   }
@@ -91,10 +91,10 @@
           <h1>台灣股票雷達：讓八位專家級 AI 分析師對同一檔股票完成正式研討、訊號評估與風格化決策
             <span class="en-translation">Taiwan Stock Radar turns one stock into a formal research committee with eight specialist AI analysts.</span>
           </h1>
-          <p class="lead">Taiwan Stock Radar 以單一台股為核心，不做空泛摘要，而是讓趨勢、動能、量價、籌碼、基本面、事件、策略與驗證角色先各自發言，再由主持 agent 整合出正式結論。</p>
-          <p class="lead en-translation">Taiwan Stock Radar is built around one Taiwan stock at a time. Instead of a shallow summary, it lets trend, momentum, price-volume, chip-flow, fundamental, event, strategy, and validation roles speak independently before a chair agent synthesizes the final verdict.</p>
-          <p class="lead">最終輸出是一份可執行的單股決策文件，包含訊號引擎摘要、風格權重、策略模組、趨勢預測、買入區、停損區、停利區、失效條件，以及會議中保留下來的反方意見。</p>
-          <p class="lead en-translation">The final output is an execution-aware decision packet with signal-engine summaries, style weights, strategy modules, trend scenarios, buy zones, stop-loss, targets, invalidation rules, and preserved dissent.</p>
+          <p class="lead">Taiwan Stock Radar 以單一台股為核心，先校準趨勢、動能、量價、籌碼、基本面與事件六層訊號，再由八位具不同專長與權重的 AI 分析師進行交叉檢視與加權整合。</p>
+          <p class="lead en-translation">Taiwan Stock Radar is built around one Taiwan stock at a time. It calibrates six signal layers first, then asks eight specialist AI analysts to review the stock through weighted cross-examination.</p>
+          <p class="lead">最終輸出不是一句方向判斷，而是一份帶有訊號摘要、風格權重、策略提名、情境推演、買入區、停損區、停利階梯與失效條件的決策文件。</p>
+          <p class="lead en-translation">The final output is not a one-line call. It is a decision packet with signal summaries, style weights, strategy nominations, scenario framing, buy zones, stop-loss logic, targets, and invalidation rules.</p>
           <div class="chip-row">
             <span class="chip">單股研判<span class="en-translation">Single stock</span></span>
             <span class="chip">指標委員會<span class="en-translation">Indicator committee</span></span>
@@ -146,7 +146,7 @@
             </div>
             <div>
               <span class="label">Agent 模型<span class="en-translation">Agent model</span></span>
-              <span class="value">8 位權重化 specialist personas
+              <span class="value">8 位權重化專家角色
                 <span class="en-translation">8 weighted specialist personas</span>
               </span>
             </div>
@@ -172,36 +172,36 @@
         <h2>專案定位
           <span class="en-translation">Project Statement</span>
         </h2>
-        <p class="section-intro">Taiwan Stock Radar 展示的是一種更成熟的股市 AI skill 工作方式。`v1.4` 把單股判斷先收斂成台股訊號引擎，再用風格權重與策略模組整合成可執行結論。</p>
-        <p class="section-intro en-translation">Taiwan Stock Radar demonstrates a more mature stock-AI workflow. In `v1.4`, it turns single-stock judgment into a Taiwan-market signal stack first, then applies style weights and strategy modules before producing an actionable conclusion.</p>
+        <p class="section-intro">Taiwan Stock Radar 的定位不是市場雜訊摘要，而是單股研究介面。`v1.4` 先處理訊號健康度與風格匹配，再讓策略與操作規劃建立在更清楚的證據上。</p>
+        <p class="section-intro en-translation">Taiwan Stock Radar is not positioned as a noisy market summary. It is a single-stock research surface. In `v1.4`, signal health and style fit are resolved before strategy and action planning are allowed to speak with confidence.</p>
         <div class="grid">
           <article class="card">
-            <h3>不是雜訊 watchlist，而是一檔股票
+            <h3>不是市場雜訊，而是一檔股票
               <span class="en-translation">One stock, not a noisy watchlist</span>
             </h3>
-            <p>`v1.4` 明確聚焦於一檔 TWSE 或 TPEX 股票，把單股判斷當成主體，並要求先看訊號堆疊，再談策略與執行。</p>
+            <p>`v1.4` 明確聚焦於一檔 TWSE 或 TPEX 股票，把單股判斷當成主體，要求先看訊號堆疊，再談策略與執行。</p>
             <p class="en-translation">`v1.4` is explicitly centered on one TWSE or TPEX stock at a time, treating single-stock judgment as the main event and requiring a signal-stack review before strategy and execution language.</p>
           </article>
           <article class="card">
-            <h3>多位 specialist AI analyst
-              <span class="en-translation">Multiple specialist AI analysts</span>
+            <h3>八位專家級 AI 分析師
+              <span class="en-translation">Eight specialist AI analysts</span>
             </h3>
-            <p>趨勢、動能、量價、籌碼、基本面、事件、策略與驗證先被分開，再交由主持 agent 整合成最終結論。</p>
+            <p>趨勢、動能、量價、籌碼、基本面、事件、策略與驗證先被拆開檢視，再交由主持 agent 整合成最終結論。</p>
             <p class="en-translation">Trend, momentum, price-volume, chip-flow, fundamental, event, strategy, and validation perspectives are separated first, then synthesized by a chair agent into the final verdict.</p>
           </article>
           <article class="card">
             <h3>保留分歧，而不是掩蓋矛盾
               <span class="en-translation">Visible disagreement</span>
             </h3>
-            <p>混合訊號應該降低信心，而不是被強行包成一段很順的敘事。這也是為什麼 final packet 會保留 dissent memo。</p>
-            <p class="en-translation">Mixed evidence should lower confidence instead of being flattened into a smooth narrative. That is why the final packet preserves dissent.</p>
+            <p>混合訊號應該降低信心，而不是被強行包成一段很順的敘事。這也是為什麼最終決策文件會保留反方備忘錄。</p>
+            <p class="en-translation">Mixed evidence should lower confidence instead of being flattened into a smooth narrative. That is why the final decision packet preserves dissent.</p>
           </article>
           <article class="card">
             <h3>輸出以決策為中心
               <span class="en-translation">Decision-oriented output</span>
             </h3>
-            <p>結果不只是一句方向判斷，而是訊號引擎、風格權重、策略模組、情境分支、買入區、停損、停利階梯與 thesis-break 條件。</p>
-            <p class="en-translation">The result is more than a directional opinion. It includes signal engines, style weights, strategy modules, scenarios, buy zones, stop-loss logic, take-profit ladders, and thesis-break conditions.</p>
+            <p>結果不只是一句方向判斷，而是訊號引擎、風格權重、策略模組、情境分支、買入區、停損、停利階梯與失效條件。</p>
+            <p class="en-translation">The result is more than a directional opinion. It includes signal engines, style weights, strategy modules, scenarios, buy zones, stop-loss logic, take-profit ladders, and invalidation conditions.</p>
           </article>
         </div>
       </section>
@@ -217,8 +217,8 @@
             <h3>六層訊號引擎
               <span class="en-translation">Six signal engines</span>
             </h3>
-            <p>系統先把單股拆成趨勢、動能、量價、籌碼、基本面與事件六層，再決定這個 setup 是否值得往下做。</p>
-            <p class="en-translation">The system first breaks a stock into six layers: trend, momentum, price-volume, chip flow, fundamentals, and events, then decides whether the setup deserves further action.</p>
+            <p>系統先把單股拆成趨勢、動能、量價、籌碼、基本面與事件六層，再決定這個個案是否值得往下做。</p>
+            <p class="en-translation">The system first breaks a stock into six layers: trend, momentum, price-volume, chip flow, fundamentals, and events, then decides whether the case deserves further action.</p>
           </article>
           <article class="card">
             <h3>風格權重切換
@@ -246,7 +246,7 @@
 
       <section>
         <div class="quote">
-          <p><strong>展品摘要：</strong> Taiwan Stock Radar 是一個面向台股的單股指標研究 skill，透過多 Agent 正式研討會議，輸出帶有訊號引擎、風格權重、策略選擇、操作區間與風險反方意見的結構化決策文件。<span class="en-translation"><strong>Exhibit summary:</strong> Taiwan Stock Radar is a single-stock Taiwan-equity indicator skill that turns one stock into a formal multi-agent meeting and returns a structured decision packet with signal engines, style weights, strategy selection, action zones, and risk-aware dissent.</span></p>
+          <p><strong>展品摘要：</strong> Taiwan Stock Radar 是一個面向台股的單股指標研究 skill，透過多位 AI 分析師的正式研討會議，輸出帶有訊號引擎、風格權重、策略選擇、操作區間與風險反方意見的結構化決策文件。<span class="en-translation"><strong>Exhibit summary:</strong> Taiwan Stock Radar is a single-stock Taiwan-equity indicator skill that turns one stock into a formal multi-analyst meeting and returns a structured decision packet with signal engines, style weights, strategy selection, action zones, and risk-aware dissent.</span></p>
         </div>
       </section>
 
@@ -264,14 +264,14 @@
             <ul>
               <li>委員會 verdict summary bar<span class="en-translation">Committee verdict summary bar</span></li>
               <li>個案背景與研究問題<span class="en-translation">Case setup and research objective</span></li>
-              <li>strategy engine 與策略選擇<span class="en-translation">Strategy engine and strategy selection</span></li>
-              <li>committee scorecard 與權重傾向<span class="en-translation">Committee scorecard and weighted leaning</span></li>
-              <li>validation scorecard 與 robustness notes<span class="en-translation">Validation scorecard and robustness notes</span></li>
-              <li>不同週期的 forecast panel<span class="en-translation">Horizon-specific forecast panel</span></li>
-              <li>specialist agent 簡報<span class="en-translation">Specialist agent briefs</span></li>
+              <li>策略引擎與策略選擇<span class="en-translation">Strategy engine and strategy selection</span></li>
+              <li>委員會評分卡與權重傾向<span class="en-translation">Committee scorecard and weighted leaning</span></li>
+              <li>驗證評分卡與穩健度備註<span class="en-translation">Validation scorecard and robustness notes</span></li>
+              <li>不同週期的預測面板<span class="en-translation">Horizon-specific forecast panel</span></li>
+              <li>專家簡報<span class="en-translation">Specialist briefs</span></li>
               <li>同業比較區塊<span class="en-translation">Peer comparison block</span></li>
               <li>進出場階梯與操作地圖<span class="en-translation">Entry / exit ladder and action map</span></li>
-              <li>dissent memo 與 scenario tree<span class="en-translation">Dissent memo and scenario tree</span></li>
+              <li>反方備忘錄與情境樹<span class="en-translation">Dissent memo and scenario tree</span></li>
             </ul>
           </article>
           <article class="analysis-card">
@@ -286,8 +286,8 @@
       </section>
 
       <section>
-        <h2>Specialist Agent Council
-          <span class="en-translation">Specialist Agent Council</span>
+        <h2>研究委員會成員
+          <span class="en-translation">Research Committee</span>
         </h2>
         <p class="section-intro">系統使用帶權重的研究委員會，讓任何一種分析風格都不會單獨控制最終結論，並把策略選擇與驗證獨立成可見角色。</p>
         <p class="section-intro en-translation">The system uses a weighted research committee so that no single analytical style controls the final conclusion, while strategy selection and validation remain visible roles.</p>
@@ -338,7 +338,7 @@
             </tr>
             <tr>
               <td>Strategy Architect</td>
-              <td>判斷 setup 屬於哪一種策略模組，並檢查是否與當前 regime 相容。<span class="en-translation">Classifies the setup into a strategy family and checks whether it fits the current regime.</span></td>
+              <td>判斷個案屬於哪一種策略模組，並檢查是否與當前市況相容。<span class="en-translation">Classifies the case into a strategy family and checks whether it fits the current market regime.</span></td>
               <td>0.09</td>
             </tr>
             <tr>
@@ -354,7 +354,7 @@
         <h2>會議流程
           <span class="en-translation">Meeting Workflow</span>
         </h2>
-        <p class="section-intro">委員會的設計讓每位 specialist 都能在結論形成前先清楚思考與發言。</p>
+        <p class="section-intro">委員會的設計讓每位專家角色都能在結論形成前先清楚思考與發言。</p>
         <p class="section-intro en-translation">The council is structured so that each specialist can think clearly before the final conclusion is formed.</p>
         <div class="kpi-grid">
           <div class="kpi">
@@ -363,11 +363,11 @@
           </div>
           <div class="kpi">
             <strong>2</strong>
-            <span class="muted">各 specialist 獨立簡報<span class="en-translation">Independent specialist briefs</span></span>
+            <span class="muted">各專家角色獨立簡報<span class="en-translation">Independent specialist briefs</span></span>
           </div>
           <div class="kpi">
             <strong>3</strong>
-            <span class="muted">策略提名與 setup 分類<span class="en-translation">Strategy nomination and setup classification</span></span>
+            <span class="muted">策略提名與個案分類<span class="en-translation">Strategy nomination and case classification</span></span>
           </div>
           <div class="kpi">
             <strong>4</strong>
@@ -450,7 +450,7 @@
 
     <footer class="footer">
       <div class="footer-card">
-        <p><strong>風險聲明：</strong> Taiwan Stock Radar 是研究與決策輔助 skill，不保證投資結果，也不應被理解為對未來股價的確定承諾。<span class="en-translation"><strong>Risk note:</strong> Taiwan Stock Radar is a research and decision-support skill. It does not promise investment results and should not be interpreted as certainty about future price behavior.</span></p>
+        <p><strong>免責聲明：</strong> Taiwan Stock Radar 僅供研究、教育與產品展示使用，不構成投資建議、招攬、保證報酬或個別證券推薦。所有交易決策與風險承擔仍應由使用者自行判斷。<span class="en-translation"><strong>Disclaimer:</strong> Taiwan Stock Radar is provided for research, education, and product demonstration. It is not investment advice, not a solicitation, and not a guarantee of returns. All trading decisions and risk-bearing remain the user's responsibility.</span></p>
       </div>
     </footer>
   </div>

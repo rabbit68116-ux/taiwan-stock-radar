@@ -6,8 +6,8 @@
 ![Market](https://img.shields.io/badge/market-Taiwan%20Stocks-red)
 ![Mode](https://img.shields.io/badge/mode-single--stock%20indicator%20committee-green)
 
-Taiwan Stock Radar v1.4 是一個面向台灣股票單股研判的研究型 AI skill。
-這一版把重心從「策略模組」再往前推一層，正式建立成 **台股指標作業系統**，讓 AI agent 能依照不同交易風格，系統化讀取趨勢、動能、量價、籌碼、基本面與事件面訊號，再產出可執行的判斷。
+Taiwan Stock Radar v1.4 是一個專為台灣股票單股研究打造的 AI skill。
+它把一檔股票交給八位具不同專長與權重的 AI 分析師，先完成六層訊號引擎檢視，再依交易風格切換權重，最後輸出可執行的決策文件。
 
 > 一檔股票。八位專家級 AI 分析師。六層台股訊號引擎。三種交易風格權重。
 > One stock. Eight specialist AI analysts. Six Taiwan-stock signal engines. Three trading-style profiles.
@@ -18,18 +18,16 @@ Taiwan Stock Radar v1.4 是一個面向台灣股票單股研判的研究型 AI s
 
 ## 繁體中文
 
-### 封面定位
+### 產品定位
 
-**Taiwan Stock Radar** 是一個專注於台灣股票單股深度研判的 AI skill。
-它不是只做市場掃描的 watchlist 工具，也不是只輸出一句方向判斷的聊天式助理，而是把一檔股票交給多位不同專長、不同性格、不同權重的 AI analyst 分身，模擬一場正式的投資研究會議。
+**Taiwan Stock Radar** 聚焦於台灣股票的單股深度研究。
+它不是市場掃描後的簡短清單工具，也不是只輸出一句看多或看空的聊天式回覆，而是把一檔股票送進正式研究流程，先拆開訊號、再交由不同角色交叉檢視，最後形成帶有分歧與紀律的加權結論。
 
-`v1.4` 的重心是 **台股指標與風格加強版本**：
+`v1.4` 的產品重點是 **台股指標與風格層**：
 
-- 不只問「這檔股票偏多還是偏空」
-- 也不只問「最適合哪一種交易策略」
-- 而是先回答「這檔股票目前的訊號堆疊是否健康」
-- 再依短線、波段、中長線三種風格切換權重
-- 最後才輸出策略、買賣點與風險條件
+- 先回答「這檔股票的訊號堆疊是否健康」
+- 再回答「它適合用哪一種交易風格來理解」
+- 最後才落到策略、買賣點、停損與失效條件
 
 ### v1.4 升級重點
 
@@ -45,7 +43,7 @@ Taiwan Stock Radar v1.4 是一個面向台灣股票單股研判的研究型 AI s
 |---|---|
 | 產品模式 Product mode | `v1.4` indicator-driven single-stock committee |
 | 主要市場 Coverage | `TWSE / TPEX` 單股深度研判 |
-| Agent 數量 Agent count | `8` 位 specialist personas |
+| Agent 數量 Agent count | `8` 位加權專家角色 |
 | 訊號引擎 Signal engines | `6` 層台股訊號堆疊 |
 | 交易風格 Style profiles | `short_term / swing / position` |
 | 最終交付 Final deliverable | 風格化判斷、策略建議、買入區、停損區、停利區、失效條件 |
@@ -115,9 +113,9 @@ Taiwan Stock Radar v1.4 是一個面向台灣股票單股研判的研究型 AI s
 - 股價重新站回 `60MA`
 - 量能開始放大
 
-### AI Agent 研討會
+### 八位 AI 分析師如何分工
 
-在 `v1.4` 中，單一股票會進入一個以指標引擎為核心的 multi-agent committee。每位 agent 有不同性格、專業、指標權重與責任。
+在 `v1.4` 中，單一股票會進入一個以指標引擎為核心的多分析師研究委員會。每位 AI 分析師負責不同的專業視角與風險責任，最後再由主持角色整合。
 
 | AI Agent | 角色定位 | 核心觀察 | 權重 |
 |---|---|---|---:|
@@ -127,7 +125,7 @@ Taiwan Stock Radar v1.4 是一個面向台灣股票單股研判的研究型 AI s
 | Fundamental Analyst | 基本面與品質分析 | 月營收、`EPS`、`ROE`、毛利率、估值與股利 | 0.14 |
 | Catalyst Analyst | 事件與催化因子分析 | 法說、財報、營收、除權息、重大訊息、產業事件 | 0.10 |
 | Risk Manager | 反方與風控代表 | 流動性、跳空風險、事件聚集、失效條件 | 0.11 |
-| Strategy Architect | 策略模組選擇與風格切換 | setup 類型、style fit、策略衝突 | 0.09 |
+| Strategy Architect | 策略模組選擇與風格切換 | 個案類型、風格適配、策略衝突 | 0.09 |
 | Quant Validation Analyst | 驗證與穩健度檢查 | 回測品質、尾部風險、參數穩定性、成本敏感度 | 0.08 |
 
 ### 單股研討會輸出範例
@@ -202,6 +200,12 @@ streamlit run app/streamlit_app.py
 目前的 scan 與 dashboard 仍保留為展示型資產。  
 `v1.4` 的核心價值則集中在 skill、blueprint、indicator catalog、style weights、case study 與公開展示頁。
 
+### 免責聲明 Disclaimer
+
+Taiwan Stock Radar 僅供研究、教育與產品展示使用，不構成任何形式的投資建議、招攬、保證報酬或個別證券推薦。
+專案中的案例、情境推演、買入區、停損區、停利區與失效條件，皆屬方法展示，不應被視為對未來股價表現的確定承諾。
+任何交易決策、資金配置與風險承擔，仍應由使用者自行判斷與負責。
+
 ---
 
 ## English
@@ -231,3 +235,7 @@ streamlit run app/streamlit_app.py
 - Website: [https://rabbit68116-ux.github.io/taiwan-stock-radar/](https://rabbit68116-ux.github.io/taiwan-stock-radar/)
 - Case Study: [https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html](https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html)
 - GitHub: [https://github.com/rabbit68116-ux/taiwan-stock-radar](https://github.com/rabbit68116-ux/taiwan-stock-radar)
+
+### Disclaimer
+
+Taiwan Stock Radar is provided for research, education, and product demonstration. It is not investment advice, not a solicitation, and not a guarantee of future returns. Any case study, scenario, action zone, stop, target, or invalidation rule in this project is illustrative and should not be treated as a certain commitment about future price behavior.
