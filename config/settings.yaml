@@ -2,18 +2,20 @@
   "project": {
     "name": "taiwan-stock-radar",
     "display_name": "Taiwan Stock Radar",
-    "plan_version": "v1.3",
-    "mode": "single_stock_strategy_council"
+    "plan_version": "v1.4",
+    "mode": "single_stock_indicator_council"
   },
   "analysis": {
     "primary_scope": "single_stock",
     "default_horizon": "swing",
     "supported_horizons": [
-      "tactical",
+      "short_term",
       "swing",
       "position"
     ],
-    "strategy_engine": "multi_strategy_weighted_committee",
+    "signal_engine": "taiwan_market_multi_engine_committee",
+    "indicator_catalog_path": "config/indicator_catalog.yaml",
+    "style_weight_config_path": "config/style_weights.yaml",
     "supported_strategy_families": [
       "trend_following",
       "relative_strength_leadership",
@@ -34,6 +36,8 @@
   },
   "validation": {
     "enabled": true,
+    "require_signal_engine_summary": true,
+    "require_style_profile": true,
     "require_strategy_selection": true,
     "require_validation_panel": true,
     "minimum_trade_count": 30,
@@ -61,6 +65,6 @@
   },
   "app": {
     "title": "Taiwan Stock Radar",
-    "subtitle": "Strategy-enhanced single-stock Taiwan equity committee with legacy scan demo support"
+    "subtitle": "Indicator-driven single-stock Taiwan equity committee with legacy scan demo support"
   }
 }

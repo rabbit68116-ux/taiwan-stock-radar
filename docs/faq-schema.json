@@ -7,15 +7,15 @@
       "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Taiwan Stock Radar 是一個面向台灣股票單股研究的 AI skill。v1.3 版本加入策略選擇與驗證面板，透過多位 specialist AI analyst 的正式研討會議輸出結構化決策文件。 Taiwan Stock Radar is an AI skill for Taiwan single-stock research. In v1.3 it adds strategy selection and validation panels to a formal multi-agent committee workflow."
+        "text": "Taiwan Stock Radar 是一個面向台灣股票單股研究的 AI skill。v1.4 版本加入六層訊號引擎與風格權重切換，透過多位 specialist AI analyst 的正式研討會議輸出結構化決策文件。 Taiwan Stock Radar is an AI skill for Taiwan single-stock research. In v1.4 it adds six signal engines and style-weight switching to a formal multi-agent committee workflow."
       }
     },
     {
       "@type": "Question",
-      "name": "多 Agent 策略委員會如何運作？ How does the multi-agent strategy committee work?",
+      "name": "多 Agent 指標委員會如何運作？ How does the multi-agent indicator committee work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "系統會把技術面、籌碼面、基本面、催化因子、風控、策略選擇與驗證拆成不同 specialist 角色，先分別形成觀點，再由主持 agent 做權重整合與衝突裁決。 The system separates technical, chip-flow, fundamental, catalyst, risk, strategy-selection, and validation roles, lets them form independent views, and then asks a chair agent to synthesize the final verdict."
+        "text": "系統會把趨勢、動能、量價、籌碼、基本面、事件、風控、策略選擇與驗證拆成不同 specialist 角色，先分別形成觀點，再由主持 agent 做權重整合與衝突裁決。 The system separates trend, momentum, price-volume, chip-flow, fundamentals, events, risk, strategy-selection, and validation roles, lets them form independent views, and then asks a chair agent to synthesize the final verdict."
       }
     },
     {
@@ -31,7 +31,7 @@
       "name": "最終輸出有哪些欄位？ What does the final output include?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "標準輸出包含 thesis、策略模組選擇、驗證面板、base/bull/bear 三情境、建議買入區、進場條件、停損、停利階梯、失效條件、信心分級與 dissent memo。 A standard output includes the thesis, strategy-module selection, validation panels, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and dissent notes."
+        "text": "標準輸出包含 signal-engine summary、style profile、策略模組選擇、驗證面板、base/bull/bear 三情境、建議買入區、進場條件、停損、停利階梯、失效條件、信心分級與 dissent memo。 A standard output includes the signal-engine summary, style profile, strategy-module selection, validation panels, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and dissent notes."
       }
     },
     {

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 方法論 Methodology</title>
-  <meta name="description" content="Taiwan Stock Radar 方法論頁，說明單股策略研究委員會如何完成策略選擇、驗證面板、最終判斷與操作方案，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar 方法論頁，說明單股指標研究委員會如何完成訊號引擎評估、風格切換、策略選擇與操作方案，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 方法論 Methodology">
-  <meta property="og:description" content="了解 Taiwan Stock Radar 如何透過多位 specialist AI analyst 完成單股研究、策略選擇與決策整合。">
+  <meta property="og:description" content="了解 Taiwan Stock Radar 如何透過多位 specialist AI analyst 完成單股研究、指標評估與決策整合。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -50,11 +50,11 @@
     <section class="hero">
       <div class="hero-card">
         <p class="eyebrow">方法論<span class="en-translation">Methodology</span></p>
-        <h1>Taiwan Stock Radar 如何執行單股研究會議
-          <span class="en-translation">How Taiwan Stock Radar runs a single-stock strategy committee</span>
+        <h1>Taiwan Stock Radar 如何執行單股指標研究會議
+          <span class="en-translation">How Taiwan Stock Radar runs a single-stock indicator committee</span>
         </h1>
-        <p class="lead">這一頁說明 Taiwan Stock Radar `v1.3` 的核心分析序列。這一版不只追求更嚴謹的單股判斷，也要求把策略選擇、驗證與風險治理放進正式流程。</p>
-        <p class="lead en-translation">This page outlines the analytical sequence behind Taiwan Stock Radar `v1.3`. The goal is not only more rigorous single-stock judgment, but also explicit strategy selection, validation, and risk governance.</p>
+        <p class="lead">這一頁說明 Taiwan Stock Radar `v1.4` 的核心分析序列。這一版先建立台股訊號引擎，再依交易風格切換權重，最後才進入策略與操作規劃。</p>
+        <p class="lead en-translation">This page outlines the analytical sequence behind Taiwan Stock Radar `v1.4`. The workflow builds a Taiwan-market signal stack first, then switches weights by trading style before moving into strategy and action planning.</p>
       </div>
     </section>
 
@@ -68,51 +68,59 @@
       </section>
 
       <section>
-        <h2>2. 台股脈絡校準
-          <span class="en-translation">2. Taiwan market context</span>
+        <h2>2. 台股訊號引擎校準
+          <span class="en-translation">2. Signal-engine calibration</span>
         </h2>
-        <p>在下方向判斷之前，系統會先看市場 regime、所屬族群、同業相對位置與事件時點。單一股票不能脫離它所在的市場背景來理解。</p>
-        <p class="en-translation">Before any directional call is made, the system reviews market regime, sector position, peer context, and event timing. A stock should not be judged in isolation.</p>
+        <p>在下方向判斷之前，系統會先看趨勢、動能、量價、籌碼、基本面與事件六層訊號。單一股票不能只靠一個圖形或一則新聞來理解。</p>
+        <p class="en-translation">Before any directional call is made, the system reviews trend, momentum, price-volume, chip flow, fundamentals, and events. A stock should not be judged from only one chart pattern or one headline.</p>
       </section>
 
       <section>
-        <h2>3. Specialist 獨立簡報
-          <span class="en-translation">3. Independent specialist briefs</span>
+        <h2>3. 交易風格切換
+          <span class="en-translation">3. Style-profile switching</span>
+        </h2>
+        <p>`v1.4` 不會假設短線、波段與中長線的判讀標準相同。系統會先決定 active style，再調整各引擎的權重。</p>
+        <p class="en-translation">`v1.4` does not assume that short-term, swing, and position trading should read a stock the same way. The system selects the active style first, then adjusts engine weights.</p>
+      </section>
+
+      <section>
+        <h2>4. Specialist 獨立簡報
+          <span class="en-translation">4. Independent specialist briefs</span>
         </h2>
         <p>技術面、籌碼面、基本面、催化因子、風控、策略選擇與驗證角色會先各自形成初步看法。這能避免第一個強勢敘事過早主導整場會議。</p>
         <p class="en-translation">Technical, chip-flow, fundamental, catalyst, risk, strategy-selection, and validation specialists each produce an initial view independently so that the first strong narrative does not dominate the whole meeting.</p>
       </section>
 
       <section>
-        <h2>4. 策略提名
-          <span class="en-translation">4. Strategy nomination</span>
+        <h2>5. 策略提名
+          <span class="en-translation">5. Strategy nomination</span>
         </h2>
-        <p>`v1.3` 會先由 Strategy Architect 判斷 setup 最適合哪一種策略模組，並標記 primary strategy、secondary strategy 與不該採用的執行方式。</p>
-        <p class="en-translation">In `v1.3`, the Strategy Architect first classifies the setup into the most suitable strategy family, then labels the primary strategy, secondary strategy, and the execution style to avoid.</p>
+        <p>Strategy Architect 會先判斷這檔股票適合用哪種交易策略來理解，例如趨勢跟隨、突破、拉回承接，還是根本不該採用短線反彈思維。</p>
+        <p class="en-translation">The Strategy Architect decides which trading strategy best fits the stock, such as trend-following, breakout, pullback continuation, or whether mean-reversion logic should be avoided entirely.</p>
       </section>
 
       <section>
-        <h2>5. 驗證面板
-          <span class="en-translation">5. Validation panel</span>
+        <h2>6. 驗證面板
+          <span class="en-translation">6. Validation panel</span>
         </h2>
         <p>Quant Validation Analyst 會用績效、尾部風險、交易品質與穩健度指標檢查 setup 是否足以支撐操作。這一步的目標，是防止會議只剩下漂亮的故事。</p>
         <p class="en-translation">The Quant Validation Analyst tests whether the setup deserves action by reviewing performance, tail-risk, trade quality, and robustness metrics. This step exists to prevent the meeting from becoming story-driven.</p>
       </section>
 
       <section>
-        <h2>6. 交叉質詢與權重整合
-          <span class="en-translation">6. Cross-examination and weighted synthesis</span>
+        <h2>7. 交叉質詢與權重整合
+          <span class="en-translation">7. Cross-examination and weighted synthesis</span>
         </h2>
-        <p>主持 agent 會在 strategy fit 與 validation 結果都進場後，才整合各 specialist 的意見。最終結論不是投票平均，而是依角色權重與風險反對意見共同形成。</p>
-        <p class="en-translation">The chair agent synthesizes the specialists only after strategy fit and validation are both on the table. The final verdict is not a simple vote, but a weighted conclusion shaped by both conviction and visible objections.</p>
+        <p>主持 agent 會在 signal-engine review、style fit、strategy fit 與 validation 結果都進場後，才整合各 specialist 的意見。最終結論不是投票平均，而是依角色權重與風險反對意見共同形成。</p>
+        <p class="en-translation">The chair agent synthesizes the specialists only after signal-engine review, style fit, strategy fit, and validation are on the table. The final verdict is not a simple vote, but a weighted conclusion shaped by both conviction and visible objections.</p>
       </section>
 
       <section>
-        <h2>7. 決策文件輸出
-          <span class="en-translation">7. Decision packet</span>
+        <h2>8. 決策文件輸出
+          <span class="en-translation">8. Decision packet</span>
         </h2>
-        <p>最後輸出會包含 thesis、策略模組選擇、validation panel、base/bull/bear 三情境、建議買入區、進場條件、停損、停利階梯、失效條件，以及保留下來的 dissent memo。</p>
-        <p class="en-translation">The final packet includes the thesis, strategy-module selection, validation panel, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, and preserved dissent notes.</p>
+        <p>最後輸出會包含 signal-engine summary、style profile、策略模組選擇、validation panel、base/bull/bear 三情境、建議買入區、進場條件、停損、停利階梯、失效條件，以及保留下來的 dissent memo。</p>
+        <p class="en-translation">The final packet includes the signal-engine summary, style profile, strategy-module selection, validation panel, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, and preserved dissent notes.</p>
       </section>
     </main>
   </div>

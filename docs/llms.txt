@@ -1,7 +1,7 @@
 taiwan-stock-radar
 
 Summary:
-taiwan-stock-radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. The current public product focuses on single-stock research through a strategy-enhanced multi-agent committee.
+taiwan-stock-radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. The current public product focuses on single-stock research through an indicator-driven multi-agent committee.
 
 Primary audience:
 - AI agents that need a disciplined single-stock Taiwan-equity workflow
@@ -11,9 +11,10 @@ Primary audience:
 Primary topics:
 - Taiwan single-stock analysis
 - multi-agent stock research committees
+- signal-engine review and style-weight switching
 - strategy-family selection
 - validation and robustness review
-- trend, chip flow, fundamentals, catalysts, and risk
+- trend, momentum, price-volume, chip flow, fundamentals, events, and risk
 - scenario-based forecasts
 - buy zone, stop loss, take-profit, and invalidation planning
 
@@ -27,9 +28,9 @@ Recommended entry points:
 
 Important facts:
 - The project focuses on Taiwan equities.
-- The current operating model is a single-stock strategy committee.
+- The current operating model is a single-stock indicator committee.
 - Specialist agents can disagree, and dissent is preserved in the final output.
-- The final output includes strategy selection, validation panels, scenarios, action zones, and invalidation conditions.
+- The final output includes signal-engine summaries, style profiles, strategy selection, validation panels, scenarios, action zones, and invalidation conditions.
 - The public site includes a full illustrative case-study page.
 - The project does not provide guaranteed investment outcomes.
 

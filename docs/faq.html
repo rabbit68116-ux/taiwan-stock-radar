@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 常見問題 FAQ</title>
-  <meta name="description" content="Taiwan Stock Radar 常見問題頁，說明這個以單股為核心的台股策略研究 skill 如何運作，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar 常見問題頁，說明這個以單股為核心的台股指標研究 skill 如何運作，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 常見問題 FAQ">
-  <meta property="og:description" content="了解 Taiwan Stock Radar 如何以多位專業 AI analyst 對單一台股進行深度研究、策略選擇與驗證。">
+  <meta property="og:description" content="了解 Taiwan Stock Radar 如何以多位專業 AI analyst 對單一台股進行深度研究、指標評估與風格切換。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -23,15 +23,15 @@
         "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taiwan Stock Radar 是一個面向台灣股票單股研究的 AI skill。v1.3 版本加入策略選擇與驗證面板，透過多位 specialist AI analyst 的正式研討會議輸出結構化判斷。 Taiwan Stock Radar is an AI skill for Taiwan single-stock research. In v1.3 it adds strategy selection and validation panels to a formal multi-agent committee workflow."
+          "text": "Taiwan Stock Radar 是一個面向台灣股票單股研究的 AI skill。v1.4 版本加入六層訊號引擎與風格權重切換，透過多位 specialist AI analyst 的正式研討會議輸出結構化判斷。 Taiwan Stock Radar is an AI skill for Taiwan single-stock research. In v1.4 it adds six signal engines and style-weight switching to a formal multi-agent committee workflow."
         }
       },
       {
         "@type": "Question",
-        "name": "多 Agent 策略委員會是怎麼運作的？ How does the multi-agent strategy committee work?",
+        "name": "多 Agent 指標委員會是怎麼運作的？ How does the multi-agent indicator committee work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "系統會將技術面、籌碼面、基本面、催化因子、風險管理、策略選擇與驗證拆成不同角色，各自先獨立提出判斷，再由主持型 agent 做權重整合與衝突裁決。 The system separates technical, chip-flow, fundamental, catalyst, risk, strategy-selection, and validation roles, lets them form independent views first, and then asks a chair agent to synthesize the final verdict through weighted judgment."
+          "text": "系統會將趨勢、動能、量價、籌碼、基本面、事件、風險管理、策略選擇與驗證拆成不同角色，各自先獨立提出判斷，再由主持型 agent 做權重整合與衝突裁決。 The system separates trend, momentum, price-volume, chip-flow, fundamentals, events, risk, strategy-selection, and validation roles, lets them form independent views first, and then asks a chair agent to synthesize the final verdict through weighted judgment."
         }
       },
       {
@@ -47,7 +47,7 @@
         "name": "最終輸出會包含哪些內容？ What does the final output include?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "標準輸出包含最終 thesis、base/bull/bear 三情境、建議買入區、進場觸發條件、停損、停利階梯、失效條件、信心分級，以及保留下來的反方意見。 A standard output includes the final thesis, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and preserved dissent notes."
+          "text": "標準輸出包含 signal-engine summary、style profile、最終 thesis、base/bull/bear 三情境、建議買入區、進場觸發條件、停損、停利階梯、失效條件、信心分級，以及保留下來的反方意見。 A standard output includes the signal-engine summary, style profile, the final thesis, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and preserved dissent notes."
         }
       },
       {
@@ -101,8 +101,8 @@
         <h1>關於 Taiwan Stock Radar 的常見問題
           <span class="en-translation">Common questions about Taiwan Stock Radar</span>
         </h1>
-        <p class="lead">這一頁整理 Taiwan Stock Radar `v1.3` 最常被問到的核心問題，說明這個單股策略研究 skill 怎麼運作、會產出什麼，以及它的邊界在哪裡。</p>
-        <p class="lead en-translation">This page answers the most common questions about Taiwan Stock Radar `v1.3`, including how the single-stock strategy workflow operates, what it returns, and where its limits are.</p>
+        <p class="lead">這一頁整理 Taiwan Stock Radar `v1.4` 最常被問到的核心問題，說明這個單股指標研究 skill 怎麼運作、會產出什麼，以及它的邊界在哪裡。</p>
+        <p class="lead en-translation">This page answers the most common questions about Taiwan Stock Radar `v1.4`, including how the single-stock indicator workflow operates, what it returns, and where its limits are.</p>
       </div>
     </section>
 
@@ -113,15 +113,15 @@
             <h2>什麼是 Taiwan Stock Radar？
               <span class="en-translation">What is Taiwan Stock Radar?</span>
             </h2>
-            <p>它是一個專門用來研究單一台股的 AI skill。它不只給一句看多或看空，而是模擬一場正式研究會議，輸出帶有策略模組與驗證面板的決策文件。</p>
-            <p class="en-translation">It is an AI skill built for one Taiwan stock at a time. Instead of a loose bullish or bearish comment, it produces a reviewable decision packet with strategy modules and validation panels.</p>
+            <p>它是一個專門用來研究單一台股的 AI skill。它不只給一句看多或看空，而是模擬一場正式研究會議，輸出帶有訊號引擎、風格權重與策略模組的決策文件。</p>
+            <p class="en-translation">It is an AI skill built for one Taiwan stock at a time. Instead of a loose bullish or bearish comment, it produces a reviewable decision packet with signal engines, style weights, and strategy modules.</p>
           </article>
           <article class="card">
             <h2>為什麼要用多位 specialist agent？
               <span class="en-translation">Why use multiple specialist agents?</span>
             </h2>
-            <p>因為一種分析語氣很容易忽略其他風險。把技術面、籌碼面、基本面、催化因子、風控、策略選擇與驗證拆開後，結論會更平衡，也更像專業投研團隊。</p>
-            <p class="en-translation">Because one analytical voice can hide important contradictions. Separating structure, flow, fundamentals, catalysts, risk, strategy selection, and validation creates a more balanced result.</p>
+            <p>因為一種分析語氣很容易忽略其他風險。把趨勢、動能、量價、籌碼、基本面、事件、風控、策略選擇與驗證拆開後，結論會更平衡，也更像專業投研團隊。</p>
+            <p class="en-translation">Because one analytical voice can hide important contradictions. Separating trend, momentum, price-volume, flow, fundamentals, events, risk, strategy selection, and validation creates a more balanced result.</p>
           </article>
           <article class="card">
             <h2>主持 agent 扮演什麼角色？
@@ -134,15 +134,15 @@
             <h2>買賣點會怎麼表達？
               <span class="en-translation">How are buy and sell points expressed?</span>
             </h2>
-            <p>輸出不只是一句「可以買」，而是會定義策略模組、建議買入區、替代進場條件、停損、停利階梯與失效條件，把判斷連回可執行的交易紀律。</p>
-            <p class="en-translation">The output defines the strategy module, preferred buy zone, alternate entry triggers, stop-loss, take-profit ladder, and invalidation so the thesis stays connected to execution discipline.</p>
+            <p>輸出不只是一句「可以買」，而是會定義 signal-engine summary、style profile、策略模組、建議買入區、替代進場條件、停損、停利階梯與失效條件，把判斷連回可執行的交易紀律。</p>
+            <p class="en-translation">The output defines the signal-engine summary, style profile, strategy module, preferred buy zone, alternate entry triggers, stop-loss, take-profit ladder, and invalidation so the thesis stays connected to execution discipline.</p>
           </article>
           <article class="card">
-            <h2>v1.3 多了什麼？
-              <span class="en-translation">What is new in v1.3?</span>
+            <h2>v1.4 多了什麼？
+              <span class="en-translation">What is new in v1.4?</span>
             </h2>
-            <p>`v1.3` 新增了 strategy selection、validation panel、兩位新 specialist，以及更完整的尾部風險與穩健度檢查。</p>
-            <p class="en-translation">`v1.3` adds strategy selection, validation panels, two new specialists, and a broader tail-risk and robustness review.</p>
+            <p>`v1.4` 新增了六層訊號引擎、交易風格權重、最小可用欄位集，以及更完整的台股指標白皮書。</p>
+            <p class="en-translation">`v1.4` adds six signal engines, trading-style weights, a minimum viable field set, and a fuller Taiwan-equity indicator whitepaper.</p>
           </article>
           <article class="card">
             <h2>如果 agents 彼此意見不同怎麼辦？

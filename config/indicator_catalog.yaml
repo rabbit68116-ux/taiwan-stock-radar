@@ -1,0 +1,154 @@
+{
+  "version": "v1.4",
+  "signal_engines": {
+    "trend": {
+      "description": "Define whether the stock is in a bullish, neutral, or weakening structure.",
+      "priority_fields": [
+        "close",
+        "ma5",
+        "ma10",
+        "ma20",
+        "ma60",
+        "ma120",
+        "ma240",
+        "above_ma20",
+        "above_ma60",
+        "ma20_slope",
+        "ma60_slope",
+        "distance_to_52w_high",
+        "distance_to_52w_low"
+      ],
+      "core_rules": [
+        "above_ma20_and_ma60_with_rising_slopes_is_constructive",
+        "ma5_crossing_above_ma20_is_short_term_strength",
+        "break_below_ma20_with_expanding_volume_requires_caution",
+        "above_ma60_prefer_buy_points_below_ma60_avoid_chasing"
+      ]
+    },
+    "momentum": {
+      "description": "Judge short- to medium-term strength, overheating, and turning behavior.",
+      "priority_fields": [
+        "macd",
+        "macd_histogram",
+        "rsi_14",
+        "kd_9_3_3",
+        "bollinger_position",
+        "return_5d",
+        "return_20d"
+      ],
+      "core_rules": [
+        "macd_cross_above_signal_is_constructive",
+        "zero_line_macd_cross_is_stronger_than_below_zero_cross",
+        "rsi_above_50_is_stronger_than_below_50",
+        "kd_is_best_used_for_short_term_and_range_conditions_not_as_a_primary_trend_end_signal"
+      ]
+    },
+    "price_volume": {
+      "description": "Separate valid breakouts and healthy consolidations from weak moves.",
+      "priority_fields": [
+        "volume",
+        "avg_volume_5d",
+        "avg_volume_20d",
+        "volume_ratio",
+        "price_volume_state",
+        "breakout_with_volume",
+        "pullback_with_contraction"
+      ],
+      "core_rules": [
+        "price_up_volume_up_is_healthy",
+        "price_up_volume_down_is_weaker_than_it_looks",
+        "price_down_volume_down_can_be_normal_consolidation",
+        "price_down_volume_up_means_distribution_risk"
+      ]
+    },
+    "chip_flow": {
+      "description": "Capture Taiwan-market institutional and positioning behavior.",
+      "priority_fields": [
+        "foreign_net_buy",
+        "trust_net_buy",
+        "dealer_net_buy",
+        "margin_financing_change",
+        "short_interest_change",
+        "securities_lending_change",
+        "buy_sell_streak_days"
+      ],
+      "core_rules": [
+        "trust_buying_streaks_are_high_value_for_mid_small_caps",
+        "foreign_flow_matters_more_for_large_caps_and_index_heavy_names",
+        "financing_up_without_price_progress_is_a_chip_quality_warning",
+        "securities_lending_and_short_interest_should_be_read_together"
+      ]
+    },
+    "fundamentals": {
+      "description": "Check whether price action has business quality, valuation support, or yield support.",
+      "priority_fields": [
+        "monthly_revenue_yoy",
+        "monthly_revenue_mom",
+        "eps",
+        "pe_ratio",
+        "dividend_yield",
+        "pb_ratio",
+        "roe",
+        "gross_margin",
+        "operating_margin",
+        "cash_flow",
+        "inventory_change",
+        "accounts_receivable_change"
+      ],
+      "core_rules": [
+        "growth_names_should_not_be_judged_on_low_pe_alone",
+        "cyclical_low_pe_can_be_a_late_cycle_warning",
+        "two_to_three_months_of_revenue_reacceleration_is_high_value",
+        "revenue_strength_without_price_response_can_mean_early_positioning_opportunity"
+      ]
+    },
+    "events": {
+      "description": "Prevent otherwise strong setups from being blindsided by timing risk.",
+      "priority_fields": [
+        "earnings_date",
+        "monthly_revenue_release_date",
+        "ex_dividend_date",
+        "material_announcement_flag",
+        "industry_theme",
+        "semiconductor_index_context",
+        "adr_spillover_risk"
+      ],
+      "core_rules": [
+        "do_not_ignore_mops_announcements",
+        "event_windows_should_reduce_position_size_or_raise_confirmation_requirements",
+        "semiconductor_and_adr_spillover_can_shift_short_term_tape_quality",
+        "good_technicals_can_be_invalidated_by_poor_event_order"
+      ]
+    }
+  },
+  "minimum_viable_fields": [
+    "close",
+    "ma20",
+    "ma60",
+    "ma20_slope",
+    "volume",
+    "avg_volume_20d",
+    "breakout_with_volume",
+    "macd",
+    "rsi_14",
+    "foreign_net_buy",
+    "trust_net_buy",
+    "monthly_revenue_yoy"
+  ],
+  "source_hints": {
+    "technical_and_price_volume": [
+      "TWSE",
+      "TPEX",
+      "internal price history"
+    ],
+    "chip_flow": [
+      "TWSE",
+      "TPEX"
+    ],
+    "fundamentals_and_events": [
+      "MOPS",
+      "TWSE",
+      "TPEX"
+    ]
+  }
+}

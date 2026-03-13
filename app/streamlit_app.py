@@ -41,9 +41,9 @@ def main() -> None:
     title = app_settings.get("title", project_settings.get("display_name", "Taiwan Stock Radar"))
     subtitle = app_settings.get(
         "subtitle",
-        "Strategy-enhanced single-stock Taiwan equity committee with legacy scan demo support",
+        "Indicator-driven single-stock Taiwan equity committee with legacy scan demo support",
     )
-    version = project_settings.get("plan_version", "v1.3")
+    version = project_settings.get("plan_version", "v1.4")
 
     st.set_page_config(page_title=title, page_icon="📈", layout="wide")
     st.title(title)

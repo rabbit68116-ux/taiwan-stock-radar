@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 知識庫 Knowledge Base</title>
-  <meta name="description" content="Taiwan Stock Radar 知識庫與文件入口，整理 skill 定義、agent blueprint、策略模組、評估指標與公開展示頁，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar 知識庫與文件入口，整理 skill 定義、agent blueprint、台股指標、風格權重與公開展示頁，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 知識庫 Knowledge Base">
-  <meta property="og:description" content="查看 Taiwan Stock Radar 背後的 skill 定義、藍圖、策略模組、評估指標與案例頁。">
+  <meta property="og:description" content="查看 Taiwan Stock Radar 背後的 skill 定義、藍圖、台股指標、風格權重與案例頁。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -53,8 +53,8 @@
         <h1>Taiwan Stock Radar 背後的參考文件
           <span class="en-translation">The reference library behind Taiwan Stock Radar</span>
         </h1>
-        <p class="lead">這一頁整理 `v1.3` 單股策略研究 skill 的核心文件。它是公開展示頁背後的文件書架，讓訪客能看見方法如何被定義，而不只是看結果。</p>
-        <p class="lead en-translation">This page gathers the core documents behind the `v1.3` single-stock strategy committee. It is the reference shelf behind the public exhibit, showing how the method is defined instead of only showing the output.</p>
+        <p class="lead">這一頁整理 `v1.4` 單股指標研究 skill 的核心文件。它是公開展示頁背後的文件書架，讓訪客能看見方法如何被定義，而不只是看結果。</p>
+        <p class="lead en-translation">This page gathers the core documents behind the `v1.4` single-stock indicator committee. It is the reference shelf behind the public exhibit, showing how the method is defined instead of only showing the output.</p>
       </div>
     </section>
 
@@ -63,13 +63,13 @@
         <h2>建議先看的文件
           <span class="en-translation">Recommended starting points</span>
         </h2>
-        <p class="section-intro">如果你想先理解這個 skill 如何思考、策略如何被選擇、驗證如何進行，以及最終決策文件如何成形，以下幾份文件最值得先打開。</p>
-        <p class="section-intro en-translation">If you want to understand how the skill thinks, how strategies are chosen, how validation is run, and how the final packet is structured, these are the best places to start.</p>
+        <p class="section-intro">如果你想先理解這個 skill 如何思考、台股指標如何被組織、風格如何切換，以及最終決策文件如何成形，以下幾份文件最值得先打開。</p>
+        <p class="section-intro en-translation">If you want to understand how the skill thinks, how Taiwan indicators are organized, how styles are switched, and how the final packet is structured, these are the best places to start.</p>
         <div class="grid">
           <article class="card">
             <h3>SKILL.md</h3>
-            <p>主行為定義文件，說明單股策略委員會 workflow、策略選擇與輸出紀律。</p>
-            <p class="en-translation">The main behavior document defining the single-stock strategy committee workflow, strategy selection, and output discipline.</p>
+            <p>主行為定義文件，說明單股指標委員會 workflow、風格切換與輸出紀律。</p>
+            <p class="en-translation">The main behavior document defining the single-stock indicator committee workflow, style switching, and output discipline.</p>
           </article>
           <article class="card">
             <h3>Agent analyst blueprint</h3>
@@ -77,14 +77,14 @@
             <p class="en-translation">Explains specialist roles, meeting protocol, strategy nomination, weighted synthesis, and the required sections of the decision packet.</p>
           </article>
           <article class="card">
-            <h3>Strategy modules</h3>
-            <p>定義六大策略模組、適用 regime、確認條件與禁用條件。</p>
-            <p class="en-translation">Defines the six strategy families, preferred regimes, confirmation rules, and disqualifiers.</p>
+            <h3>Indicator catalog</h3>
+            <p>定義六層台股訊號引擎、最小可用欄位與各欄位的實戰用途。</p>
+            <p class="en-translation">Defines the six Taiwan-market signal engines, the minimum viable field set, and the practical use of each field.</p>
           </article>
           <article class="card">
-            <h3>Evaluation metrics</h3>
-            <p>定義績效、尾部風險、交易品質與穩健度面板。</p>
-            <p class="en-translation">Defines the performance, tail-risk, trade-quality, and robustness panels.</p>
+            <h3>Style weights</h3>
+            <p>定義短線、波段、中長線三種交易風格的權重切換。</p>
+            <p class="en-translation">Defines the weighting switch for short-term, swing, and position trading styles.</p>
           </article>
           <article class="card">
             <h3>Agent personas</h3>
@@ -93,8 +93,8 @@
           </article>
           <article class="card">
             <h3>Case study</h3>
-            <p>展示公開版本的完整單股策略委員會輸出，從個案設定一路到失效條件。</p>
-            <p class="en-translation">Shows the public exhibit version of a full single-stock strategy committee memo, from case setup to invalidation.</p>
+            <p>展示公開版本的完整單股指標委員會輸出，從個案設定一路到失效條件。</p>
+            <p class="en-translation">Shows the public exhibit version of a full single-stock indicator committee memo, from case setup to invalidation.</p>
           </article>
         </div>
       </section>
@@ -125,19 +125,23 @@
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/agent-analyst-blueprint.md">Agent analyst blueprint</a></td>
-              <td>描述單股策略研究委員會的上層操作模型。<span class="en-translation">Documents the higher-level operating model for the single-stock strategy committee.</span></td>
+              <td>描述單股指標研究委員會的上層操作模型。<span class="en-translation">Documents the higher-level operating model for the single-stock indicator committee.</span></td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/strategy-research-v1.3.md">Strategy research v1.3</a></td>
-              <td>整理外部研究來源與 repo 如何把它們轉成策略模組與驗證規格。<span class="en-translation">Maps external research sources into strategy modules and validation rules for the repo.</span></td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/taiwan-indicator-framework-v1.4.md">Taiwan indicator framework v1.4</a></td>
+              <td>整理台股核心技術、籌碼、基本面與事件欄位，以及它們的實戰判讀方式。<span class="en-translation">Maps the core Taiwan technical, flow, fundamental, and event fields into practical interpretation rules.</span></td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/indicator_catalog.yaml">Indicator catalog</a></td>
+              <td>定義訊號引擎、核心欄位、資料來源提示與最小可用欄位集。<span class="en-translation">Defines the signal engines, core fields, source hints, and minimum viable field set.</span></td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/style_weights.yaml">Style weights</a></td>
+              <td>定義 `short_term`、`swing`、`position` 三種風格的引擎權重與優先欄位。<span class="en-translation">Defines engine weights and priority fields for `short_term`, `swing`, and `position`.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/strategy_modules.yaml">Strategy modules</a></td>
-              <td>定義策略家族、適用 regime、確認條件與禁用條件。<span class="en-translation">Defines strategy families, preferred regimes, confirmations, and disqualifiers.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/evaluation_metrics.yaml">Evaluation metrics</a></td>
-              <td>記錄績效、尾部風險、執行品質與穩健度的評估集合。<span class="en-translation">Stores the performance, tail-risk, execution-quality, and robustness metric sets.</span></td>
+              <td>定義策略家族、適用 style / regime、確認條件與禁用條件。<span class="en-translation">Defines strategy families, preferred style / regime, confirmations, and disqualifiers.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/agent_personas.yaml">Agent personas</a></td>
@@ -166,18 +170,18 @@
         <div class="grid">
           <article class="card">
             <h3>Specialist reasoning</h3>
-            <p>定義技術面、籌碼、基本面、催化、風險、策略與驗證如何在整合前先被分開思考。</p>
-            <p class="en-translation">How technical, flow, fundamental, catalyst, risk, strategy, and validation reasoning are separated before synthesis.</p>
+            <p>定義趨勢、動能、量價、籌碼、基本面、事件、策略與驗證如何在整合前先被分開思考。</p>
+            <p class="en-translation">How trend, momentum, price-volume, flow, fundamentals, events, strategy, and validation reasoning are separated before synthesis.</p>
           </article>
           <article class="card">
             <h3>Decision structure</h3>
-            <p>定義委員會如何把分歧轉成帶有策略選擇、信心與失效條件的最終 verdict。</p>
-            <p class="en-translation">How the committee turns disagreement into a weighted verdict with strategy selection, explicit confidence, and invalidation.</p>
+            <p>定義委員會如何把分歧轉成帶有風格選擇、策略選擇、信心與失效條件的最終 verdict。</p>
+            <p class="en-translation">How the committee turns disagreement into a weighted verdict with style choice, strategy selection, explicit confidence, and invalidation.</p>
           </article>
           <article class="card">
             <h3>Execution-aware output</h3>
-            <p>定義分析如何落到買入區、停損、停利框架、驗證面板與風險備註。</p>
-            <p class="en-translation">How the committee translates analysis into buy zones, stop-loss logic, take-profit framing, validation panels, and risk notes.</p>
+            <p>定義分析如何落到買入區、停損、停利框架、驗證面板、風格權重與風險備註。</p>
+            <p class="en-translation">How the committee translates analysis into buy zones, stop-loss logic, take-profit framing, validation panels, style weights, and risk notes.</p>
           </article>
         </div>
       </section>

@@ -1,7 +1,7 @@
 {
   "horizons": {
     "scan_default": "swing",
-    "deep_dive_default": "tactical_and_swing",
+    "deep_dive_default": "swing",
     "single_stock_council_default": "swing"
   },
   "entry_models": {
@@ -29,6 +29,8 @@
   "deep_dive": {
     "required_sections": [
       "market_regime",
+      "signal_engine_summary",
+      "style_profile",
       "sector_map",
       "business_quality",
       "chip_flow",
@@ -45,7 +47,9 @@
   "single_stock_council": {
     "meeting_phases": [
       "case_setup",
+      "signal_engine_review",
       "independent_specialist_briefs",
+      "style_weight_application",
       "strategy_nomination",
       "validation_review",
       "cross_examination",
@@ -54,12 +58,13 @@
     ],
     "required_sections": [
       "analysis_date",
-      "horizon",
+      "style_profile",
       "stock_context",
       "market_regime",
+      "signal_engine_summary",
       "specialist_briefs",
+      "style_weight_summary",
       "strategy_selection",
-      "committee_scorecard",
       "validation_scorecard",
       "agreement_map",
       "final_thesis",
@@ -97,6 +102,7 @@
   },
   "validation_protocol": {
     "minimum_reporting_panels": [
+      "signal_quality",
       "performance",
       "trade_quality",
       "tail_risk",

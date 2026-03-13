@@ -1,6 +1,16 @@
 {
-  "version": "v1.3",
+  "version": "v1.4",
   "panels": {
+    "signal_quality": [
+      "above_ma20",
+      "above_ma60",
+      "ma20_slope",
+      "macd_state",
+      "volume_expansion_score",
+      "institutional_alignment_score",
+      "monthly_revenue_direction",
+      "event_risk_flag"
+    ],
     "performance": [
       "cagr",
       "annualized_volatility",
@@ -46,6 +56,11 @@
   },
   "reporting_requirements": {
     "always_report": [
+      "above_ma20",
+      "above_ma60",
+      "macd_state",
+      "volume_expansion_score",
+      "institutional_alignment_score",
       "sharpe_ratio",
       "sortino_ratio",
       "calmar_ratio",
@@ -95,9 +110,10 @@
     }
   },
   "committee_metrics": {
+    "signal_engine_balance": "How healthy the combined trend, momentum, volume, flow, fundamentals, and event stack looks.",
+    "style_fit_score": "How well the active short-term, swing, or position style matches the observed signals.",
     "strategy_fit_score": "How well the selected strategy matches the current regime and setup structure.",
     "evidence_quality_score": "How complete and fresh the evidence stack is across price, flow, fundamentals, and catalysts.",
-    "disagreement_penalty": "How much visible specialist disagreement should reduce the final conviction.",
     "execution_clarity_score": "How clearly the committee can define buy zone, stop, targets, and invalidation."
   }
 }

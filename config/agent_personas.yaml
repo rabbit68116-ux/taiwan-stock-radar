@@ -1,6 +1,6 @@
 {
-  "version": "v1.3",
-  "default_council_mode": "single_stock_taiwan_equity_strategy_committee",
+  "version": "v1.4",
+  "default_council_mode": "single_stock_taiwan_equity_indicator_committee",
   "agents": [
     {
       "id": "chief_strategist",
@@ -15,8 +15,8 @@
       ],
       "primary_indicators": [
         "market_regime",
-        "sector_leadership",
-        "consensus_strength",
+        "signal_engine_balance",
+        "style_fit",
         "thesis_coherence"
       ]
     },
@@ -27,17 +27,21 @@
       "weight": 0.16,
       "focus_areas": [
         "trend structure",
-        "support and resistance",
-        "breakout quality",
-        "volatility state"
+        "moving-average alignment",
+        "momentum rotation",
+        "breakout and pullback quality"
       ],
       "primary_indicators": [
-        "daily_trend",
-        "weekly_trend",
-        "relative_strength",
-        "volume_expansion",
-        "adx",
-        "atr_structure"
+        "ma5",
+        "ma10",
+        "ma20",
+        "ma60",
+        "ma120",
+        "ma240",
+        "macd",
+        "rsi_14",
+        "kd_9_3_3",
+        "bollinger_position"
       ]
     },
     {
@@ -49,14 +53,16 @@
         "foreign flow",
         "investment trust flow",
         "dealer behavior",
-        "financing and short dynamics"
+        "financing and securities lending"
       ],
       "primary_indicators": [
         "foreign_net_buy",
         "trust_net_buy",
-        "dealer_positioning",
+        "dealer_net_buy",
         "margin_financing_change",
-        "distribution_risk"
+        "short_interest_change",
+        "securities_lending_change",
+        "buy_sell_streak"
       ]
     },
     {
@@ -67,15 +73,20 @@
       "focus_areas": [
         "monthly revenue trajectory",
         "earnings quality",
-        "margin direction",
-        "product cycle"
+        "valuation and yield",
+        "quality of profitability"
       ],
       "primary_indicators": [
         "monthly_revenue_yoy",
-        "revenue_momentum",
-        "eps_trend",
-        "gross_margin_direction",
-        "valuation_narrative"
+        "monthly_revenue_mom",
+        "eps",
+        "roe",
+        "gross_margin",
+        "operating_margin",
+        "pe_ratio",
+        "dividend_yield",
+        "pb_ratio",
+        "cash_flow_quality"
       ]
     },
     {
@@ -86,15 +97,16 @@
       "focus_areas": [
         "earnings timing",
         "monthly revenue release",
-        "policy windows",
-        "industry catalysts"
+        "material announcements",
+        "policy and industry windows"
       ],
       "primary_indicators": [
-        "event_calendar",
         "earnings_date",
         "revenue_release_window",
-        "policy_timing",
-        "product_launch_timing"
+        "ex_dividend_date",
+        "material_announcement_flag",
+        "industry_theme",
+        "adr_spillover_risk"
       ]
     },
     {
@@ -111,7 +123,7 @@
       "primary_indicators": [
         "turnover_liquidity",
         "volatility_regime",
-        "event_risk",
+        "event_density",
         "slippage_risk",
         "invalidation_clarity"
       ]
@@ -123,16 +135,17 @@
       "weight": 0.09,
       "focus_areas": [
         "strategy-family selection",
-        "regime fit",
+        "style-profile selection",
         "setup classification",
         "strategy conflict resolution"
       ],
       "primary_indicators": [
         "strategy_fit_score",
+        "style_fit_score",
         "regime_alignment",
         "breakout_validity",
         "pullback_depth",
-        "volatility_compression"
+        "volume_quality"
       ]
     },
     {
@@ -169,9 +182,10 @@
     "final_output_order": [
       "stock_context",
       "market_regime",
+      "signal_engine_summary",
+      "style_profile",
       "specialist_briefs",
       "strategy_selection",
-      "committee_scorecard",
       "validation_scorecard",
       "agreement_and_disagreement",
       "final_thesis",

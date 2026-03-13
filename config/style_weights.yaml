@@ -1,0 +1,82 @@
+{
+  "version": "v1.4",
+  "styles": {
+    "short_term": {
+      "description": "For short-horizon timing, reaction strength, and tactical entry management.",
+      "engine_weights": {
+        "trend": 0.22,
+        "momentum": 0.21,
+        "price_volume": 0.23,
+        "chip_flow": 0.16,
+        "fundamentals": 0.06,
+        "events": 0.12
+      },
+      "priority_indicators": [
+        "ma5",
+        "ma10",
+        "ma20",
+        "volume_ratio",
+        "kd_9_3_3",
+        "rsi_14",
+        "short_term_institutional_flow"
+      ]
+    },
+    "swing": {
+      "description": "For multi-day to multi-week trend continuation and pullback execution.",
+      "engine_weights": {
+        "trend": 0.24,
+        "momentum": 0.11,
+        "price_volume": 0.18,
+        "chip_flow": 0.18,
+        "fundamentals": 0.17,
+        "events": 0.12
+      },
+      "priority_indicators": [
+        "ma20",
+        "ma60",
+        "ma120",
+        "macd",
+        "breakout_with_volume",
+        "foreign_net_buy",
+        "trust_net_buy",
+        "monthly_revenue_yoy"
+      ]
+    },
+    "position": {
+      "description": "For medium- to long-term holding, valuation discipline, and event-aware sizing.",
+      "engine_weights": {
+        "trend": 0.18,
+        "momentum": 0.05,
+        "price_volume": 0.09,
+        "chip_flow": 0.14,
+        "fundamentals": 0.34,
+        "events": 0.20
+      },
+      "priority_indicators": [
+        "dividend_yield",
+        "pe_ratio",
+        "roe",
+        "cash_flow",
+        "industry_theme",
+        "earnings_date",
+        "ex_dividend_date",
+        "ma120",
+        "ma240"
+      ]
+    }
+  },
+  "interpretation_rules": {
+    "short_term": [
+      "treat_kd_as_supporting_not_primary",
+      "respect_price_volume_quality_above_story_quality"
+    ],
+    "swing": [
+      "prefer_ma20_and_ma60_defined_risk_entries",
+      "require_volume_confirmation_for_breakout_language"
+    ],
+    "position": [
+      "do_not_overweight_short_term_kd_or_intraday_noise",
+      "valuation_and_event_discipline_should_override_short_term_excitement"
+    ]
+  }
+}

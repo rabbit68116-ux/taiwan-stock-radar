@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 案例頁 Case Study</title>
-  <meta name="description" content="Taiwan Stock Radar 單股案例頁，展示多 Agent 台股策略委員會如何形成正式決策文件，包含策略模組、驗證面板、情境預測、買賣區間與反方意見。">
+  <meta name="description" content="Taiwan Stock Radar 單股案例頁，展示多 Agent 台股指標委員會如何形成正式決策文件，包含訊號引擎、風格權重、策略模組、情境預測、買賣區間與反方意見。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 案例頁 Case Study">
-  <meta property="og:description" content="完整展示 Taiwan Stock Radar 單股多 Agent 策略委員會的輸出樣貌。">
+  <meta property="og:description" content="完整展示 Taiwan Stock Radar 單股多 Agent 指標委員會的輸出樣貌。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -51,16 +51,16 @@
       <div class="hero-grid">
         <article class="hero-card">
           <p class="eyebrow">展示型案例<span class="en-translation">Illustrative exhibit example</span></p>
-          <h1>單股策略委員會案例頁
-            <span class="en-translation">Single-Stock Strategy Committee Case Study</span>
+          <h1>單股指標委員會案例頁
+            <span class="en-translation">Single-Stock Indicator Committee Case Study</span>
           </h1>
-          <p class="lead">這一頁展示的是 Taiwan Stock Radar 在一檔股票進入完整多 Agent 策略委員會後，最終會輸出的決策文件長相。它是產品展示樣本，不是即時盤中喊單。</p>
-          <p class="lead en-translation">This page shows what Taiwan Stock Radar is designed to produce when one stock is reviewed through a full multi-agent strategy committee. It is a product exhibit, not a live trading call.</p>
+          <p class="lead">這一頁展示的是 Taiwan Stock Radar 在一檔股票進入完整多 Agent 指標委員會後，最終會輸出的決策文件長相。它是產品展示樣本，不是即時盤中喊單。</p>
+          <p class="lead en-translation">This page shows what Taiwan Stock Radar is designed to produce when one stock is reviewed through a full multi-agent indicator committee. It is a product exhibit, not a live trading call.</p>
           <div class="chip-row">
             <span class="chip">個案：2330 台積電<span class="en-translation">Case: 2330 TSMC</span></span>
             <span class="chip">日期：2026-03-13<span class="en-translation">Date: 2026-03-13</span></span>
             <span class="chip">週期：Swing<span class="en-translation">Horizon: Swing</span></span>
-            <span class="chip">模式：Full strategy memo<span class="en-translation">Mode: Full strategy memo</span></span>
+            <span class="chip">模式：Full indicator memo<span class="en-translation">Mode: Full indicator memo</span></span>
           </div>
         </article>
 
@@ -69,6 +69,12 @@
             <span class="en-translation">Case Snapshot</span>
           </h2>
           <div class="meta-list">
+            <div>
+              <span class="label">風格<span class="en-translation">Style</span></span>
+              <span class="value">Swing
+                <span class="en-translation">Swing</span>
+              </span>
+            </div>
             <div>
               <span class="label">主策略<span class="en-translation">Primary strategy</span></span>
               <span class="value">Relative-Strength Leadership
@@ -147,32 +153,32 @@
       </section>
 
       <section>
-        <h2>策略引擎
-          <span class="en-translation">Strategy Engine</span>
+        <h2>訊號引擎
+          <span class="en-translation">Signal Engines</span>
         </h2>
-        <p class="section-intro">`v1.3` 的案例頁不只說委員會怎麼看，也會明確指出哪一種策略模組最適合目前 setup，以及哪一種執行方式不該採用。</p>
-        <p class="section-intro en-translation">A `v1.3` case study does not stop at the committee view. It also states which strategy family best fits the current setup and which execution style should be avoided.</p>
+        <p class="section-intro">`v1.4` 的案例頁不只說委員會怎麼看，也會先把趨勢、動能、量價、籌碼、基本面與事件六層訊號攤開，再決定這個 setup 如何處理。</p>
+        <p class="section-intro en-translation">A `v1.4` case study does not stop at the committee view. It first lays out trend, momentum, price-volume, chip flow, fundamentals, and events before deciding how the setup should be handled.</p>
         <div class="grid">
           <article class="card">
-            <h3>Primary strategy
-              <span class="en-translation">Primary strategy</span>
+            <h3>Trend + Momentum
+              <span class="en-translation">Trend + Momentum</span>
             </h3>
-            <p>相對強勢領導。這檔股票目前更像族群領導股的回檔管理，而不是新故事的早期發現。</p>
-            <p class="en-translation">Relative-Strength Leadership. The stock currently looks more like a leadership-quality pullback management case than an early discovery of a new story.</p>
+            <p>結構仍偏健康，`20MA` 與 `60MA` 扮演明確支撐，`MACD` 與 `RSI` 沒有明顯失真。</p>
+            <p class="en-translation">The structure remains constructive. `20MA` and `60MA` act as clean support, while `MACD` and `RSI` do not show material deterioration.</p>
           </article>
           <article class="card">
-            <h3>Secondary strategy
-              <span class="en-translation">Secondary strategy</span>
+            <h3>Price-Volume + Flow
+              <span class="en-translation">Price-Volume + Flow</span>
             </h3>
-            <p>趨勢拉回。若回檔深度與籌碼品質維持健康，這個模組可以支援更有紀律的切入。</p>
-            <p class="en-translation">Pullback Continuation. If pullback depth and flow quality stay healthy, this module supports a more disciplined entry.</p>
+            <p>回檔若能維持量縮、法人未明顯轉賣，則 setup 品質仍可維持在波段可接受範圍。</p>
+            <p class="en-translation">If the pullback contracts in volume and institutional flow does not deteriorate materially, the setup remains acceptable for swing treatment.</p>
           </article>
           <article class="card">
-            <h3>Do not use
-              <span class="en-translation">Do not use</span>
+            <h3>Style decision
+              <span class="en-translation">Style decision</span>
             </h3>
-            <p>戰術型均值回歸。這個案例不是單純 oversold bounce；若用反彈思維處理，容易錯估風險與部位節奏。</p>
-            <p class="en-translation">Tactical Mean Reversion. This is not a simple oversold bounce. Treating it that way would likely misprice risk and timing.</p>
+            <p>這個案例更適合 `swing`，而不是用過度短線的均值回歸思維處理。風格錯配會讓買賣點失真。</p>
+            <p class="en-translation">This case fits a `swing` style better than a highly tactical mean-reversion lens. A style mismatch would distort execution.</p>
           </article>
         </div>
       </section>
@@ -263,8 +269,8 @@
         <h2>驗證面板
           <span class="en-translation">Validation Panel</span>
         </h2>
-        <p class="section-intro">`v1.3` 會把 validation 從附註提升為正式區塊。這讓委員會必須回答：這個 thesis 不只是好聽，是否也足夠穩健。</p>
-        <p class="section-intro en-translation">`v1.3` promotes validation from a footnote into a formal section. The committee must answer whether the thesis is not only persuasive, but also robust enough.</p>
+        <p class="section-intro">`v1.4` 會把 validation 從附註提升為正式區塊。這讓委員會必須回答：這個 thesis 不只是好聽，是否也足夠穩健，而且是否符合目前的風格權重。</p>
+        <p class="section-intro en-translation">`v1.4` promotes validation from a footnote into a formal section. The committee must answer whether the thesis is not only persuasive, but also robust enough and aligned with the active style profile.</p>
         <table>
           <thead>
             <tr>

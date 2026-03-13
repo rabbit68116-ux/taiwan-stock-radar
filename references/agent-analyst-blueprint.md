@@ -1,8 +1,8 @@
-# Agent Analyst Blueprint v1.3
+# Agent Analyst Blueprint v1.4
 
-Version: `v1.3`
+Version: `v1.4`
 
-Use this reference when designing the skill to behave like a **single-stock Taiwan-equity strategy committee** instead of a market screener.
+Use this reference when designing the skill to behave like a **single-stock Taiwan-equity indicator committee** instead of a market screener.
 
 ## 1. Objective
 
@@ -11,17 +11,18 @@ The agent should focus on one Taiwan stock at a time and evaluate it through a c
 The end product is not a score-only output. It is a professional decision packet that answers:
 
 - what the main thesis is
+- whether the Taiwan-market signal stack is healthy
+- which trading style is active
 - which strategy family best fits the current setup
 - what could make the thesis work
 - what could break it
 - where to buy
 - where to stop
 - where to take profit
-- how robust the setup actually is
 
 ## 2. Core operating principle
 
-`v1.3` assumes that one stock deserves multiple specialized viewpoints and one explicit strategy-selection layer.
+`v1.4` assumes that one stock deserves multiple specialized viewpoints, one explicit signal-engine layer, and one style-weight layer.
 
 Do not let one generic analyst voice dominate the output. Use distinct agent roles with distinct priorities, then synthesize them into a final verdict.
 
@@ -30,7 +31,7 @@ Required properties of the process:
 - each specialist should begin with an independent read
 - disagreement should be preserved, not hidden
 - the final verdict should be weighted, not arbitrary
-- the output should separate observation, interpretation, strategy choice, validation, scenario, and action plan
+- the output should separate observation, interpretation, style choice, strategy choice, validation, scenario, and action plan
 
 ## 3. Default committee roster
 
@@ -49,14 +50,14 @@ Primary focus:
 ### B. Technical Strategist
 
 Purpose:
-- own trend, structure, and price behavior
+- own trend, structure, and momentum behavior
 
 Primary focus:
 - daily and weekly trend
 - support and resistance
-- base quality
+- moving-average structure
+- MACD, RSI, KD, and Bollinger interpretation
 - breakout or pullback structure
-- volatility state
 
 ### C. Chip Flow Analyst
 
@@ -68,6 +69,7 @@ Primary focus:
 - investment trust flow
 - dealer behavior
 - financing expansion
+- securities lending
 - signs of accumulation or distribution
 
 ### D. Fundamental Analyst
@@ -79,9 +81,9 @@ Primary focus:
 - monthly revenue trend
 - earnings quality
 - margin direction
-- product cycle
-- order visibility
-- valuation narrative
+- ROE
+- cash-flow quality
+- valuation and dividend profile
 
 ### E. Catalyst Analyst
 
@@ -93,8 +95,9 @@ Primary focus:
 - monthly revenue release
 - industry events
 - policy timing
-- major launches
 - ex-dividend schedule
+- material announcements
+- ADR and semiconductor spillover risk
 
 ### F. Risk Manager
 
@@ -104,7 +107,6 @@ Purpose:
 Primary focus:
 - liquidity risk
 - volatility asymmetry
-- fragile breakout patterns
 - event concentration
 - downside gap risk
 - whether the thesis has acceptable invalidation structure
@@ -116,6 +118,7 @@ Purpose:
 
 Primary focus:
 - regime fit
+- style fit
 - setup classification
 - primary versus secondary strategy module
 - disqualifying conflicts between thesis and execution style
@@ -132,23 +135,32 @@ Primary focus:
 - walk-forward robustness
 - slippage and cost sensitivity
 
-## 4. Evidence stack
+## 4. Signal-engine stack
 
-Every single-stock meeting should review evidence across these layers:
+Every single-stock meeting should review evidence across these six engines:
 
-1. Market regime
-2. Sector leadership and peer comparison
-3. Technical structure
-4. Capital flow and positioning
-5. Fundamentals and business support
-6. Catalysts and event timing
-7. Risk and fragility
-8. Strategy fit
-9. Validation and robustness
+1. Trend
+2. Momentum
+3. Price-Volume
+4. Chip Flow
+5. Fundamentals
+6. Events
 
-Do not skip a layer just because another layer looks strong.
+Do not skip an engine just because another engine looks strong.
 
-## 5. Meeting protocol
+## 5. Style profiles
+
+Every single-stock meeting should activate one primary style:
+
+| Style | Core emphasis |
+|---|---|
+| `short_term` | 5/10/20MA, volume, KD, RSI, short-horizon flow |
+| `swing` | 20/60/120MA, MACD, breakout quality, institutional trend, revenue / earnings support |
+| `position` | dividend stability, valuation, ROE, cash flow, industry trend, long-term structure |
+
+The committee should not pretend that all styles read the same stock the same way.
+
+## 6. Meeting protocol
 
 ### Phase 1: Case setup
 
@@ -157,31 +169,44 @@ Define:
 - symbol and company name
 - market: TWSE or TPEX
 - analysis date
-- horizon: tactical, swing, or position
+- active style: short_term / swing / position
 - exact user question
 
-### Phase 2: Independent specialist briefs
+### Phase 2: Signal-engine review
+
+The committee should explicitly label:
+
+- which engines support the thesis
+- which engines are mixed
+- which engine is weakest
+
+### Phase 3: Independent specialist briefs
 
 Each specialist produces:
 
-- current leaning: bullish / neutral / cautious / bearish
+- current leaning
 - strongest evidence
 - strongest objection
 - confidence level
 
-This phase should avoid premature consensus.
+### Phase 4: Style-weight application
 
-### Phase 3: Strategy nomination
+The Strategy Architect should state:
+
+- which style profile is active
+- which engines receive priority weight
+- which indicators are informative but secondary
+
+### Phase 5: Strategy nomination
 
 The Strategy Architect produces:
 
 - primary strategy family
 - secondary strategy family
 - strategy to avoid
-- why the chosen module fits the current regime
-- which conditions would force a strategy switch
+- why the chosen module fits the active style and current regime
 
-### Phase 4: Validation review
+### Phase 6: Validation review
 
 The Quant Validation Analyst reviews:
 
@@ -189,19 +214,19 @@ The Quant Validation Analyst reviews:
 - trade-quality metrics
 - tail-risk metrics
 - robustness and overfitting checks
-- the minimum evidence needed before the committee should act
+- whether the setup has enough evidence to act
 
-### Phase 5: Cross-examination
+### Phase 7: Cross-examination
 
 The chair identifies:
 
 - where specialists agree
 - where the thesis is fragile
-- whether strategy fit and validation are aligned
+- whether the active style and strategy selection are aligned
 - which facts are missing
 - what evidence would change the current leaning
 
-### Phase 6: Weighted vote
+### Phase 8: Weighted vote
 
 The system aggregates specialist views using configured weights.
 
@@ -209,157 +234,130 @@ The vote should not erase dissent. It should report:
 
 - consensus score
 - dominant direction
+- dominant style
 - dominant strategy family
 - dissenting agents
 - the highest-priority unresolved risk
 
-### Phase 7: Final decision packet
+### Phase 9: Final decision packet
 
 The chair writes the final result in a form that can be acted on or challenged.
 
-## 6. Weighted synthesis rules
+## 7. Signal-engine rules
 
-Suggested weight profile:
+### Trend
 
-| Agent | Weight |
-|---|---:|
-| Chief Strategist | 0.18 |
-| Technical Strategist | 0.16 |
-| Chip Flow Analyst | 0.14 |
-| Fundamental Analyst | 0.14 |
-| Catalyst Analyst | 0.10 |
-| Risk Manager | 0.11 |
-| Strategy Architect | 0.09 |
-| Quant Validation Analyst | 0.08 |
+At minimum review:
 
-Guidelines:
+- 5MA / 10MA / 20MA / 60MA / 120MA / 240MA
+- whether price is above 20MA and 60MA
+- 20MA slope
+- 60MA slope
+- distance from 52-week high / low
 
-- keep total weights normalized to `1.00`
-- require the Risk Manager to be visible even when bullish consensus is strong
-- if Catalyst, Risk, or Validation strongly objects, reduce confidence even if the directional vote stays positive
-- if Technical and Chip Flow disagree sharply, treat the setup as fragile
-- if Strategy Architect and Validation disagree on the same setup, avoid pretending the execution plan is settled
+### Momentum
 
-## 7. Strategy engine
+At minimum review:
 
-The `v1.3` strategy engine should prefer these families:
+- MACD
+- RSI(14)
+- KD(9,3,3)
+- Bollinger-band position
+- 5-day and 20-day returns
 
-| Strategy family | Use when | Avoid when |
-|---|---|---|
-| Time-Series Momentum | the stock and its regime both support continuation | crash-like or disorderly high-vol conditions |
-| Relative-Strength Leadership | a stock leads peers with flow support | leadership is fading or breadth is collapsing |
-| Breakout Confirmation | structure tightens and expands with volume | expansion is late, thin, or unsupported by flow |
-| Pullback Continuation | the trend is intact and pullback depth stays healthy | pullback becomes structural failure |
-| Volatility Contraction Expansion | volatility compresses before directional release | catalysts can create random gap risk |
-| Tactical Mean Reversion | oversold conditions occur inside higher-quality structure | the tape is breaking and downside trend remains dominant |
+### Price-Volume
 
-## 8. Evaluation stack
+At minimum review:
 
-Every `v1.3` deep-dive should include metrics across four layers:
+- daily volume
+- 5-day and 20-day average volume
+- volume ratio
+- breakout with volume
+- pullback with contraction
+- rising price with rising volume versus rising price with weak volume
 
-### Core performance
+### Chip Flow
 
-- CAGR
-- annualized volatility
-- Sharpe ratio
-- Sortino ratio
-- Calmar ratio
+At minimum review:
 
-### Trade quality
+- foreign, trust, and dealer net flow
+- financing and short changes
+- securities lending and balance
+- streaks of consecutive buying or selling
 
-- win rate
-- profit factor
-- expectancy
-- exposure
-- turnover
-- trade count
+### Fundamentals
 
-### Tail risk
+At minimum review:
 
-- maximum drawdown
-- VaR
-- CVaR
-- CDaR
-- Ulcer Index
-- Omega ratio
-- Tail ratio
+- monthly revenue MoM / YoY
+- EPS
+- gross margin / operating margin
+- ROE
+- PE / dividend yield / PB
+- cash flow
 
-### Robustness
+### Events
 
-- walk-forward stability
-- purged cross-validation
-- combinatorial purged cross-validation
-- deflated Sharpe ratio
-- parameter sensitivity
-- cost and slippage sensitivity
-- regime-split performance
+At minimum review:
 
-## 9. Required output schema
+- earnings date
+- monthly revenue release date
+- ex-dividend date
+- material announcements
+- industry theme
+- ADR or semiconductor spillover factors
 
-Every `v1.3` deep-dive should include these sections:
+## 8. Required output schema
+
+Every `v1.4` deep-dive should include these sections:
 
 | Section | Why it matters |
 |---|---|
-| Analysis Date / Horizon | Anchors the judgment in time |
+| Analysis Date / Style | Anchors the judgment in time and intent |
 | Stock Context | Identifies market, sector, and peers |
 | Market Regime | Shows whether the broader tape helps or hurts |
+| Signal-Engine Summary | Makes the Taiwan indicator stack explicit |
 | Specialist Briefs | Preserves the separate expert views |
+| Style Profile | Shows which weighting lens is active |
 | Strategy Selection | Shows how the setup should actually be traded |
-| Committee Scorecard | Makes internal weighting visible |
 | Validation Scorecard | Shows whether the thesis survives quantitative scrutiny |
 | Agreement / Disagreement Map | Makes the internal debate explicit |
 | Final Thesis | States the main committee conclusion |
-| Scenario Tree | Base, bull, and bear cases |
 | Buy Zone | Defines where risk-reward becomes attractive |
 | Aggressive / Conservative Trigger | Differentiates early entry from confirmation |
 | Stop / Invalidation | Shows what breaks the thesis |
 | TP1 / TP2 | Provides a concrete exit framework |
-| Robustness Notes | Keeps overfitting risk visible |
 | Confidence / Missing Data | Prevents false precision |
 
-## 10. Deepening rules for stronger analysis
-
-If the user asks for a stronger or deeper judgment, expand the meeting with:
-
-- peer comparison versus top 3 direct comparables
-- revenue and earnings trend table
-- catalyst calendar with dates
-- multi-timeframe technical map
-- strategy-switch conditions
-- evidence ranking: strongest 3 bullish and strongest 3 bearish points
-- dissent memo from the Risk Manager
-- validation memo from the Quant Validation Analyst
-
-The deeper mode should feel like a professional internal meeting note, not just a longer paragraph.
-
-## 11. What makes the agent feel senior
+## 9. What makes the agent feel senior
 
 The agent should:
 
 - prefer structured evidence over adjective-heavy commentary
 - explain why a viewpoint is strong, not just what it is
-- show when the setup is attractive but still fragile
+- show when the setup is attractive but still style-mismatched
 - distinguish business quality from trading quality
 - separate the best case from the most likely case
 - always name the thesis-break condition
-- state clearly when a strategy is interesting but not yet validated enough to act
+- treat volume, flow, and event timing as first-class Taiwan-market evidence
 
 The agent should not:
 
 - sound certain when evidence is mixed
 - hide disagreement for the sake of simplicity
 - present identical buy/sell logic for every stock
-- skip catalyst timing, liquidity risk, or validation risk
+- skip financing, securities lending, or event-timing risk
 
-## 12. Implementation guidance
+## 10. Implementation guidance
 
 When turning this blueprint into workflows or code, prefer:
 
-- a persona config file with weights and focus areas
+- an indicator-catalog config file
+- a style-weight config file
 - a strategy-module config file
 - reusable meeting phases
 - mandatory validation fields
 - Taiwan-specific data sources and timing logic
 - structured logs of agreement and dissent
 
-The `v1.3` system is successful when a reader can see not only the final call, but also how the specialists chose the strategy, how robust the setup is, and what would still invalidate it.
+The `v1.4` system is successful when a reader can see not only the final call, but also how the Taiwan-market signal stack was read, which trading style was activated, and what would still invalidate the setup.

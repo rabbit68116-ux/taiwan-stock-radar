@@ -1,25 +1,29 @@
 {
-  "version": "v1.3",
+  "version": "v1.4",
   "primary_scope": "single_stock_taiwan_equity",
   "strategy_families": [
     {
       "id": "trend_following",
       "display_name": "趨勢跟隨 / Time-Series Momentum",
+      "preferred_styles": [
+        "swing",
+        "position"
+      ],
       "preferred_regimes": [
         "bull",
         "sideways"
       ],
       "purpose": "在市場與個股同向延續時，捕捉趨勢續航。",
       "primary_indicators": [
-        "6m_return",
-        "12m_return",
-        "sma50_over_sma200",
-        "adx",
+        "ma20",
+        "ma60",
+        "ma120",
         "macd",
         "natr"
       ],
       "confirmations": [
-        "weekly_trend_up",
+        "above_ma20_and_ma60",
+        "macd_constructive",
         "institutional_flow_positive",
         "volatility_not_disorderly"
       ],
@@ -32,6 +36,10 @@
     {
       "id": "relative_strength_leadership",
       "display_name": "相對強勢領導 / Relative-Strength Leadership",
+      "preferred_styles": [
+        "swing",
+        "position"
+      ],
       "preferred_regimes": [
         "bull",
         "sideways"
@@ -39,10 +47,10 @@
       "purpose": "在同族群中辨識領導股，而不是落後補漲股。",
       "primary_indicators": [
         "relative_strength_rank",
-        "peer_outperformance",
         "foreign_net_buy",
         "trust_net_buy",
-        "turnover_value"
+        "turnover_value",
+        "distance_to_52w_high"
       ],
       "confirmations": [
         "peer_group_strength",
@@ -58,14 +66,18 @@
     {
       "id": "breakout_confirmation",
       "display_name": "突破確認 / Breakout Confirmation",
+      "preferred_styles": [
+        "short_term",
+        "swing"
+      ],
       "preferred_regimes": [
         "bull",
         "sideways"
       ],
       "purpose": "避免假突破，只在結構與量能同步擴張時出手。",
       "primary_indicators": [
-        "donchian_breakout",
-        "volume_expansion",
+        "breakout_with_volume",
+        "volume_ratio",
         "adx",
         "obv",
         "mfi"
@@ -84,6 +96,9 @@
     {
       "id": "pullback_continuation",
       "display_name": "趨勢拉回 / Pullback Continuation",
+      "preferred_styles": [
+        "swing"
+      ],
       "preferred_regimes": [
         "bull",
         "sideways"
@@ -91,10 +106,10 @@
       "purpose": "在上升趨勢中的健康回檔裡尋找較好的風險報酬比。",
       "primary_indicators": [
         "ma20_support",
-        "ma50_support",
+        "ma60_support",
         "atr_pullback_depth",
         "rsi_reset",
-        "volume_contraction"
+        "pullback_with_contraction"
       ],
       "confirmations": [
         "trend_still_intact",
@@ -110,6 +125,10 @@
     {
       "id": "volatility_contraction_expansion",
       "display_name": "波動收縮轉擴張 / Volatility Contraction Expansion",
+      "preferred_styles": [
+        "short_term",
+        "swing"
+      ],
       "preferred_regimes": [
         "bull",
         "sideways"
@@ -135,13 +154,16 @@
     {
       "id": "tactical_mean_reversion",
       "display_name": "戰術型均值回歸 / Tactical Mean Reversion",
+      "preferred_styles": [
+        "short_term"
+      ],
       "preferred_regimes": [
         "sideways"
       ],
       "purpose": "只在高品質標的短期過度偏離時做戰術性反彈。",
       "primary_indicators": [
-        "rsi",
-        "mfi",
+        "rsi_14",
+        "kd_9_3_3",
         "distance_from_ma20",
         "gap_exhaustion",
         "short_term_volume_spike"
@@ -161,7 +183,7 @@
   "selection_rules": {
     "require_primary_and_secondary_strategy": true,
     "require_do_not_trade_strategy": true,
-    "require_regime_commentary": true,
+    "require_style_commentary": true,
     "fallback_when_conflicted": "reduce_size_or_wait_for_confirmation"
   }
 }
