@@ -9,8 +9,8 @@
 Taiwan Stock Radar v1.4 是一個面向台灣股票單股研判的研究型 AI skill。
 這一版把重心從「策略模組」再往前推一層，正式建立成 **台股指標作業系統**，讓 AI agent 能依照不同交易風格，系統化讀取趨勢、動能、量價、籌碼、基本面與事件面訊號，再產出可執行的判斷。
 
-> 一檔股票。八位 specialist AI analysts。六層台股訊號引擎。三種交易風格權重。
-> One stock. Eight specialist AI analysts. Six Taiwan-market signal engines. Three trading-style profiles.
+> 一檔股票。八位專家級 AI 分析師。六層台股訊號引擎。三種交易風格權重。
+> One stock. Eight specialist AI analysts. Six Taiwan-stock signal engines. Three trading-style profiles.
 
 [官方網站 Official Website](https://rabbit68116-ux.github.io/taiwan-stock-radar/) | [案例頁 Featured Case Study](https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html) | [GitHub Repo](https://github.com/rabbit68116-ux/taiwan-stock-radar)
 
@@ -212,7 +212,7 @@ streamlit run app/streamlit_app.py
 
 ### What Changed in v1.4
 
-- six Taiwan-market signal engines now structure the single-stock workflow
+- six Taiwan-stock signal engines now structure the single-stock workflow
 - a formal indicator catalog was added for technical, flow, fundamental, and event fields
 - style-weight profiles were added for `short_term`, `swing`, and `position`
 - the system now treats signal quality as the first gate before strategy and action planning
