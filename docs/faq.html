@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 常見問題 FAQ</title>
-  <meta name="description" content="Taiwan Stock Radar 常見問題頁，說明這個以單股為核心的台股指標研究 skill 如何運作，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar 常見問題頁，說明這個結合台股開市前評估與單股研究的 AI skill 如何運作，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 常見問題 FAQ">
-  <meta property="og:description" content="了解 Taiwan Stock Radar 如何以多位專業 AI analyst 對單一台股進行深度研究、指標評估與風格切換。">
+  <meta property="og:description" content="了解 Taiwan Stock Radar 如何先做台股開市前評估，再以多位專業 AI analyst 對單一台股進行深度研究。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -23,7 +23,7 @@
         "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taiwan Stock Radar 是一個面向台灣股票單股研究的 AI skill。v1.4 版本加入六層訊號引擎與風格權重切換，透過多位 AI 分析師的正式研討會議輸出結構化判斷。 Taiwan Stock Radar is an AI skill for Taiwan single-stock research. In v1.4 it adds six signal engines and style-weight switching to a formal multi-analyst committee workflow."
+          "text": "Taiwan Stock Radar 是一個面向台灣股票研究的 AI skill。v1.5 版本先用台股夜盤與美股趨勢建立開市前評估，再透過六層訊號引擎與多位 AI 分析師的正式研討會議輸出結構化判斷。 Taiwan Stock Radar is an AI skill for Taiwan-equity research. In v1.5 it starts with a premarket brief and then runs a formal multi-analyst committee with six signal engines."
         }
       },
       {
@@ -101,8 +101,8 @@
         <h1>關於 Taiwan Stock Radar 的常見問題
           <span class="en-translation">Common questions about Taiwan Stock Radar</span>
         </h1>
-        <p class="lead">這一頁整理 Taiwan Stock Radar `v1.4` 最常被問到的核心問題，聚焦在它如何運作、會輸出什麼，以及哪些事情它不應被誤解成可以保證。</p>
-        <p class="lead en-translation">This page answers the most common questions about Taiwan Stock Radar `v1.4`, focusing on how it operates, what it returns, and what it should never be mistaken for.</p>
+        <p class="lead">這一頁整理 Taiwan Stock Radar `v1.5` 最常被問到的核心問題，聚焦在它如何把開市前環境與單股研究接起來、會輸出什麼，以及哪些事情它不應被誤解成可以保證。</p>
+        <p class="lead en-translation">This page answers the most common questions about Taiwan Stock Radar `v1.5`, focusing on how it connects the premarket environment to single-stock research, what it returns, and what it should never be mistaken for.</p>
       </div>
     </section>
 
@@ -131,6 +131,13 @@
             <p class="en-translation">The chair agent is not just another analyst. It moderates the meeting, surfaces disagreement, applies weighting, and writes the final verdict.</p>
           </article>
           <article class="card">
+            <h2>開市前報告會怎麼運作？
+              <span class="en-translation">How does the premarket brief work?</span>
+            </h2>
+            <p>系統會先讀取台股夜盤、S&amp;P 500、Nasdaq、SOX、TSM ADR、NVIDIA 與 VIX，將它們轉成台股隔日開盤偏向、族群觀察與風險提示，再決定單股分析該用多積極的節奏切入。</p>
+            <p class="en-translation">The system first reads Taiwan night-session, the S&amp;P 500, Nasdaq, SOX, TSM ADR, NVIDIA, and VIX, converts them into an opening-bias view, sector watchlist, and risk flags, then decides how aggressively the stock analysis should be framed.</p>
+          </article>
+          <article class="card">
             <h2>買賣點會怎麼表達？
               <span class="en-translation">How are buy and sell points expressed?</span>
             </h2>
@@ -138,11 +145,11 @@
             <p class="en-translation">The output defines the signal-engine summary, style profile, strategy module, preferred buy zone, alternate entry triggers, stop-loss, take-profit ladder, and invalidation so the thesis stays connected to execution discipline.</p>
           </article>
           <article class="card">
-            <h2>v1.4 多了什麼？
-              <span class="en-translation">What is new in v1.4?</span>
+            <h2>v1.5 多了什麼？
+              <span class="en-translation">What is new in v1.5?</span>
             </h2>
-            <p>`v1.4` 新增了六層訊號引擎、交易風格權重、最小可用欄位集，以及更完整的台股指標白皮書。</p>
-            <p class="en-translation">`v1.4` adds six signal engines, trading-style weights, a minimum viable field set, and a fuller Taiwan-equity indicator whitepaper.</p>
+            <p>`v1.5` 新增了開市前夜盤 + 美股趨勢報告，讓單股委員會能先接住隔夜環境，再進入六層訊號引擎、交易風格權重與策略模組的正式判讀。</p>
+            <p class="en-translation">`v1.5` adds a premarket brief built from Taiwan night-session and US-market trends, so the single-stock committee can absorb the overnight environment before moving into signal engines, style weights, and strategy modules.</p>
           </article>
           <article class="card">
             <h2>如果不同分析師彼此意見不同怎麼辦？

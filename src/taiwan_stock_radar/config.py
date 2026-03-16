@@ -1,4 +1,4 @@
-"""Config loading helpers for demo-mode scans."""
+"""Config loading helpers for Taiwan Stock Radar demo workflows."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 
-def _load_mapping(path: Path) -> dict[str, Any]:
+def load_mapping(path: Path) -> dict[str, Any]:
     text = path.read_text(encoding="utf-8")
     try:
         import yaml  # type: ignore
@@ -24,11 +24,18 @@ def load_project_config(
     project_root: Path,
 ) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any]]:
     config_dir = project_root / "config"
-    settings = _load_mapping(config_dir / "settings.yaml")
-    weights = _load_mapping(config_dir / "weights.yaml")
-    universe = _load_mapping(config_dir / "universe.yaml")
-    action_rules = _load_mapping(config_dir / "action_rules.yaml")
+    settings = load_mapping(config_dir / "settings.yaml")
+    weights = load_mapping(config_dir / "weights.yaml")
+    universe = load_mapping(config_dir / "universe.yaml")
+    action_rules = load_mapping(config_dir / "action_rules.yaml")
     return settings, weights, universe, action_rules
+
+
+def load_premarket_config(project_root: Path) -> tuple[dict[str, Any], dict[str, Any]]:
+    config_dir = project_root / "config"
+    settings = load_mapping(config_dir / "settings.yaml")
+    premarket_rules = load_mapping(config_dir / "premarket_rules.yaml")
+    return settings, premarket_rules
 
 
 def resolve_output_dir(project_root: Path, settings: dict[str, Any]) -> Path:

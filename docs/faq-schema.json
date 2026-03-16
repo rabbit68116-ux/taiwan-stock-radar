@@ -7,7 +7,7 @@
       "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Taiwan Stock Radar 是一個面向台灣股票單股研究的 AI skill。v1.4 版本加入六層訊號引擎與風格權重切換，透過多位 specialist AI analyst 的正式研討會議輸出結構化決策文件。 Taiwan Stock Radar is an AI skill for Taiwan single-stock research. In v1.4 it adds six signal engines and style-weight switching to a formal multi-agent committee workflow."
+        "text": "Taiwan Stock Radar 是一個面向台灣股票研究的 AI skill。v1.5 版本先用台股夜盤與美股趨勢建立開市前評估，再透過六層訊號引擎與多位 specialist AI analyst 的正式研討會議輸出結構化決策文件。 Taiwan Stock Radar is an AI skill for Taiwan-equity research. In v1.5 it starts with a premarket brief and then runs a formal multi-agent committee with six signal engines."
       }
     },
     {

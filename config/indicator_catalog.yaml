@@ -1,5 +1,5 @@
 {
-  "version": "v1.4",
+  "version": "v1.5",
   "signal_engines": {
     "trend": {
       "description": "Define whether the stock is in a bullish, neutral, or weakening structure.",

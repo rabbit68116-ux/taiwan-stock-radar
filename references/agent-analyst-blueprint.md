@@ -1,6 +1,6 @@
-# Agent Analyst Blueprint v1.4
+# Agent Analyst Blueprint v1.5
 
-Version: `v1.4`
+Version: `v1.5`
 
 Use this reference when designing the skill to behave like a **single-stock Taiwan-equity indicator committee** instead of a market screener.
 
@@ -10,6 +10,7 @@ The agent should focus on one Taiwan stock at a time and evaluate it through a c
 
 The end product is not a score-only output. It is a professional decision packet that answers:
 
+- what the overnight environment is saying before Taiwan opens
 - what the main thesis is
 - whether the Taiwan-market signal stack is healthy
 - which trading style is active
@@ -22,7 +23,7 @@ The end product is not a score-only output. It is a professional decision packet
 
 ## 2. Core operating principle
 
-`v1.4` assumes that one stock deserves multiple specialized viewpoints, one explicit signal-engine layer, and one style-weight layer.
+`v1.5` assumes that Taiwan-equity research should read the overnight environment first, then let one stock receive multiple specialized viewpoints, one explicit signal-engine layer, and one style-weight layer.
 
 Do not let one generic analyst voice dominate the output. Use distinct agent roles with distinct priorities, then synthesize them into a final verdict.
 
@@ -162,7 +163,17 @@ The committee should not pretend that all styles read the same stock the same wa
 
 ## 6. Meeting protocol
 
-### Phase 1: Case setup
+### Phase 1: Premarket environment
+
+If the task happens before the Taiwan open, review:
+
+- Taiwan night-session
+- US broad indices
+- semiconductor leadership proxies
+- VIX and overnight risk tone
+- sector watchlist and risk flags
+
+### Phase 2: Case setup
 
 Define:
 
@@ -172,7 +183,7 @@ Define:
 - active style: short_term / swing / position
 - exact user question
 
-### Phase 2: Signal-engine review
+### Phase 3: Signal-engine review
 
 The committee should explicitly label:
 
@@ -180,7 +191,7 @@ The committee should explicitly label:
 - which engines are mixed
 - which engine is weakest
 
-### Phase 3: Independent specialist briefs
+### Phase 4: Independent specialist briefs
 
 Each specialist produces:
 
@@ -189,7 +200,7 @@ Each specialist produces:
 - strongest objection
 - confidence level
 
-### Phase 4: Style-weight application
+### Phase 5: Style-weight application
 
 The Strategy Architect should state:
 
@@ -197,7 +208,7 @@ The Strategy Architect should state:
 - which engines receive priority weight
 - which indicators are informative but secondary
 
-### Phase 5: Strategy nomination
+### Phase 6: Strategy nomination
 
 The Strategy Architect produces:
 
@@ -206,7 +217,7 @@ The Strategy Architect produces:
 - strategy to avoid
 - why the chosen module fits the active style and current regime
 
-### Phase 6: Validation review
+### Phase 7: Validation review
 
 The Quant Validation Analyst reviews:
 
@@ -216,7 +227,7 @@ The Quant Validation Analyst reviews:
 - robustness and overfitting checks
 - whether the setup has enough evidence to act
 
-### Phase 7: Cross-examination
+### Phase 8: Cross-examination
 
 The chair identifies:
 
@@ -226,7 +237,7 @@ The chair identifies:
 - which facts are missing
 - what evidence would change the current leaning
 
-### Phase 8: Weighted vote
+### Phase 9: Weighted vote
 
 The system aggregates specialist views using configured weights.
 
@@ -239,7 +250,7 @@ The vote should not erase dissent. It should report:
 - dissenting agents
 - the highest-priority unresolved risk
 
-### Phase 9: Final decision packet
+### Phase 10: Final decision packet
 
 The chair writes the final result in a form that can be acted on or challenged.
 
@@ -309,7 +320,7 @@ At minimum review:
 
 ## 8. Required output schema
 
-Every `v1.4` deep-dive should include these sections:
+Every `v1.5` deep-dive should include these sections:
 
 | Section | Why it matters |
 |---|---|
@@ -360,4 +371,4 @@ When turning this blueprint into workflows or code, prefer:
 - Taiwan-specific data sources and timing logic
 - structured logs of agreement and dissent
 
-The `v1.4` system is successful when a reader can see not only the final call, but also how the Taiwan-market signal stack was read, which trading style was activated, and what would still invalidate the setup.
+The `v1.5` system is successful when a reader can see not only the final call, but also how the overnight environment was read, how the Taiwan-market signal stack was interpreted, which trading style was activated, and what would still invalidate the setup.

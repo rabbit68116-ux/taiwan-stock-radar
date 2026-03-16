@@ -1,0 +1,83 @@
+{
+  "version": "v1.5",
+  "weights": {
+    "taiwan_night": 0.4,
+    "us_broad": 0.25,
+    "semiconductors": 0.2,
+    "risk": 0.15
+  },
+  "thresholds": {
+    "bullish_open": 0.7,
+    "constructive_open": 0.58,
+    "neutral_open": 0.45,
+    "cautious_open": 0.34
+  },
+  "component_thresholds": {
+    "strong_positive_pct": 1.0,
+    "positive_pct": 0.35,
+    "negative_pct": -0.35,
+    "strong_negative_pct": -1.0,
+    "night_volume_ratio_hot": 1.2,
+    "night_volume_ratio_soft": 0.85,
+    "vix_relief_pct": -4.0,
+    "vix_stress_pct": 4.0
+  },
+  "sector_templates": {
+    "semiconductors": {
+      "label": "半導體",
+      "positive_if": [
+        "sox",
+        "tsm_adr"
+      ],
+      "negative_if": [
+        "vix"
+      ]
+    },
+    "ai_servers": {
+      "label": "AI 伺服器 / 高速運算",
+      "positive_if": [
+        "nasdaq",
+        "nvidia"
+      ],
+      "negative_if": [
+        "vix"
+      ]
+    },
+    "financials": {
+      "label": "金融股",
+      "positive_if": [
+        "dow"
+      ],
+      "negative_if": [
+        "vix"
+      ]
+    },
+    "defensives": {
+      "label": "防禦型族群",
+      "positive_if": [
+        "vix"
+      ],
+      "negative_if": [
+        "nasdaq"
+      ]
+    }
+  },
+  "report_defaults": {
+    "default_profile": "semi_risk_on",
+    "output_basename": "premarket_brief",
+    "report_time_local": "08:00",
+    "focus_contracts": [
+      "台指期近月",
+      "電子期",
+      "金融期"
+    ],
+    "focus_us_assets": [
+      "S&P 500",
+      "Nasdaq",
+      "SOX",
+      "TSM ADR",
+      "NVIDIA",
+      "VIX"
+    ]
+  }
+}

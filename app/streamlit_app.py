@@ -43,7 +43,7 @@ def main() -> None:
         "subtitle",
         "Indicator-driven single-stock Taiwan equity committee with legacy scan demo support",
     )
-    version = project_settings.get("plan_version", "v1.4")
+    version = project_settings.get("plan_version", "v1.5")
 
     st.set_page_config(page_title=title, page_icon="📈", layout="wide")
     st.title(title)

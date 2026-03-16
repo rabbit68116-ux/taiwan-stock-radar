@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 案例頁 Case Study</title>
-  <meta name="description" content="Taiwan Stock Radar 單股案例頁，展示多位 AI 分析師如何在台股指標委員會中形成正式決策文件，內容包含訊號引擎、風格權重、策略模組、情境預測、買賣區間與反方意見。">
+  <meta name="description" content="Taiwan Stock Radar 單股案例頁，展示多位 AI 分析師如何在開市前環境評估與台股指標委員會中形成正式決策文件，內容包含夜盤、美股趨勢、訊號引擎、風格權重、策略模組與買賣區間。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 案例頁 Case Study">
-  <meta property="og:description" content="完整展示 Taiwan Stock Radar 單股多分析師指標委員會的輸出樣貌。">
+  <meta property="og:description" content="完整展示 Taiwan Stock Radar 如何先讀取開市前環境，再形成單股多分析師指標委員會輸出。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -54,12 +54,13 @@
           <h1>單股指標委員會案例頁
             <span class="en-translation">Single-Stock Indicator Committee Case Study</span>
           </h1>
-          <p class="lead">這一頁展示的是 Taiwan Stock Radar 在一檔股票進入完整多分析師指標委員會後，最終會輸出的決策文件樣貌。它是產品展示樣本，不是即時盤中喊單。</p>
-          <p class="lead en-translation">This page shows what Taiwan Stock Radar is designed to produce when one stock is reviewed through a full multi-analyst indicator committee. It is a product exhibit, not a live trading call.</p>
+          <p class="lead">這一頁展示的是 Taiwan Stock Radar 在一檔股票先經過開市前環境評估，再進入完整多分析師指標委員會後，最終會輸出的決策文件樣貌。它是產品展示樣本，不是即時盤中喊單。</p>
+          <p class="lead en-translation">This page shows what Taiwan Stock Radar is designed to produce when one stock first passes through a premarket environment review and then enters a full multi-analyst indicator committee. It is a product exhibit, not a live trading call.</p>
           <div class="chip-row">
             <span class="chip">個案：2330 台積電<span class="en-translation">Case: 2330 TSMC</span></span>
             <span class="chip">日期：2026-03-13<span class="en-translation">Date: 2026-03-13</span></span>
             <span class="chip">週期：波段<span class="en-translation">Horizon: Swing</span></span>
+            <span class="chip">開盤偏向：建設性偏強<span class="en-translation">Opening bias: Constructive</span></span>
             <span class="chip">模式：完整指標備忘錄<span class="en-translation">Mode: Full indicator memo</span></span>
           </div>
         </article>
@@ -153,11 +154,42 @@
       </section>
 
       <section>
+        <h2>開市前環境
+          <span class="en-translation">Premarket Environment</span>
+        </h2>
+        <p class="section-intro">`v1.5` 的案例頁不再只從單股本身開始。若研究時點落在台股開盤前，案例會先顯示隔夜環境，說明為什麼委員會今天的語氣偏積極、保守，還是應該先等確認。</p>
+        <p class="section-intro en-translation">A `v1.5` case study no longer starts only with the stock itself. If the research happens before the Taiwan open, the page first shows the overnight environment and explains why the committee tone is constructive, cautious, or waiting for confirmation.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>夜盤與美股
+              <span class="en-translation">Night session and US markets</span>
+            </h3>
+            <p>台指期夜盤偏強，Nasdaq 與 SOX 同步向上，代表早盤若量價延續，電子權值較有機會接棒。</p>
+            <p class="en-translation">Taiwan night-session is constructive while Nasdaq and SOX also push higher, which gives large-cap electronics a cleaner chance to lead if price-volume confirms after the open.</p>
+          </article>
+          <article class="card">
+            <h3>開盤偏向
+              <span class="en-translation">Opening bias</span>
+            </h3>
+            <p>委員會以「建設性偏強」定義今天的開盤語境，代表可以準備計畫，但不鼓勵脫離結構的追價。</p>
+            <p class="en-translation">The committee labels the opening context as constructive, which means a plan can be prepared, but not at the expense of structure-aware execution.</p>
+          </article>
+          <article class="card">
+            <h3>優先觀察族群
+              <span class="en-translation">Priority sectors</span>
+            </h3>
+            <p>半導體與 AI 伺服器鏈仍是主要觀察對象，若開盤後權值股無法延續，整體評等會快速降溫。</p>
+            <p class="en-translation">Semiconductors and AI server names remain the first sectors to watch. If leadership fails after the open, the committee quickly cools its stance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
         <h2>訊號引擎
           <span class="en-translation">Signal Engines</span>
         </h2>
-        <p class="section-intro">`v1.4` 的案例頁不只說委員會怎麼看，也會先把趨勢、動能、量價、籌碼、基本面與事件六層訊號攤開，再決定這個個案應如何處理。</p>
-        <p class="section-intro en-translation">A `v1.4` case study does not stop at the committee view. It first lays out trend, momentum, price-volume, chip flow, fundamentals, and events before deciding how the case should be handled.</p>
+        <p class="section-intro">`v1.5` 的案例頁不只說委員會怎麼看，也會先把趨勢、動能、量價、籌碼、基本面與事件六層訊號攤開，再決定這個個案應如何處理。</p>
+        <p class="section-intro en-translation">A `v1.5` case study does not stop at the committee view. It first lays out trend, momentum, price-volume, chip flow, fundamentals, and events before deciding how the case should be handled.</p>
         <div class="grid">
           <article class="card">
             <h3>趨勢與動能
@@ -269,8 +301,8 @@
         <h2>驗證面板
           <span class="en-translation">Validation Panel</span>
         </h2>
-        <p class="section-intro">`v1.4` 會把驗證從附註提升為正式區塊。這讓委員會必須回答：這個結論不只是好聽，是否也足夠穩健，而且是否符合目前的風格權重。</p>
-        <p class="section-intro en-translation">`v1.4` promotes validation from a footnote into a formal section. The committee must answer whether the thesis is not only persuasive, but also robust enough and aligned with the active style profile.</p>
+        <p class="section-intro">`v1.5` 會把驗證從附註提升為正式區塊。這讓委員會必須回答：這個結論不只是好聽，是否也足夠穩健，而且是否符合目前的風格權重與開市前環境。</p>
+        <p class="section-intro en-translation">`v1.5` promotes validation from a footnote into a formal section. The committee must answer whether the thesis is not only persuasive, but also robust enough and aligned with the active style profile and the premarket environment.</p>
         <table>
           <thead>
             <tr>

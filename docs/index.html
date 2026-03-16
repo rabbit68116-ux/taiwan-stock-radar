@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taiwan Stock Radar | 台灣股票雷達單股指標 AI Skill</title>
-  <meta name="description" content="Taiwan Stock Radar 是專為單一台股深度研判打造的指標驅動 AI skill，透過六層訊號引擎、風格權重切換與正式研究會議完成判斷與操作規劃，並附英文翻譯。">
+  <title>Taiwan Stock Radar | 台灣股票雷達開市前與單股研究 AI Skill</title>
+  <meta name="description" content="Taiwan Stock Radar 是專為台股打造的研究 AI skill，先以台股夜盤與美股趨勢形成開市前評估，再透過六層訊號引擎、風格權重切換與正式研究會議完成單股判斷與操作規劃。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Taiwan Stock Radar | 台灣股票雷達">
-  <meta property="og:description" content="以單股為核心的台股指標驅動研究 skill，將 AI 分析提升為正式研討會議、風格權重與決策文件。">
+  <meta property="og:description" content="以台股開市前評估與單股研究為核心的 AI skill，將夜盤、美股趨勢、訊號引擎、風格權重與決策文件接成同一套工作流。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -35,7 +35,7 @@
         "publisher": {
           "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization"
         },
-        "description": "Taiwan Stock Radar 是一個以單股為核心的台股指標驅動研究網站，展示多位 AI 分析師如何對同一檔股票進行正式研討、風格權重切換與決策整合。 Taiwan Stock Radar is a professional website for single-stock Taiwan equity analysis through an indicator-driven multi-analyst research committee."
+        "description": "Taiwan Stock Radar 是一個以台股開市前評估與單股研究為核心的研究網站，展示 AI 分析師如何先讀取台股夜盤與美股趨勢，再對同一檔股票進行正式研討、風格權重切換與決策整合。 Taiwan Stock Radar is a research website for Taiwan premarket assessment and single-stock analysis through a formal multi-analyst committee."
       },
       {
         "@type": "SoftwareApplication",
@@ -45,7 +45,7 @@
         "operatingSystem": "Web",
         "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
         "downloadUrl": "https://github.com/rabbit68116-ux/taiwan-stock-radar",
-        "description": "Taiwan Stock Radar 是一個開源台股研究 skill，讓多位 AI 分析師對同一檔股票開立正式會議，完成訊號引擎評估、風格切換、策略選擇與操作計畫。 Taiwan Stock Radar is an open-source Taiwan equity research skill that stages a formal multi-analyst meeting around one stock and returns signal-engine review, style adaptation, strategy selection, action zones, and invalidation rules."
+        "description": "Taiwan Stock Radar 是一個開源台股研究 skill，先建立台股夜盤與美股趨勢的開市前評估，再讓多位 AI 分析師對同一檔股票開立正式會議，完成訊號引擎評估、風格切換、策略選擇與操作計畫。 Taiwan Stock Radar is an open-source Taiwan equity research skill that starts with a premarket brief and then stages a formal multi-analyst meeting around one stock."
       }
     ]
   }
@@ -87,15 +87,16 @@
     <section class="hero">
       <div class="hero-grid">
         <article class="hero-card">
-          <p class="eyebrow">台股單股指標研究技能<span class="en-translation">Single-stock indicator committee skill for Taiwan equities</span></p>
-          <h1>台灣股票雷達：讓八位專家級 AI 分析師對同一檔股票完成正式研討、訊號評估與風格化決策
-            <span class="en-translation">Taiwan Stock Radar turns one stock into a formal research committee with eight specialist AI analysts.</span>
+          <p class="eyebrow">台股開市前評估與單股研究技能<span class="en-translation">Premarket and single-stock research skill for Taiwan equities</span></p>
+          <h1>台灣股票雷達：先用夜盤與美股趨勢判讀開市前環境，再讓八位專家級 AI 分析師完成單股正式研討
+            <span class="en-translation">Taiwan Stock Radar reads the overnight environment first, then turns one stock into a formal research committee with eight specialist AI analysts.</span>
           </h1>
-          <p class="lead">Taiwan Stock Radar 以單一台股為核心，先校準趨勢、動能、量價、籌碼、基本面與事件六層訊號，再由八位具不同專長與權重的 AI 分析師進行交叉檢視與加權整合。</p>
-          <p class="lead en-translation">Taiwan Stock Radar is built around one Taiwan stock at a time. It calibrates six signal layers first, then asks eight specialist AI analysts to review the stock through weighted cross-examination.</p>
-          <p class="lead">最終輸出不是一句方向判斷，而是一份帶有訊號摘要、風格權重、策略提名、情境推演、買入區、停損區、停利階梯與失效條件的決策文件。</p>
-          <p class="lead en-translation">The final output is not a one-line call. It is a decision packet with signal summaries, style weights, strategy nominations, scenario framing, buy zones, stop-loss logic, targets, and invalidation rules.</p>
+          <p class="lead">Taiwan Stock Radar 先以台股夜盤、Nasdaq、SOX、TSM ADR、NVIDIA 與 VIX 建立隔日開盤偏向，再把指定股票送進六層訊號引擎與八位專家級 AI 分析師組成的委員會。</p>
+          <p class="lead en-translation">Taiwan Stock Radar starts with Taiwan night-session, Nasdaq, SOX, TSM ADR, NVIDIA, and VIX to form an opening-bias brief, then sends the chosen stock into a six-engine committee with eight specialist AI analysts.</p>
+          <p class="lead">最終輸出不是一句方向判斷，而是包含開市前環境、訊號摘要、風格權重、策略提名、情境推演、買入區、停損區、停利階梯與失效條件的完整決策文件。</p>
+          <p class="lead en-translation">The final output is not a one-line call. It is a full decision packet with premarket context, signal summaries, style weights, strategy nominations, scenario framing, buy zones, stop-loss logic, targets, and invalidation rules.</p>
           <div class="chip-row">
+            <span class="chip">開市前趨勢報告<span class="en-translation">Premarket brief</span></span>
             <span class="chip">單股研判<span class="en-translation">Single stock</span></span>
             <span class="chip">指標委員會<span class="en-translation">Indicator committee</span></span>
             <span class="chip">六層訊號引擎<span class="en-translation">Six signal engines</span></span>
@@ -130,7 +131,7 @@
           <div class="meta-list">
             <div>
               <span class="label">版本<span class="en-translation">Version</span></span>
-              <span class="value">v1.4</span>
+              <span class="value">v1.5</span>
             </div>
             <div>
               <span class="label">市場<span class="en-translation">Market</span></span>
@@ -140,8 +141,8 @@
             </div>
             <div>
               <span class="label">主要模式<span class="en-translation">Primary mode</span></span>
-              <span class="value">單股指標研究委員會
-                <span class="en-translation">Single-stock indicator committee</span>
+              <span class="value">開市前環境報告 + 單股指標委員會
+                <span class="en-translation">Premarket brief + single-stock committee</span>
               </span>
             </div>
             <div>
@@ -152,14 +153,14 @@
             </div>
             <div>
               <span class="label">主要輸出<span class="en-translation">Primary output</span></span>
-              <span class="value">決策文件 + 風格權重
-                <span class="en-translation">Decision packet plus style weights</span>
+              <span class="value">開市前報告 + 決策文件
+                <span class="en-translation">Premarket brief plus decision packet</span>
               </span>
             </div>
             <div>
               <span class="label">更新時間<span class="en-translation">Last updated</span></span>
-              <span class="value">2026 年 3 月 13 日
-                <span class="en-translation">March 13, 2026</span>
+              <span class="value">2026 年 3 月 17 日
+                <span class="en-translation">March 17, 2026</span>
               </span>
             </div>
           </div>
@@ -172,15 +173,15 @@
         <h2>專案定位
           <span class="en-translation">Project Statement</span>
         </h2>
-        <p class="section-intro">Taiwan Stock Radar 的定位不是市場雜訊摘要，而是單股研究介面。`v1.4` 先處理訊號健康度與風格匹配，再讓策略與操作規劃建立在更清楚的證據上。</p>
-        <p class="section-intro en-translation">Taiwan Stock Radar is not positioned as a noisy market summary. It is a single-stock research surface. In `v1.4`, signal health and style fit are resolved before strategy and action planning are allowed to speak with confidence.</p>
+        <p class="section-intro">Taiwan Stock Radar 的定位不是市場雜訊摘要，而是一套台股研究工作流。`v1.5` 先處理隔夜環境與開市前偏向，再讓單股訊號健康度與風格匹配成為策略與操作規劃的基礎。</p>
+        <p class="section-intro en-translation">Taiwan Stock Radar is not positioned as a noisy market summary. It is a Taiwan-equity research workflow. In `v1.5`, the overnight environment is resolved first, then signal health and style fit shape strategy and action planning.</p>
         <div class="grid">
           <article class="card">
-            <h3>不是市場雜訊，而是一檔股票
-              <span class="en-translation">One stock, not a noisy watchlist</span>
+            <h3>不是只看夜盤，而是先看環境再看單股
+              <span class="en-translation">Environment first, then the stock</span>
             </h3>
-            <p>`v1.4` 明確聚焦於一檔 TWSE 或 TPEX 股票，把單股判斷當成主體，要求先看訊號堆疊，再談策略與執行。</p>
-            <p class="en-translation">`v1.4` is explicitly centered on one TWSE or TPEX stock at a time, treating single-stock judgment as the main event and requiring a signal-stack review before strategy and execution language.</p>
+            <p>`v1.5` 先把台股夜盤與美股趨勢收成開市前報告，再把單股判斷當成主體，避免買賣點脫離隔夜市況。</p>
+            <p class="en-translation">`v1.5` turns Taiwan night-session and US-market moves into a premarket brief first, then treats the single-stock judgment as the main event so trade planning does not detach from the overnight tape.</p>
           </article>
           <article class="card">
             <h3>八位專家級 AI 分析師
@@ -207,12 +208,19 @@
       </section>
 
       <section>
-        <h2>v1.4 指標與風格版本
-          <span class="en-translation">v1.4 Indicator and Style Layer</span>
+        <h2>v1.5 開市前 + 指標委員會版本
+          <span class="en-translation">v1.5 Premarket and Committee Layer</span>
         </h2>
-        <p class="section-intro">這一版的核心不是增加更多形容詞，而是讓每個單股結論都多出「訊號是否健康」與「風格是否匹配」兩道門。</p>
-        <p class="section-intro en-translation">The point of this release is not more adjectives. It is to add two extra gates to every single-stock call: signal health and style fit.</p>
+        <p class="section-intro">這一版的核心不是增加更多形容詞，而是讓每個單股結論都多出「隔夜環境是否支持」、「訊號是否健康」與「風格是否匹配」三道門。</p>
+        <p class="section-intro en-translation">The point of this release is not more adjectives. It is to add three gates to every single-stock call: whether the overnight environment supports it, whether the signal stack is healthy, and whether the style fit is coherent.</p>
         <div class="grid">
+          <article class="card">
+            <h3>開市前環境報告
+              <span class="en-translation">Premarket environment brief</span>
+            </h3>
+            <p>系統先把台股夜盤、Nasdaq、SOX、TSM ADR、NVIDIA 與 VIX 轉成隔日台股開盤偏向、風險提示與族群觀察名單。</p>
+            <p class="en-translation">The system first converts Taiwan night-session, Nasdaq, SOX, TSM ADR, NVIDIA, and VIX into an opening-bias brief, risk flags, and a sector watchlist for Taiwan equities.</p>
+          </article>
           <article class="card">
             <h3>六層訊號引擎
               <span class="en-translation">Six signal engines</span>
@@ -224,8 +232,8 @@
             <h3>風格權重切換
               <span class="en-translation">Style-weight switching</span>
             </h3>
-            <p>同一檔股票在短線、波段與中長線下不應用相同標準。`v1.4` 會依風格切換權重與優先欄位。</p>
-            <p class="en-translation">The same stock should not be judged by the same lens across short-term, swing, and position trading. `v1.4` switches both weights and field priority by style.</p>
+            <p>同一檔股票在短線、波段與中長線下不應用相同標準。`v1.5` 會依風格切換權重與優先欄位，也會讓開市前環境影響早盤積極度。</p>
+            <p class="en-translation">The same stock should not be judged by the same lens across short-term, swing, and position trading. `v1.5` switches both weights and field priority by style, and lets the premarket tone affect early-session aggressiveness.</p>
           </article>
           <article class="card">
             <h3>最小可用欄位集
@@ -246,7 +254,7 @@
 
       <section>
         <div class="quote">
-          <p><strong>展品摘要：</strong> Taiwan Stock Radar 是一個面向台股的單股指標研究 skill，透過多位 AI 分析師的正式研討會議，輸出帶有訊號引擎、風格權重、策略選擇、操作區間與風險反方意見的結構化決策文件。<span class="en-translation"><strong>Exhibit summary:</strong> Taiwan Stock Radar is a single-stock Taiwan-equity indicator skill that turns one stock into a formal multi-analyst meeting and returns a structured decision packet with signal engines, style weights, strategy selection, action zones, and risk-aware dissent.</span></p>
+          <p><strong>展品摘要：</strong> Taiwan Stock Radar 是一個面向台股的研究 skill，先以台股夜盤與美股趨勢形成開市前報告，再透過多位 AI 分析師的正式研討會議，輸出帶有訊號引擎、風格權重、策略選擇、操作區間與風險反方意見的結構化決策文件。<span class="en-translation"><strong>Exhibit summary:</strong> Taiwan Stock Radar is a Taiwan-equity research skill that begins with a premarket brief and then turns one stock into a formal multi-analyst meeting with signal engines, style weights, strategy selection, action zones, and risk-aware dissent.</span></p>
         </div>
       </section>
 
@@ -262,6 +270,7 @@
               <span class="en-translation">What the page shows</span>
             </h3>
             <ul>
+              <li>開市前環境摘要<span class="en-translation">Premarket environment summary</span></li>
               <li>委員會 verdict summary bar<span class="en-translation">Committee verdict summary bar</span></li>
               <li>個案背景與研究問題<span class="en-translation">Case setup and research objective</span></li>
               <li>策略引擎與策略選擇<span class="en-translation">Strategy engine and strategy selection</span></li>
@@ -359,27 +368,27 @@
         <div class="kpi-grid">
           <div class="kpi">
             <strong>1</strong>
-            <span class="muted">個案設定：股票、日期、週期、研究問題<span class="en-translation">Case setup: stock, date, horizon, question</span></span>
+            <span class="muted">開市前環境評估：夜盤、美股、半導體與風險情緒<span class="en-translation">Premarket environment: night session, US markets, semis, and risk tone</span></span>
           </div>
           <div class="kpi">
             <strong>2</strong>
-            <span class="muted">各專家角色獨立簡報<span class="en-translation">Independent specialist briefs</span></span>
+            <span class="muted">個案設定：股票、日期、週期、研究問題<span class="en-translation">Case setup: stock, date, horizon, question</span></span>
           </div>
           <div class="kpi">
             <strong>3</strong>
-            <span class="muted">策略提名與個案分類<span class="en-translation">Strategy nomination and case classification</span></span>
+            <span class="muted">各專家角色獨立簡報<span class="en-translation">Independent specialist briefs</span></span>
           </div>
           <div class="kpi">
             <strong>4</strong>
-            <span class="muted">驗證面板與穩健度檢查<span class="en-translation">Validation panel and robustness review</span></span>
+            <span class="muted">策略提名與個案分類<span class="en-translation">Strategy nomination and case classification</span></span>
           </div>
           <div class="kpi">
             <strong>5</strong>
-            <span class="muted">交叉質詢、權重整合與 dissent 記錄<span class="en-translation">Cross-examination, weighted synthesis, and dissent logging</span></span>
+            <span class="muted">驗證面板與穩健度檢查<span class="en-translation">Validation panel and robustness review</span></span>
           </div>
           <div class="kpi">
             <strong>6</strong>
-            <span class="muted">形成最終決策文件與操作計畫<span class="en-translation">Final decision packet with action plan</span></span>
+            <span class="muted">交叉質詢後形成最終決策文件與操作計畫<span class="en-translation">Cross-examination followed by the final decision packet</span></span>
           </div>
         </div>
       </section>
@@ -391,6 +400,17 @@
         <p class="section-intro">一個成熟的股市 skill 應該交付的不是一句方向判斷，而是能被檢討、被質疑、也能被執行的研究成果。</p>
         <p class="section-intro en-translation">A serious stock skill should deliver more than a directional opinion. It should produce work that can be reviewed, challenged, and acted on with discipline.</p>
         <div class="split-grid">
+          <article class="analysis-card">
+            <h3>開市前報告
+              <span class="en-translation">Premarket brief</span>
+            </h3>
+            <ul>
+              <li><strong>開盤偏向：</strong>偏多、建設性偏強、中性偏多、偏保守或偏空防守。<span class="en-translation"><strong>Opening bias:</strong> bullish, constructive, neutral-positive, cautious, or defensive.</span></li>
+              <li><strong>關鍵驅動：</strong>夜盤、Nasdaq、SOX、TSM ADR、NVIDIA 與 VIX。<span class="en-translation"><strong>Key drivers:</strong> night session, Nasdaq, SOX, TSM ADR, NVIDIA, and VIX.</span></li>
+              <li><strong>族群觀察：</strong>半導體、AI 伺服器、金融或防禦型族群。<span class="en-translation"><strong>Sector watchlist:</strong> semis, AI servers, financials, or defensive groups.</span></li>
+              <li><strong>風險提示：</strong>夜盤缺口、風險情緒惡化與外盤分歧。<span class="en-translation"><strong>Risk flags:</strong> gap risk, deteriorating risk tone, and conflicting overnight signals.</span></li>
+            </ul>
+          </article>
           <article class="analysis-card">
             <h3>研究文件
               <span class="en-translation">Research packet</span>
