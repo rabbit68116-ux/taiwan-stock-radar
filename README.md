@@ -132,6 +132,19 @@ python3 -m pip install -r requirements-desktop.txt
 python3 apps/windows/main.py
 ```
 
+若你是在 Windows 上直接雙擊啟動，也可以使用：
+
+```bat
+start_windows_app.bat
+```
+
+這支 launcher 會自動：
+
+- 建立 `.venv`
+- 檢查 `PySide6`
+- 第一次啟動時安裝 `requirements-desktop.txt`
+- 啟動 Windows desktop app
+
 若要在 Windows 主機打包 one-folder EXE：
 
 ```bash
