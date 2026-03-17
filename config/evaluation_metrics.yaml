@@ -1,5 +1,5 @@
 {
-  "version": "v1.5",
+  "version": "v1.6",
   "panels": {
     "signal_quality": [
       "above_ma20",

@@ -186,9 +186,10 @@ def generate_premarket_brief(
     analysis_date: str | None = None,
     profile: str | None = None,
     context_file: str | None = None,
+    context: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     analysis_date = analysis_date or date.today().isoformat()
-    context = load_premarket_context(profile=profile, context_file=context_file)
+    context = context or load_premarket_context(profile=profile, context_file=context_file)
 
     weights = rules["weights"]
     taiwan_night_score = _night_session_score(context["taiwan_night"], rules)
@@ -220,7 +221,7 @@ def generate_premarket_brief(
     return {
         "analysis_date": analysis_date,
         "project": settings.get("project", {}).get("display_name", "Taiwan Stock Radar"),
-        "version": settings.get("project", {}).get("plan_version", "v1.5"),
+        "version": settings.get("project", {}).get("plan_version", "v1.6"),
         "report_type": "premarket_opening_bias",
         "profile_label": context.get("profile_label", profile or "custom"),
         "opening_bias": opening_bias,
@@ -245,8 +246,8 @@ def generate_premarket_brief(
         "sector_watchlist": sector_watchlist,
         "risk_flags": risk_flags,
         "disclaimer": (
-            "This premarket brief is for research and planning use. "
-            "It does not guarantee how Taiwan equities will open or trade intraday."
+            "本開市前報告僅供研究、教育與產品展示使用，不構成投資建議，亦不保證台股開盤或盤中走勢。 "
+            "This premarket brief is for research, education, and product demonstration only. It is not investment advice and does not guarantee how Taiwan equities will open or trade intraday."
         ),
     }
 

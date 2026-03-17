@@ -1,6 +1,6 @@
-# Agent Analyst Blueprint v1.5
+# Agent Analyst Blueprint v1.6
 
-Version: `v1.5`
+Version: `v1.6`
 
 Use this reference when designing the skill to behave like a **single-stock Taiwan-equity indicator committee** instead of a market screener.
 
@@ -23,7 +23,7 @@ The end product is not a score-only output. It is a professional decision packet
 
 ## 2. Core operating principle
 
-`v1.5` assumes that Taiwan-equity research should read the overnight environment first, then let one stock receive multiple specialized viewpoints, one explicit signal-engine layer, and one style-weight layer.
+`v1.6` assumes that Taiwan-equity research should read the 08:30 market brief first, then let one stock receive multiple specialized viewpoints, one explicit signal-engine layer, and one style-weight layer.
 
 Do not let one generic analyst voice dominate the output. Use distinct agent roles with distinct priorities, then synthesize them into a final verdict.
 
@@ -320,7 +320,7 @@ At minimum review:
 
 ## 8. Required output schema
 
-Every `v1.5` deep-dive should include these sections:
+Every `v1.6` deep-dive should include these sections:
 
 | Section | Why it matters |
 |---|---|
@@ -371,4 +371,4 @@ When turning this blueprint into workflows or code, prefer:
 - Taiwan-specific data sources and timing logic
 - structured logs of agreement and dissent
 
-The `v1.5` system is successful when a reader can see not only the final call, but also how the overnight environment was read, how the Taiwan-market signal stack was interpreted, which trading style was activated, and what would still invalidate the setup.
+The `v1.6` system is successful when a reader can see not only the final call, but also how the 08:30 market brief was read, how the Taiwan-market signal stack was interpreted, which trading style was activated, and what would still invalidate the setup.

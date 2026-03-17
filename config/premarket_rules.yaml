@@ -1,5 +1,5 @@
 {
-  "version": "v1.5",
+  "version": "v1.6",
   "weights": {
     "taiwan_night": 0.4,
     "us_broad": 0.25,
@@ -65,7 +65,7 @@
   "report_defaults": {
     "default_profile": "semi_risk_on",
     "output_basename": "premarket_brief",
-    "report_time_local": "08:00",
+    "report_time_local": "08:30",
     "focus_contracts": [
       "台指期近月",
       "電子期",

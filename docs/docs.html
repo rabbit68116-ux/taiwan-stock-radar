@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 知識庫 Knowledge Base</title>
-  <meta name="description" content="Taiwan Stock Radar 知識庫與文件入口，整理 skill 定義、開市前報告框架、agent blueprint、台股指標、風格權重與公開展示頁，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar 知識庫與文件入口，整理 skill 定義、08:30 日盤報告框架、agent blueprint、台股指標、風格權重與公開展示頁，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 知識庫 Knowledge Base">
-  <meta property="og:description" content="查看 Taiwan Stock Radar 背後的 skill 定義、開市前報告方法、台股指標、風格權重與案例頁。">
+  <meta property="og:description" content="查看 Taiwan Stock Radar 背後的 skill 定義、08:30 日盤報告方法、台股指標、風格權重與案例頁。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -53,8 +53,8 @@
         <h1>Taiwan Stock Radar 背後的參考文件
           <span class="en-translation">The reference library behind Taiwan Stock Radar</span>
         </h1>
-        <p class="lead">這一頁整理 `v1.5` 台股研究 skill 的核心文件。它不是文件清單而已，而是公開展示頁背後的方法書架，讓訪客能看到「開市前環境評估 + 單股委員會」這套流程是如何被定義、配置與限制。</p>
-        <p class="lead en-translation">This page gathers the core documents behind the `v1.5` Taiwan-equity research skill. It shows how the combined premarket layer and single-stock committee are defined, configured, and constrained behind the public exhibit.</p>
+        <p class="lead">這一頁整理 `v1.6` 台股研究 skill 的核心文件。它不是文件清單而已，而是公開展示頁背後的方法書架，讓訪客能看到「08:30 日盤預測報告 + 單股委員會」這套流程是如何被定義、配置與限制。</p>
+        <p class="lead en-translation">This page gathers the core documents behind the `v1.6` Taiwan-equity research skill. It shows how the combined 08:30 market brief and single-stock committee are defined, configured, and constrained behind the public exhibit.</p>
       </div>
     </section>
 
@@ -87,9 +87,9 @@
             <p class="en-translation">Defines the weighting switch for short-term, swing, and position trading styles.</p>
           </article>
           <article class="card">
-            <h3>Premarket brief framework</h3>
-            <p>說明台股夜盤、美股趨勢、半導體領先訊號與 VIX 如何轉成隔日開盤偏向、風險提示與族群觀察。</p>
-            <p class="en-translation">Explains how Taiwan night-session, US-market moves, semiconductor leadership, and VIX become an opening-bias brief, risk flags, and sector watchlists.</p>
+            <h3>Daily market brief framework</h3>
+            <p>說明 08:30 日盤預測報告的來源、10 大訊息配比、綜合評分與來源容錯邏輯。</p>
+            <p class="en-translation">Explains the 08:30 daily market brief source mix, ten-message allocation, scoring model, and reliability guardrails.</p>
           </article>
           <article class="card">
             <h3>Agent personas</h3>
@@ -133,12 +133,12 @@
               <td>描述單股指標研究委員會的上層操作模型。<span class="en-translation">Documents the higher-level operating model for the single-stock indicator committee.</span></td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/taiwan-indicator-framework-v1.5.md">Taiwan indicator framework v1.5</a></td>
-              <td>整理台股核心技術、籌碼、基本面與事件欄位，以及它們的實戰判讀方式。<span class="en-translation">Maps the core Taiwan technical, flow, fundamental, and event fields into practical interpretation rules.</span></td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/taiwan-indicator-framework-v1.6.md">Taiwan indicator framework v1.6</a></td>
+              <td>整理 `v1.6` 的六層台股訊號引擎、風格切換與和日盤簡報的銜接方式。<span class="en-translation">Maps the `v1.6` six-engine Taiwan indicator stack, style switching, and its connection to the daily brief.</span></td>
             </tr>
             <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/premarket-brief-framework-v1.5.md">Premarket brief framework v1.5</a></td>
-              <td>定義開市前報告的評估欄位、加權規則、風險標記與輸出格式。<span class="en-translation">Defines the fields, scoring rules, risk flags, and output format for the premarket brief.</span></td>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/daily-market-brief-framework-v1.6.md">Daily market brief framework v1.6</a></td>
+              <td>定義 08:30 日盤預測報告的來源、10 大訊息配比、評分權重與容錯規則。<span class="en-translation">Defines the 08:30 daily brief source mix, ten-message allocation, scoring weights, and fallback rules.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/indicator_catalog.yaml">Indicator catalog</a></td>
@@ -147,6 +147,10 @@
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/premarket_rules.yaml">Premarket rules</a></td>
               <td>定義台股夜盤、美股大盤、半導體與風險因子的權重與判讀閾值。<span class="en-translation">Defines weights and thresholds for Taiwan night-session, US broad indices, semiconductors, and risk factors.</span></td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/daily_market_brief_rules.yaml">Daily market brief rules</a></td>
+              <td>定義 08:30 報告的來源網址、10 大訊息配比與整體評分權重。<span class="en-translation">Defines the 08:30 brief source URLs, ten-message allocation, and overall scoring weights.</span></td>
             </tr>
             <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/style_weights.yaml">Style weights</a></td>
@@ -173,8 +177,12 @@
               <td>保留較早期市場掃描階段的展示型資產。<span class="en-translation">Preserves an earlier demo asset from the broader-market exploration stage.</span></td>
             </tr>
             <tr>
+              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_daily_market_brief.py">Daily market brief script</a></td>
+              <td>輸出每日 08:30 台股日盤預測報告、10 大重點訊息與綜合評估。<span class="en-translation">Generates the daily 08:30 Taiwan market brief with ten key messages and an overall assessment.</span></td>
+            </tr>
+            <tr>
               <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_premarket_brief.py">Premarket brief script</a></td>
-              <td>輸出台股開市前報告，供早盤前環境研判使用。<span class="en-translation">Generates the Taiwan premarket brief for opening-bias assessment before the market opens.</span></td>
+              <td>保留較基礎的開市前環境報告，作為 `v1.6` 日盤簡報的底層模組。<span class="en-translation">Preserves the lower-level overnight brief that feeds the richer `v1.6` daily market brief.</span></td>
             </tr>
           </tbody>
         </table>

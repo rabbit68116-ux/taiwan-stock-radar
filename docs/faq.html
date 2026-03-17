@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 常見問題 FAQ</title>
-  <meta name="description" content="Taiwan Stock Radar 常見問題頁，說明這個結合台股開市前評估與單股研究的 AI skill 如何運作，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar 常見問題頁，說明這個結合每日 08:30 台股日盤預測報告與單股研究的 AI skill 如何運作，並附英文翻譯。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 常見問題 FAQ">
-  <meta property="og:description" content="了解 Taiwan Stock Radar 如何先做台股開市前評估，再以多位專業 AI analyst 對單一台股進行深度研究。">
+  <meta property="og:description" content="了解 Taiwan Stock Radar 如何先做每日 08:30 台股日盤預測報告，再以多位專業 AI analyst 對單一台股進行深度研究。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -23,7 +23,7 @@
         "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taiwan Stock Radar 是一個面向台灣股票研究的 AI skill。v1.5 版本先用台股夜盤與美股趨勢建立開市前評估，再透過六層訊號引擎與多位 AI 分析師的正式研討會議輸出結構化判斷。 Taiwan Stock Radar is an AI skill for Taiwan-equity research. In v1.5 it starts with a premarket brief and then runs a formal multi-analyst committee with six signal engines."
+          "text": "Taiwan Stock Radar 是一個面向台灣股票研究的 AI skill。v1.6 版本會先在每日 08:30 以前整合台指期夜盤、Yahoo奇摩股市、Anue 鉅亨網與美股關鍵指標，輸出台股日盤預測報告與 10 大重點訊息，再在需要時展開單股委員會。 Taiwan Stock Radar is an AI skill for Taiwan-equity research. In v1.6 it starts with a daily 08:30 market brief and ten key messages, then opens a formal single-stock committee when needed."
         }
       },
       {
@@ -101,8 +101,8 @@
         <h1>關於 Taiwan Stock Radar 的常見問題
           <span class="en-translation">Common questions about Taiwan Stock Radar</span>
         </h1>
-        <p class="lead">這一頁整理 Taiwan Stock Radar `v1.5` 最常被問到的核心問題，聚焦在它如何把開市前環境與單股研究接起來、會輸出什麼，以及哪些事情它不應被誤解成可以保證。</p>
-        <p class="lead en-translation">This page answers the most common questions about Taiwan Stock Radar `v1.5`, focusing on how it connects the premarket environment to single-stock research, what it returns, and what it should never be mistaken for.</p>
+        <p class="lead">這一頁整理 Taiwan Stock Radar `v1.6` 最常被問到的核心問題，聚焦在它如何把 08:30 日盤預測報告、10 大重點訊息與單股研究委員會接起來，以及哪些事情它不應被誤解成可以保證。</p>
+        <p class="lead en-translation">This page answers the most common questions about Taiwan Stock Radar `v1.6`, focusing on how it connects the 08:30 daily brief, ten key messages, and the single-stock committee, and what it should never be mistaken for.</p>
       </div>
     </section>
 
@@ -113,8 +113,8 @@
             <h2>什麼是 Taiwan Stock Radar？
               <span class="en-translation">What is Taiwan Stock Radar?</span>
             </h2>
-            <p>它是一個專門用來研究單一台股的 AI skill。它不只給一句看多或看空，而是模擬一場正式研究會議，輸出帶有訊號引擎、風格權重與策略模組的決策文件。</p>
-            <p class="en-translation">It is an AI skill built for one Taiwan stock at a time. Instead of a loose bullish or bearish comment, it produces a reviewable decision packet with signal engines, style weights, and strategy modules.</p>
+            <p>它是一個專門為台股打造的 AI skill。產品第一層輸出是每日 08:30 台股日盤預測報告，第二層才是在需要時啟動的單股研究委員會，因此它同時處理市場環境與個股決策。</p>
+            <p class="en-translation">It is an AI skill built specifically for Taiwan equities. The first product layer is a daily 08:30 Taiwan market brief, and the second layer is the single-stock committee opened when deeper analysis is needed.</p>
           </article>
           <article class="card">
             <h2>為什麼要用多位專家型 AI 分析師？
@@ -131,11 +131,11 @@
             <p class="en-translation">The chair agent is not just another analyst. It moderates the meeting, surfaces disagreement, applies weighting, and writes the final verdict.</p>
           </article>
           <article class="card">
-            <h2>開市前報告會怎麼運作？
-              <span class="en-translation">How does the premarket brief work?</span>
+            <h2>08:30 日盤報告會怎麼運作？
+              <span class="en-translation">How does the 08:30 market brief work?</span>
             </h2>
-            <p>系統會先讀取台股夜盤、S&amp;P 500、Nasdaq、SOX、TSM ADR、NVIDIA 與 VIX，將它們轉成台股隔日開盤偏向、族群觀察與風險提示，再決定單股分析該用多積極的節奏切入。</p>
-            <p class="en-translation">The system first reads Taiwan night-session, the S&amp;P 500, Nasdaq, SOX, TSM ADR, NVIDIA, and VIX, converts them into an opening-bias view, sector watchlist, and risk flags, then decides how aggressively the stock analysis should be framed.</p>
+            <p>系統會先讀取台股夜盤、S&amp;P 500、Nasdaq、Dow、SOX、TSM ADR、NVIDIA 與 VIX，再整理 Yahoo奇摩股市與 Anue 鉅亨網重點頁面，輸出 10 大重點訊息、開盤偏向、族群觀察與風險提示。</p>
+            <p class="en-translation">The system first reads Taiwan night-session, the S&amp;P 500, Nasdaq, Dow, SOX, TSM ADR, NVIDIA, and VIX, then combines Yahoo Taiwan market pages and Anue headlines into ten key messages, an opening bias, sector watchlists, and risk flags.</p>
           </article>
           <article class="card">
             <h2>買賣點會怎麼表達？
@@ -145,11 +145,11 @@
             <p class="en-translation">The output defines the signal-engine summary, style profile, strategy module, preferred buy zone, alternate entry triggers, stop-loss, take-profit ladder, and invalidation so the thesis stays connected to execution discipline.</p>
           </article>
           <article class="card">
-            <h2>v1.5 多了什麼？
-              <span class="en-translation">What is new in v1.5?</span>
+            <h2>v1.6 多了什麼？
+              <span class="en-translation">What is new in v1.6?</span>
             </h2>
-            <p>`v1.5` 新增了開市前夜盤 + 美股趨勢報告，讓單股委員會能先接住隔夜環境，再進入六層訊號引擎、交易風格權重與策略模組的正式判讀。</p>
-            <p class="en-translation">`v1.5` adds a premarket brief built from Taiwan night-session and US-market trends, so the single-stock committee can absorb the overnight environment before moving into signal engines, style weights, and strategy modules.</p>
+            <p>`v1.6` 把產品主輸出升級成每日 08:30 台股日盤預測報告，固定整理 10 大重點訊息與綜合評估，再把單股委員會當成第二層 deeper analysis，而不是唯一輸出。</p>
+            <p class="en-translation">`v1.6` upgrades the main product output into a daily 08:30 Taiwan market brief with ten key messages and an overall assessment, then treats the single-stock committee as the second analysis layer rather than the only output.</p>
           </article>
           <article class="card">
             <h2>如果不同分析師彼此意見不同怎麼辦？

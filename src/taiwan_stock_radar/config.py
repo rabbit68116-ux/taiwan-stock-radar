@@ -38,6 +38,16 @@ def load_premarket_config(project_root: Path) -> tuple[dict[str, Any], dict[str,
     return settings, premarket_rules
 
 
+def load_daily_market_brief_config(
+    project_root: Path,
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    config_dir = project_root / "config"
+    settings = load_mapping(config_dir / "settings.yaml")
+    premarket_rules = load_mapping(config_dir / "premarket_rules.yaml")
+    daily_market_brief_rules = load_mapping(config_dir / "daily_market_brief_rules.yaml")
+    return settings, premarket_rules, daily_market_brief_rules
+
+
 def resolve_output_dir(project_root: Path, settings: dict[str, Any]) -> Path:
     output_dir = settings.get("paths", {}).get("output_dir", "output")
     return project_root / output_dir

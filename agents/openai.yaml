@@ -1,8 +1,8 @@
 interface:
   display_name: "Taiwan Stock Radar"
-  short_description: "台股單股研討、開市前夜盤評估與風格切換 skill"
+  short_description: "台股 08:30 日盤預測報告、10 大重點訊息與單股研討 skill"
   brand_color: "#C43D2B"
-  default_prompt: "Use $taiwan-stock-radar to run a Taiwan equity research workflow that can first build a premarket night-session and US-trend brief, then open the indicator-driven single-stock committee, activate the correct style profile, select the best-fit strategy family, and return the weighted thesis, scenarios, buy zone, stop loss, take-profit plan, and invalidation."
+  default_prompt: "Use $taiwan-stock-radar to build the 08:30 Taiwan daily market brief from night-session trends, Yahoo Taiwan market pages, Anue headlines, and US market signals, return ten key messages plus an overall Taiwan-market assessment, then open the indicator-driven single-stock committee when a specific stock deep-dive is needed."
 
 policy:
   allow_implicit_invocation: true

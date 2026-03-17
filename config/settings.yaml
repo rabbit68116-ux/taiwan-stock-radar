@@ -2,7 +2,7 @@
   "project": {
     "name": "taiwan-stock-radar",
     "display_name": "Taiwan Stock Radar",
-    "plan_version": "v1.5",
+    "plan_version": "v1.6",
     "mode": "single_stock_indicator_council"
   },
   "analysis": {
@@ -53,9 +53,15 @@
   },
   "premarket": {
     "enabled": true,
-    "report_time_local": "08:00",
+    "report_time_local": "08:30",
     "rules_config_path": "config/premarket_rules.yaml",
     "default_context_profile": "semi_risk_on"
+  },
+  "daily_market_brief": {
+    "enabled": true,
+    "report_time_local": "08:30",
+    "rules_config_path": "config/daily_market_brief_rules.yaml",
+    "output_basename": "daily_market_brief"
   },
   "market": {
     "default_regime": "sideways",
@@ -71,6 +77,6 @@
   },
   "app": {
     "title": "Taiwan Stock Radar",
-    "subtitle": "Indicator-driven Taiwan equity committee with premarket brief and legacy scan demo support"
+    "subtitle": "08:30 Taiwan market brief, single-stock committee, and legacy scan demo support"
   }
 }

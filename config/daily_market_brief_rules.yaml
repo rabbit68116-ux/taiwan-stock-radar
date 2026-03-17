@@ -1,0 +1,77 @@
+{
+  "version": "v1.6",
+  "schedule": {
+    "report_time_local": "08:30",
+    "report_name": "台股日盤 08:30 預測報告"
+  },
+  "sources": {
+    "yahoo_tw_market_url": "https://tw.stock.yahoo.com/tw-market/",
+    "yahoo_us_market_url": "https://tw.stock.yahoo.com/us-market/",
+    "yahoo_futures_url": "https://tw.stock.yahoo.com/future/futures.html?fumr=futurefull",
+    "cnyes_tw_stock_url": "https://news.cnyes.com/news/cat/tw_stock",
+    "cnyes_us_stock_url": "https://news.cnyes.com/news/cat/us_stock",
+    "yahoo_quote_symbols": {
+      "sp500": "^GSPC",
+      "nasdaq": "^IXIC",
+      "dow": "^DJI",
+      "sox": "^SOX",
+      "tsm_adr": "TSM",
+      "nvidia": "NVDA",
+      "vix": "^VIX"
+    }
+  },
+  "headline_plan": {
+    "top_n": 10,
+    "market_signal_slots": 4,
+    "headline_slots": 6,
+    "source_limits": {
+      "yahoo_tw": 3,
+      "yahoo_us": 0,
+      "cnyes_tw": 2,
+      "cnyes_us": 1
+    }
+  },
+  "summary_weights": {
+    "premarket": 0.7,
+    "headlines": 0.3
+  },
+  "headline_sentiment": {
+    "positive_keywords": [
+      "大漲",
+      "走強",
+      "創高",
+      "勁揚",
+      "秒填息",
+      "利多",
+      "買超",
+      "回神",
+      "上攻",
+      "大漲逾",
+      "surge",
+      "rally",
+      "gain",
+      "beats"
+    ],
+    "negative_keywords": [
+      "重挫",
+      "走弱",
+      "下修",
+      "利空",
+      "賣壓",
+      "跌破",
+      "震盪",
+      "壓回",
+      "衰退",
+      "風險",
+      "slump",
+      "drop",
+      "miss",
+      "warning"
+    ]
+  },
+  "night_session": {
+    "preferred_contract": "WTX&",
+    "hot_volume_threshold": 90000,
+    "soft_volume_threshold": 40000
+  }
+}

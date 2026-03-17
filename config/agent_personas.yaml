@@ -1,5 +1,5 @@
 {
-  "version": "v1.5",
+  "version": "v1.6",
   "default_council_mode": "single_stock_taiwan_equity_indicator_committee",
   "agents": [
     {
