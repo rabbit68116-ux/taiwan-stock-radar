@@ -19,17 +19,17 @@
       "publisher": {
         "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization"
       },
-      "description": "Taiwan Stock Radar 是一個以每日 08:30 台股日盤預測報告與單股研究為核心的研究網站，展示 AI 系統如何整合夜盤、Yahoo奇摩股市、Anue 鉅亨網與美股趨勢，再完成當日評估與單股決策。 Taiwan Stock Radar is a research website centered on a daily 08:30 Taiwan market brief and single-stock analysis."
+      "description": "Taiwan Stock Radar 是一個以 shared core 同步服務 daily brief、single-stock committee 與 Windows desktop 的台股研究網站。 Taiwan Stock Radar is a Taiwan-stock research site whose shared core serves the daily brief, the single-stock committee, and the Windows desktop app."
     },
     {
       "@type": "SoftwareApplication",
       "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#software",
       "name": "Taiwan Stock Radar",
       "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
+      "operatingSystem": "Web, Windows",
       "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
       "downloadUrl": "https://github.com/rabbit68116-ux/taiwan-stock-radar",
-      "description": "Taiwan Stock Radar 是一個開源台股 AI research skill，每日 08:30 先建立台股日盤預測報告與 10 大重點訊息，再讓多位 specialist AI analyst 對同一檔股票開會，完成訊號引擎評估、風格切換、策略選擇與操作計畫。 Taiwan Stock Radar is an open-source Taiwan equity research skill that starts with a daily 08:30 market brief and then runs a specialist AI committee around one stock."
+      "description": "Taiwan Stock Radar 是一個開源台股研究產品，以 shared core 同步服務每日 08:30 日盤報告、單股委員會、CLI 與 Windows desktop app。 Taiwan Stock Radar is an open-source Taiwan-stock research product whose shared core powers the daily 08:30 brief, the single-stock committee, the CLI, and the Windows desktop app."
     }
   ]
 }

@@ -1,36 +1,35 @@
 ---
 name: taiwan-stock-radar
-description: Use when the task is to build a daily Taiwan market brief or analyze one Taiwan stock through a formal research workflow. Start with the 08:30 daily brief when the user needs same-day Taiwan market direction. Prioritize Taiwan night-session, Yahoo Taiwan market pages, Anue headlines, US market spillover, moving-average structure, volume behavior, institutional flow, financing and securities lending, monthly revenue, valuation, event timing, style fit, and validation risk. Separate observation from forecast, preserve dissent between specialist agents, and end with explicit action levels and invalidation.
+description: Use when the task is to build a Taiwan market brief, run a Taiwan stock scan, or analyze one Taiwan stock through a formal committee workflow. Start with the 08:30 daily brief when the user needs same-day Taiwan market direction, then move into the single-stock committee when deeper judgment is required. The v1.7 system also powers the Windows desktop app through the same shared Python core.
 ---
 
 # taiwan-stock-radar
 
-Current operating blueprint version: `v1.6`
+Current operating blueprint version: `v1.7`
 Skill ID / repo slug: `taiwan-stock-radar`
 
-Use this skill when the user wants a **Taiwan-equity judgment that feels like a professional market desk workflow** instead of a one-shot chatbot answer.
+Use this skill when the user wants a **Taiwan-equity research workflow that behaves like a disciplined desk process**, not a one-shot chatbot answer.
 
-The `v1.6` default mode is:
+The `v1.7` default mode is:
 
 - a daily `08:30` Taiwan market brief before the cash session
-- one concise report with 10 key market signals and headlines
-- data combined from night-session trend, Yahoo Taiwan market pages, Anue headlines, and US-market direction
+- one concise report with 10 key market messages and an overall day-session assessment
+- one shared Python core used by the skill, CLI workflows, GitHub showcase, and Windows desktop app
 - one stock at a time for deep-dive committee analysis when needed
 - multiple specialist AI personas with explicit weights
 - style-specific weighting for short-term, swing, and position analysis
-- a final decision packet with scenarios and action zones
-
-This skill should make the agent behave like a disciplined Taiwan-equity desk: first summarize the day’s setup, then judge specific stocks, then define execution discipline.
+- a final decision packet with scenarios, action levels, invalidation, and visible dissent
 
 ## Use this skill for
 
 - daily Taiwan market brief generation before 09:00
 - same-day Taiwan market direction assessment
 - night-session and US spillover analysis
+- Top20 demo scan generation
 - single-stock analysis on TWSE or TPEX names
 - deep-dive judgment on trend, momentum, price-volume, chip flow, fundamentals, and event risk
-- trading-style adaptation for short-term, swing, and position horizons
 - buy zone, stop-loss, take-profit, invalidation, and style-aware robustness planning
+- shared-core workflow design for both the skill route and the Windows desktop app
 
 ## Do not use this skill for
 
@@ -42,18 +41,16 @@ This skill should make the agent behave like a disciplined Taiwan-equity desk: f
 
 ## Read these references and configs only as needed
 
-- `references/taiwan-market-playbook.md`
-  Use for Taiwan-specific heuristics, chip-flow interpretation, sector logic, and risk flags.
 - `references/prediction-framework.md`
   Use when the user wants forecasts or scenario language that must stay honest about uncertainty.
 - `references/agent-analyst-blueprint.md`
   Use when you need the multi-agent committee operating model and decision packet.
-- `references/taiwan-indicator-framework-v1.6.md`
+- `references/taiwan-indicator-framework-v1.7.md`
   Use when you need the Taiwan indicator stack, practical signal interpretation, or field-priority guidance.
-- `references/daily-market-brief-framework-v1.6.md`
+- `references/daily-market-brief-framework-v1.7.md`
   Use when you need the `08:30` daily brief model, source mix, headline allocation, or reliability guardrails.
-- `references/premarket-brief-framework-v1.5.md`
-  Use as the historical foundation for the overnight environment model when tracing how `v1.6` evolved.
+- `references/windows-desktop-framework-v1.7.md`
+  Use when the task involves the Windows desktop delivery, GUI behavior, or packaging posture.
 - `config/daily_market_brief_rules.yaml`
   Use when you need the `08:30` schedule, source mix, headline plan, or summary weights.
 - `config/premarket_rules.yaml`
@@ -66,16 +63,20 @@ This skill should make the agent behave like a disciplined Taiwan-equity desk: f
   Use when you need strategy-family definitions, preferred regimes, confirmations, or disqualifiers.
 - `config/evaluation_metrics.yaml`
   Use when you need validation panels, thresholds, or robustness checks.
+- `config/agent_personas.yaml`
+  Use when you need role weights, specialties, or vote composition.
+- `config/action_rules.yaml`
+  Use when you need the required sections, scenario framework, and action-plan fields.
 
 ## Core workflow
 
 1. Define the task.
    Confirm:
-   - whether the user wants the daily market brief, a single-stock memo, or both
+   - whether the user wants the daily market brief, the premarket brief, the Top20 scan, a single-stock memo, or several of these together
    - symbol and company name if a stock is specified
    - analysis date
-   - style: short_term, swing, or position when a stock is involved
-   - the exact user objective, such as same-day market outlook, buy point, or full committee memo
+   - style: `short_term`, `swing`, or `position` when a stock is involved
+   - the exact user objective, such as same-day market outlook, buy point, or a full committee memo
 
 2. Verify freshness.
    If the task depends on current price, revenue, news, or overnight moves, use fresh sources and state the exact date. If the evidence is stale or incomplete, reduce confidence.
@@ -85,19 +86,7 @@ This skill should make the agent behave like a disciplined Taiwan-equity desk: f
    - the user asks before the Taiwan cash open
    - the user asks how Taiwan equities may trade today
    - the user wants overnight context before discussing any stock
-
-   The daily brief should combine:
-   - Taiwan night-session trend
-   - Yahoo Taiwan market pages
-   - Anue Taiwan and US stock headlines
-   - S&P 500, Nasdaq, Dow, SOX, TSM ADR, NVIDIA, and VIX
-
-   The output should include:
-   - ten key market messages
-   - opening-bias or day-session tone
-   - sector watchlist
-   - risk flags
-   - one concise overall assessment
+   - a single-stock committee is requested for the same session and the daily brief is missing
 
 4. Normalize the Taiwan single-stock context when a stock is requested.
    Establish:
@@ -128,9 +117,9 @@ This skill should make the agent behave like a disciplined Taiwan-equity desk: f
 
 7. Apply the style profile.
    Use the correct weighting from `config/style_weights.yaml`:
-   - short_term
-   - swing
-   - position
+   - `short_term`
+   - `swing`
+   - `position`
 
 8. Let each specialist write independently first.
    Each specialist should output:
@@ -178,9 +167,18 @@ This skill should make the agent behave like a disciplined Taiwan-equity desk: f
     - invalidation
     - do-not-trade condition
 
+## Shared-core rule
+
+`v1.7` must behave as one core with two delivery surfaces:
+
+- the skill / CLI / docs route
+- the Windows desktop route
+
+Do not introduce analysis logic that only exists in one route unless it is clearly marked as display-only. Business logic belongs in `src/taiwan_stock_radar/`, not in the GUI layer.
+
 ## Default answer structure
 
-For a full `v1.6` workflow, return:
+For a full `v1.7` workflow, return:
 
 - analysis date
 - daily market brief summary if timing makes it relevant
@@ -198,16 +196,6 @@ For a full `v1.6` workflow, return:
 - TP1 / TP2 and exit logic
 - missing data, robustness notes, and risk flags
 
-## Taiwan-specific rules
-
-- Taiwan night-session plus US overnight context should shape the tone of any pre-open answer.
-- Yahoo Taiwan market pages and Anue headlines are source inputs, not truth by themselves. Summarize them, do not blindly follow them.
-- Monthly revenue, institutional net buy/sell, financing, securities lending, and event windows often matter more than generic US-market heuristics when moving from the market brief into a stock call.
-- Always compare a stock against both the broad market and its direct sector peers.
-- TPEX and lower-liquidity names require harsher risk penalties because slippage and manipulation risk are materially higher.
-- Strong charts do not override weak liquidity, aggressive financing blow-off, heavy institutional distribution, or imminent event risk.
-- `60MA` matters in practice. Above it, prefer looking for disciplined entries. Below it, avoid aggressive chasing unless the setup is explicitly turnaround-style.
-
 ## Prediction discipline
 
 - State the date, timing, and horizon explicitly.
@@ -221,11 +209,11 @@ For a full `v1.6` workflow, return:
 ## Anti-patterns
 
 - Skipping the `08:30` brief when the user asks about today’s Taiwan market before the open
-- Collapsing the six signal engines into one vague paragraph
 - Treating a strong chart as enough when chip flow, event timing, or liquidity contradicts it
 - Outputting buy or sell points without invalidation
 - Presenting a strategy module without saying why it fits the active style
 - Speaking as if the model can guarantee price direction
+- Duplicating shared business logic inside the Windows app instead of calling the shared core
 
 ## Implementation posture
 
@@ -233,11 +221,10 @@ When converting this skill into code or workflows, favor:
 
 - explicit `08:30` scheduling rules
 - explicit source lists for Yahoo, Anue, and night-session inputs
-- explicit premarket scoring rules
 - explicit indicator catalogs
 - explicit style-weight profiles
 - weighted-vote synthesis
 - validation scorecards with mandatory sections
-- outputs that can be reviewed, challenged, and improved over time
+- outputs that can be reviewed, challenged, archived, and improved over time
 
-This skill is successful when the final answer reads like a disciplined Taiwan-equity desk memo: the day’s setup is clear, the overnight evidence is visible, the stock thesis is grounded in Taiwan-market structure, and execution discipline is explicit.
+This skill is successful when the final answer reads like a disciplined Taiwan-equity desk memo and the same workflow can be executed consistently from the CLI, the docs-backed skill flow, or the Windows desktop app.

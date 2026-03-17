@@ -12,9 +12,8 @@ SRC_DIR = PROJECT_ROOT / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from taiwan_stock_radar.config import load_premarket_config, resolve_output_dir
 from taiwan_stock_radar.demo_premarket_data import DEMO_PREMARKET_PROFILES
-from taiwan_stock_radar.premarket_brief import generate_premarket_brief, write_premarket_outputs
+from taiwan_stock_radar.workflows import generate_premarket_brief
 
 
 def parse_args() -> argparse.Namespace:
@@ -34,23 +33,18 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    settings, premarket_rules = load_premarket_config(PROJECT_ROOT)
-    output_dir = resolve_output_dir(PROJECT_ROOT, settings)
-    basename = premarket_rules.get("report_defaults", {}).get("output_basename", "premarket_brief")
-
-    brief = generate_premarket_brief(
-        settings,
-        premarket_rules,
+    bundle = generate_premarket_brief(
+        PROJECT_ROOT,
         analysis_date=args.analysis_date,
-        profile=args.profile or premarket_rules.get("report_defaults", {}).get("default_profile"),
+        profile=args.profile,
         context_file=args.context_file,
     )
-    write_premarket_outputs(output_dir, brief, basename=basename)
+    brief = bundle["report"]
 
     print(f"Generated premarket brief for {brief['analysis_date']}")
     print(f"Opening bias: {brief['opening_bias']} ({brief['opening_score']}/100)")
     print(f"Profile: {brief['profile_label']}")
-    print(f"Output directory: {output_dir}")
+    print(f"Output directory: {bundle['output_dir']}")
     print("Key drivers:")
     for item in brief["key_drivers"]:
         print(f"- {item}")

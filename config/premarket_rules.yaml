@@ -1,5 +1,5 @@
 {
-  "version": "v1.6",
+  "version": "v1.7",
   "weights": {
     "taiwan_night": 0.4,
     "us_broad": 0.25,

@@ -2,8 +2,8 @@
   "project": {
     "name": "taiwan-stock-radar",
     "display_name": "Taiwan Stock Radar",
-    "plan_version": "v1.6",
-    "mode": "single_stock_indicator_council"
+    "plan_version": "v1.7",
+    "mode": "dual_track_shared_core"
   },
   "analysis": {
     "primary_scope": "single_stock",
@@ -63,6 +63,18 @@
     "rules_config_path": "config/daily_market_brief_rules.yaml",
     "output_basename": "daily_market_brief"
   },
+  "single_stock_committee": {
+    "enabled": true,
+    "output_basename": "single_stock_committee",
+    "auto_generate_daily_brief": true
+  },
+  "desktop_app": {
+    "enabled": true,
+    "framework": "PySide6",
+    "entry_point": "apps/windows/main.py",
+    "build_script": "scripts/build_windows_app.py",
+    "distribution_model": "PyInstaller one-folder"
+  },
   "market": {
     "default_regime": "sideways",
     "market_score_by_regime": {
@@ -77,6 +89,6 @@
   },
   "app": {
     "title": "Taiwan Stock Radar",
-    "subtitle": "08:30 Taiwan market brief, single-stock committee, and legacy scan demo support"
+    "subtitle": "Shared-core Taiwan stock product: 08:30 market brief, single-stock committee, and Windows desktop app"
   }
 }

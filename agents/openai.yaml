@@ -1,8 +1,8 @@
 interface:
   display_name: "Taiwan Stock Radar"
-  short_description: "台股 08:30 日盤預測報告、10 大重點訊息與單股研討 skill"
+  short_description: "台股 08:30 日盤報告、單股委員會與 Windows desktop 共用的 shared-core product"
   brand_color: "#C43D2B"
-  default_prompt: "Use $taiwan-stock-radar to build the 08:30 Taiwan daily market brief from night-session trends, Yahoo Taiwan market pages, Anue headlines, and US market signals, return ten key messages plus an overall Taiwan-market assessment, then open the indicator-driven single-stock committee when a specific stock deep-dive is needed."
+  default_prompt: "Use $taiwan-stock-radar to run the shared-core Taiwan workflow: build the 08:30 daily market brief from night-session trends, Yahoo Taiwan market pages, Anue headlines, and US market signals, return ten key messages plus an overall Taiwan-market assessment, then open the executable single-stock committee when a specific stock deep-dive is needed."
 
 policy:
   allow_implicit_invocation: true

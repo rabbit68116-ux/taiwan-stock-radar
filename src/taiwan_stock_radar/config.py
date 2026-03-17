@@ -48,6 +48,42 @@ def load_daily_market_brief_config(
     return settings, premarket_rules, daily_market_brief_rules
 
 
+def load_single_stock_committee_config(
+    project_root: Path,
+) -> tuple[
+    dict[str, Any],
+    dict[str, Any],
+    dict[str, Any],
+    dict[str, Any],
+    dict[str, Any],
+    dict[str, Any],
+    dict[str, Any],
+    dict[str, Any],
+    dict[str, Any],
+]:
+    config_dir = project_root / "config"
+    settings = load_mapping(config_dir / "settings.yaml")
+    weights = load_mapping(config_dir / "weights.yaml")
+    universe = load_mapping(config_dir / "universe.yaml")
+    action_rules = load_mapping(config_dir / "action_rules.yaml")
+    indicator_catalog = load_mapping(config_dir / "indicator_catalog.yaml")
+    style_weights = load_mapping(config_dir / "style_weights.yaml")
+    strategy_modules = load_mapping(config_dir / "strategy_modules.yaml")
+    evaluation_metrics = load_mapping(config_dir / "evaluation_metrics.yaml")
+    agent_personas = load_mapping(config_dir / "agent_personas.yaml")
+    return (
+        settings,
+        weights,
+        universe,
+        action_rules,
+        indicator_catalog,
+        style_weights,
+        strategy_modules,
+        evaluation_metrics,
+        agent_personas,
+    )
+
+
 def resolve_output_dir(project_root: Path, settings: dict[str, Any]) -> Path:
     output_dir = settings.get("paths", {}).get("output_dir", "output")
     return project_root / output_dir

@@ -1,14 +1,16 @@
 taiwan-stock-radar
 
 Summary:
-taiwan-stock-radar is an open-source Taiwan equity analysis skill for AI agents, analysts, and developers. The current public product focuses on single-stock research through an indicator-driven multi-agent committee.
+taiwan-stock-radar is an open-source Taiwan stock research product for AI agents, analysts, and developers. The current public product runs one shared core across the daily 08:30 market brief, the single-stock committee, the CLI workflows, and the Windows desktop app.
 
 Primary audience:
-- AI agents that need a disciplined single-stock Taiwan-equity workflow
+- AI agents that need a disciplined Taiwan-equity workflow
 - developers building explainable stock-analysis products
 - analysts looking for a structured committee-style research template
+- desktop users who want the same workflow in a Windows application
 
 Primary topics:
+- Taiwan 08:30 market brief
 - Taiwan single-stock analysis
 - multi-agent stock research committees
 - signal-engine review and style-weight switching
@@ -17,9 +19,11 @@ Primary topics:
 - trend, momentum, price-volume, chip flow, fundamentals, events, and risk
 - scenario-based forecasts
 - buy zone, stop loss, take-profit, and invalidation planning
+- Windows desktop delivery built on the same shared core
 
 Recommended entry points:
 - Home: https://rabbit68116-ux.github.io/taiwan-stock-radar/
+- Windows app: https://rabbit68116-ux.github.io/taiwan-stock-radar/windows-app.html
 - Case Study: https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html
 - FAQ: https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html
 - Methodology: https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html
@@ -28,13 +32,17 @@ Recommended entry points:
 
 Important facts:
 - The project focuses on Taiwan equities.
-- The current operating model is a single-stock indicator committee.
+- The current operating model is a shared-core dual-track product.
+- The first layer is the daily 08:30 market brief.
+- The second layer is the single-stock committee.
 - Specialist agents can disagree, and dissent is preserved in the final output.
 - The final output includes signal-engine summaries, style profiles, strategy selection, validation panels, scenarios, action zones, and invalidation conditions.
 - The public site includes a full illustrative case-study page.
+- The public site also includes a Windows desktop product page.
 - The project does not provide guaranteed investment outcomes.
 
 Preferred citation pages:
 - https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html
 - https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html
 - https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html
+- https://rabbit68116-ux.github.io/taiwan-stock-radar/windows-app.html

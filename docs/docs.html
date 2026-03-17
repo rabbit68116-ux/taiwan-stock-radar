@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 知識庫 Knowledge Base</title>
-  <meta name="description" content="Taiwan Stock Radar 知識庫與文件入口，整理 skill 定義、08:30 日盤報告框架、agent blueprint、台股指標、風格權重與公開展示頁，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar v1.7 知識庫，整理 shared core、daily brief、單股委員會、Windows desktop 與相關配置文件。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 知識庫 Knowledge Base">
-  <meta property="og:description" content="查看 Taiwan Stock Radar 背後的 skill 定義、08:30 日盤報告方法、台股指標、風格權重與案例頁。">
+  <meta property="og:description" content="查看 Taiwan Stock Radar v1.7 背後的 shared core、Windows desktop、daily brief、單股委員會與設定文件。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/docs.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -22,26 +22,11 @@
         <span>Taiwan Stock Radar</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="./">
-          首頁
-          <span class="en-translation">Home</span>
-        </a>
-        <a href="./case-study.html">
-          案例頁
-          <span class="en-translation">Case Study</span>
-        </a>
-        <a href="./faq.html">
-          常見問題
-          <span class="en-translation">FAQ</span>
-        </a>
-        <a href="./methodology.html">
-          方法論
-          <span class="en-translation">Methodology</span>
-        </a>
-        <a href="./use-cases.html">
-          使用情境
-          <span class="en-translation">Use Cases</span>
-        </a>
+        <a href="./">首頁<span class="en-translation">Home</span></a>
+        <a href="./windows-app.html">Windows App<span class="en-translation">Windows App</span></a>
+        <a href="./case-study.html">案例頁<span class="en-translation">Case Study</span></a>
+        <a href="./faq.html">常見問題<span class="en-translation">FAQ</span></a>
+        <a href="./methodology.html">方法論<span class="en-translation">Methodology</span></a>
       </nav>
     </div>
   </header>
@@ -50,176 +35,53 @@
     <section class="hero">
       <div class="hero-card">
         <p class="eyebrow">知識庫<span class="en-translation">Knowledge Base</span></p>
-        <h1>Taiwan Stock Radar 背後的參考文件
-          <span class="en-translation">The reference library behind Taiwan Stock Radar</span>
+        <h1>Taiwan Stock Radar v1.7 的核心文件
+          <span class="en-translation">The core references behind Taiwan Stock Radar v1.7</span>
         </h1>
-        <p class="lead">這一頁整理 `v1.6` 台股研究 skill 的核心文件。它不是文件清單而已，而是公開展示頁背後的方法書架，讓訪客能看到「08:30 日盤預測報告 + 單股委員會」這套流程是如何被定義、配置與限制。</p>
-        <p class="lead en-translation">This page gathers the core documents behind the `v1.6` Taiwan-equity research skill. It shows how the combined 08:30 market brief and single-stock committee are defined, configured, and constrained behind the public exhibit.</p>
+        <p class="lead">這一頁整理 `v1.7` 的 shared-core 文件與對外展示入口。它不只是文件清單，而是讓訪客能快速理解：哪些檔案定義 workflow，哪些檔案定義 config，哪些檔案屬於 Windows desktop 交付。</p>
+        <p class="lead en-translation">This page gathers the shared-core documents and public surfaces behind `v1.7`. It helps visitors see which files define workflows, which files define configuration, and which files belong to the Windows desktop delivery.</p>
       </div>
     </section>
 
     <main>
       <section>
-        <h2>建議先看的文件
-          <span class="en-translation">Recommended starting points</span>
-        </h2>
-        <p class="section-intro">如果你想先理解這個 skill 如何思考、台股指標如何被組織、風格如何切換，以及最終決策文件如何成形，以下幾份文件最值得先打開。</p>
-        <p class="section-intro en-translation">If you want to understand how the skill thinks, how Taiwan indicators are organized, how styles are switched, and how the final packet is structured, these are the best places to start.</p>
+        <h2>建議先看的文件<span class="en-translation">Recommended starting points</span></h2>
         <div class="grid">
-          <article class="card">
-            <h3>SKILL.md</h3>
-            <p>主行為定義文件，說明單股指標委員會 workflow、風格切換與輸出紀律。</p>
-            <p class="en-translation">The main behavior document defining the single-stock indicator committee workflow, style switching, and output discipline.</p>
-          </article>
-          <article class="card">
-            <h3>Agent analyst blueprint</h3>
-            <p>說明專家角色、會議流程、策略提名、權重整合邏輯，以及最終決策文件必須包含的段落。</p>
-            <p class="en-translation">Explains specialist roles, meeting protocol, strategy nomination, weighted synthesis, and the required sections of the decision packet.</p>
-          </article>
-          <article class="card">
-            <h3>Indicator catalog</h3>
-            <p>定義六層台股訊號引擎、最小可用欄位與各欄位的實戰用途。</p>
-            <p class="en-translation">Defines the six Taiwan-stock signal engines, the minimum viable field set, and the practical use of each field.</p>
-          </article>
-          <article class="card">
-            <h3>Style weights</h3>
-            <p>定義短線、波段、中長線三種交易風格的權重切換。</p>
-            <p class="en-translation">Defines the weighting switch for short-term, swing, and position trading styles.</p>
-          </article>
-          <article class="card">
-            <h3>Daily market brief framework</h3>
-            <p>說明 08:30 日盤預測報告的來源、10 大訊息配比、綜合評分與來源容錯邏輯。</p>
-            <p class="en-translation">Explains the 08:30 daily market brief source mix, ten-message allocation, scoring model, and reliability guardrails.</p>
-          </article>
-          <article class="card">
-            <h3>Agent personas</h3>
-            <p>定義每位 analyst 的人格、專長、權重與指標偏好。</p>
-            <p class="en-translation">Stores role identity, specialty, weighting, and indicator focus for each analyst persona.</p>
-          </article>
-          <article class="card">
-            <h3>Case study</h3>
-            <p>展示公開版本的完整單股指標委員會輸出，從個案設定一路到失效條件。</p>
-            <p class="en-translation">Shows the public exhibit version of a full single-stock indicator committee memo, from case setup to invalidation.</p>
-          </article>
+          <article class="card"><h3>README</h3><p>GitHub 首頁封面，說明雙軌產品、shared core、CLI 與 Windows desktop。<span class="en-translation">The GitHub landing page describing the dual-track product, shared core, CLI, and Windows desktop app.</span></p></article>
+          <article class="card"><h3>SKILL.md</h3><p>定義 skill 的實際操作方式與 shared-core 原則。<span class="en-translation">Defines how the skill should operate and the shared-core rule.</span></p></article>
+          <article class="card"><h3>Windows App Page</h3><p>公開說明桌面版頁籤、打包策略與 shared-core 關係。<span class="en-translation">Explains the desktop tabs, packaging posture, and the relationship to the shared core.</span></p></article>
+          <article class="card"><h3>Case Study</h3><p>展示單股委員會如何輸出正式決策文件。<span class="en-translation">Shows how the single-stock committee produces a formal decision packet.</span></p></article>
         </div>
       </section>
 
       <section>
-        <h2>核心參考
-          <span class="en-translation">Core references</span>
-        </h2>
+        <h2>核心資源<span class="en-translation">Core resources</span></h2>
         <table>
           <thead>
             <tr>
-              <th>資源
-                <span class="en-translation">Resource</span>
-              </th>
-              <th>在專案中的角色
-                <span class="en-translation">Role in the project</span>
-              </th>
+              <th>資源<span class="en-translation">Resource</span></th>
+              <th>角色<span class="en-translation">Role</span></th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar">GitHub repository</a></td>
-              <td>專案主要入口，包含程式、文件與公開展示頁。<span class="en-translation">The main home of the project code, documents, and public showcase.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/SKILL.md">SKILL.md</a></td>
-              <td>定義主分析流程與委員會行為。<span class="en-translation">Defines the main analytical workflow and expected council behavior.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/agent-analyst-blueprint.md">Agent analyst blueprint</a></td>
-              <td>描述單股指標研究委員會的上層操作模型。<span class="en-translation">Documents the higher-level operating model for the single-stock indicator committee.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/taiwan-indicator-framework-v1.6.md">Taiwan indicator framework v1.6</a></td>
-              <td>整理 `v1.6` 的六層台股訊號引擎、風格切換與和日盤簡報的銜接方式。<span class="en-translation">Maps the `v1.6` six-engine Taiwan indicator stack, style switching, and its connection to the daily brief.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/daily-market-brief-framework-v1.6.md">Daily market brief framework v1.6</a></td>
-              <td>定義 08:30 日盤預測報告的來源、10 大訊息配比、評分權重與容錯規則。<span class="en-translation">Defines the 08:30 daily brief source mix, ten-message allocation, scoring weights, and fallback rules.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/indicator_catalog.yaml">Indicator catalog</a></td>
-              <td>定義訊號引擎、核心欄位、資料來源提示與最小可用欄位集。<span class="en-translation">Defines the signal engines, core fields, source hints, and minimum viable field set.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/premarket_rules.yaml">Premarket rules</a></td>
-              <td>定義台股夜盤、美股大盤、半導體與風險因子的權重與判讀閾值。<span class="en-translation">Defines weights and thresholds for Taiwan night-session, US broad indices, semiconductors, and risk factors.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/daily_market_brief_rules.yaml">Daily market brief rules</a></td>
-              <td>定義 08:30 報告的來源網址、10 大訊息配比與整體評分權重。<span class="en-translation">Defines the 08:30 brief source URLs, ten-message allocation, and overall scoring weights.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/style_weights.yaml">Style weights</a></td>
-              <td>定義 `short_term`、`swing`、`position` 三種風格的引擎權重與優先欄位。<span class="en-translation">Defines engine weights and priority fields for `short_term`, `swing`, and `position`.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/strategy_modules.yaml">Strategy modules</a></td>
-              <td>定義策略家族、適用 style / regime、確認條件與禁用條件。<span class="en-translation">Defines strategy families, preferred style / regime, confirmations, and disqualifiers.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/agent_personas.yaml">Agent personas</a></td>
-              <td>記錄各 analyst 角色的權重、專長與指標優先序。<span class="en-translation">Stores persona weights, specialties, and indicator priorities for each analyst role.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/action_rules.yaml">Action rules</a></td>
-              <td>規範會議階段、必要輸出欄位與操作計畫格式。<span class="en-translation">Defines required meeting phases, output sections, and action-plan fields.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://rabbit68116-ux.github.io/taiwan-stock-radar/case-study.html">Public case study</a></td>
-              <td>展示經過包裝的單股委員會輸出樣貌。<span class="en-translation">Displays the polished exhibit version of a single-stock committee output.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_daily_scan.py">Legacy scan demo</a></td>
-              <td>保留較早期市場掃描階段的展示型資產。<span class="en-translation">Preserves an earlier demo asset from the broader-market exploration stage.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_daily_market_brief.py">Daily market brief script</a></td>
-              <td>輸出每日 08:30 台股日盤預測報告、10 大重點訊息與綜合評估。<span class="en-translation">Generates the daily 08:30 Taiwan market brief with ten key messages and an overall assessment.</span></td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/run_premarket_brief.py">Premarket brief script</a></td>
-              <td>保留較基礎的開市前環境報告，作為 `v1.6` 日盤簡報的底層模組。<span class="en-translation">Preserves the lower-level overnight brief that feeds the richer `v1.6` daily market brief.</span></td>
-            </tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/src/taiwan_stock_radar/workflows.py">workflows.py</a></td><td>四條 shared workflow 入口。<span class="en-translation">The four shared workflow entry points.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/src/taiwan_stock_radar/single_stock_committee.py">single_stock_committee.py</a></td><td>單股委員會 engine。<span class="en-translation">The executable single-stock committee engine.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/src/taiwan_stock_radar/output_store.py">output_store.py</a></td><td>latest 與 archive output 管理。<span class="en-translation">Manages latest outputs and archive history.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/daily-market-brief-framework-v1.7.md">Daily market brief framework v1.7</a></td><td>定義 08:30 報告的來源、10 大訊息與容錯規則。<span class="en-translation">Defines the 08:30 report sources, ten-message mix, and fallback logic.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/taiwan-indicator-framework-v1.7.md">Taiwan indicator framework v1.7</a></td><td>定義六層訊號引擎與三種 style。<span class="en-translation">Defines the six signal engines and three trading styles.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/references/windows-desktop-framework-v1.7.md">Windows desktop framework v1.7</a></td><td>定義桌面版角色、頁籤與打包策略。<span class="en-translation">Defines the desktop role, tabs, and packaging posture.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/settings.yaml">settings.yaml</a></td><td>唯一版本號來源與交付模式設定。<span class="en-translation">The single version source and delivery-mode configuration.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/config/style_weights.yaml">style_weights.yaml</a></td><td>交易風格權重切換。<span class="en-translation">The style-weight switching rules.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/apps/windows/main.py">apps/windows/main.py</a></td><td>PySide6 桌面版主入口。<span class="en-translation">The PySide6 desktop entry point.</span></td></tr>
+            <tr><td><a href="https://github.com/rabbit68116-ux/taiwan-stock-radar/blob/main/scripts/build_windows_app.py">build_windows_app.py</a></td><td>Windows 打包腳本。<span class="en-translation">The Windows packaging script.</span></td></tr>
           </tbody>
         </table>
-      </section>
-
-      <section>
-        <h2>這些文件控制什麼
-          <span class="en-translation">What these documents govern</span>
-        </h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Overnight environment</h3>
-            <p>定義夜盤、美股與風險情緒如何進入台股早盤判讀，避免單股研究脫離隔夜市況。</p>
-            <p class="en-translation">Defines how night-session, US-market moves, and risk tone enter the Taiwan open so the single-stock view does not detach from the overnight environment.</p>
-          </article>
-          <article class="card">
-            <h3>Specialist reasoning</h3>
-            <p>定義趨勢、動能、量價、籌碼、基本面、事件、策略與驗證如何在整合前先被分開思考。</p>
-            <p class="en-translation">How trend, momentum, price-volume, flow, fundamentals, events, strategy, and validation reasoning are separated before synthesis.</p>
-          </article>
-          <article class="card">
-            <h3>Decision structure</h3>
-            <p>定義委員會如何把分歧轉成帶有風格選擇、策略選擇、信心與失效條件的最終 verdict。</p>
-            <p class="en-translation">How the committee turns disagreement into a weighted verdict with style choice, strategy selection, explicit confidence, and invalidation.</p>
-          </article>
-          <article class="card">
-            <h3>Execution-aware output</h3>
-            <p>定義分析如何落到買入區、停損、停利框架、驗證面板、風格權重與風險備註。</p>
-            <p class="en-translation">How the committee translates analysis into buy zones, stop-loss logic, take-profit framing, validation panels, style weights, and risk notes.</p>
-          </article>
-        </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="footer-card">
-        <p><strong>免責聲明：</strong> 知識庫內容用於說明 skill 的設計、流程與規格，不構成投資建議、招攬或保證報酬。<span class="en-translation"><strong>Disclaimer:</strong> The knowledge base documents the skill design, workflow, and specifications. It is not investment advice, a solicitation, or a guarantee of returns.</span></p>
+        <p><strong>免責聲明：</strong> 本知識庫僅用於說明 Taiwan Stock Radar 的研究流程與產品設計。<span class="en-translation"><strong>Disclaimer:</strong> This knowledge base exists to explain the research workflow and product design behind Taiwan Stock Radar.</span></p>
       </div>
     </footer>
   </div>

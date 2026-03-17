@@ -12,8 +12,7 @@ SRC_DIR = PROJECT_ROOT / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from taiwan_stock_radar.config import load_project_config, resolve_output_dir
-from taiwan_stock_radar.demo_scan import generate_scan_result, write_scan_outputs
+from taiwan_stock_radar.workflows import generate_market_scan
 
 
 def parse_args() -> argparse.Namespace:
@@ -30,24 +29,18 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    settings, weights, universe, action_rules = load_project_config(PROJECT_ROOT)
-    output_dir = resolve_output_dir(PROJECT_ROOT, settings)
-
-    scan_result = generate_scan_result(
-        settings,
-        weights,
-        universe,
-        action_rules,
+    bundle = generate_market_scan(
+        PROJECT_ROOT,
         analysis_date=args.analysis_date,
         regime=args.regime,
         top_n=args.top_n,
     )
-    write_scan_outputs(output_dir, scan_result)
+    scan_result = bundle["report"]
 
     print(f"Generated demo scan for {scan_result['analysis_date']}")
     print(f"Market regime: {scan_result['market_regime']}")
     print(f"Universe size: {scan_result['universe_size']}")
-    print(f"Output directory: {output_dir}")
+    print(f"Output directory: {bundle['output_dir']}")
     print("Top 5:")
     for index, row in enumerate(scan_result["top20"][:5], start=1):
         print(

@@ -7,7 +7,7 @@
       "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Taiwan Stock Radar 是一個面向台灣股票研究的 AI skill。v1.6 版本會先在每日 08:30 以前整合台指期夜盤、Yahoo奇摩股市、Anue 鉅亨網與美股關鍵指標，輸出台股日盤預測報告與 10 大重點訊息，再在需要時展開單股委員會。 Taiwan Stock Radar is an AI skill for Taiwan-equity research. In v1.6 it starts with a daily 08:30 market brief and ten key messages, then opens a formal single-stock committee when needed."
+        "text": "Taiwan Stock Radar 是一個面向台灣股票研究的雙軌產品。v1.7 會以 shared core 同步服務每日 08:30 日盤報告、單股委員會、CLI 與 Windows desktop app。 Taiwan Stock Radar is a dual-track Taiwan-stock research product. In v1.7, one shared core powers the daily 08:30 brief, the single-stock committee, the CLI, and the Windows desktop app."
       }
     },
     {
@@ -15,7 +15,7 @@
       "name": "多 Agent 指標委員會如何運作？ How does the multi-agent indicator committee work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "系統會把趨勢、動能、量價、籌碼、基本面、事件、風控、策略選擇與驗證拆成不同 specialist 角色，先分別形成觀點，再由主持 agent 做權重整合與衝突裁決。 The system separates trend, momentum, price-volume, chip-flow, fundamentals, events, risk, strategy-selection, and validation roles, lets them form independent views, and then asks a chair agent to synthesize the final verdict."
+        "text": "系統會把趨勢、動能、量價、籌碼、基本面、事件、風控、策略選擇與驗證拆成不同 specialist 角色，先分別形成觀點，再由主持 agent 做權重整合與衝突裁決；同一套流程也會被 Windows desktop 直接呼叫。 The system separates trend, momentum, price-volume, chip-flow, fundamentals, events, risk, strategy-selection, and validation roles, lets them form independent views, and then asks a chair agent to synthesize the final verdict. The Windows desktop app calls the same workflow directly."
       }
     },
     {
@@ -39,7 +39,7 @@
       "name": "Taiwan Stock Radar 會保證績效嗎？ Does it guarantee performance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不會。Taiwan Stock Radar 是研究與決策輔助 skill，不保證投資報酬。 No. Taiwan Stock Radar is a research and decision-support skill and does not guarantee investment performance."
+        "text": "不會。Taiwan Stock Radar 僅供研究、教育與產品展示使用，不保證投資報酬。 No. Taiwan Stock Radar is for research, education, and product demonstration only. It does not guarantee investment performance."
       }
     }
   ]

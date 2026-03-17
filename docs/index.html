@@ -3,53 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taiwan Stock Radar | 台灣股票雷達 08:30 日盤預測 AI Skill</title>
-  <meta name="description" content="Taiwan Stock Radar 是專為台股打造的研究 AI skill，每日 08:30 先整合夜盤趨勢、Yahoo奇摩股市、Anue 鉅亨網與美股趨勢，輸出 10 大重點股市訊息與台股綜合評估，再延伸到單股判斷。">
+  <title>Taiwan Stock Radar | 台灣股票雷達 v1.7 雙軌研究產品</title>
+  <meta name="description" content="Taiwan Stock Radar v1.7 是專為台股打造的雙軌研究產品。它以 shared core 同時服務每日 08:30 台股日盤報告、單股委員會、CLI、GitHub 展示站與 Windows desktop app。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Taiwan Stock Radar | 台灣股票雷達">
-  <meta property="og:description" content="以每日 08:30 台股日盤預測報告與單股研究為核心的 AI skill，整合夜盤、Yahoo、Anue 與美股趨勢後輸出綜合評估。">
+  <meta property="og:description" content="以 shared core 同時服務 08:30 日盤報告、單股委員會與 Windows desktop app 的台股研究產品。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization",
-        "name": "Taiwan Stock Radar",
-        "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
-        "logo": "https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/logo.svg",
-        "sameAs": [
-          "https://github.com/rabbit68116-ux/taiwan-stock-radar"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#website",
-        "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
-        "name": "Taiwan Stock Radar",
-        "publisher": {
-          "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#organization"
-        },
-        "description": "Taiwan Stock Radar 是一個以每日 08:30 台股日盤預測報告與單股研究為核心的研究網站，展示 AI 系統如何整合夜盤、Yahoo、Anue 與美股趨勢，再形成當日評估與單股決策。 Taiwan Stock Radar is a research website for daily 08:30 Taiwan market briefs and single-stock analysis."
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://rabbit68116-ux.github.io/taiwan-stock-radar/#software",
-        "name": "Taiwan Stock Radar",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "url": "https://rabbit68116-ux.github.io/taiwan-stock-radar/",
-        "downloadUrl": "https://github.com/rabbit68116-ux/taiwan-stock-radar",
-        "description": "Taiwan Stock Radar 是一個開源台股研究 skill，每日 08:30 先建立日盤預測報告，再讓多位 AI 分析師在需要時對同一檔股票開立正式會議，完成訊號引擎評估、風格切換、策略選擇與操作計畫。 Taiwan Stock Radar is an open-source Taiwan equity research skill that starts with a daily 08:30 market brief and then stages a formal multi-analyst meeting around one stock."
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
   <header class="topbar">
@@ -59,26 +22,11 @@
         <span>Taiwan Stock Radar</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="./case-study.html">
-          案例頁
-          <span class="en-translation">Case Study</span>
-        </a>
-        <a href="./faq.html">
-          常見問題
-          <span class="en-translation">FAQ</span>
-        </a>
-        <a href="./methodology.html">
-          方法論
-          <span class="en-translation">Methodology</span>
-        </a>
-        <a href="./use-cases.html">
-          使用情境
-          <span class="en-translation">Use Cases</span>
-        </a>
-        <a href="./docs.html">
-          知識庫
-          <span class="en-translation">Knowledge Base</span>
-        </a>
+        <a href="./windows-app.html">Windows App<span class="en-translation">Windows App</span></a>
+        <a href="./case-study.html">案例頁<span class="en-translation">Case Study</span></a>
+        <a href="./faq.html">常見問題<span class="en-translation">FAQ</span></a>
+        <a href="./methodology.html">方法論<span class="en-translation">Methodology</span></a>
+        <a href="./docs.html">知識庫<span class="en-translation">Knowledge Base</span></a>
       </nav>
     </div>
   </header>
@@ -87,83 +35,36 @@
     <section class="hero">
       <div class="hero-grid">
         <article class="hero-card">
-          <p class="eyebrow">每日 08:30 台股日盤簡報與單股研究技能<span class="en-translation">Daily 08:30 Taiwan market brief and single-stock research skill</span></p>
-          <h1>台灣股票雷達：每日 08:30 先提出台股日盤預測報告，再在需要時展開單股正式研討
-            <span class="en-translation">Taiwan Stock Radar publishes a daily 08:30 Taiwan market brief first, then opens a formal single-stock research committee when needed.</span>
+          <p class="eyebrow">台股雙軌研究產品<span class="en-translation">Dual-track Taiwan stock research product</span></p>
+          <h1>台灣股票雷達 v1.7：同一套 shared core，同步服務 AI skill 與 Windows desktop
+            <span class="en-translation">Taiwan Stock Radar v1.7 runs one shared core across the AI skill and the Windows desktop app.</span>
           </h1>
-          <p class="lead">Taiwan Stock Radar 會先整合夜盤趨勢、Yahoo奇摩股市、Anue 鉅亨網與美股方向，整理成 10 大重點股市訊息與當日台股綜合評估，之後再把指定股票送進六層訊號引擎與八位專家級 AI 分析師組成的委員會。</p>
-          <p class="lead en-translation">Taiwan Stock Radar first blends night-session trend, Yahoo Taiwan market pages, Anue headlines, and US-market direction into ten key market messages and a daily outlook, then sends a chosen stock into a six-engine committee with eight specialist AI analysts.</p>
-          <p class="lead">最終輸出不是一句方向判斷，而是包含日盤基調、10 大訊息、族群觀察、風險提示，以及在需要時延伸出的單股決策文件。</p>
-          <p class="lead en-translation">The final output is not a one-line call. It is a daily market brief with ten key messages, sector watchlists, risk flags, and a deeper single-stock decision packet when needed.</p>
+          <p class="lead">Taiwan Stock Radar 先在每日 08:30 前後整理台股日盤預測報告，再在需要時自動延伸成單股委員會。`v1.7` 的重點不是多一個前端，而是讓 skill、CLI、GitHub 展示站與 Windows app 共用同一套 workflow、同一份 config、同一個版本來源。</p>
+          <p class="lead en-translation">Taiwan Stock Radar starts with a daily 08:30 Taiwan market brief and then expands into a single-stock committee when needed. In `v1.7`, the point is not merely another front-end, but one shared workflow, one config stack, and one version source across the skill, CLI, GitHub showcase, and Windows app.</p>
           <div class="chip-row">
-            <span class="chip">08:30 日盤預測報告<span class="en-translation">08:30 daily market brief</span></span>
-            <span class="chip">10 大重點訊息<span class="en-translation">Ten key messages</span></span>
-            <span class="chip">單股研判<span class="en-translation">Single stock</span></span>
-            <span class="chip">指標委員會<span class="en-translation">Indicator committee</span></span>
-            <span class="chip">六層訊號引擎<span class="en-translation">Six signal engines</span></span>
-            <span class="chip">風格權重<span class="en-translation">Style weights</span></span>
-            <span class="chip">台股邏輯<span class="en-translation">Taiwan market logic</span></span>
-            <span class="chip">操作區間規劃<span class="en-translation">Action-zone planning</span></span>
+            <span class="chip">08:30 日盤報告<span class="en-translation">08:30 market brief</span></span>
+            <span class="chip">單股委員會<span class="en-translation">Single-stock committee</span></span>
+            <span class="chip">Shared Core<span class="en-translation">Shared Core</span></span>
+            <span class="chip">Windows Desktop<span class="en-translation">Windows Desktop</span></span>
+            <span class="chip">Archive History<span class="en-translation">Archive History</span></span>
           </div>
           <div class="hero-actions">
-            <a class="button button-primary" href="./case-study.html">
-              查看案例頁
-              <span class="en-translation">Open case study</span>
-            </a>
-            <a class="button button-secondary" href="./methodology.html">
-              查看方法論
-              <span class="en-translation">View methodology</span>
-            </a>
-            <a class="button button-secondary" href="./docs.html">
-              開啟知識庫
-              <span class="en-translation">Open knowledge base</span>
-            </a>
-            <a class="button button-secondary" href="https://github.com/rabbit68116-ux/taiwan-stock-radar">
-              查看 GitHub 專案
-              <span class="en-translation">View GitHub project</span>
-            </a>
+            <a class="button button-primary" href="./windows-app.html">查看 Windows 版<span class="en-translation">Open Windows app page</span></a>
+            <a class="button button-secondary" href="./case-study.html">查看案例頁<span class="en-translation">Open case study</span></a>
+            <a class="button button-secondary" href="./docs.html">開啟知識庫<span class="en-translation">Open knowledge base</span></a>
+            <a class="button button-secondary" href="https://github.com/rabbit68116-ux/taiwan-stock-radar">查看 GitHub 專案<span class="en-translation">View GitHub project</span></a>
           </div>
         </article>
 
         <aside class="panel">
-          <h2>展品摘要
-            <span class="en-translation">Exhibit Snapshot</span>
-          </h2>
+          <h2>展品摘要<span class="en-translation">Exhibit Snapshot</span></h2>
           <div class="meta-list">
-            <div>
-              <span class="label">版本<span class="en-translation">Version</span></span>
-              <span class="value">v1.6</span>
-            </div>
-            <div>
-              <span class="label">市場<span class="en-translation">Market</span></span>
-              <span class="value">台灣股票
-                <span class="en-translation">Taiwan equities</span>
-              </span>
-            </div>
-            <div>
-              <span class="label">主要模式<span class="en-translation">Primary mode</span></span>
-              <span class="value">08:30 日盤報告 + 單股指標委員會
-                <span class="en-translation">08:30 market brief + single-stock committee</span>
-              </span>
-            </div>
-            <div>
-              <span class="label">Agent 模型<span class="en-translation">Agent model</span></span>
-              <span class="value">8 位權重化專家角色
-                <span class="en-translation">8 weighted specialist personas</span>
-              </span>
-            </div>
-            <div>
-              <span class="label">主要輸出<span class="en-translation">Primary output</span></span>
-              <span class="value">日盤報告 + 決策文件
-                <span class="en-translation">Daily brief plus decision packet</span>
-              </span>
-            </div>
-            <div>
-              <span class="label">更新時間<span class="en-translation">Last updated</span></span>
-              <span class="value">2026 年 3 月 17 日
-                <span class="en-translation">March 17, 2026</span>
-              </span>
-            </div>
+            <div><span class="label">版本<span class="en-translation">Version</span></span><span class="value">v1.7</span></div>
+            <div><span class="label">交付模式<span class="en-translation">Delivery</span></span><span class="value">Skill + Windows App<span class="en-translation">Skill + Windows App</span></span></div>
+            <div><span class="label">Shared Core<span class="en-translation">Shared Core</span></span><span class="value">4 workflows<span class="en-translation">4 workflows</span></span></div>
+            <div><span class="label">核心輸出<span class="en-translation">Core output</span></span><span class="value">08:30 Brief + Committee<span class="en-translation">08:30 Brief + Committee</span></span></div>
+            <div><span class="label">GUI<span class="en-translation">GUI</span></span><span class="value">PySide6 Desktop<span class="en-translation">PySide6 Desktop</span></span></div>
+            <div><span class="label">更新日期<span class="en-translation">Updated</span></span><span class="value">2026 年 3 月 17 日<span class="en-translation">March 17, 2026</span></span></div>
           </div>
         </aside>
       </div>
@@ -171,299 +72,83 @@
 
     <main>
       <section>
-        <h2>專案定位
-          <span class="en-translation">Project Statement</span>
+        <h2>兩條路線，一套核心
+          <span class="en-translation">Two delivery tracks, one core</span>
         </h2>
-        <p class="section-intro">Taiwan Stock Radar 的定位不是市場雜訊摘要，而是一套台股日盤研究工作流。`v1.6` 先在 08:30 以前完成一份精簡但可執行的市場報告，再讓單股訊號健康度與風格匹配成為 deeper analysis 的基礎。</p>
-        <p class="section-intro en-translation">Taiwan Stock Radar is not positioned as a noisy market summary. It is a Taiwan day-session research workflow. In `v1.6`, the product delivers a concise but actionable market brief before 08:30, then moves into deeper stock analysis when needed.</p>
+        <p class="section-intro">`v1.7` 把產品正式拆成兩條同步維護路線，但不允許分析邏輯分叉。商業邏輯都放在 `src/taiwan_stock_radar/`，介面只負責呼叫 workflow 與呈現結果。</p>
+        <p class="section-intro en-translation">`v1.7` formally separates the product into two maintained tracks, but it does not allow the analysis logic to split. Business logic stays in `src/taiwan_stock_radar/`, while interfaces only call workflows and render results.</p>
         <div class="grid">
           <article class="card">
-            <h3>不是只看夜盤，而是先看環境再看單股
-              <span class="en-translation">Environment first, then the stock</span>
+            <h3>路線 A：Skill / CLI / Docs
+              <span class="en-translation">Track A: Skill / CLI / Docs</span>
             </h3>
-            <p>`v1.6` 先把台股夜盤、美股關鍵指數與新聞流向整理成 08:30 日盤預測報告，再決定今天應該先看哪些族群、哪些風險要先保守處理，以及是否需要進入單股深度研究。</p>
-            <p class="en-translation">`v1.6` turns Taiwan night-session, key US-market signals, and curated headlines into an 08:30 daily brief first, then decides which sectors deserve attention, which risks require caution, and whether a stock needs deeper committee analysis.</p>
+            <p>保留原本的 AI skill、CLI 腳本、GitHub repo 與文件站，適合研究工作流、規格維護與可引用輸出。</p>
+            <p class="en-translation">Keeps the AI skill, CLI scripts, GitHub repo, and documentation site for research workflows, specification maintenance, and citation-friendly outputs.</p>
           </article>
           <article class="card">
-            <h3>八位專家級 AI 分析師
-              <span class="en-translation">Eight specialist AI analysts</span>
+            <h3>路線 B：Windows Desktop
+              <span class="en-translation">Track B: Windows Desktop</span>
             </h3>
-            <p>趨勢、動能、量價、籌碼、基本面、事件、策略與驗證先被拆開檢視，再交由主持 agent 整合成最終結論。</p>
-            <p class="en-translation">Trend, momentum, price-volume, chip-flow, fundamental, event, strategy, and validation perspectives are separated first, then synthesized by a chair agent into the final verdict.</p>
+            <p>新增原生桌面程式，讓 daily brief、premarket、Top20 scan 與 single-stock committee 可以直接在 GUI 內執行與閱讀。</p>
+            <p class="en-translation">Adds a native desktop application so the daily brief, premarket brief, Top20 scan, and single-stock committee can be run and read directly inside the GUI.</p>
           </article>
           <article class="card">
-            <h3>保留分歧，而不是掩蓋矛盾
-              <span class="en-translation">Visible disagreement</span>
+            <h3>Shared Core
+              <span class="en-translation">Shared Core</span>
             </h3>
-            <p>混合訊號應該降低信心，而不是被強行包成一段很順的敘事。這也是為什麼最終決策文件會保留反方備忘錄。</p>
-            <p class="en-translation">Mixed evidence should lower confidence instead of being flattened into a smooth narrative. That is why the final decision packet preserves dissent.</p>
-          </article>
-          <article class="card">
-            <h3>輸出以決策為中心
-              <span class="en-translation">Decision-oriented output</span>
-            </h3>
-            <p>結果不只是一句方向判斷，而是訊號引擎、風格權重、策略模組、情境分支、買入區、停損、停利階梯與失效條件。</p>
-            <p class="en-translation">The result is more than a directional opinion. It includes signal engines, style weights, strategy modules, scenarios, buy zones, stop-loss logic, take-profit ladders, and invalidation conditions.</p>
+            <p>四條 workflow、同一份 config、同一個版本號來源、同一套 latest + archive output，確保之後功能升級不會只落在某一個介面。</p>
+            <p class="en-translation">Four workflows, one config stack, one version source, and one latest-plus-archive output system keep future upgrades from landing in only one interface.</p>
           </article>
         </div>
       </section>
 
       <section>
-        <h2>v1.6 日盤簡報 + 指標委員會版本
-          <span class="en-translation">v1.6 Daily Brief and Committee Layer</span>
-        </h2>
-        <p class="section-intro">這一版的核心不是增加更多形容詞，而是讓每個當日判斷都先經過「夜盤與美股是否支持」、「新聞流向是否偏正向」與「單股訊號是否健康」三道門。</p>
-        <p class="section-intro en-translation">The point of this release is not more adjectives. It is to add three gates to every daily call: whether the overnight environment supports it, whether the news flow is aligned, and whether a stock signal stack is healthy.</p>
-        <div class="grid">
-          <article class="card">
-            <h3>08:30 日盤預測報告
-              <span class="en-translation">08:30 daily market brief</span>
-            </h3>
-            <p>系統先把夜盤趨勢、Yahoo奇摩股市、Anue 鉅亨網與美股方向整理成 10 大訊息與當日綜合評估。</p>
-            <p class="en-translation">The system first turns night-session trend, Yahoo Taiwan pages, Anue headlines, and US direction into ten key messages and one daily outlook.</p>
-          </article>
-          <article class="card">
-            <h3>六層訊號引擎
-              <span class="en-translation">Six signal engines</span>
-            </h3>
-            <p>系統先把單股拆成趨勢、動能、量價、籌碼、基本面與事件六層，再決定這個個案是否值得往下做。</p>
-            <p class="en-translation">The system first breaks a stock into six layers: trend, momentum, price-volume, chip flow, fundamentals, and events, then decides whether the case deserves further action.</p>
-          </article>
-          <article class="card">
-            <h3>風格權重切換
-              <span class="en-translation">Style-weight switching</span>
-            </h3>
-            <p>同一檔股票在短線、波段與中長線下不應用相同標準。`v1.6` 會依風格切換權重與優先欄位，也會讓日盤簡報影響當日節奏判斷。</p>
-            <p class="en-translation">The same stock should not be judged by the same lens across short-term, swing, and position trading. `v1.6` switches both weights and field priority by style, and lets the daily brief shape execution tone.</p>
-          </article>
-          <article class="card">
-            <h3>最小可用欄位集
-              <span class="en-translation">Minimum viable field set</span>
-            </h3>
-            <p>如果資料有限，系統至少能用 `20MA`、`60MA`、量能、`MACD`、`RSI`、外資、投信與月營收 `YoY` 做出穩定初判。</p>
-            <p class="en-translation">If data is limited, the system can still form a stable first read with `20MA`, `60MA`, volume, `MACD`, `RSI`, foreign flow, trust flow, and monthly revenue `YoY`.</p>
-          </article>
-          <article class="card">
-            <h3>台股實戰語言
-              <span class="en-translation">Taiwan-practical language</span>
-            </h3>
-            <p>像「`60MA` 之上找買點」、「回檔量縮」、「投信連買」、「事件窗口降權」這些，現在都被正式寫進 skill。</p>
-            <p class="en-translation">Practical Taiwan-market rules such as “prefer entries above `60MA`,” “pullback with contraction,” “trust-buy streaks,” and “event-window downgrades” are now formalized in the skill.</p>
-          </article>
-        </div>
-      </section>
-
-      <section>
-        <div class="quote">
-          <p><strong>展品摘要：</strong> Taiwan Stock Radar 是一個面向台股的研究 skill，每日 08:30 先用夜盤、Yahoo、Anue 與美股趨勢整理出 10 大重點股市訊息與台股綜合評估，再在需要時把一檔股票送進正式研究委員會。<span class="en-translation"><strong>Exhibit summary:</strong> Taiwan Stock Radar is a Taiwan-equity research skill that starts with a daily 08:30 brief built from night-session, Yahoo, Anue, and US-market direction, then opens a formal committee when a stock deep dive is needed.</span></p>
-        </div>
-      </section>
-
-      <section>
-        <h2>精選案例頁
-          <span class="en-translation">Featured Case Study</span>
-        </h2>
-        <p class="section-intro">公開網站提供完整案例頁，讓訪客直接看到產品最後會長成什麼樣，而不是只看抽象敘述。</p>
-        <p class="section-intro en-translation">The public site includes a full case-study page so visitors can see the product in its final form instead of only reading abstract descriptions.</p>
-        <div class="split-grid">
-          <article class="analysis-card">
-            <h3>案例頁會展示什麼
-              <span class="en-translation">What the page shows</span>
-            </h3>
-            <ul>
-              <li>08:30 日盤摘要<span class="en-translation">08:30 market brief summary</span></li>
-              <li>委員會 verdict summary bar<span class="en-translation">Committee verdict summary bar</span></li>
-              <li>個案背景與研究問題<span class="en-translation">Case setup and research objective</span></li>
-              <li>策略引擎與策略選擇<span class="en-translation">Strategy engine and strategy selection</span></li>
-              <li>委員會評分卡與權重傾向<span class="en-translation">Committee scorecard and weighted leaning</span></li>
-              <li>驗證評分卡與穩健度備註<span class="en-translation">Validation scorecard and robustness notes</span></li>
-              <li>不同週期的預測面板<span class="en-translation">Horizon-specific forecast panel</span></li>
-              <li>專家簡報<span class="en-translation">Specialist briefs</span></li>
-              <li>同業比較區塊<span class="en-translation">Peer comparison block</span></li>
-              <li>進出場階梯與操作地圖<span class="en-translation">Entry / exit ladder and action map</span></li>
-              <li>反方備忘錄與情境樹<span class="en-translation">Dissent memo and scenario tree</span></li>
-            </ul>
-          </article>
-          <article class="analysis-card">
-            <h3>打開展品
-              <span class="en-translation">Open the exhibit</span>
-            </h3>
-            <p>這一頁被設計成像正式投研備忘錄的公開展品，而不是單純的內容頁。</p>
-            <p class="en-translation">The case-study page is designed to feel like a polished internal research memo turned into a public product artifact.</p>
-            <p><a class="button button-primary" href="./case-study.html">查看完整案例頁<span class="en-translation">Open case study</span></a></p>
-          </article>
-        </div>
-      </section>
-
-      <section>
-        <h2>研究委員會成員
-          <span class="en-translation">Research Committee</span>
-        </h2>
-        <p class="section-intro">系統使用帶權重的研究委員會，讓任何一種分析風格都不會單獨控制最終結論，並把策略選擇與驗證獨立成可見角色。</p>
-        <p class="section-intro en-translation">The system uses a weighted research committee so that no single analytical style controls the final conclusion, while strategy selection and validation remain visible roles.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Agent 角色
-                <span class="en-translation">Agent</span>
-              </th>
-              <th>主要責任
-                <span class="en-translation">Primary responsibility</span>
-              </th>
-              <th>權重
-                <span class="en-translation">Weight</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Chief Strategist</td>
-              <td>主持會議、裁決衝突並撰寫最終綜合結論。<span class="en-translation">Leads the meeting, resolves conflicts, and writes the final synthesis.</span></td>
-              <td>0.18</td>
-            </tr>
-            <tr>
-              <td>Technical Strategist</td>
-              <td>評估多週期趨勢、支撐壓力與量價結構。<span class="en-translation">Judges multi-timeframe structure, support, resistance, and volume confirmation.</span></td>
-              <td>0.16</td>
-            </tr>
-            <tr>
-              <td>Chip Flow Analyst</td>
-              <td>觀察外資、投信、融資與籌碼分配風險。<span class="en-translation">Evaluates foreign flow, trust flow, financing pressure, and distribution risk.</span></td>
-              <td>0.14</td>
-            </tr>
-            <tr>
-              <td>Fundamental Analyst</td>
-              <td>檢視月營收、獲利品質、產品週期與商業敘事。<span class="en-translation">Tests revenue quality, earnings support, product cycle, and business narrative.</span></td>
-              <td>0.14</td>
-            </tr>
-            <tr>
-              <td>Catalyst Analyst</td>
-              <td>追蹤法說、營收公告、政策與產業事件時點。<span class="en-translation">Tracks earnings, revenue-release windows, policy timing, and industry events.</span></td>
-              <td>0.10</td>
-            </tr>
-            <tr>
-              <td>Risk Manager</td>
-              <td>從流動性、波動與失效紀律挑戰 thesis。<span class="en-translation">Challenges the thesis through liquidity, volatility, and invalidation discipline.</span></td>
-              <td>0.11</td>
-            </tr>
-            <tr>
-              <td>Strategy Architect</td>
-              <td>判斷個案屬於哪一種策略模組，並檢查是否與當前市況相容。<span class="en-translation">Classifies the case into a strategy family and checks whether it fits the current market regime.</span></td>
-              <td>0.09</td>
-            </tr>
-            <tr>
-              <td>Quant Validation Analyst</td>
-              <td>以風險調整後報酬、尾部風險與穩健度檢查 thesis 是否足以執行。<span class="en-translation">Uses risk-adjusted returns, tail-risk, and robustness checks to judge whether the thesis is executable.</span></td>
-              <td>0.08</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section>
-        <h2>會議流程
-          <span class="en-translation">Meeting Workflow</span>
-        </h2>
-        <p class="section-intro">委員會的設計讓每位專家角色都能在結論形成前先清楚思考與發言。</p>
-        <p class="section-intro en-translation">The council is structured so that each specialist can think clearly before the final conclusion is formed.</p>
-        <div class="kpi-grid">
-          <div class="kpi">
-            <strong>1</strong>
-            <span class="muted">08:30 日盤環境：夜盤、美股、半導體與風險情緒<span class="en-translation">08:30 market brief: night session, US markets, semis, and risk tone</span></span>
-          </div>
-          <div class="kpi">
-            <strong>2</strong>
-            <span class="muted">個案設定：股票、日期、週期、研究問題<span class="en-translation">Case setup: stock, date, horizon, question</span></span>
-          </div>
-          <div class="kpi">
-            <strong>3</strong>
-            <span class="muted">各專家角色獨立簡報<span class="en-translation">Independent specialist briefs</span></span>
-          </div>
-          <div class="kpi">
-            <strong>4</strong>
-            <span class="muted">策略提名與個案分類<span class="en-translation">Strategy nomination and case classification</span></span>
-          </div>
-          <div class="kpi">
-            <strong>5</strong>
-            <span class="muted">驗證面板與穩健度檢查<span class="en-translation">Validation panel and robustness review</span></span>
-          </div>
-          <div class="kpi">
-            <strong>6</strong>
-            <span class="muted">交叉質詢後形成最終決策文件與操作計畫<span class="en-translation">Cross-examination followed by the final decision packet</span></span>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>代表性輸出
-          <span class="en-translation">Representative Output</span>
-        </h2>
-        <p class="section-intro">一個成熟的股市 skill 應該交付的不是一句方向判斷，而是能被檢討、被質疑、也能被執行的研究成果。</p>
-        <p class="section-intro en-translation">A serious stock skill should deliver more than a directional opinion. It should produce work that can be reviewed, challenged, and acted on with discipline.</p>
-        <div class="split-grid">
-          <article class="analysis-card">
-            <h3>08:30 日盤報告
-              <span class="en-translation">08:30 market brief</span>
-            </h3>
-            <ul>
-              <li><strong>開盤偏向：</strong>偏多、建設性偏強、中性偏多、偏保守或偏空防守。<span class="en-translation"><strong>Opening bias:</strong> bullish, constructive, neutral-positive, cautious, or defensive.</span></li>
-              <li><strong>關鍵驅動：</strong>夜盤、Nasdaq、SOX、TSM ADR、NVIDIA 與 VIX。<span class="en-translation"><strong>Key drivers:</strong> night session, Nasdaq, SOX, TSM ADR, NVIDIA, and VIX.</span></li>
-              <li><strong>族群觀察：</strong>半導體、AI 伺服器、金融或防禦型族群。<span class="en-translation"><strong>Sector watchlist:</strong> semis, AI servers, financials, or defensive groups.</span></li>
-              <li><strong>風險提示：</strong>夜盤缺口、風險情緒惡化與外盤分歧。<span class="en-translation"><strong>Risk flags:</strong> gap risk, deteriorating risk tone, and conflicting overnight signals.</span></li>
-            </ul>
-          </article>
-          <article class="analysis-card">
-            <h3>研究文件
-              <span class="en-translation">Research packet</span>
-            </h3>
-            <ul>
-              <li><strong>股票背景：</strong>市場、族群、同業位置與目前 regime。<span class="en-translation"><strong>Stock context:</strong> market, sector, peer map, and current regime.</span></li>
-              <li><strong>Specialist notes：</strong>技術、籌碼、基本面、催化與風險分開陳述。<span class="en-translation"><strong>Specialist notes:</strong> separate technical, chip-flow, fundamental, catalyst, and risk briefs.</span></li>
-              <li><strong>Strategy engine：</strong>primary / secondary strategy 與避免採用的策略。<span class="en-translation"><strong>Strategy engine:</strong> primary and secondary strategy plus the strategy to avoid.</span></li>
-              <li><strong>Validation panel：</strong>績效、尾部風險與穩健度檢查。<span class="en-translation"><strong>Validation panel:</strong> performance, tail-risk, and robustness review.</span></li>
-              <li><strong>Scenario tree：</strong>base、bull、bear 與觸發條件。<span class="en-translation"><strong>Scenario tree:</strong> base case, bull case, and bear case with trigger conditions.</span></li>
-              <li><strong>Consensus map：</strong>哪些地方有共識，哪些仍有爭議。<span class="en-translation"><strong>Consensus map:</strong> what the council agrees on and what remains contested.</span></li>
-            </ul>
-          </article>
-          <article class="analysis-card">
-            <h3>操作計畫
-              <span class="en-translation">Action plan</span>
-            </h3>
-            <ul>
-              <li><strong>建議買入區：</strong>何處風險報酬比開始變得合理。<span class="en-translation"><strong>Preferred buy zone:</strong> where risk-reward becomes acceptable.</span></li>
-              <li><strong>進場觸發：</strong>積極進場與保守確認的差異。<span class="en-translation"><strong>Entry triggers:</strong> aggressive entry versus conservative confirmation.</span></li>
-              <li><strong>風險控制：</strong>停損、失效條件與事件風險註記。<span class="en-translation"><strong>Risk control:</strong> stop-loss, invalidation, and event-risk caveats.</span></li>
-              <li><strong>出場框架：</strong>TP1、TP2 與分批調節邏輯。<span class="en-translation"><strong>Exit framework:</strong> TP1, TP2, and trim logic tied to scenario quality.</span></li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section>
-        <h2>這個 Skill 為什麼重要
-          <span class="en-translation">Why This Skill Matters</span>
+        <h2>v1.7 Shared Workflows
+          <span class="en-translation">v1.7 Shared Workflows</span>
         </h2>
         <div class="grid">
           <article class="card">
-            <h3>對 AI agents
-              <span class="en-translation">For AI agents</span>
-            </h3>
-            <p>它提供一個可重複使用的結構，讓 agent 面對股市問題時少一點即興、多一點可辯護的推理。</p>
-            <p class="en-translation">It provides a reusable structure for handling stock questions with less improvisation and more defensible reasoning.</p>
+            <h3>`generate_premarket_brief(...)`</h3>
+            <p>處理台股夜盤、美股大盤、半導體與 VIX，形成開市前風險偏好與族群觀察。</p>
+            <p class="en-translation">Processes Taiwan night-session, US broad indices, semiconductors, and VIX into an opening-risk read and a sector watchlist.</p>
           </article>
           <article class="card">
-            <h3>對分析者
-              <span class="en-translation">For analysts</span>
-            </h3>
-            <p>它示範如何把單股研究拆成角色、經過質詢，再重新組成更清楚的決策備忘錄。</p>
-            <p class="en-translation">It demonstrates how single-stock work can be split into roles, challenged, and reassembled into a clearer decision memo.</p>
+            <h3>`generate_daily_market_brief(...)`</h3>
+            <p>輸出每日 08:30 台股日盤報告、10 大訊息、綜合評估、來源可用性與風險提示。</p>
+            <p class="en-translation">Produces the daily 08:30 Taiwan market brief, ten key messages, overall assessment, source availability, and risk flags.</p>
           </article>
           <article class="card">
-            <h3>對產品開發者
-              <span class="en-translation">For builders</span>
-            </h3>
-            <p>它把分析方法本身變成可攜帶的 skill，附帶 config、blueprint 與公開展示頁。</p>
-            <p class="en-translation">It turns the analysis method itself into a portable skill with configs, blueprints, and a public-facing showcase.</p>
+            <h3>`generate_market_scan(...)`</h3>
+            <p>保留 Top20 demo scan，用於 watchlist、sector summary 與 action-plan 格式驗證。</p>
+            <p class="en-translation">Keeps the Top20 demo scan for watchlists, sector summaries, and action-plan formatting.</p>
+          </article>
+          <article class="card">
+            <h3>`generate_single_stock_committee_report(...)`</h3>
+            <p>輸出真正可執行的單股委員會報告，並在缺少同日 daily brief 時自動補前置步驟。</p>
+            <p class="en-translation">Produces an executable single-stock committee report and auto-generates the daily brief first when the same-day brief is missing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>主要輸出
+          <span class="en-translation">Primary Deliverables</span>
+        </h2>
+        <div class="grid">
+          <article class="card">
+            <h3>08:30 日盤預測報告<span class="en-translation">08:30 daily brief</span></h3>
+            <p>固定產出開盤偏向、綜合分數、10 大訊息、族群觀察與風險提示。</p>
+            <p class="en-translation">Always returns opening bias, overall score, ten key messages, sector watchlists, and risk flags.</p>
+          </article>
+          <article class="card">
+            <h3>單股委員會<span class="en-translation">Single-stock committee</span></h3>
+            <p>輸出 signal-engine summary、specialist briefs、style profile、strategy selection、validation scorecard、scenario tree 與 action plan。</p>
+            <p class="en-translation">Returns the signal-engine summary, specialist briefs, style profile, strategy selection, validation scorecard, scenario tree, and action plan.</p>
+          </article>
+          <article class="card">
+            <h3>Latest + Archive<span class="en-translation">Latest + Archive</span></h3>
+            <p>最新輸出保留在 `output/`，歷史版本保留在 `output/archive/`，可供 CLI、展示站與桌面版共同讀取。</p>
+            <p class="en-translation">Latest outputs stay in `output/`, while historical versions are stored in `output/archive/` for the CLI, showcase, and desktop app to read together.</p>
           </article>
         </div>
       </section>
@@ -471,7 +156,7 @@
 
     <footer class="footer">
       <div class="footer-card">
-        <p><strong>免責聲明：</strong> Taiwan Stock Radar 僅供研究、教育與產品展示使用，不構成投資建議、招攬、保證報酬或個別證券推薦。所有交易決策與風險承擔仍應由使用者自行判斷。<span class="en-translation"><strong>Disclaimer:</strong> Taiwan Stock Radar is provided for research, education, and product demonstration. It is not investment advice, not a solicitation, and not a guarantee of returns. All trading decisions and risk-bearing remain the user's responsibility.</span></p>
+        <p><strong>免責聲明：</strong> Taiwan Stock Radar 僅供研究、教育與產品展示使用，不構成投資建議、招攬、保證報酬或個別證券推薦。<span class="en-translation"><strong>Disclaimer:</strong> Taiwan Stock Radar is for research, education, and product demonstration only. It is not investment advice, not a solicitation, and not a guarantee of returns.</span></p>
       </div>
     </footer>
   </div>

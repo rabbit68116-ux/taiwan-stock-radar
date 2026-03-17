@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 方法論 Methodology</title>
-  <meta name="description" content="Taiwan Stock Radar 方法論頁，說明 08:30 日盤預測報告與單股指標研究委員會如何完成訊號引擎評估、風格切換、策略選擇與操作方案，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar v1.7 方法論頁，說明 shared core 如何依序執行 08:30 日盤報告、單股委員會、archive 輸出與 Windows desktop 呈現。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 方法論 Methodology">
-  <meta property="og:description" content="了解 Taiwan Stock Radar 如何從台股開市前評估走到單股研究、指標評估與決策整合。">
+  <meta property="og:description" content="了解 Taiwan Stock Radar v1.7 如何用 shared core 連接 08:30 報告、單股委員會與 Windows desktop。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/methodology.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -22,26 +22,11 @@
         <span>Taiwan Stock Radar</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="./">
-          首頁
-          <span class="en-translation">Home</span>
-        </a>
-        <a href="./case-study.html">
-          案例頁
-          <span class="en-translation">Case Study</span>
-        </a>
-        <a href="./faq.html">
-          常見問題
-          <span class="en-translation">FAQ</span>
-        </a>
-        <a href="./use-cases.html">
-          使用情境
-          <span class="en-translation">Use Cases</span>
-        </a>
-        <a href="./docs.html">
-          知識庫
-          <span class="en-translation">Knowledge Base</span>
-        </a>
+        <a href="./">首頁<span class="en-translation">Home</span></a>
+        <a href="./windows-app.html">Windows App<span class="en-translation">Windows App</span></a>
+        <a href="./case-study.html">案例頁<span class="en-translation">Case Study</span></a>
+        <a href="./faq.html">常見問題<span class="en-translation">FAQ</span></a>
+        <a href="./docs.html">知識庫<span class="en-translation">Knowledge Base</span></a>
       </nav>
     </div>
   </header>
@@ -50,91 +35,26 @@
     <section class="hero">
       <div class="hero-card">
         <p class="eyebrow">方法論<span class="en-translation">Methodology</span></p>
-        <h1>Taiwan Stock Radar 如何執行單股指標研究會議
-          <span class="en-translation">How Taiwan Stock Radar runs a single-stock indicator committee</span>
+        <h1>Taiwan Stock Radar v1.7 如何運作
+          <span class="en-translation">How Taiwan Stock Radar v1.7 operates</span>
         </h1>
-        <p class="lead">這一頁說明 Taiwan Stock Radar `v1.6` 的核心分析序列。流程先從每日 08:30 台股日盤預測報告開始，再進入個案定義、訊號引擎校準、風格切換、專家質詢與驗證，最後才形成操作建議。</p>
-        <p class="lead en-translation">This page outlines the analytical sequence behind Taiwan Stock Radar `v1.6`. The workflow starts with the daily 08:30 Taiwan market brief, then moves through case definition, signal calibration, style switching, specialist review, and validation before producing an action plan.</p>
+        <p class="lead">`v1.7` 的方法論重點是：分析邏輯只存在於 shared core，交付面可以是 skill、CLI 或 Windows desktop。這樣做的目的，是讓每日報告與單股委員會在任何介面都能維持同一份結論結構。</p>
+        <p class="lead en-translation">The key methodological rule in `v1.7` is that analysis logic exists only in the shared core, while delivery surfaces can be the skill, the CLI, or the Windows desktop app. This keeps the daily brief and the stock committee structurally consistent in every interface.</p>
       </div>
     </section>
 
     <main>
-      <section>
-        <h2>1. 08:30 日盤預測報告
-          <span class="en-translation">1. The 08:30 market brief</span>
-        </h2>
-        <p>如果分析時間點在台股開盤前，系統會先讀取台股夜盤、S&amp;P 500、Nasdaq、Dow、SOX、TSM ADR、NVIDIA 與 VIX，再補入 Yahoo奇摩股市與 Anue 鉅亨網重點頁面，形成一份 08:30 日盤報告、10 大訊息、族群觀察與風險提示。</p>
-        <p class="en-translation">If the task happens before the Taiwan open, the system first reads Taiwan night-session, the S&amp;P 500, Nasdaq, Dow, SOX, TSM ADR, NVIDIA, and VIX, then adds curated Yahoo Taiwan and Anue pages to form the 08:30 market brief, ten key messages, sector watchlists, and risk flags.</p>
-      </section>
-
-      <section>
-        <h2>2. 個案設定
-          <span class="en-translation">2. Case setup</span>
-        </h2>
-        <p>流程接著定義一檔股票、一個分析日期、一個研究週期與一個明確問題。這能避免討論失焦，也避免 agent 用模糊問題產生模糊答案。</p>
-        <p class="en-translation">The workflow then defines one stock, one analysis date, one time horizon, and one explicit research question. That keeps the meeting focused and prevents vague answers.</p>
-      </section>
-
-      <section>
-        <h2>3. 台股訊號引擎校準
-          <span class="en-translation">3. Signal-engine calibration</span>
-        </h2>
-        <p>在下方向判斷之前，系統會先看趨勢、動能、量價、籌碼、基本面與事件六層訊號。單一股票不能只靠一個圖形或一則新聞來理解。</p>
-        <p class="en-translation">Before any directional call is made, the system reviews trend, momentum, price-volume, chip flow, fundamentals, and events. A stock should not be judged from only one chart pattern or one headline.</p>
-      </section>
-
-      <section>
-        <h2>4. 交易風格切換
-          <span class="en-translation">4. Style-profile switching</span>
-        </h2>
-        <p>`v1.6` 不會假設短線、波段與中長線的判讀標準相同。系統會先決定 active style，再調整各引擎的權重，也會讓 08:30 日盤報告影響當日積極度與節奏。</p>
-        <p class="en-translation">`v1.6` does not assume that short-term, swing, and position trading should read a stock the same way. The system selects the active style first, then adjusts engine weights and lets the 08:30 brief shape execution tone for the day.</p>
-      </section>
-
-      <section>
-        <h2>5. Specialist 獨立簡報
-          <span class="en-translation">5. Independent specialist briefs</span>
-        </h2>
-        <p>技術面、籌碼面、基本面、催化因子、風控、策略選擇與驗證角色會先各自形成初步看法。這能避免第一個強勢敘事過早主導整場會議。</p>
-        <p class="en-translation">Technical, chip-flow, fundamental, catalyst, risk, strategy-selection, and validation specialists each produce an initial view independently so that the first strong narrative does not dominate the whole meeting.</p>
-      </section>
-
-      <section>
-        <h2>6. 策略提名
-          <span class="en-translation">6. Strategy nomination</span>
-        </h2>
-        <p>Strategy Architect 會先判斷這檔股票適合用哪種交易策略來理解，例如趨勢跟隨、突破、拉回承接，還是根本不該採用短線反彈思維。</p>
-        <p class="en-translation">The Strategy Architect decides which trading strategy best fits the stock, such as trend-following, breakout, pullback continuation, or whether mean-reversion logic should be avoided entirely.</p>
-      </section>
-
-      <section>
-        <h2>7. 驗證面板
-          <span class="en-translation">7. Validation panel</span>
-        </h2>
-        <p>Quant Validation Analyst 會用績效、尾部風險、交易品質與穩健度指標檢查這個個案是否足以支撐操作。這一步的目標，是防止會議只剩下漂亮的故事。</p>
-        <p class="en-translation">The Quant Validation Analyst tests whether the setup deserves action by reviewing performance, tail-risk, trade quality, and robustness metrics. This step exists to prevent the meeting from becoming story-driven.</p>
-      </section>
-
-      <section>
-        <h2>8. 交叉質詢與權重整合
-          <span class="en-translation">8. Cross-examination and weighted synthesis</span>
-        </h2>
-        <p>主持 agent 會在 08:30 日盤報告、訊號引擎檢視、風格適配、策略適配與驗證結果都進場後，才整合各專家角色的意見。最終結論不是投票平均，而是依角色權重與風險反對意見共同形成。</p>
-        <p class="en-translation">The chair agent synthesizes the specialists only after the 08:30 market brief, signal-engine review, style fit, strategy fit, and validation are on the table. The final verdict is not a simple vote, but a weighted conclusion shaped by both conviction and visible objections.</p>
-      </section>
-
-      <section>
-        <h2>9. 決策文件輸出
-          <span class="en-translation">9. Decision packet</span>
-        </h2>
-        <p>最後輸出會包含 08:30 日盤摘要、signal-engine summary、style profile、策略模組選擇、validation panel、base/bull/bear 三情境、建議買入區、進場條件、停損、停利階梯、失效條件，以及保留下來的 dissent memo。</p>
-        <p class="en-translation">The final packet includes the 08:30 market brief summary, signal-engine summary, style profile, strategy-module selection, validation panel, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, and preserved dissent notes.</p>
-      </section>
+      <section><h2>1. 開市前環境層<span class="en-translation">1. Premarket environment</span></h2><p>系統先讀台股夜盤、美股大盤、半導體與 VIX，建立台股開盤前的風險偏好基底。<span class="en-translation">The system first reads Taiwan night-session, US broad indices, semiconductors, and VIX to build the overnight risk foundation before Taiwan opens.</span></p></section>
+      <section><h2>2. 08:30 日盤報告<span class="en-translation">2. The 08:30 market brief</span></h2><p>接著整合 Yahoo奇摩股市與 Anue 鉅亨網，形成 10 大訊息、開盤偏向、整體分數、族群觀察與風險提示。<span class="en-translation">It then integrates Yahoo Taiwan and Anue pages into ten key messages, an opening bias, an overall score, sector watchlists, and risk flags.</span></p></section>
+      <section><h2>3. 單股委員會<span class="en-translation">3. Single-stock committee</span></h2><p>當使用者指定股票時，系統會先確保同日 daily brief 已存在，再啟動六層訊號引擎、八位專家 AI 分析師與 style profile。<span class="en-translation">When a stock is requested, the system first ensures the same-day daily brief exists, then activates the six signal engines, eight specialist AI analysts, and the selected style profile.</span></p></section>
+      <section><h2>4. 策略與驗證<span class="en-translation">4. Strategy and validation</span></h2><p>主策略、次策略與 avoid strategy 會由 Strategy Architect 提名，再由 Validation layer 檢查 performance、tail risk、robustness 與 execution clarity。<span class="en-translation">The Strategy Architect nominates the primary, secondary, and avoid strategies, after which the validation layer checks performance, tail risk, robustness, and execution clarity.</span></p></section>
+      <section><h2>5. 輸出與 archive<span class="en-translation">5. Outputs and archive</span></h2><p>所有 workflow 都同時寫入 latest output 與 archive output，讓 CLI、文件站與 desktop app 都能讀到同一份歷史。<span class="en-translation">Every workflow writes both a latest output and an archive output so the CLI, docs site, and desktop app can read the same history.</span></p></section>
+      <section><h2>6. Windows desktop 的角色<span class="en-translation">6. The role of the Windows desktop app</span></h2><p>Windows desktop 只做 GUI 層，不複製 business logic。這是 `v1.7` 能夠雙軌同步更新的關鍵。<span class="en-translation">The Windows desktop app is only a GUI layer and does not duplicate business logic. That is the key to keeping the two tracks synchronized in `v1.7`.</span></p></section>
     </main>
 
     <footer class="footer">
       <div class="footer-card">
-        <p><strong>免責聲明：</strong> 本方法論用於說明研究流程與產品設計，不構成對任何個股的投資建議或報酬保證。<span class="en-translation"><strong>Disclaimer:</strong> This methodology explains the research workflow and product design. It is not investment advice and does not guarantee outcomes for any security.</span></p>
+        <p><strong>免責聲明：</strong> 本方法論頁僅用來說明產品運作與研究流程，不構成對任何個股或市場方向的投資建議。<span class="en-translation"><strong>Disclaimer:</strong> This methodology page explains the product behavior and research workflow only. It is not investment advice for any stock or market direction.</span></p>
       </div>
     </footer>
   </div>

@@ -1,5 +1,5 @@
-"""taiwan-stock-radar demo package."""
+"""taiwan-stock-radar package."""
 
 __all__ = ["__version__"]
 
-__version__ = "0.1.0"
+__version__ = "v1.7"

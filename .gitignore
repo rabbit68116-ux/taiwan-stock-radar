@@ -19,3 +19,5 @@ venv/
 # Project outputs
 data/
 output/
+build/
+dist/

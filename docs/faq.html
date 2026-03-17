@@ -4,63 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiwan Stock Radar 常見問題 FAQ</title>
-  <meta name="description" content="Taiwan Stock Radar 常見問題頁，說明這個結合每日 08:30 台股日盤預測報告與單股研究的 AI skill 如何運作，並附英文翻譯。">
+  <meta name="description" content="Taiwan Stock Radar v1.7 常見問題，說明 dual-track 產品、08:30 日盤報告、單股委員會與 Windows desktop app 如何協作。">
   <link rel="canonical" href="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Taiwan Stock Radar 常見問題 FAQ">
-  <meta property="og:description" content="了解 Taiwan Stock Radar 如何先做每日 08:30 台股日盤預測報告，再以多位專業 AI analyst 對單一台股進行深度研究。">
+  <meta property="og:description" content="了解 Taiwan Stock Radar v1.7 如何以 shared core 同步服務 08:30 報告、單股委員會與 Windows desktop。">
   <meta property="og:url" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/faq.html">
   <meta property="og:image" content="https://rabbit68116-ux.github.io/taiwan-stock-radar/assets/og-card.svg">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Taiwan Stock Radar 是什麼？ What is Taiwan Stock Radar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Taiwan Stock Radar 是一個面向台灣股票研究的 AI skill。v1.6 版本會先在每日 08:30 以前整合台指期夜盤、Yahoo奇摩股市、Anue 鉅亨網與美股關鍵指標，輸出台股日盤預測報告與 10 大重點訊息，再在需要時展開單股委員會。 Taiwan Stock Radar is an AI skill for Taiwan-equity research. In v1.6 it starts with a daily 08:30 market brief and ten key messages, then opens a formal single-stock committee when needed."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "多 Agent 指標委員會是怎麼運作的？ How does the multi-agent indicator committee work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "系統會將趨勢、動能、量價、籌碼、基本面、事件、風險管理、策略選擇與驗證拆成不同角色，各自先獨立提出判斷，再由主持型 agent 做權重整合與衝突裁決。 The system separates trend, momentum, price-volume, chip-flow, fundamentals, events, risk, strategy-selection, and validation roles, lets them form independent views first, and then asks a chair agent to synthesize the final verdict through weighted judgment."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "為什麼要建立不同性格或專業的 AI analyst？ Why use multiple specialist personas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "因為單一觀點很容易忽略矛盾訊號。不同專家角色可以把趨勢、資金流、商業品質、事件時點與風險分開檢視，讓最後結論更接近專業研究會議。 Multiple specialist personas reduce single-view bias by separating structure, flow, business quality, timing, and risk into distinct voices."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "最終輸出會包含哪些內容？ What does the final output include?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "標準輸出包含 signal-engine summary、style profile、最終 thesis、base/bull/bear 三情境、建議買入區、進場觸發條件、停損、停利階梯、失效條件、信心分級，以及保留下來的反方意見。 A standard output includes the signal-engine summary, style profile, the final thesis, base/bull/bear scenarios, preferred buy zone, entry triggers, stop-loss, take-profit ladder, invalidation, confidence, and preserved dissent notes."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Taiwan Stock Radar 會保證報酬嗎？ Does it guarantee stock performance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "不會。Taiwan Stock Radar 是研究與決策輔助 skill，不提供保證報酬，也不應被理解為對未來股價的確定承諾。 No. Taiwan Stock Radar is a research and decision-support skill, not a guarantee of future returns."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
   <header class="topbar">
@@ -70,26 +22,11 @@
         <span>Taiwan Stock Radar</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="./">
-          首頁
-          <span class="en-translation">Home</span>
-        </a>
-        <a href="./case-study.html">
-          案例頁
-          <span class="en-translation">Case Study</span>
-        </a>
-        <a href="./methodology.html">
-          方法論
-          <span class="en-translation">Methodology</span>
-        </a>
-        <a href="./use-cases.html">
-          使用情境
-          <span class="en-translation">Use Cases</span>
-        </a>
-        <a href="./docs.html">
-          知識庫
-          <span class="en-translation">Knowledge Base</span>
-        </a>
+        <a href="./">首頁<span class="en-translation">Home</span></a>
+        <a href="./windows-app.html">Windows App<span class="en-translation">Windows App</span></a>
+        <a href="./case-study.html">案例頁<span class="en-translation">Case Study</span></a>
+        <a href="./methodology.html">方法論<span class="en-translation">Methodology</span></a>
+        <a href="./docs.html">知識庫<span class="en-translation">Knowledge Base</span></a>
       </nav>
     </div>
   </header>
@@ -98,80 +35,30 @@
     <section class="hero">
       <div class="hero-card">
         <p class="eyebrow">常見問題<span class="en-translation">Frequently Asked Questions</span></p>
-        <h1>關於 Taiwan Stock Radar 的常見問題
-          <span class="en-translation">Common questions about Taiwan Stock Radar</span>
+        <h1>關於 Taiwan Stock Radar v1.7 的常見問題
+          <span class="en-translation">Common questions about Taiwan Stock Radar v1.7</span>
         </h1>
-        <p class="lead">這一頁整理 Taiwan Stock Radar `v1.6` 最常被問到的核心問題，聚焦在它如何把 08:30 日盤預測報告、10 大重點訊息與單股研究委員會接起來，以及哪些事情它不應被誤解成可以保證。</p>
-        <p class="lead en-translation">This page answers the most common questions about Taiwan Stock Radar `v1.6`, focusing on how it connects the 08:30 daily brief, ten key messages, and the single-stock committee, and what it should never be mistaken for.</p>
+        <p class="lead">這一頁聚焦說明 `v1.7` 的 shared core、08:30 日盤報告、單股委員會、Windows desktop app，以及它不應被誤解成保證報酬的地方。</p>
+        <p class="lead en-translation">This page explains the `v1.7` shared core, the 08:30 daily brief, the single-stock committee, the Windows desktop app, and what the product should never be mistaken for.</p>
       </div>
     </section>
 
     <main>
       <section>
         <div class="grid">
-          <article class="card">
-            <h2>什麼是 Taiwan Stock Radar？
-              <span class="en-translation">What is Taiwan Stock Radar?</span>
-            </h2>
-            <p>它是一個專門為台股打造的 AI skill。產品第一層輸出是每日 08:30 台股日盤預測報告，第二層才是在需要時啟動的單股研究委員會，因此它同時處理市場環境與個股決策。</p>
-            <p class="en-translation">It is an AI skill built specifically for Taiwan equities. The first product layer is a daily 08:30 Taiwan market brief, and the second layer is the single-stock committee opened when deeper analysis is needed.</p>
-          </article>
-          <article class="card">
-            <h2>為什麼要用多位專家型 AI 分析師？
-              <span class="en-translation">Why use multiple specialist AI analysts?</span>
-            </h2>
-            <p>因為一種分析語氣很容易忽略其他風險。把趨勢、動能、量價、籌碼、基本面、事件、風控、策略選擇與驗證拆開後，結論會更平衡，也更像專業投研團隊。</p>
-            <p class="en-translation">Because one analytical voice can hide important contradictions. Separating trend, momentum, price-volume, flow, fundamentals, events, risk, strategy selection, and validation creates a more balanced result.</p>
-          </article>
-          <article class="card">
-            <h2>主持 agent 扮演什麼角色？
-              <span class="en-translation">What does the chair agent do?</span>
-            </h2>
-            <p>主持 agent 不是另一個分析師，而是會議主持人。它負責整理共識、標出分歧、做權重整合，最後形成正式結論。</p>
-            <p class="en-translation">The chair agent is not just another analyst. It moderates the meeting, surfaces disagreement, applies weighting, and writes the final verdict.</p>
-          </article>
-          <article class="card">
-            <h2>08:30 日盤報告會怎麼運作？
-              <span class="en-translation">How does the 08:30 market brief work?</span>
-            </h2>
-            <p>系統會先讀取台股夜盤、S&amp;P 500、Nasdaq、Dow、SOX、TSM ADR、NVIDIA 與 VIX，再整理 Yahoo奇摩股市與 Anue 鉅亨網重點頁面，輸出 10 大重點訊息、開盤偏向、族群觀察與風險提示。</p>
-            <p class="en-translation">The system first reads Taiwan night-session, the S&amp;P 500, Nasdaq, Dow, SOX, TSM ADR, NVIDIA, and VIX, then combines Yahoo Taiwan market pages and Anue headlines into ten key messages, an opening bias, sector watchlists, and risk flags.</p>
-          </article>
-          <article class="card">
-            <h2>買賣點會怎麼表達？
-              <span class="en-translation">How are buy and sell points expressed?</span>
-            </h2>
-            <p>輸出不只是一句「可以買」，而是會定義訊號引擎摘要、交易風格、策略模組、建議買入區、替代進場條件、停損、停利階梯與失效條件，把判斷連回可執行的交易紀律。</p>
-            <p class="en-translation">The output defines the signal-engine summary, style profile, strategy module, preferred buy zone, alternate entry triggers, stop-loss, take-profit ladder, and invalidation so the thesis stays connected to execution discipline.</p>
-          </article>
-          <article class="card">
-            <h2>v1.6 多了什麼？
-              <span class="en-translation">What is new in v1.6?</span>
-            </h2>
-            <p>`v1.6` 把產品主輸出升級成每日 08:30 台股日盤預測報告，固定整理 10 大重點訊息與綜合評估，再把單股委員會當成第二層 deeper analysis，而不是唯一輸出。</p>
-            <p class="en-translation">`v1.6` upgrades the main product output into a daily 08:30 Taiwan market brief with ten key messages and an overall assessment, then treats the single-stock committee as the second analysis layer rather than the only output.</p>
-          </article>
-          <article class="card">
-            <h2>如果不同分析師彼此意見不同怎麼辦？
-              <span class="en-translation">What happens when analysts disagree?</span>
-            </h2>
-            <p>分歧會被保留下來，而不是被一句結論硬蓋掉。這也是為什麼最終文件會同時呈現共識與反方備忘錄。</p>
-            <p class="en-translation">Disagreement is preserved rather than erased. That is why the final packet shows both consensus and dissent notes.</p>
-          </article>
-          <article class="card">
-            <h2>這個專案適合誰？
-              <span class="en-translation">Who is this project for?</span>
-            </h2>
-            <p>它適合想建立更嚴謹台股研判流程的 AI agent、需要可解釋輸出的分析者，以及要把投研方法產品化的開發者。</p>
-            <p class="en-translation">It is designed for AI agents that need a stronger Taiwan-stock workflow, analysts who value explainable reasoning, and builders productizing research methods.</p>
-          </article>
+          <article class="card"><h2>什麼是 Taiwan Stock Radar？<span class="en-translation">What is Taiwan Stock Radar?</span></h2><p>它是一個專為台股打造的雙軌研究產品。第一條路線是 skill / CLI / docs，第二條路線是 Windows desktop app；兩者共用同一套 shared core。<span class="en-translation">It is a dual-track Taiwan-stock research product. One route is the skill / CLI / docs, the other is the Windows desktop app, and both share the same core.</span></p></article>
+          <article class="card"><h2>08:30 日盤報告會怎麼運作？<span class="en-translation">How does the 08:30 brief work?</span></h2><p>系統會整合台股夜盤、Yahoo奇摩股市、Anue 鉅亨網與美股關鍵指標，輸出 10 大重點訊息、開盤偏向、綜合評估、族群觀察與風險提示。<span class="en-translation">The system combines Taiwan night-session, Yahoo Taiwan market pages, Anue headlines, and key US indicators into ten key messages, an opening bias, an overall assessment, sector watchlists, and risk flags.</span></p></article>
+          <article class="card"><h2>單股委員會會輸出哪些內容？<span class="en-translation">What does the committee output?</span></h2><p>輸出包含 signal-engine summary、specialist briefs、style profile、strategy selection、validation scorecard、scenario tree、buy zone、entry triggers、stop、take-profit、invalidation 與 dissent。<span class="en-translation">The committee outputs the signal-engine summary, specialist briefs, style profile, strategy selection, validation scorecard, scenario tree, buy zone, entry triggers, stop, take-profit, invalidation, and dissent.</span></p></article>
+          <article class="card"><h2>Windows 版和 skill 有什麼關係？<span class="en-translation">How does the Windows app relate to the skill?</span></h2><p>Windows 版不是另一套分析系統，而是 shared core 的桌面交付層。GUI 不應複製商業邏輯，只負責呼叫 workflow 與渲染結果。<span class="en-translation">The Windows app is not a separate analysis system. It is the desktop delivery layer of the shared core. The GUI should not duplicate business logic; it should only call workflows and render results.</span></p></article>
+          <article class="card"><h2>如果沒有同日 daily brief 怎麼辦？<span class="en-translation">What if the same-day brief is missing?</span></h2><p>單股委員會 workflow 會先檢查同日 `daily_market_brief`，若不存在就先補產生，再進入個股深度分析。<span class="en-translation">The single-stock committee checks for the same-day `daily_market_brief` first. If it does not exist, it generates it before entering the stock analysis.</span></p></article>
+          <article class="card"><h2>會保證報酬嗎？<span class="en-translation">Does it guarantee returns?</span></h2><p>不會。Taiwan Stock Radar 僅供研究、教育與產品展示使用，不是投資建議，也不是任何形式的報酬保證。<span class="en-translation">No. Taiwan Stock Radar is for research, education, and product demonstration only. It is not investment advice and not a guarantee of returns.</span></p></article>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="footer-card">
-        <p><strong>免責聲明：</strong> Taiwan Stock Radar 僅供研究、教育與產品展示使用，不構成投資建議、招攬、保證報酬或個別證券推薦。<span class="en-translation"><strong>Disclaimer:</strong> Taiwan Stock Radar is provided for research, education, and product demonstration. It is not investment advice, not a solicitation, and not a guarantee of returns or a personalized security recommendation.</span></p>
+        <p><strong>免責聲明：</strong> Taiwan Stock Radar 僅供研究、教育與產品展示使用，不構成投資建議、招攬、保證報酬或個別證券推薦。<span class="en-translation"><strong>Disclaimer:</strong> Taiwan Stock Radar is for research, education, and product demonstration only. It is not investment advice, not a solicitation, and not a guarantee of returns or a personalized security recommendation.</span></p>
       </div>
     </footer>
   </div>
