@@ -41,6 +41,8 @@ if not exist ".venv\Scripts\python.exe" (
 )
 
 set "VENV_PY=.venv\Scripts\python.exe"
+set "APP_SCRIPT=%CD%\apps\windows\launcher.py"
+set "APP_LOG=%CD%\output\desktop_logs\launcher.log"
 
 echo [INFO] Checking desktop dependencies...
 "%VENV_PY%" -c "import PySide6" >nul 2>nul
@@ -56,12 +58,14 @@ if errorlevel 1 (
 )
 
 echo [INFO] Starting Taiwan Stock Radar Desktop...
-"%VENV_PY%" apps\windows\main.py
+"%VENV_PY%" "%APP_SCRIPT%"
 set "APP_EXIT=%errorlevel%"
 
 if not "%APP_EXIT%"=="0" (
   echo.
   echo [ERROR] The desktop app exited with code %APP_EXIT%.
+  echo [ERROR] Check the log file:
+  echo [ERROR] %APP_LOG%
   pause
   exit /b %APP_EXIT%
 )
